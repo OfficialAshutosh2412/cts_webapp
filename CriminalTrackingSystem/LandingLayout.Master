@@ -7,11 +7,85 @@
     <title></title>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
+ 
+    <link rel="icon" href="dist/favicon/cts_logo.ico"" type="image/x-icon">
+    <link href="dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="dist/css/style.css" rel="stylesheet" />
 </head>
 <body>
     <form id="form1" runat="server">
+        <nav class="bg-success navbar navbar-expand-lg  shadow text-white">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="dist/img/cts_logo.png" class="head-image"  alt="CTS_logo.png">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link active text-white" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white" href="#">About</a>
+                </li>
+                <li class="nav-item ">
+                  <a class="nav-link text-white" href="#">Gallery</a>
+                </li>
+                <li class="nav-item ">
+                  <a class="nav-link text-white" href="#">Contact us</a>
+                </li>
+                  <li class="nav-item ">
+                  <a class="nav-link text-white" href="#">FAQ</a>
+                </li>
+                <li class="nav-item ">
+                  <a class="nav-link text-white" href="#">Signup</a>
+                </li>
+                <li class="nav-item ">
+                  <a class=" btn text-white bg-danger border-white"  href="#">Login</a>
+                </li>
+              </ul>
+              
+            </div>
+          </div>
+        </nav>
+
         <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                
+            </asp:ContentPlaceHolder>
         </div>
+
+        <footer class="bg-success text-white d-flex justify-content-center align-content-center  flex-column">
+            <div>
+                <h2 class="text-center">Follow us</h2>
+                <div class="d-flex justify-content-center align-content-center">
+                    <a href="http://"><img class="follow"  src="dist/img/fb.png" /></a>
+                    <a href="http://"><img class="follow" src="dist/img/insta.png" /></a>
+                    <a href="http://"><img class="follow" src="dist/img/link.png" /></a>
+                    <a href="http://"><img class="follow" src="dist/img/whap.png" /></a>
+                    <a href="http://"><img class="follow" src="dist/img/yweet.png" /></a>
+                </div>
+            </div>
+            <div class="text-capitalize text-center">
+                <p>
+             
+                    all rights are reserved CTS &copy; 2023 Inc.
+                </p>
+            </div>
+        </footer>
+
+        
+
+
+
     </form>
+
+
+    <script src="dist/js/bootstrap.bundle.min.js"></script>
+
+
+    
 </body>
 </html>

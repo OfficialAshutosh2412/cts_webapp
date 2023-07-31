@@ -76,8 +76,14 @@
       <DependentUpon>CTS.mdf</DependentUpon>
     </Content>
     <Content Include="Contact.aspx" />
-    <Content Include="dist\css\CTS.css" />
+    <Content Include="dist\css\style.css" />
+    <Content Include="dist\favicon\cts_logo.ico" />
     <Content Include="dist\img\cts_logo.png" />
+    <Content Include="dist\img\fb.png" />
+    <Content Include="dist\img\insta.png" />
+    <Content Include="dist\img\link.png" />
+    <Content Include="dist\img\whap.png" />
+    <Content Include="dist\img\yweet.png" />
     <Content Include="FAQ.aspx" />
     <Content Include="Gallery.aspx" />
     <Content Include="Home.aspx" />
@@ -89,6 +95,7 @@
     <Content Include="Registration\MissingValuable.aspx" />
     <Content Include="Registration\RegisterHome.aspx" />
     <Content Include="Web.config" />
+    <Content Include="WebForm1.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="About.aspx.cs">
@@ -218,6 +225,13 @@
     <Compile Include="Registration\RegisterLayout.Master.designer.cs">
       <DependentUpon>RegisterLayout.Master</DependentUpon>
     </Compile>
+    <Compile Include="WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="LandingLayout.Master" />
@@ -234,6 +248,7 @@
   <ItemGroup>
     <Folder Include="Admin\AdminGallery\" />
     <Folder Include="Admin\Police\" />
+    <Folder Include="dist\js\" />
     <Folder Include="RegisterPhoto\" />
     <Folder Include="Registration\AnyProof\" />
     <Folder Include="Registration\MissingPerson\" />
