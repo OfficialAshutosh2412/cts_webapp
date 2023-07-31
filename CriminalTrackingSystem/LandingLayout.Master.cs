@@ -11,7 +11,7 @@ namespace CriminalTrackingSystem
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            Label1.Text = System.DateTime.Now.ToString("dd-MM-yyyy");
+           
         }
         
     }

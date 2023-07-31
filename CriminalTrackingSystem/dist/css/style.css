@@ -1,4 +1,16 @@
-﻿.nav-bg {
+﻿* {
+    scroll-behavior:smooth;
+    padding:0;
+    margin:0;
+}
+.hero{
+    display:flex;
+    width:80%;
+    margin:0 auto;
+    align-items:center;
+    justify-content:center
+}
+.nav-bg {
     background: #fff6d4;
 }
 
@@ -10,3 +22,21 @@
     margin-right:10px;
     margin-left:10px;
 }
+
+@media screen and (max-width:880px){
+    .hero img{
+        width:300px;
+    }
+}
+@media screen and (max-width:682px) {
+    .hero{
+        flex-direction:column;
+        justify-content:center;
+        text-align:center;
+        padding:2%;
+    }
+    .joinus{
+        display:flex;
+        justify-content:center;
+        align-items:center;
+    }

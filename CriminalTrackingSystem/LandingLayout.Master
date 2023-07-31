@@ -16,7 +16,7 @@
     <form id="form1" runat="server">
         <nav class="bg-success navbar navbar-expand-lg  shadow text-white">
           <div class="container-fluid">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="Home.aspx">
                 <img src="dist/img/cts_logo.png" class="head-image"  alt="CTS_logo.png">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -25,19 +25,19 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                  <a class="nav-link active text-white" aria-current="page" href="#">Home</a>
+                  <a class="nav-link active text-white" aria-current="page" href="Home.aspx">Home</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link text-white" href="#">About</a>
+                  <a class="nav-link text-white" href="About.aspx">About</a>
                 </li>
                 <li class="nav-item ">
-                  <a class="nav-link text-white" href="#">Gallery</a>
+                  <a class="nav-link text-white" href="Gallery.aspx">Gallery</a>
                 </li>
                 <li class="nav-item ">
-                  <a class="nav-link text-white" href="#">Contact us</a>
+                  <a class="nav-link text-white" href="Contact.aspx">Contact us</a>
                 </li>
                   <li class="nav-item ">
-                  <a class="nav-link text-white" href="#">FAQ</a>
+                  <a class="nav-link text-white" href="FAQ.aspx">FAQ</a>
                 </li>
                 <li class="nav-item ">
                   <a class="nav-link text-white" href="#">Signup</a>
@@ -57,7 +57,7 @@
             </asp:ContentPlaceHolder>
         </div>
 
-        <footer class="bg-success text-white d-flex justify-content-center align-content-center  flex-column">
+        <footer class=" p-3 bg-success text-white d-flex justify-content-center align-content-center  flex-column">
             <div>
                 <h2 class="text-center">Follow us</h2>
                 <div class="d-flex justify-content-center align-content-center">
@@ -70,7 +70,6 @@
             </div>
             <div class="text-capitalize text-center">
                 <p>
-             
                     all rights are reserved CTS &copy; 2023 Inc.
                 </p>
             </div>

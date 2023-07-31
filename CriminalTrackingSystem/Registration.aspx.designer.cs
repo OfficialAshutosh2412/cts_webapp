@@ -10,7 +10,5 @@
 
 namespace CriminalTrackingSystem
 {
-    public partial class Registration
-    {
-    }
+    
 }

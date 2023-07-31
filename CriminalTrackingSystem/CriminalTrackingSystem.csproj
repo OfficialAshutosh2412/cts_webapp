@@ -76,6 +76,11 @@
       <DependentUpon>CTS.mdf</DependentUpon>
     </Content>
     <Content Include="Contact.aspx" />
+    <Content Include="adPhotos\1.jpeg" />
+    <Content Include="adPhotos\2.jpg" />
+    <Content Include="adPhotos\3.jpg" />
+    <Content Include="adPhotos\4.jpg" />
+    <Content Include="adPhotos\5.jpg" />
     <Content Include="dist\css\style.css" />
     <Content Include="dist\favicon\cts_logo.ico" />
     <Content Include="dist\img\cts_logo.png" />
@@ -94,6 +99,7 @@
     <Content Include="Registration\MissingPerson.aspx" />
     <Content Include="Registration\MissingValuable.aspx" />
     <Content Include="Registration\RegisterHome.aspx" />
+    <Content Include="Rotater.xml" />
     <Content Include="Web.config" />
     <Content Include="WebForm1.aspx" />
   </ItemGroup>
