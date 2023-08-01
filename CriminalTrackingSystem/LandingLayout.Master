@@ -40,10 +40,10 @@
                   <a class="nav-link text-white" href="FAQ.aspx">FAQ</a>
                 </li>
                 <li class="nav-item ">
-                  <a class="nav-link text-white" href="#">Signup</a>
+                  <a class="nav-link text-white" href="Signup.aspx">Signup</a>
                 </li>
                 <li class="nav-item ">
-                  <a class=" btn text-white bg-danger border-white"  href="#">Login</a>
+                  <a class=" btn text-white bg-danger border-white"  href="Login.aspx">Login</a>
                 </li>
               </ul>
               
@@ -57,7 +57,7 @@
             </asp:ContentPlaceHolder>
         </div>
 
-        <footer class=" p-3 bg-success text-white d-flex justify-content-center align-content-center  flex-column">
+        <footer class=" p-3 bg-success text-white d-flex justify-content-center align-content-center  flex-column" style="bottom:0">
             <div>
                 <h2 class="text-center">Follow us</h2>
                 <div class="d-flex justify-content-center align-content-center">
