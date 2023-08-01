@@ -24,7 +24,7 @@ namespace CriminalTrackingSystem
             con.Open();
             cmd.CommandText = "INSERT INTO Contact VALUES('"+ContactName.Text+"', '"+ContactEmail.Text+"', '"+ContactNumber.Text+"', '"+ContactPurpose.Text+"', '"+ContactDetails.Text+"')";
             cmd.ExecuteNonQuery();
-            Label1.Text = "Thank you for contacting us. We answer you ASAP...";
+            Label1.Text = "Thank you for contacting us. We will answer you ASAP...";
             con.Close();
             ContactName.Text = "";
             ContactEmail.Text = "";

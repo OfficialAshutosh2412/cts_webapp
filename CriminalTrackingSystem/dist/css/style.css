@@ -35,12 +35,21 @@
     width:70%;
     margin:0 auto;
 }
+.signup {
+    width: 80%;
+    margin:0 auto;
+}
+
 @media screen and (max-width:880px){
     .hero img{
         width:300px;
     }
     .deflex{
         display:block;
+    }
+    .signup {
+        width: 100%;
+       
     }
 }
 @media screen and (max-width:682px) {
@@ -61,6 +70,7 @@
         margin: 0 auto;
 
     }
+    
 }
 @media screen and (max-width:400px) {
     .customContainer {

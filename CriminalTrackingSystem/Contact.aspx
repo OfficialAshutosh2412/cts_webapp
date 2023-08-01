@@ -5,7 +5,6 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <%--contact form--%>
     <div class="pad-5 bg-body-secondary min-width">
-
         <div class="customContainer p-5 shadow-lg rounded bg-white">
             <h1 class="text-dark text-capitalize">Contact us</h1>
             <div class=" deflex">
@@ -19,7 +18,7 @@
                 </div>
                 <div class="mb-1 w-100 p-2">
                     <label class="form-label">Phone Number</label>
-                    <asp:TextBox ID="ContactNumber" runat="server" type="text" class="form-control border-2 border-success "></asp:TextBox>
+                    <asp:TextBox ID="ContactNumber" runat="server" type="text" class="form-control border-2 border-success " MaxLength="13"></asp:TextBox>
                 </div>
             </div>
             <div class="mb-1 w-100 p-2">
