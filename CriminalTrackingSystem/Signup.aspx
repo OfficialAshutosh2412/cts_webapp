@@ -87,14 +87,18 @@
                 <div class="w-100 p-2">
                     <label class="form-label">Contact Number</label>
                     <asp:TextBox ID="SignupContact" runat="server" class="form-control border-2 border-success"></asp:TextBox>
-                    <asp:RegularExpressionValidator ID="RegularExpressionValidator4" runat="server" ControlToValidate="SignupContact" ErrorMessage="incorrect phone number" Font-Bold="True" Font-Size="Small" ForeColor="#FF5050" ValidationExpression="\d{13}"></asp:RegularExpressionValidator>
+                    <asp:RegularExpressionValidator ID="RegularExpressionValidator4" runat="server" ControlToValidate="SignupContact" ErrorMessage="incorrect phone number" Font-Bold="True" Font-Size="Small" ForeColor="#FF5050" ValidationExpression="\d{10}"></asp:RegularExpressionValidator>
                 </div>
                 <div class="w-100 p-2">
                     <label class="form-label">Profile</label>
                     <asp:FileUpload ID="SignupProfile" runat="server" class="form-control border-2 border-success" />
                 </div>
             </div>
-            <asp:Button ID="Button1" runat="server" Text="Signup"  class="btn m-2 btn-success"/>
+            <%--buttons--%>
+            <asp:Button ID="Button1" runat="server" Text="Signup"  class="btn m-2 btn-success" OnClick="Button1_Click"/>
+            <asp:HyperLink ID="HyperLink1" runat="server" CssClass="link-success " NavigateUrl="~/Login.aspx">click here to login...</asp:HyperLink>
+            &nbsp;&nbsp;
+            <asp:Literal ID="Literal1" runat="server" ></asp:Literal>
         </div>
     </div>
 </asp:Content>

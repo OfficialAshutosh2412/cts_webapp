@@ -40,6 +40,11 @@
     margin:0 auto;
 }
 
+.signin{
+    width:50%;
+    margin:0 auto;
+}
+
 @media screen and (max-width:880px){
     .hero img{
         width:300px;
@@ -50,6 +55,10 @@
     .signup {
         width: 100%;
        
+    }
+    .signin {
+        width: 70%;
+        margin: 0 auto;
     }
 }
 @media screen and (max-width:682px) {
@@ -69,6 +78,10 @@
         width: 100%;
         margin: 0 auto;
 
+    }
+    .signin {
+        width: 100%;
+        margin: 0 auto;
     }
     
 }
