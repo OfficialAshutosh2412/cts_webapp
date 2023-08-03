@@ -1,21 +1,30 @@
-﻿* {
-    scroll-behavior:smooth;
-    padding:0;
-    margin:0;
+﻿/*universal*/
+* {
+    scroll-behavior: smooth;
+    padding: 0;
+    margin: 0;
 }
-.min-width{
-    min-width:300px
+/*theme css*/
+:root {
+    --tan: #ffe1b2;
 }
-.pad-5{
-    padding:5%;
+/*visitor navbar*/
+.min-width {
+    min-width: 300px
 }
-.hero{
-    display:flex;
-    width:80%;
-    margin:0 auto;
-    align-items:center;
-    justify-content:center
+
+.pad-5 {
+    padding: 5%;
 }
+
+.hero {
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center
+}
+
 .nav-bg {
     background: #fff6d4;
 }
@@ -23,73 +32,166 @@
 .head-image {
     width: 50px;
 }
-.follow{
+
+.follow {
     width: 30px;
-    margin-right:10px;
-    margin-left:10px;
+    margin-right: 10px;
+    margin-left: 10px;
 }
-.deflex{
-    display:flex;
+
+.deflex {
+    display: flex;
 }
+/*signup*/
 .customContainer {
-    width:70%;
-    margin:0 auto;
+    width: 70%;
+    margin: 0 auto;
 }
+
 .signup {
     width: 80%;
-    margin:0 auto;
+    margin: 0 auto;
+}
+/*signin*/
+.signin {
+    width: 50%;
+    margin: 0 auto;
+}
+/*user navbar*/
+.user-navbar {
+    background: var(--tan);
+    color: black;
+    box-shadow: 1px 1px 10px 0px gray;
+    padding: 0 2%;
+    transition: 0.5s;
 }
 
-.signin{
-    width:50%;
-    margin:0 auto;
-}
-
-@media screen and (max-width:880px){
-    .hero img{
-        width:300px;
-    }
-    .deflex{
-        display:block;
-    }
-    .signup {
-        width: 100%;
-       
-    }
-    .signin {
-        width: 70%;
-        margin: 0 auto;
-    }
-}
-@media screen and (max-width:682px) {
-    .hero {
-        flex-direction: column;
-        justify-content: center;
-        text-align: center;
-        padding: 2%;
+    .user-navbar .hovers {
+        position: relative;
     }
 
-    .joinus {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    .user-navbar img {
+        width: 50px
     }
-    .customContainer {
-        width: 100%;
-        margin: 0 auto;
 
+    .user-navbar a {
+        font-weight: 600;
     }
-    .signin {
-        width: 100%;
-        margin: 0 auto;
+
+    .user-navbar .dropdown-section {
+        background: #ffbd9c;
+        transition: 0.4s all;
+        list-style: none;
+        border-radius: 5px;
+        position: absolute;
+        z-index: 1;
+        left: 20px;
+        width: fit-content;
     }
-    
+
+    .user-navbar .dropdown-section {
+        border-top: none;
+        border-right: none;
+        border-left: none;
+        border-bottom: 1px solid #ff9999;
+        padding: 10px;
+        display: none;
+    }
+
+.dropdown:hover .dropdown-section {
+    display: block;
 }
-@media screen and (max-width:400px) {
-    .customContainer {
-        width: 100%;
-    }
-    .pad-5{
-        padding:0%
-    }
+
+.user-navbar .dropdown-section li:hover {
+    text-decoration: underline;
+    transition: 0.3s all;
 }
+.logout {
+    background: #d40027;
+    background: linear-gradient(45deg, var(--tan)  50%, #ffa67e  50%);
+    background-size:400%;
+    background-position:left;
+    transition:0.5s; 
+}
+    .logout:hover {
+        background-position: right;
+        transition: 0.5s all;
+    }
+/*user footer*/
+.user-footer {
+    background: var(--tan);
+    padding: 1%;
+}
+
+    .user-footer .img-width {
+        width: 150px;
+    }
+/*responsive queries*/
+@media screen and (max-width:880px) {
+       .logout{
+           width:fit-content;
+           padding:1%;
+       }
+
+}
+
+    /*large screen*/
+    @media screen and (max-width:880px) {
+        .hero img {
+            width: 30px;
+        }
+
+        .deflex {
+            display: block;
+        }
+
+        .signup {
+            width: 100%;
+        }
+
+        .signin {
+            width: 70%;
+            margin: 0 auto;
+        }
+
+        .user-navbar .dropdown-section {
+            width: fit-content;
+        }
+    }
+
+    /*medium screen*/
+    @media screen and (max-width:682px) {
+        .hero {
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            padding: 2%;
+        }
+
+        .joinus {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .customContainer {
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .signin {
+            width: 100%;
+            margin: 0 auto;
+        }
+    }
+
+    /*small screen*/
+    @media screen and (max-width:400px) {
+        .customContainer {
+            width: 100%;
+        }
+
+        .pad-5 {
+            padding: 0%
+        }
+    }
