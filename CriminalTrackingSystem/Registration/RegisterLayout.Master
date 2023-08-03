@@ -33,8 +33,13 @@
                             <a class="nav-link dropdown-toggle toggler" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Complain Report
                             </a>
                             <ul class="dropdown-section shadow-sm">
-                                <li><a class="dropdown-item hidden-drop" href="#">For Crime</a></li>
-                                <li><a class="dropdown-item hidden-drop" href="#">For Criminal</a></li>
+                                <li>
+                                    <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/Registration/CrimeComplain.aspx" class="dropdown-item hidden-drop">For Crime</asp:HyperLink>
+                                </li>
+
+                                <li>
+                                    <asp:HyperLink ID="HyperLink3" class="dropdown-item hidden-drop" runat="server" NavigateUrl="~/Registration/GeneralComplain.aspx">General complain</asp:HyperLink>
+                                </li>
                             </ul>
                         </li>
                         <%--dropdown two--%>
