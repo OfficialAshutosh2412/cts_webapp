@@ -17,12 +17,33 @@ namespace CriminalTrackingSystem.Registration
         SqlDataAdapter adp = new SqlDataAdapter();
         protected void Page_Load(object sender, EventArgs e)
         {
-            Timer1.Enabled = true;  
+            Timer1.Enabled = true;
+            cmd.Connection = con;
         }
 
         protected void Timer1_Tick(object sender, EventArgs e)
         {
-            Label1.Text = DateTime.Now.ToString("hh:mm:ss dddd ,  dd MMMM yyyy ");
+            Label1.Text = DateTime.Now.ToString("hh:mm:ss tt dddd ,  dd MMMM yyyy ");
         }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            con.Open();
+            FileUpload1.SaveAs(Server.MapPath("AnyProof") + "/" + FileUpload1.FileName);
+            Literal1.Text = "AnyProof" + "/" + FileUpload1.FileName;
+            cmd.CommandText = "INSERT INTO CrimeComplain VALUES('" + UserName.Text + "', '" + PoliceStation.Text + "', '" + CrimeType.SelectedValue + "', '" + InvolvedPerson.Text + "', '" + FileUpload1.FileName + "', '" + CrimeStation.Text + "', '" + CrimeDate.Text + "', '" + CurrentDate.Text + "', '" + CrimeStatus.Text + "')";
+            cmd.ExecuteNonQuery();
+            Label2.Text = "We listened you !";
+            con.Close();
+            UserName.Text = "";
+            PoliceStation.Text = "";
+            InvolvedPerson.Text = "";
+            CrimeStation.Text = "";
+            CrimeDate.Text = "";
+            CurrentDate.Text = "";
+            CrimeStatus.Text = "";
+        }
+
+
     }
 }

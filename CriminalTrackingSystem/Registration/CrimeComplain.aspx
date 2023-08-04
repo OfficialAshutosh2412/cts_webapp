@@ -2,12 +2,12 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    
+    <%--date time renderer--%>
     <asp:ScriptManager ID="ScriptManager1" runat="server">
     </asp:ScriptManager>
     <asp:UpdatePanel ID="UpdatePanel1" runat="server">
         <ContentTemplate>
-            <asp:Label ID="Label1" runat="server" CssClass="z-1"></asp:Label>
+            <asp:Label ID="Label1" runat="server" Class=" p-2  text-white bg-danger" ></asp:Label>
         </ContentTemplate>
         <Triggers>
             <asp:AsyncPostBackTrigger ControlID="Timer1" EventName="Tick" />
@@ -68,6 +68,7 @@
                 <div>
                     <label>Give us Proof</label>
                     <asp:FileUpload ID="FileUpload1" runat="server"  class="cc-box"/>
+                    <asp:Literal ID="Literal1" runat="server"></asp:Literal>
                 </div>
                 <div>
                     <label>Crime Station</label>
@@ -95,7 +96,9 @@
             </div>
             <%--fifth row--%>
             <div class="cc-flexbox">
-                <asp:Button ID="Button1" runat="server" Text="send complain to us !"  class="cc-btn"  />
+                <asp:Button ID="Button1" runat="server" Text="send complain to us !"  class="cc-btn" OnClick="Button1_Click"   />
+                <input type="reset" value="clear fields" class="cc-btn"/><br />
+                <asp:Label ID="Label2" runat="server" Font-Bold="True" Font-Size="Medium" ForeColor="#009933"></asp:Label>
             </div>
         </div>
     </div>

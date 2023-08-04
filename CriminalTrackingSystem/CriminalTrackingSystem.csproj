@@ -89,6 +89,7 @@
     <Content Include="dist\img\cts_logo.png" />
     <Content Include="dist\img\fb.png" />
     <Content Include="dist\img\insta.png" />
+    <Content Include="dist\img\letter.png" />
     <Content Include="dist\img\link.png" />
     <Content Include="dist\img\question.png" />
     <Content Include="dist\img\trial.png" />
