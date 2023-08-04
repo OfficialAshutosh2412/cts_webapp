@@ -2,6 +2,21 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    
+    <asp:ScriptManager ID="ScriptManager1" runat="server">
+    </asp:ScriptManager>
+    <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+        <ContentTemplate>
+            <asp:Label ID="Label1" runat="server" CssClass="z-1"></asp:Label>
+        </ContentTemplate>
+        <Triggers>
+            <asp:AsyncPostBackTrigger ControlID="Timer1" EventName="Tick" />
+        </Triggers>
+    </asp:UpdatePanel>
+    <asp:Timer ID="Timer1" runat="server" Interval="1000" OnTick="Timer1_Tick">
+    </asp:Timer>
+    
+    <br />
     <div class="cc-container min-width">
         <div class="cc-semi-container ">
             <h2><img src="../dist/img/trial.png" />Crime Complain</h2>
@@ -15,7 +30,7 @@
                 </div>
                 <div>
                     <label>Police Station</label>
-                    <asp:TextBox ID="PoliceStation" runat="server" class="cc-box"></asp:TextBox>
+                    <asp:TextBox ID="PoliceStation" runat="server" class="cc-box" placeholder="police station name"></asp:TextBox>
                     <br />
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="PoliceStation" ErrorMessage="*station name required" Font-Bold="True" Font-Size="Small" ForeColor="#FF5050"></asp:RequiredFieldValidator>
                 </div>
@@ -45,7 +60,7 @@
             <div class="cc-flexbox">
                 <div>
                     <label>Involved Persons</label>
-                    <asp:TextBox ID="InvolvedPerson" runat="server" class="cc-box"></asp:TextBox>
+                    <asp:TextBox ID="InvolvedPerson" runat="server" class="cc-box" placeholder="name persons who are involved in crime..."></asp:TextBox>
                 </div>
             </div>
             <%--third row--%>
@@ -56,31 +71,31 @@
                 </div>
                 <div>
                     <label>Crime Station</label>
-                    <asp:TextBox ID="CrimeStation" runat="server" class="cc-box" ></asp:TextBox>
+                    <asp:TextBox ID="CrimeStation" runat="server" class="cc-box" placeholder="crime police station name"></asp:TextBox>
                 </div>
                 <div>
                     <label>Date of Crime</label>
-                    <asp:TextBox ID="CrimeDate" runat="server" class="cc-box" ></asp:TextBox>
+                    <asp:TextBox ID="CrimeDate" runat="server" class="cc-box" placeholder="when crime happened?"></asp:TextBox>
                </div>
             </div>
             <%--fourth row--%>
             <div class="cc-flexbox">
                 <div>
                     <label>Current Date & Time</label>
-                    <asp:TextBox ID="CurrentDate" runat="server" class="cc-box"></asp:TextBox>
+                    <asp:TextBox ID="CurrentDate" runat="server" class="cc-box"  placeholder="enter current date and time"></asp:TextBox>
                     <br />
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="CurrentDate" ErrorMessage="*date required" Font-Bold="True" Font-Size="Small" ForeColor="#FF5050"></asp:RequiredFieldValidator>
                 </div>
                 <div>
                     <label>Status</label>
-                    <asp:TextBox ID="CrimeStatus" runat="server" class="cc-box"></asp:TextBox>
+                    <asp:TextBox ID="CrimeStatus" runat="server" class="cc-box" placeholder="write 0, if crime solved, 1 if not solved..."></asp:TextBox>
                     <br />
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="CrimeStatus" ErrorMessage="*required status" Font-Bold="True" Font-Size="Small" ForeColor="#FF5050"></asp:RequiredFieldValidator>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator5"  runat="server" ControlToValidate="CrimeStatus" ErrorMessage="*required status" Font-Bold="True" Font-Size="Small" ForeColor="#FF5050"></asp:RequiredFieldValidator>
                 </div>
             </div>
             <%--fifth row--%>
             <div class="cc-flexbox">
-                <asp:Button ID="Button1" runat="server" Text="send complain to us !"  class="cc-btn" />
+                <asp:Button ID="Button1" runat="server" Text="send complain to us !"  class="cc-btn"  />
             </div>
         </div>
     </div>

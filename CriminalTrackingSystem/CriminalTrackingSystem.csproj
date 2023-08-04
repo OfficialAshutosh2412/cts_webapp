@@ -71,16 +71,19 @@
     <Content Include="Admin\GalleryAdmin.aspx" />
     <Content Include="Admin\AdminHome.aspx" />
     <Content Include="Admin\PoliceStation.aspx" />
-    <Content Include="App_Data\CTS.mdf" />
-    <Content Include="App_Data\CTS_log.ldf">
-      <DependentUpon>CTS.mdf</DependentUpon>
-    </Content>
-    <Content Include="Contact.aspx" />
     <Content Include="adPhotos\1.jpeg" />
     <Content Include="adPhotos\2.jpg" />
     <Content Include="adPhotos\3.jpg" />
     <Content Include="adPhotos\4.jpg" />
     <Content Include="adPhotos\5.jpg" />
+    <Content Include="adPhotos\6.jpg" />
+    <Content Include="adPhotos\7.jpg" />
+    <Content Include="adPhotos\8.jpg" />
+    <Content Include="App_Data\CTS.mdf" />
+    <Content Include="App_Data\CTS_log.ldf">
+      <DependentUpon>CTS.mdf</DependentUpon>
+    </Content>
+    <Content Include="Contact.aspx" />
     <Content Include="dist\css\style.css" />
     <Content Include="dist\favicon\cts_logo.ico" />
     <Content Include="dist\img\cts_logo.png" />
@@ -253,6 +256,7 @@
     <Folder Include="RegisterPhoto\" />
     <Folder Include="Registration\AnyProof\" />
     <Folder Include="Registration\MissingPerson\" />
+    <Folder Include="Registration\MissingValuableRecipt\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

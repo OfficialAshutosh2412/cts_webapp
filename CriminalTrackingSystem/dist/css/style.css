@@ -4,6 +4,12 @@
     padding: 0;
     margin: 0;
 }
+
+::placeholder { /* Default */
+    font-size:10pt;
+    font-style:italic;
+    padding:1%;
+}
 /*theme css*/
 :root {
     --tan: #ffe1b2;
@@ -42,11 +48,22 @@
 .deflex {
     display: flex;
 }
-/*signup*/
-.customContainer {
-    width: 70%;
-    margin: 0 auto;
+/*visitor home*/
+.slide-container .carousel {
+    width: 100%;
+    height: 50vh;
+    overflow:hidden
 }
+    .slide-container .carousel img {
+        width:100%;
+        height:100%;
+        object-fit: fill;
+    }
+    /*signup*/
+    .customContainer {
+        width: 70%;
+        margin: 0 auto;
+    }
 
 .signup {
     width: 80%;
