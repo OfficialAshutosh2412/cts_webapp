@@ -27,21 +27,25 @@ namespace CriminalTrackingSystem.Registration
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            var name = GCUserName.Text;
-            var ps = GCPoliceStation.Text;
-            var title = GCTitle.Text;
-            var details = GCDetails.Text;
-            var ip = GCInvolvedPersons.Text;
-            var cd = GCCurrentDate.Text;
-            var status = GCCrimeStatus.Text;
-            if ((name == "") || (ps == "") || (title == "") || (details == "") || (ip == "") || (cd == "") || (status == ""))
+
+            if ((GCUserName.Text == "") || (GCPoliceStation.Text == "") || (GCTitle.Text == "") || (GCDetails.Text == "") || (GCInvolvedPersons.Text == "") || (GCCurrentDate.Text == "") || (GCCrimeStatus.Text == ""))
             {
                 Response.Write("<script>alert('fields are empty, fill them first !');</script>");
-                
             }
             else
             {
-                Label2.Text = "okay";
+                con.Open();
+                cmd.CommandText = "INSERT INTO GeneralComplain VALUES('" + GCUserName.Text + "', '" + GCPoliceStation.Text + "', '" + GCTitle.Text + "', '" + GCDetails.Text + "', '" + GCInvolvedPersons.Text + "', '" + GCCurrentDate.Text + "', '" + GCCrimeStatus.Text + "')";
+                cmd.ExecuteNonQuery();
+                Label2.Text = "We listened you !";
+                con.Close();    
+                GCUserName.Text = "";
+                GCPoliceStation.Text = "";
+                GCTitle.Text = "";
+                GCDetails.Text = "";
+                GCInvolvedPersons.Text = "";
+                GCCurrentDate.Text = "";
+                GCCrimeStatus.Text = "";
             }
         }
     }

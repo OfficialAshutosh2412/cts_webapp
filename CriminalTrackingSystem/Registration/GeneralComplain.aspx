@@ -64,10 +64,9 @@
             <%--fifth row--%>
             <div class="cc-flexbox">
                 <asp:Button ID="Button1" runat="server" Text="send complain to us !"  class="cc-btn"  OnClick="Button1_Click"/>
-                <input type="reset" value="clear fields" class="cc-btn"/><br />
-                <asp:Label ID="Label2" runat="server" class="text-success"></asp:Label>
+                <input type="reset" value="clear fields" class="cc-btn"/>
+                <asp:Label ID="Label2" runat="server" class="text-success pt-3"></asp:Label>
             </div>
         </div>
     </div>
-
 </asp:Content>

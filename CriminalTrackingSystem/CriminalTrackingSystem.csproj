@@ -87,6 +87,7 @@
     <Content Include="dist\css\style.css" />
     <Content Include="dist\favicon\cts_logo.ico" />
     <Content Include="dist\img\cts_logo.png" />
+    <Content Include="dist\img\diamond_2600353.png" />
     <Content Include="dist\img\fb.png" />
     <Content Include="dist\img\insta.png" />
     <Content Include="dist\img\letter.png" />

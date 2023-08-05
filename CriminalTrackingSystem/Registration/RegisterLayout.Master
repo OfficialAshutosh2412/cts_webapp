@@ -47,8 +47,10 @@
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Missing Report
                             </a>
                             <ul class="dropdown-section shadow-sm">
-                                <li><a class="dropdown-item hidden-drop" href="#">For Valuable</a></li>
-                                <li><a class="dropdown-item hidden-drop" href="#">For a Person</a></li>
+                                <li><asp:HyperLink ID="HyperLink4" class="dropdown-item hidden-drop" runat="server" NavigateUrl="~/Registration/MissingValuable.aspx">For Valuables</asp:HyperLink></li>
+                                <li>
+                                    <asp:HyperLink ID="HyperLink5" class="dropdown-item hidden-drop" runat="server" NavigateUrl="~/Registration/MissingPerson.aspx">For a missing person</asp:HyperLink>
+                                </li>
                             </ul>
                         </li>
                         <li class="nav-item">
