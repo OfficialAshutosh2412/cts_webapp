@@ -5,9 +5,9 @@
     <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
     <asp:Timer ID="Timer1" runat="server" Interval="1000" OnTick="Timer1_Tick">
     </asp:Timer>
-    <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+    <asp:UpdatePanel ID="UpdatePanel1" runat="server" class="mt-3">
         <ContentTemplate>
-            <asp:Label ID="Label1" runat="server" CssClass="p-3 bg-danger text-white"></asp:Label>
+            <asp:Label ID="Label1" runat="server" CssClass="p-2 bg-danger text-white"></asp:Label>
         </ContentTemplate>
         <Triggers>
             <asp:AsyncPostBackTrigger ControlID="Timer1" EventName="Tick" />

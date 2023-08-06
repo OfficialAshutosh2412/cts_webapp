@@ -11,70 +11,64 @@
     <link rel="icon" href="dist/favicon/cts_logo.ico"" type="image/x-icon">
     <link href="dist/css/bootstrap.min.css" rel="stylesheet" />
     <link href="dist/css/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <form id="form1" runat="server">
-        <nav class="bg-success navbar navbar-expand-lg  shadow text-white">
-          <div class="container-fluid">
-            <a class="navbar-brand" href="Home.aspx">
-                <img src="dist/img/cts_logo.png" class="head-image"  alt="CTS_logo.png">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                  <a class="nav-link active text-white" aria-current="page" href="Home.aspx">Home</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link text-white" href="About.aspx">About</a>
-                </li>
-                <li class="nav-item ">
-                  <a class="nav-link text-white" href="Gallery.aspx">Gallery</a>
-                </li>
-                <li class="nav-item ">
-                  <a class="nav-link text-white" href="Contact.aspx">Contact us</a>
-                </li>
-                  <li class="nav-item ">
-                  <a class="nav-link text-white" href="FAQ.aspx">FAQ</a>
-                </li>
-                <li class="nav-item ">
-                  <a class="nav-link text-white" href="Signup.aspx">Signup</a>
-                </li>
-                <li class="nav-item ">
-                  <a class=" btn text-white bg-danger border-white"  href="Login.aspx">Login</a>
-                </li>
-              </ul>
-              
+        <%--header--%>
+        <nav class="visitor-container">
+            <div class="visitor-nav">
+                <div class="hamburger">
+                    <img src="dist/img/cts_logo.png" alt=""><i class="fa-solid fa-bars " id="togglebtn"></i>
+                </div>
+                <div class="navs-item show">
+                    <ul>
+                        <li>
+                            <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Home.aspx"><i class="fa-solid fa-house"></i>Home</asp:HyperLink>
+                        </li>
+                        <li>
+                            <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/About.aspx"><i class="fa-solid fa-circle-info"></i>About us</asp:HyperLink>
+                        </li>
+                        <li>
+                            <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/Gallery.aspx"><i class="fa-solid fa-images"></i>Gallery</asp:HyperLink>
+                        </li>
+                        <li>
+                            <asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="~/Contact.aspx"><i class="fa-solid fa-address-book"></i>Contact us</asp:HyperLink></li>
+                        <li>
+                            <asp:HyperLink ID="HyperLink5" runat="server" NavigateUrl="~/Login.aspx"><i class="fa-solid fa-right-to-bracket"></i>Login</asp:HyperLink>
+                        </li>
+                    </ul>
+                </div>
             </div>
-          </div>
         </nav>
-
+        <%--content holder--%>
         <div>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
                 
             </asp:ContentPlaceHolder>
         </div>
 
-        <footer class=" p-3 bg-success text-white d-flex justify-content-center align-content-center  flex-column" style="bottom:0">
-            <div>
-                <h2 class="text-center">Follow us</h2>
-                <div class="d-flex justify-content-center align-content-center">
-                    <a href="http://"><img class="follow"  src="dist/img/fb.png" /></a>
-                    <a href="http://"><img class="follow" src="dist/img/insta.png" /></a>
-                    <a href="http://"><img class="follow" src="dist/img/link.png" /></a>
-                    <a href="http://"><img class="follow" src="dist/img/whap.png" /></a>
-                    <a href="http://"><img class="follow" src="dist/img/yweet.png" /></a>
-                </div>
+        <%--footer--%>
+        <footer class="footer">
+        <div class="footer-brand">
+            <img src="./dist/img/cts_logo.png" alt="">
+        </div>
+        
+        <div>
+            <h6>follow us</h6>
+            <div class="footer-follow">
+              
+                    <a href="http://" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                  <a href="http://" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
+                 <a href="http://" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                  <a href="http://" target="_blank"><i class="fa-brands fa-square-threads"></i></a>
+              
             </div>
-            <div class="text-capitalize text-center">
-                <p>
-                    all rights are reserved CTS &copy; 2023 Inc.
-                </p>
-            </div>
-        </footer>
-
+        </div>
+        <div class="rights">
+            <p>All rights are reserved &copy;Criminal tracking system 2023 .inc</p>
+        </div>
+    </footer>
         
 
 
@@ -83,7 +77,7 @@
 
 
     <script src="dist/js/bootstrap.bundle.min.js"></script>
-
+    <script src="dist/js/custom.js"></script>
 
     
 </body>

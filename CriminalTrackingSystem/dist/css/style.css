@@ -3,18 +3,102 @@
     scroll-behavior: smooth;
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
-::placeholder { /* Default */
-    font-size:10pt;
-    font-style:italic;
-    padding:1%;
+::placeholder {
+    font-size: 10pt;
+    font-style: italic;
+    padding: 1%;
 }
+
 /*theme css*/
 :root {
     --tan: #ffe1b2;
 }
 /*visitor navbar*/
+.visitor-container {
+    background: #ffddab;
+    align-items: center;
+}
+
+#hams {
+    display: none;
+}
+
+.visitor-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 3%;
+}
+
+    .visitor-nav img {
+        width: 60px;
+        padding-bottom: 5px
+    }
+
+    .visitor-nav ul {
+        display: flex;
+        list-style: none;
+        align-items: center;
+        margin: 0;
+    }
+
+        .visitor-nav ul li {
+            margin-left: 30px;
+        }
+
+            .visitor-nav ul li a {
+                text-decoration: none;
+                color: black;
+            }
+
+            .visitor-nav ul li a {
+                font-weight: 400;
+            }
+
+.hamburger {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+    .hamburger i {
+        display: none;
+    }
+.dropdownbtn div {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    z-index: 10000;
+    background: #ffe3a9;
+    padding:4px;
+    box-shadow:0px 0px 10px 0px gray;
+    line-height:40px;
+    border-radius:5px;
+    transition:0.1s all;
+}
+.dropdownbtn{
+    display:none
+}
+.dropdownbtn div * {
+    padding: 5px;
+    transition: 0.3s all;
+}
+        .dropdownbtn div *:hover {
+            background: #006a87;
+            border-radius: 5px;
+            color: white;
+            transition: 0.3s all;
+        }
+.drophover:hover{
+    cursor:pointer;
+}
+.drophover:hover .dropdownbtn {
+    display: block;
+}
+
 .min-width {
     min-width: 300px
 }
@@ -48,22 +132,53 @@
 .deflex {
     display: flex;
 }
-/*visitor home*/
-.slide-container .carousel {
-    width: 100%;
-    height: 50vh;
-    overflow:hidden
+/*visitor footer*/
+
+.footer {
+    background: #ffe3a9;
+    text-align: center;
+    text-transform: capitalize;
 }
-    .slide-container .carousel img {
-        width:100%;
-        height:100%;
-        object-fit: fill;
+
+.footer-brand {
+    margin-bottom: 20px;
+}
+
+    .footer-brand img {
+        width: 150px;
     }
-    /*signup*/
-    .customContainer {
-        width: 70%;
-        margin: 0 auto;
+
+.footer-follow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+    .footer-follow a {
+        color: black;
+        padding-right: 1%;
+        font-size: 1.4em
     }
+
+.footer h6 {
+    font-weight: 600;
+}
+
+.rights {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fdc38d;
+    font-size: 0.9em;
+    font-weight: 600;
+}
+/*signup*/
+.customContainer {
+    width: 70%;
+    margin: 0 auto;
+}
 
 .signup {
     width: 80%;
@@ -74,80 +189,7 @@
     width: 50%;
     margin: 0 auto;
 }
-/*user navbar*/
-.user-navbar {
-    background: var(--tan);
-    color: black;
-    box-shadow: 1px 1px 10px 0px gray;
-    padding: 0 2%;
-    transition: 0.5s;
-}
 
-    .user-navbar .hovers {
-        position: relative;
-    }
-
-    .user-navbar img {
-        width: 50px
-    }
-
-    .user-navbar a {
-        font-weight: 600;
-    }
-
-    .user-navbar .dropdown-section {
-        background: #ffbd9c;
-        transition: 0.4s all;
-        list-style: none;
-        border-radius: 5px;
-        position: absolute;
-        z-index: 1;
-        left: 20px;
-        width: fit-content;
-    }
-
-    .user-navbar .dropdown-section {
-        border-top: none;
-        border-right: none;
-        border-left: none;
-        border-bottom: 1px solid #ff9999;
-        padding: 10px;
-        display: none;
-    }
-
-.dropdown:hover .dropdown-section {
-    display: block;
-}
-
-.user-navbar .dropdown-section li:hover {
-    text-decoration: underline;
-    transition: 0.3s all;
-}
-
-.logout {
-    background: #d40027;
-    background: linear-gradient(45deg, var(--tan) 50%, #ffa67e 50%);
-    background-size: 400%;
-    background-position: left;
-    transition: 0.5s;
-    width: fit-content;
-    padding-left: 2%;
-    padding-right: 2%;
-}
-
-    .logout:hover {
-        background-position: right;
-        transition: 0.5s all;
-    }
-/*user footer*/
-.user-footer {
-    background: var(--tan);
-    padding: 1%;
-}
-
-    .user-footer .img-width {
-        width: 150px;
-    }
 
 /*crime complain*/
 .cc-container {
@@ -192,11 +234,12 @@
     padding: 0.7%;
     border-radius: 5px;
     border: 2px groove #ffbb7a;
-    transition:0.4s all;
-    background:white;
+    transition: 0.4s all;
+    background: white;
 }
-    .cc-box:focus{
-        outline:2px solid #ff9999;
+
+    .cc-box:focus {
+        outline: 2px solid #ff9999;
     }
 
 .cc-btn {
@@ -241,18 +284,56 @@
     .user-navbar .dropdown-section {
         width: fit-content;
     }
-    
+
     .cc-container {
         width: 100%;
         margin: 0 auto;
-        padding:3%;
+        padding: 3%;
         box-shadow: 2px 2px 5px 0px black;
-        
     }
 }
 
 /*medium screen*/
 @media screen and (max-width:682px) {
+    .visitor-nav {
+        display: block;
+    }
+
+        .visitor-nav ul {
+            display: flex;
+            flex-direction: column;
+            background: #ffd79b;
+            height: 100%;
+            width: 100%;
+            justify-content: space-evenly;
+            align-items: flex-start;
+            padding: 10px;
+        }
+
+    .navs-item {
+        position: fixed;
+        z-index:999;
+        width: 30%;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        transform: translateX(0%);
+        transition: 0.3s all;
+    }
+
+    .show {
+        transform: translateX(-100%);
+    }
+
+    .visitor-nav ul li {
+        margin: 2%;
+    }
+
+    .hamburger i {
+        display: block;
+        cursor: pointer;
+    }
+
     .hero {
         flex-direction: column;
         justify-content: center;
@@ -275,6 +356,7 @@
         width: 100%;
         margin: 0 auto;
     }
+
     .cc-flexbox {
         display: block;
         width: 100%;

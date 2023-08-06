@@ -96,6 +96,7 @@
     <Content Include="dist\img\trial.png" />
     <Content Include="dist\img\whap.png" />
     <Content Include="dist\img\yweet.png" />
+    <Content Include="dist\js\custom.js" />
     <Content Include="FAQ.aspx" />
     <Content Include="Gallery.aspx" />
     <Content Include="Home.aspx" />
@@ -254,7 +255,6 @@
   <ItemGroup>
     <Folder Include="Admin\AdminGallery\" />
     <Folder Include="Admin\Police\" />
-    <Folder Include="dist\js\" />
     <Folder Include="RegisterPhoto\" />
     <Folder Include="Registration\AnyProof\" />
     <Folder Include="Registration\MissingPerson\" />

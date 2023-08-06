@@ -10,81 +10,75 @@
     <link rel="icon" href="../dist/favicon/cts_logo.ico"" type="image/x-icon">
     <link href="../dist/css/bootstrap.min.css" rel="stylesheet" />
     <link href="../dist/css/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
 </head>
 <body>
     <form id="form1" runat="server">
-        <%--navbar--%>
-        <nav class="navbar navbar-expand-lg user-navbar">
-            <div class="container-fluid ">
-                <a class="navbar-brand " href="./RegisterHome.aspx">
-                    <img src="../dist/img/cts_logo.png" />
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon border-0"></span>
-                </button>
-                <div class="collapse navbar-collapse justify-content-end link-dark" id="navbarNavDropdown">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="./RegisterHome.aspx">Home</a>
+        <%--header--%>
+        <nav class="visitor-container">
+            <div class="visitor-nav">
+                <div class="hamburger">
+                    <img src="../dist/img/cts_logo.png" /><i class="fa-solid fa-bars " id="togglebtn"></i>
+                </div>
+                <div class="navs-item show">
+                    <ul>
+                        <li>
+                            <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Registration/RegisterHome.aspx"><i class="fa-solid fa-house"></i>Home</asp:HyperLink>
                         </li>
-                        <%--dropdown one--%>
-                        <li class="nav-item dropdown hovers">
-                            <a class="nav-link dropdown-toggle toggler" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Complain Report
-                            </a>
-                            <ul class="dropdown-section shadow-sm">
-                                <li>
-                                    <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/Registration/CrimeComplain.aspx" class="dropdown-item hidden-drop">For Crime</asp:HyperLink>
-                                </li>
-
-                                <li>
-                                    <asp:HyperLink ID="HyperLink3" class="dropdown-item hidden-drop" runat="server" NavigateUrl="~/Registration/GeneralComplain.aspx">General complain</asp:HyperLink>
-                                </li>
-                            </ul>
+                        <li class="drophover">
+                            <asp:HyperLink ID="HyperLink2" runat="server" ><i class="fa-solid fa-circle-chevron-down"></i>Report Complain</asp:HyperLink>
+                            <div class="dropdownbtn">
+                                <div>
+                                    <asp:HyperLink ID="HyperLink7" runat="server" NavigateUrl="~/Registration/CrimeComplain.aspx"><i class="fa-solid fa-handcuffs"></i>Crime Complain</asp:HyperLink>
+                                <asp:HyperLink ID="HyperLink6" runat="server" NavigateUrl="~/Registration/GeneralComplain.aspx"><i class="fa-solid fa-pen-nib"></i>General Complain</asp:HyperLink>
+                                </div>
+                            </div>
                         </li>
-                        <%--dropdown two--%>
-                        <li class="nav-item dropdown hovers">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Missing Report
-                            </a>
-                            <ul class="dropdown-section shadow-sm">
-                                <li><asp:HyperLink ID="HyperLink4" class="dropdown-item hidden-drop" runat="server" NavigateUrl="~/Registration/MissingValuable.aspx">For Valuables</asp:HyperLink></li>
-                                <li>
-                                    <asp:HyperLink ID="HyperLink5" class="dropdown-item hidden-drop" runat="server" NavigateUrl="~/Registration/MissingPerson.aspx">For a missing person</asp:HyperLink>
-                                </li>
-                            </ul>
+                        <li class="drophover">
+                            <asp:HyperLink ID="HyperLink4" runat="server" ><i class="fa-solid fa-address-book"></i>Report Missing</asp:HyperLink>
+                            <div class="dropdownbtn">
+                                <div>
+                                    <asp:HyperLink ID="HyperLink8" runat="server" NavigateUrl="~/Registration/MissingPerson.aspx"><i class="fa-solid fa-user"></i>For a Person</asp:HyperLink>
+                                    <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/Registration/MissingValuable.aspx"><i class="fa-solid fa-star"></i>For Valuables</asp:HyperLink>
+                                
+                                </div>
+                            </div>
                         </li>
-                        <li class="nav-item">
-                            <asp:HyperLink ID="HyperLink1" runat="server" Class=" logout border border-2 border-black rounded-2 nav-link" NavigateUrl="~/Login.aspx">Logout</asp:HyperLink>
+                        <li>
+                            <asp:HyperLink ID="HyperLink9" runat="server" NavigateUrl="~/Login.aspx"><i class="fa-solid fa-right-from-bracket"></i>Logout</asp:HyperLink>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
-            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-            </asp:ContentPlaceHolder>
-        
-     <%--footer--%>
-        <footer class="user-footer">
-            <div class="text-center">
-                <img src="../dist/img/cts_logo.png" class="img-width"/>
-                <h2 class="text-center">Follow us</h2>
-                <div class="d-flex justify-content-center align-content-center">
-                    <a href="http://"><img class="follow"  src="../dist/img/fb.png" /></a>
-                    <a href="http://"><img class="follow" src="../dist/img/insta.png" /></a>
-                    <a href="http://"><img class="follow" src="../dist/img/link.png" /></a>
-                    <a href="http://"><img class="follow" src="../dist/img/whap.png" /></a>
-                    <a href="http://"><img class="follow" src="../dist/img/yweet.png" /></a>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+
+        <%--footer--%>
+        <footer class="footer">
+            <div class="footer-brand">
+                <img src="../dist/img/cts_logo.png" alt="">
+            </div>
+
+            <div>
+                <h6>follow us</h6>
+                <div class="footer-follow">
+                    <a href="http://" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="http://" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
+                    <a href="http://" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="http://" target="_blank"><i class="fa-brands fa-square-threads"></i></a>
+
                 </div>
             </div>
-            <div class="text-capitalize text-center">
-                <p>
-                    all rights are reserved CTS &copy; 2023 Inc.
-                </p>
+            <div class="rights">
+                <p>All rights are reserved &copy;Criminal tracking system 2023 .inc</p>
             </div>
         </footer>
     </form>
 
     <script src="../dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../dist/js/custom.js"></script>
     
 </body>
 </html>

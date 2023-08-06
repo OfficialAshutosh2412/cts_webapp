@@ -5,7 +5,7 @@
     <%--date time renderer--%>
     <asp:ScriptManager ID="ScriptManager1" runat="server">
     </asp:ScriptManager>
-    <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+    <asp:UpdatePanel ID="UpdatePanel1" runat="server" class="mt-3">
         <ContentTemplate>
             <asp:Label ID="Label1" runat="server" Class=" p-2  text-white bg-danger" ></asp:Label>
         </ContentTemplate>
