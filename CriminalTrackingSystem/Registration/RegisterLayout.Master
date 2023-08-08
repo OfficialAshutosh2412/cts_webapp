@@ -36,7 +36,7 @@
                             </div>
                         </li>
                         <li class="drophover">
-                            <asp:HyperLink ID="HyperLink4" runat="server" ><i class="fa-solid fa-address-book"></i>Report Missing</asp:HyperLink>
+                            <asp:HyperLink ID="HyperLink4" runat="server" ><i class="fa-solid fa-circle-chevron-down"></i>Report Missing</asp:HyperLink>
                             <div class="dropdownbtn">
                                 <div>
                                     <asp:HyperLink ID="HyperLink8" runat="server" NavigateUrl="~/Registration/MissingPerson.aspx"><i class="fa-solid fa-user"></i>For a Person</asp:HyperLink>

@@ -18,6 +18,7 @@ namespace CriminalTrackingSystem.Registration
         protected void Page_Load(object sender, EventArgs e)
         {
             Timer1.Enabled = true;
+            UserName.Text = Session["user"].ToString();
             cmd.Connection = con;
         }
 

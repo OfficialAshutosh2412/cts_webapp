@@ -11,7 +11,14 @@ namespace CriminalTrackingSystem.Registration
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            Timer1.Enabled = true;
+            MPUserName.Text = Session["user"].ToString();
 
+        }
+
+        protected void Timer1_Tick(object sender, EventArgs e)
+        {
+            Label2.Text = DateTime.Now.ToString("hh:mm:ss tt dddd ,  dd MMMM yyyy ");
         }
     }
 }

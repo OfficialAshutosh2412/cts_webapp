@@ -59,6 +59,7 @@
                 <div>
                     <label>Valuable or valuable Receipt Photo</label>
                     <asp:FileUpload ID="FileUpload1" runat="server" class="cc-box"/>
+                    <asp:Literal ID="Literal1" runat="server"></asp:Literal>
                 </div>
             </div>
             <%--third row--%>
@@ -85,7 +86,8 @@
             <%--fifth row--%>
             <div class="cc-flexbox">
                 <asp:Button ID="Button1" runat="server" Text="send report !"  class="cc-btn" OnClick="Button1_Click" />
-                <asp:Button ID="Button2" runat="server" Text="clear fields !" class="cc-btn" OnClick="Button2_Click"/>
+                <input type="reset" value="clear fields" class="cc-btn"/><br />
+                <asp:Label ID="Label2" runat="server" ForeColor="#339933" CssClass="pt-3"></asp:Label>
             </div>
         </div>
     </div>  
