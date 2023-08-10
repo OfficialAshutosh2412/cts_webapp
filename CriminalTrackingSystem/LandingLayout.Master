@@ -15,8 +15,12 @@
 </head>
 <body >
     <form id="form1" runat="server">
+ 
+        <i class="fa-solid fa-language cc-btn p-2 hidden-tool-box " id="tool-toggler" style="font-size:2em" ></i>
+        <a class=" cc-btn p-2 go-to-top" href="#nav">go to top</a>
+              
         <%--top bar--%>
-        <div class="top-bar">
+        <div class="top-bar hide-top">
             <div>
                 <asp:Label ID="Label1" runat="server"></asp:Label>
             </div>
@@ -45,7 +49,7 @@
         </div>
         
         <%--header--%>
-        <nav class="visitor-container" >
+        <nav class="visitor-container" id="nav">
             <div class="visitor-nav">
                 <div class="hamburger">
                     <img src="dist/img/cts_logo.png" alt=""><i class="fa-solid fa-bars " id="togglebtn"></i>

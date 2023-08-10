@@ -3,34 +3,55 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <%--video--%>
-    <div class="head-container">
-        <div>
-            <video autoplay loop muted>
-                <source src="dist/img/videoplayback.webm" />
-            </video>
+    <%--slider--%>
+    <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel" >
+        <div class="carousel-inner slider-section">
+            <div class="carousel-item active slider-img-container" data-bs-interval="3000">
+                <img src="dist/img/AD1.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item slider-img-container" data-bs-interval="3000">
+                <img src="dist/img/AD3...jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item slider-img-container" data-bs-interval="3000">
+                <img src="dist/img/AD4.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item slider-img-container" data-bs-interval="3000">
+                <img src="dist/img/AD5.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item slider-img-container" data-bs-interval="3000">
+                <img src="dist/img/AD6.jpg" class="d-block w-100" alt="...">
+            </div>
         </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
     </div>
-    <%--intro--%>
-    <div class="intro-section">
-        <div>
-            <img src="dist/img/cts_logo.png" />
+
+        <%--news--%>
+        <div class="news">
+            <div class="bg-danger text-white p-2 ticker">NEWS</div>
+            <div class="two">
+                <a href="#">Site is under development.</a>
+                <a href="#">If you see crime happens anywhere, report to our website.</a>
+                <a href="#">User no enabled to upload their profile.</a>
+                <a href="#">Profile edit option will be appear soon</a>
+            </div>
         </div>
-        <div>
-            <h1>Criminal Tracking System</h1>
-            <p>NCRB started CCIS in the year 1995, wherein State police headquarters and district headquarters were covered under this project. CCIS was primarily an initiative to create crime- and criminals-related database that can be used for crime monitoring by monitoring agencies such as National Crime Records Bureau (NCRB), State Crime Records Bureaus (SCRBx) and District Crime Records Bureaus (DCRBx) and to facilitate statistical analysis of crime and criminals related information with the States and monitoring agencies. </p>
-            <asp:HyperLink ID="HyperLink1" CssClass="cc-btn" runat="server" NavigateUrl="~/About.aspx">know more</asp:HyperLink>
-        </div>
-    </div>
-    <%--services 1--%>
+
+    <%--services--%>
     <div class="service-container">
-        <h1 class="menu-heads">Missing<span> Report</span></h1>
+        <h1 class="menu-heads">Our<span> Services</span></h1>
         <div class="services">
             <%--first--%>
             <div class="services-item">
                 <div>
                     <p>Missing Person Report</p>
-                    <asp:HyperLink ID="HyperLink2" runat="server" CssClass="cc-btn" NavigateUrl="~/Login.aspx">visit</asp:HyperLink>
+                    <a href="#" class="cc-btn">visit</a>
                 </div>
                 <div class="hide">
                     <img src="dist/img/mr.jpg" />
@@ -40,33 +61,27 @@
             <div class="services-item">
                 <div>
                     <p>Missing Valuable Report</p>
-                    <asp:HyperLink ID="HyperLink3" runat="server" CssClass="cc-btn" NavigateUrl="~/Login.aspx">visit</asp:HyperLink>
+                    <a href="#" class="cc-btn">visit</a>
                 </div>
                 <div class="hide">
                     <img src="dist/img/mv.jpg" />
                 </div>
             </div>
-        </div>
-    </div>
-    <%--services 2--%>
-    <div class="service-container">
-        <h1 class="menu-heads">File<span> Complain</span></h1>
-        <div class="services">
             <%--third--%>
             <div class="services-item">
                 <div>
                     <p>Crime Complain</p>
-                    <asp:HyperLink ID="HyperLink4" runat="server" CssClass="cc-btn" NavigateUrl="~/Login.aspx">visit</asp:HyperLink>
+                    <a href="#" class="cc-btn">visit</a>
                 </div>
                 <div class="hide">
                     <img src="dist/img/cc.jpg" />
                 </div>
             </div>
-            <%--second--%>
+            <%--fourth--%>
             <div class="services-item">
                 <div>
-                    <p>General Complain</p>
-                    <asp:HyperLink ID="HyperLink5" runat="server" CssClass="cc-btn" NavigateUrl="~/Login.aspx">visit</asp:HyperLink>
+                    <p>Missing Person Report</p>
+                    <a href="#" class="cc-btn">visit</a>
                 </div>
                 <div class="hide">
                     <img src="dist/img/gc.jpg" />
@@ -74,5 +89,7 @@
             </div>
         </div>
     </div>
+
+
 
 </asp:Content>
