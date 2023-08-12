@@ -1,25 +1,27 @@
 ﻿<%@ Page Title="CTS | Crime Complain Portal" Language="C#" MasterPageFile="~/Registration/RegisterLayout.Master" AutoEventWireup="true" CodeBehind="CrimeComplain.aspx.cs" Inherits="CriminalTrackingSystem.Registration.CrimeComplain" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <%--date time renderer--%>
+    <br />
     <asp:ScriptManager ID="ScriptManager1" runat="server">
     </asp:ScriptManager>
-    <asp:UpdatePanel ID="UpdatePanel1" runat="server" class="mt-3">
+    <asp:UpdatePanel ID="UpdatePanel1" runat="server">
         <ContentTemplate>
-            <asp:Label ID="Label1" runat="server" Class=" p-2  text-white bg-danger" ></asp:Label>
+            <asp:Label ID="Label1" runat="server" Class="p-2 text-white bg-danger"></asp:Label>
         </ContentTemplate>
         <Triggers>
             <asp:AsyncPostBackTrigger ControlID="Timer1" EventName="Tick" />
         </Triggers>
     </asp:UpdatePanel>
-    <asp:Timer ID="Timer1" runat="server" Interval="1000" OnTick="Timer1_Tick">
+    <%--date time renderer--%>
+    <asp:Timer ID="Timer1" runat="server" OnTick="Timer1_Tick" Interval="1000">
     </asp:Timer>
-    
     <br />
     <div class="cc-container min-width">
         <div class="cc-semi-container ">
-            <h2><img src="../dist/img/trial.png" />Crime Complain</h2>
+            <h2>
+                <img src="../dist/img/trial.png" />Crime Complain</h2>
             <%--first row--%>
             <div class="cc-flexbox">
                 <div>
@@ -67,7 +69,7 @@
             <div class="cc-flexbox">
                 <div>
                     <label>Give us Proof</label>
-                    <asp:FileUpload ID="FileUpload1" runat="server"  class="cc-box"/>
+                    <asp:FileUpload ID="FileUpload1" runat="server" class="cc-box" />
                     <asp:Literal ID="Literal1" runat="server"></asp:Literal>
                 </div>
                 <div>
@@ -77,13 +79,13 @@
                 <div>
                     <label>Date of Crime</label>
                     <asp:TextBox ID="CrimeDate" runat="server" class="cc-box" placeholder="when crime happened?"></asp:TextBox>
-               </div>
+                </div>
             </div>
             <%--fourth row--%>
             <div class="cc-flexbox">
                 <div>
                     <label>Current Date & Time</label>
-                    <asp:TextBox ID="CurrentDate" runat="server" class="cc-box"  placeholder="enter current date and time"></asp:TextBox>
+                    <asp:TextBox ID="CurrentDate" runat="server" class="cc-box" placeholder="enter current date and time"></asp:TextBox>
                     <br />
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="CurrentDate" ErrorMessage="*date required" Font-Bold="True" Font-Size="Small" ForeColor="#FF5050"></asp:RequiredFieldValidator>
                 </div>
@@ -91,13 +93,13 @@
                     <label>Status</label>
                     <asp:TextBox ID="CrimeStatus" runat="server" class="cc-box" placeholder="write 0, if crime solved, 1 if not solved..."></asp:TextBox>
                     <br />
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator5"  runat="server" ControlToValidate="CrimeStatus" ErrorMessage="*required status" Font-Bold="True" Font-Size="Small" ForeColor="#FF5050"></asp:RequiredFieldValidator>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="CrimeStatus" ErrorMessage="*required status" Font-Bold="True" Font-Size="Small" ForeColor="#FF5050"></asp:RequiredFieldValidator>
                 </div>
             </div>
             <%--fifth row--%>
             <div class="cc-flexbox">
-                <asp:Button ID="Button1" runat="server" Text="send complain to us !"  class="cc-btn" OnClick="Button1_Click"   />
-                <input type="reset" value="clear fields" class="cc-btn"/><br />
+                <asp:Button ID="Button1" runat="server" Text="send complain to us !" class="cc-btn" OnClick="Button1_Click" />
+                <input type="reset" value="clear fields" class="cc-btn" /><br />
                 <asp:Label ID="Label2" runat="server" Font-Bold="True" Font-Size="Medium" ForeColor="#009933"></asp:Label>
             </div>
         </div>

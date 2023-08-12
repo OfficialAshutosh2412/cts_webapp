@@ -6,3 +6,4 @@ document.querySelector('#togglebtn').addEventListener("click", () => {
 document.querySelector('#tool-toggler').addEventListener("click", () => {
     document.querySelector('.top-bar').classList.toggle('hide-top');
 })
+

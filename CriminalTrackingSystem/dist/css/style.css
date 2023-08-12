@@ -5,6 +5,7 @@
     margin: 0;
     box-sizing: border-box;
 }
+
 a{
     text-decoration:none
 }
@@ -284,22 +285,78 @@ a{
 .pad-5 {
     padding: 5%;
 }
-/*about-hero-section*/
+/*about page*/
 .hero {
     display: flex;
-    width: 70%;
-    margin: 0 auto;
+    width: 80%;
+    margin:0 auto;
     align-items: center;
     justify-content: center;
     height:90vh;
-    border-bottom:1px solid gray;
+    
 }
     .hero img{
-        width:100%
+        width:80%;
+        
+    }
+.card-info {
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 50px
+}
+.card-info-sections{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    align-items:center
+}
+.card-item {
+    flex: auto;
+    width: 200px;
+    height: auto;
+    border: 1px solid gray;
+    margin: 0 10px;
+    padding: 1%;
+    box-shadow: 3px 3px 10px 0px gray;
+}
+
+/*gallery page*/
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1%;
+    background:#353535;
+    margin-top:-10px;
+}
+
+    .gallery * {
+        width: 20%;
+        height: auto;
+        flex: auto;
+        margin: 5px;
+        transition: 0.3s ease-in-out all
     }
 
+        .gallery *:hover {
+            transform: translateY(-20px);
+            border: 2px solid white;
+        }
 
+/*contact use page*/
+.contact-us-container {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: -30px;
+    margin-bottom: 10px;
+    border-radius:100px;
+}
 
+/*signin page*/
+
+.signin {
+    width: 40%;
+    margin: 0 auto; 
+}
 .deflex {
     display: flex;
 }
@@ -352,15 +409,18 @@ a{
 }
 
 .signup {
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
+    margin-top:-25px;
+    border-radius:10px;
 }
-/*signin*/
-.signin {
-    width: 50%;
-    margin: 0 auto;
+/*profile*/
+.user-profile {
+    box-shadow: 5px 5px 10px 0px gray;
+    width:80%;
+    margin:0 auto;
+    margin-top:-30px;
 }
-
 
 /*crime complain*/
 .cc-container {
@@ -432,10 +492,35 @@ a{
         color: black;
         font-weight: 600;
     }
-/*responsive queries*/
-/*large screen*/
-@media screen and (max-width:880px) {
-    .hero  {
+
+.register-card{
+    width:70%;
+    margin:0 auto;
+    margin-top:50px;
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    align-items:center;
+}
+    .register-card div{
+        width:250px;
+        height:auto;
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        align-items:center;
+        margin:2%;
+        padding:4%;
+        box-shadow:1px 1px 5px 0px gray;
+        flex:auto;
+    }
+        .register-card div img{
+            width:30%;
+        }
+        /*responsive queries*/
+        /*large screen*/
+        @media screen and (max-width:880px) {
+            .hero  {
         width:100%;
     }
 
@@ -546,6 +631,10 @@ a{
     }
 
     .pad-5 {
-        padding: 0%
+        padding: 0;
     }
+    .signin{
+        width:100%;
+    }
+    
 }

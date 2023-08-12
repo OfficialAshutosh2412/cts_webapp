@@ -22,11 +22,6 @@ namespace CriminalTrackingSystem.Registration
             cmd.Connection = con;
         }
 
-        protected void Timer1_Tick(object sender, EventArgs e)
-        {
-            Label1.Text = DateTime.Now.ToString("hh:mm:ss tt dddd ,  dd MMMM yyyy ");
-        }
-
         protected void Button1_Click(object sender, EventArgs e)
         {
             con.Open();
@@ -45,6 +40,9 @@ namespace CriminalTrackingSystem.Registration
             CrimeStatus.Text = "";
         }
 
-        
+        protected void Timer1_Tick(object sender, EventArgs e)
+        {
+            Label1.Text = DateTime.Now.ToString("hh:mm:ss tt dddd ,  dd MMMM yyyy ");
+        }
     }
 }

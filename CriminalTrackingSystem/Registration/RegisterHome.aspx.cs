@@ -19,5 +19,10 @@ namespace CriminalTrackingSystem.Registration
             cmd.Connection = con;
             Label1.Text = Session["user"].ToString();
         }
+
+        protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -22,25 +22,19 @@ namespace CriminalTrackingSystem
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            if((LoginName.Text=="") || (LoginPassword.Text == ""))
+            con.Open();
+            cmd = new SqlCommand("SELECT * FROM Login WHERE Username='" + LoginName.Text + "' and Password='" + LoginPassword.Text + "'", con);
+            dtr = cmd.ExecuteReader();
+            if (dtr.Read())
             {
-                Response.Write("<script>alert('Error: Empty fields!')</script>");
+                Session["user"] = LoginName.Text;
+                Response.Redirect("~/Registration/RegisterHome.aspx");
             }
             else
             {
-                con.Open();
-                cmd = new SqlCommand("SELECT * FROM Login WHERE Username='" + LoginName.Text + "' and Password='" + LoginPassword.Text + "'", con);
-                dtr = cmd.ExecuteReader();
-                if (dtr.Read())
-                {
-                    Session["user"] = LoginName.Text;
-                    Response.Redirect("~/Registration/RegisterHome.aspx");
-                }
-                else
-                {
-                    Label1.Text = "Invalid username and password, try again!";
-                }
+                Label1.Text = "Invalid username and password, try again!";
             }
+
         }
     }
 }

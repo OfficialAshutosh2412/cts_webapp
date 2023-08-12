@@ -7,17 +7,21 @@
         <div class="signin bg-white p-5 shadow-lg rounded">
             <h1>Login</h1>
             <div class="mb-3">
-                <label class="form-label">Username</label>
-                <asp:TextBox ID="LoginName" runat="server" class="form-control border-2 border-success"></asp:TextBox>
+                <label class="form-label">Username<asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="LoginName" ErrorMessage="*fill username " ForeColor="#FF5050">*</asp:RequiredFieldValidator>
+                </label>
+                &nbsp;<asp:TextBox ID="LoginName" runat="server" class="cc-box"></asp:TextBox>
             </div>
             <div class="mb-3">
-                <label class="form-label">Password</label>
-                <asp:TextBox ID="LoginPassword" runat="server" TextMode="Password" class="form-control border-2 border-success"></asp:TextBox>
+                <label class="form-label">Password<asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="LoginPassword" ErrorMessage="*password is required  to login " ForeColor="#FF5050">*</asp:RequiredFieldValidator>
+                </label>
+                &nbsp;<asp:TextBox ID="LoginPassword" runat="server" TextMode="Password" class="cc-box"></asp:TextBox>
 
             </div>
-            <asp:Button ID="Button1" runat="server" Text="login" class="btn  btn-success" OnClick="Button1_Click"/>
+            <asp:Button ID="Button1" runat="server" Text="login now !" class="cc-btn" OnClick="Button1_Click"/>
             
-            <asp:HyperLink ID="HyperLink1" runat="server" CssClass="text-success" NavigateUrl="~/Signup.aspx">click here lo create account...</asp:HyperLink>
+            <asp:HyperLink ID="HyperLink1" runat="server" CssClass="text-secondary" NavigateUrl="~/Signup.aspx">click here to create account...</asp:HyperLink>
+            
+            <asp:ValidationSummary ID="ValidationSummary1" CssClass="d-none" runat="server" ShowMessageBox="True" />
             
             <div><asp:Label ID="Label1" runat="server" Font-Bold="True" Font-Size="Small" ForeColor="#FF5050"></asp:Label></div>
         </div>
