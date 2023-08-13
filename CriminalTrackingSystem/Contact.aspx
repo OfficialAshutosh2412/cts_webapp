@@ -33,7 +33,7 @@
                 </label>
                 &nbsp;<asp:TextBox ID="ContactDetails" runat="server" TextMode="MultiLine" class="cc-box "></asp:TextBox>
             </div>
-            <asp:Button ID="ContactBtn" runat="server" Text="submit details"  class="cc-btn" OnClick="ContactBtn_Click"/>
+            <asp:Button ID="ContactBtn" runat="server" Text="submit details"  class="send" OnClick="ContactBtn_Click"/>
 
             <asp:Label ID="Label1" runat="server" ForeColor="#339933"></asp:Label>
 

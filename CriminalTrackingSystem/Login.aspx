@@ -17,7 +17,7 @@
                 &nbsp;<asp:TextBox ID="LoginPassword" runat="server" TextMode="Password" class="cc-box"></asp:TextBox>
 
             </div>
-            <asp:Button ID="Button1" runat="server" Text="login now !" class="cc-btn" OnClick="Button1_Click"/>
+            <asp:Button ID="Button1" runat="server" Text="login now !" class="send p-2" OnClick="Button1_Click"/><br />
             
             <asp:HyperLink ID="HyperLink1" runat="server" CssClass="text-secondary" NavigateUrl="~/Signup.aspx">click here to create account...</asp:HyperLink>
             

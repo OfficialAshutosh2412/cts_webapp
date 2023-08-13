@@ -17,7 +17,7 @@
     <%--date time renderer--%>
     <asp:Timer ID="Timer1" runat="server" OnTick="Timer1_Tick" Interval="1000">
     </asp:Timer>
-    <br />
+    <%--form--%>
     <div class="cc-container min-width">
         <div class="cc-semi-container ">
             <h2>
@@ -25,19 +25,15 @@
             <%--first row--%>
             <div class="cc-flexbox">
                 <div>
-                    <label>Username</label>
+                    <label>Username<asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="UserName" ErrorMessage="*username required" Font-Bold="True" Font-Size="Small" ForeColor="#FF5050">*</asp:RequiredFieldValidator></label>
                     <asp:TextBox ID="UserName" runat="server" class="cc-box"></asp:TextBox>
-                    <br />
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="UserName" ErrorMessage="*username required" Font-Bold="True" Font-Size="Small" ForeColor="#FF5050"></asp:RequiredFieldValidator>
                 </div>
                 <div>
-                    <label>Police Station</label>
+                    <label>Police Station<asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="PoliceStation" ErrorMessage="*station name required" Font-Bold="True" Font-Size="Small" ForeColor="#FF5050">*</asp:RequiredFieldValidator></label>
                     <asp:TextBox ID="PoliceStation" runat="server" class="cc-box" placeholder="police station name"></asp:TextBox>
-                    <br />
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="PoliceStation" ErrorMessage="*station name required" Font-Bold="True" Font-Size="Small" ForeColor="#FF5050"></asp:RequiredFieldValidator>
                 </div>
                 <div>
-                    <label>Crime Type</label>
+                    <label>Crime Type<asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="CrimeType" ErrorMessage="*type of crime required" Font-Bold="True" Font-Size="Small" ForeColor="#FF5050">*</asp:RequiredFieldValidator></label>
                     <asp:DropDownList ID="CrimeType" runat="server" class="cc-box">
                         <asp:ListItem Selected="True">--select--</asp:ListItem>
                         <asp:ListItem>Cyber crime</asp:ListItem>
@@ -73,35 +69,127 @@
                     <asp:Literal ID="Literal1" runat="server"></asp:Literal>
                 </div>
                 <div>
-                    <label>Crime Station</label>
+                    <label>Crime Station<asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ControlToValidate="CrimeStation" ErrorMessage="*Report Station  required" Font-Bold="True" Font-Size="Small" ForeColor="#FF5050">*</asp:RequiredFieldValidator></label>
                     <asp:TextBox ID="CrimeStation" runat="server" class="cc-box" placeholder="crime police station name"></asp:TextBox>
                 </div>
                 <div>
-                    <label>Date of Crime</label>
+                    <label>Date of Crime<asp:RequiredFieldValidator ID="RequiredFieldValidator8" runat="server" ControlToValidate="CrimeDate" ErrorMessage="*date of crime required" Font-Bold="True" Font-Size="Small" ForeColor="#FF5050">*</asp:RequiredFieldValidator></label>
                     <asp:TextBox ID="CrimeDate" runat="server" class="cc-box" placeholder="when crime happened?"></asp:TextBox>
                 </div>
             </div>
             <%--fourth row--%>
             <div class="cc-flexbox">
                 <div>
-                    <label>Current Date & Time</label>
+                    <label>Current Date & Time<asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="CurrentDate" ErrorMessage="*date required" Font-Bold="True" Font-Size="Small" ForeColor="#FF5050">*</asp:RequiredFieldValidator></label>
                     <asp:TextBox ID="CurrentDate" runat="server" class="cc-box" placeholder="enter current date and time"></asp:TextBox>
-                    <br />
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="CurrentDate" ErrorMessage="*date required" Font-Bold="True" Font-Size="Small" ForeColor="#FF5050"></asp:RequiredFieldValidator>
+             
                 </div>
                 <div>
-                    <label>Status</label>
-                    <asp:TextBox ID="CrimeStatus" runat="server" class="cc-box" placeholder="write 0, if crime solved, 1 if not solved..."></asp:TextBox>
-                    <br />
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="CrimeStatus" ErrorMessage="*required status" Font-Bold="True" Font-Size="Small" ForeColor="#FF5050"></asp:RequiredFieldValidator>
+                    <label>Status<asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="CrimeStatus" ErrorMessage="*required status" Font-Bold="True" Font-Size="Small" ForeColor="#FF5050">*</asp:RequiredFieldValidator></label>
+                  <asp:TextBox ID="CrimeStatus" runat="server" class="cc-box" placeholder="write 0, if crime solved, 1 if not solved..."></asp:TextBox>
+             
                 </div>
             </div>
             <%--fifth row--%>
             <div class="cc-flexbox">
-                <asp:Button ID="Button1" runat="server" Text="send complain to us !" class="cc-btn" OnClick="Button1_Click" />
-                <input type="reset" value="clear fields" class="cc-btn" /><br />
+                <asp:Button ID="Button2" runat="server" Text="Send" class=" send" OnClick="Button1_Click" />
+                <asp:Button ID="Button1" runat="server" Text="Update" class="cc-btn" OnClick="Button3_Click" />
+                <asp:Button ID="Button3" runat="server" Text="Delete" class=" delete" OnClick="Button3_Click1"  />
+                <input type="reset" value="clear" class=" clear" /><br />
                 <asp:Label ID="Label2" runat="server" Font-Bold="True" Font-Size="Medium" ForeColor="#009933"></asp:Label>
+                <asp:ValidationSummary CssClass="d-none" ID="ValidationSummary1" runat="server" ShowMessageBox="True" />
             </div>
         </div>
     </div>
+
+    <%--grid--%>
+    <div class="cc-grid">
+        <asp:GridView ID="GridView1" CssClass="table text-dark table-hover" runat="server" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="CCId" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None" OnSelectedIndexChanged="GridView1_SelectedIndexChanged"   >
+            <AlternatingRowStyle BackColor="White" />
+            <Columns>
+                <asp:CommandField ShowSelectButton="True" />
+                <asp:BoundField DataField="CCId" HeaderText="ID" InsertVisible="False" ReadOnly="True" SortExpression="CCId" >
+                <HeaderStyle CssClass="bg-danger" />
+                <ItemStyle ForeColor="Black" />
+                </asp:BoundField>
+                <asp:BoundField DataField="LoginUsername" HeaderText="Username" SortExpression="LoginUsername" >
+                <HeaderStyle CssClass="bg-danger" />
+                </asp:BoundField>
+                <asp:BoundField DataField="PoliceStation" HeaderText="Police Station" SortExpression="PoliceStation" >
+                <HeaderStyle CssClass="bg-danger" />
+                </asp:BoundField>
+                <asp:BoundField DataField="CrimeType" HeaderText="Crime Type" SortExpression="CrimeType" >
+                <HeaderStyle CssClass="bg-danger" />
+                </asp:BoundField>
+                <asp:BoundField DataField="InvolvePerson" HeaderText="Involved Person" SortExpression="InvolvePerson" >
+                <HeaderStyle CssClass="bg-danger" />
+                </asp:BoundField>
+                <asp:BoundField DataField="CrimeStation" HeaderText="Crime Station" SortExpression="CrimeStation" >
+                <HeaderStyle CssClass="bg-danger" />
+                </asp:BoundField>
+                <asp:BoundField DataField="CrimeDate" HeaderText="Date of Crime" SortExpression="CrimeDate" >
+                <HeaderStyle CssClass="bg-danger" />
+                </asp:BoundField>
+                <asp:BoundField DataField="CDT" HeaderText="Complain Date" SortExpression="CDT" >
+                <HeaderStyle CssClass="bg-danger" />
+                </asp:BoundField>
+                <asp:BoundField DataField="Status" HeaderText="Status" SortExpression="Status" >
+                <HeaderStyle CssClass="bg-danger" />
+                </asp:BoundField>
+                <asp:TemplateField HeaderText="Proof Image" SortExpression="AnyProof">
+                    <EditItemTemplate>
+                        <asp:TextBox ID="TextBox1" runat="server" Text='<%# Bind("AnyProof") %>'></asp:TextBox>
+                    </EditItemTemplate>
+                    <ItemTemplate>
+                        <asp:Image ID="Image1" runat="server" Height="148px" ImageUrl='<%# Eval("AnyProof","AnyProof/{0}") %>' Width="147px" />
+                    </ItemTemplate>
+                    <HeaderStyle CssClass="bg-danger" />
+                </asp:TemplateField>
+            </Columns>
+            <FooterStyle BackColor="#990000" Font-Bold="True" ForeColor="White" />
+            <HeaderStyle Font-Bold="True" ForeColor="White" />
+            <PagerStyle BackColor="#FFCC66" ForeColor="#333333" HorizontalAlign="Center" />
+            <RowStyle BackColor="#FFFBD6" ForeColor="#333333" />
+            <SelectedRowStyle BackColor="#FFCC66" Font-Bold="True" ForeColor="Navy" />
+            <SortedAscendingCellStyle BackColor="#FDF5AC" />
+            <SortedAscendingHeaderStyle BackColor="#4D0000" />
+            <SortedDescendingCellStyle BackColor="#FCF6C0" />
+            <SortedDescendingHeaderStyle BackColor="#820000" />
+        </asp:GridView>
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [CrimeComplain] WHERE ([LoginUsername] = @LoginUsername)" DeleteCommand="DELETE FROM [CrimeComplain] WHERE [CCId] = @CCId" InsertCommand="INSERT INTO [CrimeComplain] ([LoginUsername], [PoliceStation], [CrimeType], [InvolvePerson], [AnyProof], [CrimeStation], [CrimeDate], [CDT], [Status]) VALUES (@LoginUsername, @PoliceStation, @CrimeType, @InvolvePerson, @AnyProof, @CrimeStation, @CrimeDate, @CDT, @Status)" UpdateCommand="UPDATE [CrimeComplain] SET [LoginUsername] = @LoginUsername, [PoliceStation] = @PoliceStation, [CrimeType] = @CrimeType, [InvolvePerson] = @InvolvePerson, [AnyProof] = @AnyProof, [CrimeStation] = @CrimeStation, [CrimeDate] = @CrimeDate, [CDT] = @CDT, [Status] = @Status WHERE [CCId] = @CCId">
+            <DeleteParameters>
+                <asp:Parameter Name="CCId" Type="Int32" />
+            </DeleteParameters>
+            <InsertParameters>
+                <asp:Parameter Name="LoginUsername" Type="String" />
+                <asp:Parameter Name="PoliceStation" Type="String" />
+                <asp:Parameter Name="CrimeType" Type="String" />
+                <asp:Parameter Name="InvolvePerson" Type="String" />
+                <asp:Parameter Name="AnyProof" Type="String" />
+                <asp:Parameter Name="CrimeStation" Type="String" />
+                <asp:Parameter Name="CrimeDate" Type="String" />
+                <asp:Parameter Name="CDT" Type="String" />
+                <asp:Parameter Name="Status" Type="String" />
+            </InsertParameters>
+            <SelectParameters>
+                <asp:SessionParameter Name="LoginUsername" SessionField="user" Type="String" />
+            </SelectParameters>
+            <UpdateParameters>
+                <asp:Parameter Name="LoginUsername" Type="String" />
+                <asp:Parameter Name="PoliceStation" Type="String" />
+                <asp:Parameter Name="CrimeType" Type="String" />
+                <asp:Parameter Name="InvolvePerson" Type="String" />
+                <asp:Parameter Name="AnyProof" Type="String" />
+                <asp:Parameter Name="CrimeStation" Type="String" />
+                <asp:Parameter Name="CrimeDate" Type="String" />
+                <asp:Parameter Name="CDT" Type="String" />
+                <asp:Parameter Name="Status" Type="String" />
+                <asp:Parameter Name="CCId" Type="Int32" />
+            </UpdateParameters>
+        </asp:SqlDataSource>
+    </div>
+    
+   
+    
+
 </asp:Content>

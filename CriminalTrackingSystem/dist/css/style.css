@@ -24,11 +24,92 @@ a{
         font-style: italic;
         padding: 1%;
     }
-/*theme color*/
+/*theme */
 :root {
     --tan: #ffe1b2;
     --topBarBg:#010040;
 }
+/*universal button*/
+/*clear btn*/
+.clear {
+    padding: 1.2%;
+    background: linear-gradient(145deg, #605f5f 50%, #fdc38d 50%);
+    background-size: 400%;
+    background-position: left;
+    color: white;
+    margin: 1%;
+    border: 2px solid white;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: 0.6s all;
+}
+
+    .clear:hover {
+        background-position: right;
+        transition: 0.6s all;
+        color: black;
+        font-weight: 600;
+    }
+/*delete btn*/
+.delete {
+    padding: 1.2%;
+    background: linear-gradient(145deg, #d83737 50%, #fdc38d 50%);
+    background-size: 400%;
+    background-position: left;
+    color: white;
+    margin: 1%;
+    border: 2px solid white;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: 0.6s all;
+}
+
+    .delete:hover {
+        background-position: right;
+        transition: 0.6s all;
+        color: black;
+        font-weight: 600;
+    }
+/*send btn*/
+.send {
+    padding: 1.2%;
+    background: linear-gradient(145deg, #288f0a 50%, #fdc38d 50%);
+    background-size: 400%;
+    background-position: left;
+    color: white;
+    margin: 1%;
+    border: 2px solid white;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: 0.6s all;
+}
+
+    .send:hover {
+        background-position: right;
+        transition: 0.6s all;
+        color: black;
+        font-weight: 600;
+    }
+/*update btn*/
+.cc-btn {
+    padding: 1.2%;
+    background: linear-gradient(145deg, #0351a5 50%, #ffbf81 50%);
+    background-size: 400%;
+    background-position: left;
+    color: white;
+    margin: 1%;
+    border: 2px solid white;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: 0.6s all;
+}
+
+    .cc-btn:hover {
+        background-position: right;
+        transition: 0.6s all;
+        color: black;
+        font-weight: 600;
+    }
 /*topbar*/
 .top-bar {
     background:var(--topBarBg);
@@ -473,25 +554,7 @@ a{
         outline: 2px solid #ff9999;
     }
 
-.cc-btn {
-    padding: 1.2%;
-    background: linear-gradient(145deg, #0351a5 50%, #ffbf81 50%);
-    background-size: 400%;
-    background-position: left;
-    color: white;
-    margin: 1%;
-    border: 2px solid white;
-    border-radius: 5px;
-    font-weight: 600;
-    transition: 0.6s all;
-}
 
-    .cc-btn:hover {
-        background-position: right;
-        transition: 0.6s all;
-        color: black;
-        font-weight: 600;
-    }
 
 .register-card{
     width:70%;
@@ -502,26 +565,35 @@ a{
     align-items:center;
     align-items:center;
 }
-    .register-card div{
-        width:250px;
-        height:auto;
-        display:flex;
-        flex-direction:column;
-        justify-content:center;
-        align-items:center;
-        margin:2%;
-        padding:4%;
-        box-shadow:1px 1px 5px 0px gray;
-        flex:auto;
+    .register-card div {
+        width: 250px;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 2%;
+        padding: 4%;
+        box-shadow: 1px 1px 5px 0px gray;
+        flex: auto;
     }
-        .register-card div img{
-            width:30%;
+
+        .register-card div img {
+            width: 30%;
         }
-        /*responsive queries*/
-        /*large screen*/
-        @media screen and (max-width:880px) {
-            .hero  {
-        width:100%;
+.cc-grid {
+    width: 95%;
+    height:500px;
+    margin: 0 auto;
+    overflow:scroll;
+    margin-top:10px;
+}
+    
+    /*responsive queries*/
+    /*large screen*/
+    @media screen and (max-width:880px) {
+        .hero {
+        width: 100%;
     }
 
     .deflex {
@@ -547,8 +619,9 @@ a{
         padding: 3%;
         box-shadow: 2px 2px 5px 0px black;
     }
-    .intro-data{
-        display:block;
+
+    .intro-data {
+        display: block;
     }
 }
 
