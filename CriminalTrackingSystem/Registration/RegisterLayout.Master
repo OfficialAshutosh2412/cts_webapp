@@ -16,7 +16,7 @@
 <body>
     <form id="form1" runat="server">
         <%--header--%>
-        <nav class="visitor-container">
+        <nav class="visitor-container" style="box-shadow:0px 2px 5px 0px gray;z-index:326532165316">
             <div class="visitor-nav">
                 <div class="hamburger">
                     <img src="../dist/img/cts_logo.png" /><i class="fa-solid fa-bars " id="togglebtn"></i>

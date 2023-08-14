@@ -6,28 +6,31 @@
     box-sizing: border-box;
 }
 
-a{
-    text-decoration:none
+a {
+    text-decoration: none
 }
-.menu-heads{
-    background:#0060bb;
-    width:fit-content;
-    color:white;
-    text-align:center;
+
+.menu-heads {
+    background: #0060bb;
+    width: fit-content;
+    color: white;
+    text-align: center;
 }
-    .menu-heads span{
-        background:#fdc38d;
-        color:black;
+
+    .menu-heads span {
+        background: #fdc38d;
+        color: black;
     }
-    ::placeholder {
-        font-size: 10pt;
-        font-style: italic;
-        padding: 1%;
-    }
+
+::placeholder {
+    font-size: 10pt;
+    font-style: italic;
+    padding: 1%;
+}
 /*theme */
 :root {
     --tan: #ffe1b2;
-    --topBarBg:#010040;
+    --topBarBg: #010040;
 }
 /*universal button*/
 /*clear btn*/
@@ -110,58 +113,78 @@ a{
         color: black;
         font-weight: 600;
     }
+/*universal box*/
+.cc-box {
+    width: 100%;
+    padding: 0.7%;
+    border-radius: 5px;
+    border: 2px groove #ffbb7a;
+    transition: 0.4s all;
+    background: white;
+}
+
+    .cc-box:focus {
+        outline: 2px solid #ff9999;
+    }
 /*topbar*/
 .top-bar {
-    background:var(--topBarBg);
+    background: var(--topBarBg);
     color: white;
     display: flex;
-    flex-direction:column;
+    flex-direction: column;
     justify-content: space-around;
     padding: 2% 2%;
-    top:60%;
-    right:0;
+    top: 60%;
+    right: 0;
     align-items: center;
     position: fixed;
-    transition:0.5s;
+    transition: 0.5s;
     width: fit-content;
-    height:fit-content;
-    z-index:88;
+    height: fit-content;
+    z-index: 88;
 }
+
 .hidden-tool-box, .go-to-top {
     position: fixed;
     z-index: 89;
     top: 80%;
     right: 0;
 }
-    .go-to-top{
-        top: 90%;
-        cursor:pointer;
-    }
-    .hide-top {
-        transform: translateX(100%)
-    }
-    .top-bar a{
-        color:white;
-        text-decoration:none
-    }
-    .top-bar i {
-        color: white;
-        padding-right: 10px;
-    }
+
+.go-to-top {
+    top: 90%;
+    cursor: pointer;
+}
+
+.hide-top {
+    transform: translateX(100%)
+}
+
+.top-bar a {
+    color: white;
+    text-decoration: none
+}
+
+.top-bar i {
+    color: white;
+    padding-right: 10px;
+}
 
 /* home-slider*/
-.slider-section{
-    width:100%;
-    height:84vh;
+.slider-section {
+    width: 100%;
+    height: 84vh;
 }
+
 .slider-img-container {
     width: 100%;
     height: 100%;
 }
+
 .slider-section img {
-    width:100%;
-    height:84vh;
-    object-fit:cover;
+    width: 100%;
+    height: 84vh;
+    object-fit: cover;
 }
 /*home-news*/
 .news {
@@ -172,73 +195,79 @@ a{
     align-items: center;
     background: #241f9a;
 }
-    .two a {
-        color: white;
-    }
-.news .ticker {
-    z-index:2;
-   }
-.two {
 
-   display:flex;
-   left:60px;
-   position:absolute;
-   justify-content:center;
-   align-items:center;
-    white-space:nowrap;
-  animation:pulse 30s linear infinite;
+.two a {
+    color: white;
 }
+
+.news .ticker {
+    z-index: 2;
+}
+
+.two {
+    display: flex;
+    left: 60px;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+    animation: pulse 30s linear infinite;
+}
+
     .two a {
         padding-right: 10px;
         padding-left: 10px;
-        border-right: 2px solid black;  
-        
+        border-right: 2px solid black;
     }
-    .two:hover{
-        animation-play-state:paused;
+
+    .two:hover {
+        animation-play-state: paused;
     }
 
 
-    @keyframes pulse {
-        0% {
+@keyframes pulse {
+    0% {
         transform: translate3d(0, 0, 0);
     }
 
     50% {
-      
         transform: translate3d(-100%, 0, 0);
     }
+
     75% {
         transform: translate3d(100, 0, 0);
     }
+
     100% {
         transform: translate3d(0, 0, 0);
     }
 }
-   
+
 /*home-service-section*/
-.service-container{
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    margin-top:50px;
+.service-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
 }
+
 .services {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top:30px;
-    flex-wrap:wrap;
+    margin-top: 30px;
+    flex-wrap: wrap;
 }
 
 .services-item {
     width: 250px;
     height: 250px;
-    margin:10px;
+    margin: 10px;
     overflow: hidden;
-    border:1px solid red
+    border: 1px solid red
 }
+
     .services-item div {
         width: 250px;
         height: 250px;
@@ -248,27 +277,31 @@ a{
         width: 100%;
         transition: 0.5s all ease-in-out;
     }
+
     .services-item div:nth-child(2) {
         position: relative;
         transition: 0.5s all;
     }
-    .services-item div:nth-child(1){
-        position:absolute;
-        background:#fdc38d;
-        display:flex;
-        flex-direction:column;
-        justify-content:center;
-        align-items:center;
 
+    .services-item div:nth-child(1) {
+        position: absolute;
+        background: #fdc38d;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
-        .services-item div:nth-child(1) *{
-            width:50%;
-            text-align:center
+
+        .services-item div:nth-child(1) * {
+            width: 50%;
+            text-align: center
         }
-        .services-item div:nth-child(1) p{
-            font-size:1.5em;
-            font-weight:600
+
+        .services-item div:nth-child(1) p {
+            font-size: 1.5em;
+            font-weight: 600
         }
+
     .services-item:hover .hide {
         transform-origin: 50% 75%;
         border-radius: 100px;
@@ -327,37 +360,43 @@ a{
     .hamburger i {
         display: none;
     }
+
 .dropdownbtn div {
     display: flex;
     flex-direction: column;
     position: fixed;
     z-index: 10000;
     background: #ffe3a9;
-    padding:4px;
-    box-shadow:0px 0px 10px 0px gray;
-    line-height:40px;
-    border-radius:5px;
-    transition:0.1s all;
+    padding: 4px;
+    box-shadow: 0px 0px 10px 0px gray;
+    line-height: 40px;
+    border-radius: 5px;
+    transition: 0.1s all;
 }
-.dropdownbtn{
-    display:none
+
+.dropdownbtn {
+    display: none
 }
-.dropdownbtn div * {
-    padding: 5px;
-    transition: 0.3s all;
-}
+
+    .dropdownbtn div * {
+        padding: 5px;
+        transition: 0.3s all;
+    }
+
         .dropdownbtn div *:hover {
             background: #006a87;
             border-radius: 5px;
             color: white;
             transition: 0.3s all;
         }
-.drophover:hover{
-    cursor:pointer;
+
+.drophover:hover {
+    cursor: pointer;
 }
-.drophover:hover .dropdownbtn {
-    display: block;
-}
+
+    .drophover:hover .dropdownbtn {
+        display: block;
+    }
 
 .min-width {
     min-width: 300px
@@ -370,27 +409,29 @@ a{
 .hero {
     display: flex;
     width: 80%;
-    margin:0 auto;
+    margin: 0 auto;
     align-items: center;
     justify-content: center;
-    height:90vh;
-    
+    height: 90vh;
 }
-    .hero img{
-        width:80%;
-        
+
+    .hero img {
+        width: 80%;
     }
+
 .card-info {
     width: 100%;
     margin: 0 auto;
     margin-bottom: 50px
 }
-.card-info-sections{
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
-    align-items:center
+
+.card-info-sections {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center
 }
+
 .card-item {
     flex: auto;
     width: 200px;
@@ -406,8 +447,8 @@ a{
     display: flex;
     flex-wrap: wrap;
     padding: 1%;
-    background:#353535;
-    margin-top:-10px;
+    background: #353535;
+    margin-top: -10px;
 }
 
     .gallery * {
@@ -429,15 +470,16 @@ a{
     margin: 0 auto;
     margin-top: -30px;
     margin-bottom: 10px;
-    border-radius:100px;
+    border-radius: 100px;
 }
 
 /*signin page*/
 
 .signin {
     width: 40%;
-    margin: 0 auto; 
+    margin: 0 auto;
 }
+
 .deflex {
     display: flex;
 }
@@ -484,7 +526,7 @@ a{
     font-weight: 600;
 }
 /*signup*/
- .customContainer {
+.customContainer {
     width: 70%;
     margin: 0 auto;
 }
@@ -492,79 +534,75 @@ a{
 .signup {
     width: 90%;
     margin: 0 auto;
-    margin-top:-25px;
-    border-radius:10px;
+    margin-top: -25px;
+    border-radius: 10px;
 }
 /*profile*/
 .user-profile {
     box-shadow: 5px 5px 10px 0px gray;
-    width:80%;
-    margin:0 auto;
-    margin-top:-30px;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: -30px;
 }
 
 /*crime complain*/
-.cc-container {
-    width: 80%;
-    margin: 0 auto;
-    margin-top: 3%;
-    margin-bottom: 3%;
-    box-shadow: 2px 2px 5px 0px black;
-    border-radius: 10px;
-}
-
-.cc-semi-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 1%;
-}
-
-    .cc-semi-container img {
-        width: 100px;
-    }
-
-.cc-flexbox {
-    display: flex;
-    width: 100%;
-}
-
-    .cc-flexbox label {
-        font-weight: 600;
-    }
-
-    .cc-flexbox div {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        padding: 1%;
-    }
-
-.cc-box {
-    width: 100%;
-    padding: 0.7%;
-    border-radius: 5px;
-    border: 2px groove #ffbb7a;
-    transition: 0.4s all;
-    background: white;
-}
-
-    .cc-box:focus {
-        outline: 2px solid #ff9999;
-    }
-
-
-
-.register-card{
-    width:70%;
-    margin:0 auto;
-    margin-top:50px;
+.crime-complain{
     display:flex;
-    flex-wrap:wrap;
-    align-items:center;
-    align-items:center;
+    flex-direction:row-reverse;
+    height:90vh;
 }
+.crime-complain-form {
+    padding: 1%;
+    background: #fdc38d;
+    overflow:scroll;
+}
+    .crime-complain-form div{
+        margin-bottom:10px
+    }
+.crime-complain-grid-view {
+    width: 80%;
+    height: 90vh;
+    overflow:scroll;
+    padding:2%;
+}
+.crime-complain-grid-view img {
+    width:100px
+}
+/* general complain pages*/
+.complain-form-structure {
+    display: flex;
+    flex-direction: row-reverse;
+    height: 90vh;
+}
+
+.complain-form {
+    padding: 1%;
+    
+    background: #fdc38d;
+}
+
+.complain-form-structure .complain-grid-view {
+    width: 80%;
+    height: 90vh;
+    overflow: scroll;
+    padding: 2%
+}
+.complain-form div{
+    margin-bottom:5px
+}
+
+
+
+.register-card {
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    align-items: center;
+}
+
     .register-card div {
         width: 250px;
         height: auto;
@@ -581,18 +619,12 @@ a{
         .register-card div img {
             width: 30%;
         }
-.cc-grid {
-    width: 95%;
-    height:500px;
-    margin: 0 auto;
-    overflow:scroll;
-    margin-top:10px;
-}
-    
-    /*responsive queries*/
-    /*large screen*/
-    @media screen and (max-width:880px) {
-        .hero {
+
+
+/*responsive queries*/
+/*large screen*/
+@media screen and (max-width:880px) {
+    .hero {
         width: 100%;
     }
 
@@ -644,7 +676,7 @@ a{
 
     .navs-item {
         position: fixed;
-        z-index:999;
+        z-index: 999;
         width: 30%;
         height: 100vh;
         top: 0;
@@ -682,18 +714,53 @@ a{
         margin: 0 auto;
     }
 
-    .cc-flexbox {
-        display: block;
+   
+
+    .hero {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+        .hero img {
+            width: 300px
+        }
+    /*crime complain*/
+    .crime-complain {
+        display: flex;
+        flex-direction: column-reverse;
+        height:auto;
+    }
+
+    .crime-complain-form {
+        padding: 2%;
+        overflow:visible;
+    }
+
+    .crime-complain-grid-view {
         width: 100%;
+        height: 90vh;
+        overflow: scroll;
+        padding: 2%;
     }
-    .hero{
-        flex-direction:column;
-        justify-content:center;
-        align-items:center;
-        text-align:center;
+    /* general complain pages*/
+    .complain-form-structure {
+        display: flex;
+        flex-direction: column-reverse;
+        height: auto;
     }
-    .hero img{
-        width:300px
+
+    .complain-form {
+        padding: 2%;
+        overflow: visible;
+    }
+
+    .complain-form-structure .complain-grid-view {
+        width: 100%;
+        height: 90vh;
+        overflow: scroll;
+        padding: 2%
     }
 }
 
@@ -706,8 +773,8 @@ a{
     .pad-5 {
         padding: 0;
     }
-    .signin{
-        width:100%;
+
+    .signin {
+        width: 100%;
     }
-    
 }

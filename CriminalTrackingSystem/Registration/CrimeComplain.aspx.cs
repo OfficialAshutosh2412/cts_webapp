@@ -21,7 +21,7 @@ namespace CriminalTrackingSystem.Registration
             UserName.Text = Session["user"].ToString();
             cmd.Connection = con;
         }
-
+        //insert button
         protected void Button1_Click(object sender, EventArgs e)
         {
             con.Open();
@@ -29,7 +29,7 @@ namespace CriminalTrackingSystem.Registration
             Literal1.Text = "AnyProof" + "/" + FileUpload1.FileName;
             cmd.CommandText = "INSERT INTO CrimeComplain VALUES('" + UserName.Text + "', '" + PoliceStation.Text + "', '" + CrimeType.SelectedValue + "', '" + InvolvedPerson.Text + "', '" + FileUpload1.FileName + "', '" + CrimeStation.Text + "', '" + CrimeDate.Text + "', '" + CurrentDate.Text + "', '" + CrimeStatus.Text + "')";
             cmd.ExecuteNonQuery();
-            Label2.Text = "We listened you !";
+            Response.Write("<script>alert('record inserted successfully !')</script>");
             con.Close();
             GridView1.DataBind();
             UserName.Text = "";
@@ -53,14 +53,15 @@ namespace CriminalTrackingSystem.Registration
             Response.Redirect("AnyProof/{0}");
         }
 
+        //update button
         protected void Button3_Click(object sender, EventArgs e)
         {
             con.Open();
-            cmd.CommandText = "UPDATE CrimeComplain SET LoginUsername='" + UserName.Text + "' PoliceStation='" + PoliceStation.Text+"', CrimeType='"+CrimeType.Text+"', InvolvePerson='"+InvolvedPerson.Text+"', AnyProof='"+FileUpload1.FileName+"', CrimeStation='"+CrimeStation.Text+"', CDT='"+CurrentDate.Text+"', Status='"+CrimeStatus.Text+ "' WHERE CrimeDate='" + CrimeDate.Text + "'";
+            cmd.CommandText = "UPDATE CrimeComplain SET LoginUsername='" + UserName.Text + "', PoliceStation='" + PoliceStation.Text+"', CrimeType='"+CrimeType.Text+"', InvolvePerson='"+InvolvedPerson.Text+"', AnyProof='"+FileUpload1.FileName+"', CrimeStation='"+CrimeStation.Text+"', CDT='"+CurrentDate.Text+"', Status='"+CrimeStatus.Text+ "' WHERE CrimeDate='" + CrimeDate.Text + "'";
             cmd.ExecuteNonQuery();
             con.Close();
             GridView1.DataBind();
-            Label2.Text = "Record updated !";
+            Response.Write("<script>alert('record updated successfully !')</script>");
             UserName.Text = "";
             PoliceStation.Text = "";
             InvolvedPerson.Text = "";
@@ -70,6 +71,7 @@ namespace CriminalTrackingSystem.Registration
             CrimeStatus.Text = "";
         }
 
+        //delete btn
         protected void Button3_Click1(object sender, EventArgs e)
         {
             con.Open();
@@ -77,7 +79,7 @@ namespace CriminalTrackingSystem.Registration
             cmd.ExecuteNonQuery();
             con.Close();
             GridView1.DataBind();
-            Label2.Text = "Record Deleted !";
+            Response.Write("<script>alert('record deleted successfully !')</script>");
             UserName.Text = "";
             PoliceStation.Text = "";
             InvolvedPerson.Text = "";
@@ -90,7 +92,6 @@ namespace CriminalTrackingSystem.Registration
 
         protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            UserName.Text = GridView1.SelectedRow.Cells[2].Text.ToString();
             PoliceStation.Text = GridView1.SelectedRow.Cells[3].Text.ToString();
             CrimeType.SelectedValue = GridView1.SelectedRow.Cells[4].Text.ToString();
             InvolvedPerson.Text = GridView1.SelectedRow.Cells[5].Text.ToString();
