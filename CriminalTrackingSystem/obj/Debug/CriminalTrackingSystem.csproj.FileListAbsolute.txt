@@ -56,4 +56,3 @@ C:\Users\test\source\repos\CriminalTrackingSystem\CriminalTrackingSystem\bin\Mic
 C:\Users\test\source\repos\CriminalTrackingSystem\CriminalTrackingSystem\obj\Debug\CriminalTrackingSystem.csproj.CopyComplete
 C:\Users\test\source\repos\CriminalTrackingSystem\CriminalTrackingSystem\obj\Debug\CriminalTrackingSystem.dll
 C:\Users\test\source\repos\CriminalTrackingSystem\CriminalTrackingSystem\obj\Debug\CriminalTrackingSystem.pdb
-C:\Users\test\source\repos\CriminalTrackingSystem\CriminalTrackingSystem\obj\Debug\CriminalTrackingSystem.csproj.AssemblyReference.cache

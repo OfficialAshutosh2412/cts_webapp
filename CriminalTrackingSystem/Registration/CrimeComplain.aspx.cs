@@ -57,6 +57,8 @@ namespace CriminalTrackingSystem.Registration
         protected void Button3_Click(object sender, EventArgs e)
         {
             con.Open();
+            FileUpload1.SaveAs(Server.MapPath("AnyProof") + "/" + FileUpload1.FileName);
+            Literal1.Text = "AnyProof" + "/" + FileUpload1.FileName;
             cmd.CommandText = "UPDATE CrimeComplain SET LoginUsername='" + UserName.Text + "', PoliceStation='" + PoliceStation.Text+"', CrimeType='"+CrimeType.Text+"', InvolvePerson='"+InvolvedPerson.Text+"', AnyProof='"+FileUpload1.FileName+"', CrimeStation='"+CrimeStation.Text+"', CDT='"+CurrentDate.Text+"', Status='"+CrimeStatus.Text+ "' WHERE CrimeDate='" + CrimeDate.Text + "'";
             cmd.ExecuteNonQuery();
             con.Close();

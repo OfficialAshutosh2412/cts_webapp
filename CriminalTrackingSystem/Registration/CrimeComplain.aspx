@@ -107,7 +107,7 @@
             <h2>
                 <img src="../dist/img/trial.png" />Crime Complain
             </h2>
-            <asp:GridView ID="GridView1" CssClass="table table-responsive table-group-divider table-bordered"  runat="server" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="CCId" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
+            <asp:GridView ID="GridView1" CssClass="table  table-group-divider table-bordered"  runat="server" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="CCId" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
                 <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
                 <Columns>
                     <asp:CommandField ShowSelectButton="True" ButtonType="Button" >

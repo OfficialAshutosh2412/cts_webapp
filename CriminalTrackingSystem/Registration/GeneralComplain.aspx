@@ -88,7 +88,7 @@
         <div class=" complain-grid-view">
             <h2 class="p-3">
                     <img src="../dist/img/letter.png" style="width: 60px;" />General Complain</h2>
-            <asp:GridView ID="GridView1" CssClass="table table-bordered table-responsive table-group-divider" runat="server" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="GCId" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None" Width="100%" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
+            <asp:GridView ID="GridView1" CssClass="table table-bordered table-group-divider" runat="server" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="GCId" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None" Width="100%" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
                 <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
                 <Columns>
                     <asp:CommandField ButtonType="Button" ShowSelectButton="True">
