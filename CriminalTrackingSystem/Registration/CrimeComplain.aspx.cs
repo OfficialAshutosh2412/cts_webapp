@@ -40,7 +40,7 @@ namespace CriminalTrackingSystem.Registration
             CurrentDate.Text = "";
             CrimeStatus.Text = "";
         }
-
+        //timer
         protected void Timer1_Tick(object sender, EventArgs e)
         {
             Label1.Text = DateTime.Now.ToString("hh:mm:ss tt dddd ,  dd MMMM yyyy ");

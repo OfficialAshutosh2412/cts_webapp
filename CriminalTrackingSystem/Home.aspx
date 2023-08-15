@@ -36,10 +36,10 @@
         <div class="news">
             <div class="bg-danger text-white p-2 ticker">NEWS</div>
             <div class="two">
-                <a href="#">Site is under development.</a>
-                <a href="#">If you see crime happens anywhere, report to our website.</a>
-                <a href="#">User no enabled to upload their profile.</a>
-                <a href="#">Profile edit option will be appear soon</a>
+                <a href="/Login.aspx">Site is under development.</a>
+                <a href="/Login.aspx">If you see crime happens anywhere, report to our website.</a>
+                <a href="/Login.aspx">User no enabled to upload their profile.</a>
+                <a href="/Login.aspx">Profile edit option will be appear soon</a>
             </div>
         </div>
 
@@ -51,7 +51,7 @@
             <div class="services-item">
                 <div>
                     <p>Missing Person Report</p>
-                    <a href="#" class="cc-btn">visit</a>
+                    <a href="/Login.aspx" class="cc-btn">visit</a>
                 </div>
                 <div class="hide">
                     <img src="dist/img/mr.jpg" />
@@ -61,7 +61,7 @@
             <div class="services-item">
                 <div>
                     <p>Missing Valuable Report</p>
-                    <a href="#" class="cc-btn">visit</a>
+                    <a href="/Login.aspx" class="cc-btn">visit</a>
                 </div>
                 <div class="hide">
                     <img src="dist/img/mv.jpg" />
@@ -71,7 +71,7 @@
             <div class="services-item">
                 <div>
                     <p>Crime Complain</p>
-                    <a href="#" class="cc-btn">visit</a>
+                    <a href="/Login.aspx" class="cc-btn">visit</a>
                 </div>
                 <div class="hide">
                     <img src="dist/img/cc.jpg" />
@@ -81,7 +81,7 @@
             <div class="services-item">
                 <div>
                     <p>Missing Person Report</p>
-                    <a href="#" class="cc-btn">visit</a>
+                    <a href="/Login.aspx" class="cc-btn">visit</a>
                 </div>
                 <div class="hide">
                     <img src="dist/img/gc.jpg" />

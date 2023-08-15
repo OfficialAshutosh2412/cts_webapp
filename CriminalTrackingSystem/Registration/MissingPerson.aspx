@@ -116,8 +116,8 @@
                 <div>
                     <asp:Button ID="Button2" runat="server" Text="Send" class="send" OnClick="Button1_Click" />
                     <asp:Button ID="Button3" runat="server" Text="Update" class="cc-btn" OnClick="Button3_Click1"  />
-                    <asp:Button ID="Button1" runat="server" Text="Delete" class="delete"  />
-                    <input type="reset" value="clear" class="cc-btn" /><asp:ValidationSummary ID="ValidationSummary1" CssClass="d-none" runat="server" ShowMessageBox="True" />
+                    <asp:Button ID="Button1" runat="server" Text="Delete" class="delete" OnClick="Button1_Click1"  />
+                    <input type="reset" value="clear" class="clear" /><asp:ValidationSummary ID="ValidationSummary1" CssClass="d-none" runat="server" ShowMessageBox="True" />
                     <br />
                 </div>
             </div>

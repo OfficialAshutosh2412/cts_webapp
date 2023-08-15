@@ -89,5 +89,25 @@ namespace CriminalTrackingSystem.Registration
             MPstatus.Text = GridView1.SelectedRow.Cells[12].Text.ToString();
         }
 
+        protected void Button1_Click1(object sender, EventArgs e)
+        {
+            con.Open();
+            cmd.CommandText = "DELETE FROM MissingPerson WHERE CDT='" + MPcurrentDate.Text + "'";
+            cmd.ExecuteNonQuery();
+            con.Close();
+            GridView1.DataBind();
+            Response.Write("<script>alert('record deleted successfully !')</script>");
+            MPUserName.Text = "";
+            MPPoliceStation.Text = "";
+            MPname.Text = "";
+            MPcontact.Text = "";
+            MPemail.Text = "";
+            MPlocation.Text = "";
+            MPransom.Text = "";
+            MPdob.Text = "";
+            MPdetails.Text = "";
+            MPcurrentDate.Text = "";
+            MPstatus.Text = "";
+        }
     }
 }
