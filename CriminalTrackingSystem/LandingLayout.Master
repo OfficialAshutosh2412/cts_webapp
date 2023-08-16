@@ -66,6 +66,9 @@
                             <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/Gallery.aspx"><i class="fa-solid fa-images"></i>Gallery</asp:HyperLink>
                         </li>
                         <li>
+                            <asp:HyperLink ID="HyperLink6" runat="server" NavigateUrl="~/FAQ.aspx"><i class="fa-solid fa-question"></i>FAQ</asp:HyperLink>
+                        </li>
+                        <li>
                             <asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="~/Contact.aspx"><i class="fa-solid fa-address-book"></i>Contact us</asp:HyperLink></li>
                         <li>
                             <asp:HyperLink ID="HyperLink5" runat="server" NavigateUrl="~/Login.aspx"><i class="fa-solid fa-right-to-bracket"></i>Login</asp:HyperLink>
