@@ -65,7 +65,7 @@
                     <div>
                         <label>Give us Proof</label>
                         <asp:FileUpload ID="FileUpload1" runat="server" class="cc-box" />
-                        <asp:Literal ID="Literal1" runat="server"></asp:Literal>
+                        <asp:Literal ID="Literal1" runat="server" Visible="false"></asp:Literal>
                     </div>
                     <div>
                         <label>Crime Station<asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ControlToValidate="CrimeStation" ErrorMessage="*Report Station  required" Font-Bold="True" Font-Size="Small" ForeColor="#FF5050">*</asp:RequiredFieldValidator></label>
