@@ -98,8 +98,16 @@
                     <asp:FileUpload ID="SignupProfile" runat="server" class="cc-box" />
                 </div>
             </div>
-            <%--buttons--%>
-            <asp:Button ID="Button1" runat="server" Text="Signup now !"  class="cc-btn" OnClick="Button1_Click"/>
+            <%--sixth row--%>
+            <div  class="deflex">
+                <div class="w-100 p-2">
+                    <label class="form-label">Enter Token Number</label>
+                    <asp:TextBox ID="tokenNo" runat="server" CssClass="cc-box" placeholder="only for admin, other user leave it, if other user type any thing it does not matters" OnTextChanged="tokenNo_TextChanged" AutoPostBack="True"></asp:TextBox>
+                </div>
+            </div>
+            <%--buttons row--%>
+            <asp:Button ID="Button1" runat="server" Text="Signup "  class="send" OnClick="Button1_Click"/>
+            <asp:Button ID="AdminButton" runat="server" Text="Signup as admin !"  class="clear" Visible="False" OnClick="AdminButton_Click" />
             <asp:HyperLink ID="HyperLink1" runat="server" CssClass="text-secondary " NavigateUrl="~/Login.aspx">click here to login...</asp:HyperLink>
             <asp:Literal ID="Literal1" runat="server" ></asp:Literal>
             <div>
