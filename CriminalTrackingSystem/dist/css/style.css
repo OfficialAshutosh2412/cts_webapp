@@ -691,6 +691,10 @@ a {
         .faq-form .delete{
             width:20%;
         }
+
+.admin-link {
+    color: #e2e2e2 !important;
+}
         /*responsive queries*/
         /*large screen*/
         @media screen and (max-width:880px) {

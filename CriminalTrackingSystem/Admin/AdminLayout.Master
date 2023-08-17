@@ -7,13 +7,49 @@
     <title></title>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
+    <link rel="icon" href="../dist/favicon/cts_logo.ico"" type="image/x-icon">
+    <link href="../dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../dist/css/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<body>
+<body style="background:#343434;color:#cfcfcf">
     <form id="form1" runat="server">
+        <%--header--%>
+        <nav class="visitor-container" id="nav" style="background:#222222">
+            <div class="visitor-nav">
+                <div class="hamburger">
+                    <img src="../dist/img/cts_logo.png" alt=""><i class="fa-solid fa-bars " id="togglebtn"></i>
+                </div>
+                <div class="navs-item show ">
+                    <ul>
+                        <li>
+                            <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Home.aspx" CssClass="admin-link"><i class="fa-solid fa-house"></i>Home</asp:HyperLink>
+                        </li>
+                        <li>
+                            <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/About.aspx" CssClass="admin-link"><i class="fa-solid fa-circle-info"></i>About us</asp:HyperLink>
+                        </li>
+                        <li>
+                            <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/Gallery.aspx" CssClass="admin-link"><i class="fa-solid fa-images"></i>Gallery</asp:HyperLink>
+                        </li>
+                        <li>
+                            <asp:HyperLink ID="HyperLink6" runat="server" NavigateUrl="~/FAQ.aspx" CssClass="admin-link"><i class="fa-solid fa-question"></i>FAQ</asp:HyperLink>
+                        </li>
+                        <li>
+                            <asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="~/Contact.aspx" CssClass="admin-link"><i class="fa-solid fa-address-book"></i>Contact us</asp:HyperLink></li>
+                        <li>
+                            <asp:HyperLink ID="HyperLink5" runat="server" NavigateUrl="~/Login.aspx" CssClass="admin-link"><i class="fa-solid fa-right-to-bracket"></i>Login</asp:HyperLink>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
         <div>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
         </div>
     </form>
+
+    <script src="../dist/js/bootstrap.bundle.min.js"></script>    
+    <script src="../dist/js/custom.js"></script>
 </body>
 </html>

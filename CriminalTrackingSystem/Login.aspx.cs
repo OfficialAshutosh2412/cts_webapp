@@ -27,8 +27,16 @@ namespace CriminalTrackingSystem
             dtr = cmd.ExecuteReader();
             if (dtr.Read())
             {
-                Session["user"] = LoginName.Text;
-                Response.Redirect("~/Registration/RegisterHome.aspx");
+                if (dtr[2].ToString() == "user")
+                {
+                    Session["user"] = LoginName.Text;
+                    Response.Redirect("~/Registration/RegisterHome.aspx");
+                }
+                else if (dtr[2].ToString() == "admin")
+                {
+                    Session["user"] = LoginName.Text;
+                    Response.Redirect("~/Admin/AdminHome.aspx");
+                }
             }
             else
             {
