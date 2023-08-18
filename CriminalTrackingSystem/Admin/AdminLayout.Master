@@ -33,7 +33,7 @@
                             <asp:HyperLink ID="HyperLink6" runat="server" NavigateUrl="~/FAQ.aspx" CssClass="admin-link"><i class="fa-solid fa-question"></i>FAQ</asp:HyperLink>
                         </li>
                         <li>
-                            <asp:HyperLink ID="HyperLink5" runat="server" NavigateUrl="~/Login.aspx" CssClass="admin-link"><i class="fa-solid fa-right-to-bracket"></i>Login</asp:HyperLink>
+                            <asp:HyperLink ID="HyperLink2" runat="server" cssClass=" admin-link" NavigateUrl="~/Login.aspx"><i class="fa-solid fa-right-from-bracket"></i>Logout</asp:HyperLink>
                         </li>
                     </ul>
                 </div>

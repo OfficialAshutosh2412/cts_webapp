@@ -17,6 +17,8 @@ namespace CriminalTrackingSystem.Registration
         protected void Page_Load(object sender, EventArgs e)
         {
             cmd.Connection = con;
+            if (Session["user"] == null)
+                Response.Redirect("~/Login.aspx");
             Label1.Text = Session["user"].ToString();
         }
 
