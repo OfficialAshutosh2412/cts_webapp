@@ -92,7 +92,7 @@
                 <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
                 <Columns>
                     <asp:CommandField ButtonType="Button" ShowSelectButton="True">
-                        <ControlStyle CssClass="cc-btn" />
+                        <ControlStyle CssClass="cc-btn p-1" />
                     </asp:CommandField>
                     <asp:BoundField DataField="GCId" HeaderText="ID" InsertVisible="False" ReadOnly="True" SortExpression="GCId" />
                     <asp:BoundField DataField="LoginUsername" HeaderText="Username" SortExpression="LoginUsername" />
