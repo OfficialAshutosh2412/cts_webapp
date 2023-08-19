@@ -2,6 +2,8 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <p>
-        Hi Admin !</p>
+   <div class="p-3 container-fluid">
+       <h1>Welcome, <asp:Label  runat="server" ID="adminName" CssClass="text-light fs-1"/></h1>
+       
+   </div>
 </asp:Content>
