@@ -3,7 +3,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     
-    <div class="admin-form-container">
+    <div class="admin-content-height">
         <h1><i class="fa-solid fa-question"></i> Frequently Asked Questions</h1>
         <asp:GridView ID="GridView1" CssClass="w-100 table table-dark" runat="server" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="FaqId" DataSourceID="SqlDataSource1" AllowPaging="True">
             <Columns>

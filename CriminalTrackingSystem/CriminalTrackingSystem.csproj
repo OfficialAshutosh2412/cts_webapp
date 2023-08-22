@@ -69,6 +69,7 @@
   <ItemGroup>
     <Content Include="About.aspx" />
     <Content Include="Admin\Admin-FAQ.aspx" />
+    <Content Include="Admin\Admin-MP.aspx" />
     <Content Include="Admin\GalleryAdmin.aspx" />
     <Content Include="Admin\AdminHome.aspx" />
     <Content Include="Admin\PoliceStation.aspx" />
@@ -146,6 +147,13 @@
     </Compile>
     <Compile Include="Admin\Admin-FAQ.aspx.designer.cs">
       <DependentUpon>Admin-FAQ.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Admin-MP.aspx.cs">
+      <DependentUpon>Admin-MP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Admin-MP.aspx.designer.cs">
+      <DependentUpon>Admin-MP.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\GalleryAdmin.aspx.cs">
       <DependentUpon>GalleryAdmin.aspx</DependentUpon>

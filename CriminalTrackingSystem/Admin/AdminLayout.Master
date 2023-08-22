@@ -14,58 +14,51 @@
 </head>
 <body style="background:#343434;color:#ededed">
     <form id="form1" runat="server">
-        <table  class="admin-layout" cellpadding="0" cellspacing="0">
-            <tr>
-                <td rowspan="2" class="admin-nav">
-                    <nav >
-                        <img src="../dist/img/cts_logo.png" />
-                        <div class="admin-items">
-                            <div>
-                                <asp:HyperLink ID="HyperLink2" runat="server" title="Dashboard" NavigateUrl="~/Admin/AdminHome.aspx"><i class="fa-solid fa-house text-light"></i></asp:HyperLink>
-                            </div>
-                            <div>
-                                <asp:HyperLink ID="HyperLink3" runat="server" title="Missing Person"><i class="fa-solid fa-person"></i></asp:HyperLink>
-                            </div>
-                            <div>
-                                <asp:HyperLink ID="HyperLink4" runat="server" title="Missing Valuable"><i class="fa-regular fa-gem"></i></asp:HyperLink>
-                            </div>
-                            <div>
-                                <asp:HyperLink ID="HyperLink5" runat="server" title="Crime Complains"><i class="fa-solid fa-handcuffs"></i></asp:HyperLink>
-                            </div>
-                            <div>
-                                <asp:HyperLink ID="HyperLink6" runat="server" title="General Complains"><i class="fa-solid fa-file-signature"></i></asp:HyperLink>
-                            </div>
-                            <div>
-                                <asp:HyperLink ID="HyperLink7" runat="server" title="Contact Us requests"><i class="fa-solid fa-message"></i></asp:HyperLink>
-                            </div>
-                            <div>
-                                <asp:HyperLink ID="HyperLink8" runat="server" title="FAQ" NavigateUrl="~/Admin/Admin-FAQ.aspx"><i class="fa-solid fa-circle-question text-light"></i></asp:HyperLink>
-                            </div>
-                            <div>
-                                <asp:HyperLink ID="HyperLink1" runat="server" title="Logout"><i class="fa-solid fa-right-from-bracket"></i></asp:HyperLink>
-                            </div>
-                        </div>
-                    </nav>
-                </td>
-                <td class="admin-title">
-                    <div >
-                        <h3 class="p-2">
-                            <i class="fa-solid fa-mask"></i>Admin Dashboard
-                        </h3>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td  valign="top">
-                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-                    </asp:ContentPlaceHolder>
-                </td>
-            </tr>
-
-        </table>
-       
+        <nav class="admin-nav">
+            <div class="admin-title">
+                <h3 class="p-2 d-flex align-items-center w-100">
+                    <img src="../dist/img/cts_logo.png" />
+                    &nbsp;|&nbsp; <i class="fa-solid fa-mask"></i>Admin Portal
+                </h3>
+            </div>
+            <div class="admin-items">
+                <div>
+                    <asp:HyperLink ID="HyperLink2" runat="server" title="Dashboard" NavigateUrl="~/Admin/AdminHome.aspx"><i class="fa-solid fa-house text-light"></i></asp:HyperLink>
+                </div>
+                <div>
+                    <asp:HyperLink ID="HyperLink3" runat="server" title="Missing Person" NavigateUrl="~/Admin/Admin-MP.aspx"><i class="fa-solid fa-person text-light"></i></asp:HyperLink>
+                </div>
+                <div>
+                    <asp:HyperLink ID="HyperLink4" runat="server" title="Missing Valuable"><i class="fa-regular fa-gem text-light"></i></asp:HyperLink>
+                </div>
+                <div>
+                    <asp:HyperLink ID="HyperLink5" runat="server" title="Crime Complains"><i class="fa-solid fa-handcuffs text-light"></i></asp:HyperLink>
+                </div>
+                <div>
+                    <asp:HyperLink ID="HyperLink6" runat="server" title="General Complains"><i class="fa-solid fa-file-signature text-light"></i></asp:HyperLink>
+                </div>
+                <div>
+                    <asp:HyperLink ID="HyperLink7" runat="server" title="Contact Us requests"><i class="fa-solid fa-message text-light"></i></asp:HyperLink>
+                </div>
+                <div>
+                    <asp:HyperLink ID="HyperLink8" runat="server" title="FAQ" NavigateUrl="~/Admin/Admin-FAQ.aspx"><i class="fa-solid fa-circle-question text-light"></i></asp:HyperLink>
+                </div>
+                <div>
+                    <asp:HyperLink ID="HyperLink1" runat="server" title="Logout"><i class="fa-solid fa-right-from-bracket text-light"></i></asp:HyperLink>
+                </div>
+            </div>
             
-       
+        </nav>
+        
+
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+
+
+
+        <footer class="admin-foot">
+            <p>All Rights are Reserved &copy;CTS 2023</p>
+        </footer>
     </form>
 
     <script src="../dist/js/bootstrap.bundle.min.js"></script>    

@@ -729,53 +729,36 @@ a {
     }
 
 /*admin design*/
-.admin-layout {
-    width: 100%;
-    height: 100vh;
-}
-
 .admin-nav {
-    height: 100%;
-    width: 1%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #00a9c7;
 }
-
-    .admin-nav nav {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        height: 100%;
-        align-items: center;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        background: #00798f;
-       
+    .admin-nav img{
+        width:50px
     }
-
-        .admin-nav nav .admin-items {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            height: 100%;
-            align-items: center;
-        }
-
-.admin-items div {
-    cursor: pointer
+    .admin-title{
+        width:100%;
+    }
+.admin-items {
+    display: flex;
+    justify-content:end;
+    width: 100%;
 }
-
-.admin-title {
-    height: 10vh;
-    background: #00798f;
-    text-align:right
+    .admin-items div {
+        width:100%;
+    }
+/*admin footer*/
+.admin-foot {
+    text-align:center;
+    padding:2px;
+    color:white;
 }
-
-.admin-nav img {
-    width: 50px;
-    margin-bottom: 20px;
-}
-
-.content-holder {
-    height: 100%
+/*.admin-content height*/
+.admin-content-height{
+    height:100vh;
+    overflow:scroll
 }
 /*admin home*/
 .session-name {
@@ -816,16 +799,9 @@ a {
         width:20px;
         border-radius:100%;
     }
-/*admin FAQ*/
-.admin-form-container{
-    width:100%;
-    height:90vh;
-    overflow:scroll;
-    overflow-x:hidden;
-}
-.admin-grid-height{
-    height:100%
-}
+
+
+
 /*responsive queries*/
 /*large screen*/
 @media screen and (max-width:880px) {
@@ -1009,6 +985,27 @@ a {
         overflow: scroll;
         padding: 2%
     }
+    /*admin nav*/
+    .admin-nav {
+        display: flex;
+        flex-direction:column;
+    }
+
+    .admin-items {
+        display: flex;
+        justify-content: center;
+    }
+
+        .admin-items div {
+            width: 100%;
+            text-align:center;
+            background:#005f83;
+            padding:1%;
+            transition:0.3s all ease-in-out;
+        }
+        .admin-items div:hover{
+            background:#000000;
+        }
 }
 
 /*small screen*/
