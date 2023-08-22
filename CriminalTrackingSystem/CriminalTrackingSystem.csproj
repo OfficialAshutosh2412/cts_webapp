@@ -68,6 +68,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="Admin\Admin-FAQ.aspx" />
     <Content Include="Admin\GalleryAdmin.aspx" />
     <Content Include="Admin\AdminHome.aspx" />
     <Content Include="Admin\PoliceStation.aspx" />
@@ -93,9 +94,14 @@
     <Content Include="dist\img\b80eae0e-dcf4-45a5-90bc-ed57f03ebea71649490885320_1649500857.jpg" />
     <Content Include="dist\img\bhatta-basti-rape-case-jaipur_1616044293.jpg" />
     <Content Include="dist\img\cc.jpg" />
+    <Content Include="dist\img\check-mark.png" />
+    <Content Include="dist\img\check.png" />
     <Content Include="dist\img\chitrakoot-2.png" />
+    <Content Include="dist\img\close.png" />
     <Content Include="dist\img\cts_logo.png" />
+    <Content Include="dist\img\delete.png" />
     <Content Include="dist\img\diamond_2600353.png" />
+    <Content Include="dist\img\edit.png" />
     <Content Include="dist\img\FAQs%281%29.gif" />
     <Content Include="dist\img\Fru8lECaEAE3I-O.png" />
     <Content Include="dist\img\gc.jpg" />
@@ -133,6 +139,13 @@
     </Compile>
     <Compile Include="About.aspx.designer.cs">
       <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Admin-FAQ.aspx.cs">
+      <DependentUpon>Admin-FAQ.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Admin-FAQ.aspx.designer.cs">
+      <DependentUpon>Admin-FAQ.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\GalleryAdmin.aspx.cs">
       <DependentUpon>GalleryAdmin.aspx</DependentUpon>
@@ -260,6 +273,7 @@
     <Content Include="LandingLayout.Master" />
     <Content Include="Admin\AdminLayout.Master" />
     <Content Include="dist\img\UP-Police-logo-845464.webp" />
+    <Content Include="dist\img\iloveimg-resized.zip" />
     <None Include="packages.config" />
     <Content Include="Registration\RegisterLayout.Master" />
     <None Include="Web.Debug.config">

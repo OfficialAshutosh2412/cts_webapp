@@ -95,7 +95,7 @@
             <div class="d-flex justify-content-center align-items-center">
                 <p>End-User Queries</p>
             </div>
-            <asp:HyperLink NavigateUrl="~/Admin/AdminHome.aspx" CssClass="counterbtn" runat="server" ID="HyperLink6"><i class="fa-solid fa-angle-right"></i></asp:HyperLink>
+            <asp:HyperLink NavigateUrl="~/Admin/Admin-FAQ.aspx" CssClass="counterbtn" runat="server" ID="HyperLink6"><i class="fa-solid fa-angle-right"></i></asp:HyperLink>
         </div>
     </div>
 </asp:Content>

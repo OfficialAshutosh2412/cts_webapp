@@ -14,14 +14,14 @@
 </head>
 <body style="background:#343434;color:#ededed">
     <form id="form1" runat="server">
-        <table  class="admin-layout">
+        <table  class="admin-layout" cellpadding="0" cellspacing="0">
             <tr>
                 <td rowspan="2" class="admin-nav">
                     <nav >
                         <img src="../dist/img/cts_logo.png" />
                         <div class="admin-items">
                             <div>
-                                <asp:HyperLink ID="HyperLink2" runat="server" title="Dashboard"><i class="fa-solid fa-house"></i></asp:HyperLink>
+                                <asp:HyperLink ID="HyperLink2" runat="server" title="Dashboard" NavigateUrl="~/Admin/AdminHome.aspx"><i class="fa-solid fa-house text-light"></i></asp:HyperLink>
                             </div>
                             <div>
                                 <asp:HyperLink ID="HyperLink3" runat="server" title="Missing Person"><i class="fa-solid fa-person"></i></asp:HyperLink>
@@ -39,7 +39,7 @@
                                 <asp:HyperLink ID="HyperLink7" runat="server" title="Contact Us requests"><i class="fa-solid fa-message"></i></asp:HyperLink>
                             </div>
                             <div>
-                                <asp:HyperLink ID="HyperLink8" runat="server" title="FAQ"><i class="fa-solid fa-circle-question"></i></asp:HyperLink>
+                                <asp:HyperLink ID="HyperLink8" runat="server" title="FAQ" NavigateUrl="~/Admin/Admin-FAQ.aspx"><i class="fa-solid fa-circle-question text-light"></i></asp:HyperLink>
                             </div>
                             <div>
                                 <asp:HyperLink ID="HyperLink1" runat="server" title="Logout"><i class="fa-solid fa-right-from-bracket"></i></asp:HyperLink>
