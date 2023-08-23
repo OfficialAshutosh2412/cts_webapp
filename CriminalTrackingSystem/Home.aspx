@@ -19,13 +19,12 @@
             <label class="delete p-2" id="login-close">close</label>
         </div>
         <asp:HyperLink ID="HyperLink1" runat="server" CssClass="text-secondary" NavigateUrl="~/Signup.aspx">click here to create account...</asp:HyperLink>
-        <asp:ValidationSummary ID="ValidationSummary1" CssClass="d-none" runat="server" ShowMessageBox="True" />
         <div>
             <asp:Label ID="Label1" runat="server" Font-Bold="True" Font-Size="Small" ForeColor="#FF5050"></asp:Label>
         </div>
     </div>
     <%--hero--%>
-    <div class="hero">
+    <div class="hero" id="hero">
         <div class="left"><img src="dist/img/cts_logo.png" /></div>
         <div class="right">
             <h1><span>Crime</span> Tracking System</h1>
@@ -150,9 +149,53 @@
             <asp:ImageButton ID="ImageButton25" runat="server" ImageUrl="~/dist/img/whatsapp-image-2022-10-16-at-083029_1665903787.jpg" OnClick="ImageButton25_Click" />
         </div>
     </div>
+    <%--contact us--%>
+
+
+    <div class=" min-width contact-us-container" id="contact">
+        <h1 class="section-title"><span>Give us</span> a message</h1>
+        <div class="p-3 contact-us-container-fom">
+            <div class=" deflex">
+                <div class="mb-1 w-100 p-2">
+                    <label class="form-label">
+                        Your Name
+                    </label>
+                   <asp:TextBox ID="ContactName" runat="server" type="text" class="cc-box "></asp:TextBox>
+                </div>
+                <div class="mb-1 w-100 p-2">
+                    <label class="form-label">
+                        Email address
+                    </label>
+                   <asp:TextBox ID="ContactEmail" runat="server" type="email" class="cc-box "></asp:TextBox>
+                </div>
+                <div class="mb-1 w-100 p-2">
+                    <label class="form-label">
+                        Phone Number
+                    </label>
+                   <asp:TextBox ID="ContactNumber" runat="server" type="text" class="cc-box " MaxLength="13"></asp:TextBox>
+                </div>
+            </div>
+            <div class="mb-1 w-100 p-2">
+                <label class="form-label" for="purpose">Purpose</label>
+                <asp:TextBox ID="ContactPurpose" runat="server" class="cc-box "></asp:TextBox>
+            </div>
+            <div class="mb-1 p-2">
+                <label class="form-label">
+                    Give Us Details
+                </label>
+               <asp:TextBox ID="ContactDetails" runat="server" TextMode="MultiLine" class="cc-box "></asp:TextBox>
+            </div>
+            <asp:Button ID="ContactBtn" runat="server" Text="submit details" class="send" OnClientClick="return validateContact()" OnClick="ContactBtn_Click" />
+
+            <asp:Label ID="Label2" runat="server" ForeColor="#339933"></asp:Label>
+
+
+        </div>
+    </div>
 
 
     <script>
+        //login validation
         function validateLogin() {
             var lname = document.getElementById('<%= LoginName.ClientID %>').value;
             var lpass = document.getElementById('<%= LoginPassword.ClientID %>').value;
@@ -164,6 +207,23 @@
                 return true;
             }
         }
+        //contact us validation
+        function validateContact() {
+            var cname = document.getElementById('<%= ContactName.ClientID %>').value;
+            var cmail = document.getElementById('<%= ContactEmail.ClientID %>').value;
+            var cnum = document.getElementById('<%= ContactNumber.ClientID %>').value;
+            var cpur = document.getElementById('<%= ContactPurpose.ClientID %>').value;
+            var cdet = document.getElementById('<%= ContactDetails.ClientID %>').value;
+            if (cname == "" || cmail == "" || cnum == "" || cpur == "" || cdet == "") {
+                alert("fields are empty !");
+                return false;
+            }
+            else {
+                return true;
+            }
+        }
+        
+        
         
     </script>
 </asp:Content>

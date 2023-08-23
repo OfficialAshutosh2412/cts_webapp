@@ -76,11 +76,11 @@
     <Content Include="App_Data\CTS_log.ldf">
       <DependentUpon>CTS.mdf</DependentUpon>
     </Content>
-    <Content Include="Contact.aspx" />
     <Content Include="dist\css\style.css" />
     <Content Include="dist\favicon\cts_logo.ico" />
     <Content Include="dist\img\02_07_2023-gorakhpur_aiims_police_station_23458982.jpg" />
     <Content Include="dist\img\14_04_2022-14azm_20_14042022_252-c-1.5_22627032_163740.jpg" />
+    <Content Include="dist\img\15204.jpg" />
     <Content Include="dist\img\17_06_2021-16alr_12_16062021_499-c-1.5_21744534_11139.jpg" />
     <Content Include="dist\img\3549634286_882d3c48f9_b.jpg" />
     <Content Include="dist\img\4_1614768752.jpg" />
@@ -174,13 +174,6 @@
     </Compile>
     <Compile Include="Admin\PoliceStation.aspx.designer.cs">
       <DependentUpon>PoliceStation.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Contact.aspx.cs">
-      <DependentUpon>Contact.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Contact.aspx.designer.cs">
-      <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
     <Compile Include="DynamicConnection.cs" />
     <Compile Include="FAQ.aspx.cs">

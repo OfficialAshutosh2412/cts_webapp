@@ -163,9 +163,22 @@ namespace CriminalTrackingSystem
             }
             else
             {
-                Label1.Text = "Invalid username and password, try again!";
+                Response.Write("<script>alert('invalid username and password')</script>");
             }
 
+        }
+        protected void ContactBtn_Click(object sender, EventArgs e)
+        {
+            con.Open();
+            cmd.CommandText = "INSERT INTO Contact VALUES('" + ContactName.Text + "', '" + ContactEmail.Text + "', '" + ContactNumber.Text + "', '" + ContactPurpose.Text + "', '" + ContactDetails.Text + "')";
+            cmd.ExecuteNonQuery();
+            Response.Write("<script>alert('Thank you for contacting us. We will answer you ASAP...')</script>");
+            con.Close();
+            ContactName.Text = "";
+            ContactEmail.Text = "";
+            ContactNumber.Text = "";
+            ContactPurpose.Text = "";
+            ContactDetails.Text = "";
         }
     }
 }

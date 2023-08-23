@@ -16,9 +16,9 @@
 <body >
     <form id="form1" runat="server">
  
-        <i class="fa-solid fa-language cc-btn p-2 hidden-tool-box " id="tool-toggler" style="font-size:2em" ></i>
-        <a class=" cc-btn p-2 go-to-top" href="#nav">go to top</a>
-              
+        
+        <a class="go-to-top clear" href="#hero"><i class="fa-solid fa-arrow-up"></i></a>
+        <i class="fa-solid fa-language clear  hidden-tool-box " id="tool-toggler"></i>     
         <%--top bar--%>
         <div class="top-bar hide-top">
             <div>
@@ -71,10 +71,13 @@
                             <a class="nav-link text-dark" href="#gallery"><i class="fa-solid fa-images"></i>Gallery</a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link text-dark" href="#contact"><i class="fa-solid fa-phone"></i>Contact us</a>
+                        </li>
+                        <li class="nav-item">
                             <asp:HyperLink ID="HyperLink4" class="nav-link" runat="server" NavigateUrl="~/FAQ.aspx"><i class="fa-solid fa-file-circle-question"></i>FAQ</asp:HyperLink>
                         </li>
-                        <li class="nav-item nav-link" id="login-tog">
-                            <i class="fa-solid fa-arrow-right-to-bracket "></i>Login
+                        <li class="nav-item nav-link" id="login-tog" style="cursor:pointer">
+                            <i class="fa-solid fa-arrow-right-to-bracket " ></i>Login
                         </li>
                     </ul>
                 </div>
