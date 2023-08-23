@@ -74,7 +74,7 @@
                             </div>
                         </li>
                         <li>
-                            <asp:HyperLink ID="HyperLink5" runat="server" CssClass="delete d-flex align-items-center p-1 text-light" NavigateUrl="~/Login.aspx"><i class="fa-solid fa-right-from-bracket"></i>Logout</asp:HyperLink>
+                            <asp:HyperLink ID="HyperLink5" runat="server" CssClass="delete d-flex align-items-center p-1 text-light" NavigateUrl="~/Home.aspx"><i class="fa-solid fa-right-from-bracket"></i>Logout</asp:HyperLink>
                         </li>
                     </ul>
                 </div>

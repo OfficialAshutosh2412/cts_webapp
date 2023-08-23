@@ -49,34 +49,36 @@
         </div>
         
         <%--header--%>
-        <nav class="visitor-container" id="nav">
-            <div class="visitor-nav">
-                <div class="hamburger">
-                    <img src="dist/img/cts_logo.png" alt=""><i class="fa-solid fa-bars " id="togglebtn"></i>
-                </div>
-                <div class="navs-item show">
-                    <ul>
-                        <li>
-                            <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Home.aspx"><i class="fa-solid fa-house"></i>Home</asp:HyperLink>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary p-0" id="nav">
+            <div class="container-fluid justify-content-between ">
+                <a class="navbar-brand" href="#"><img src="dist/img/cts_logo.png" /></a>
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon fw-bolder"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <asp:HyperLink ID="HyperLink1" runat="server" class="nav-link active" aria-current="page" NavigateUrl="~/Home.aspx"><i class="fa-solid fa-house"></i>Home</asp:HyperLink>
                         </li>
-                        <li>
-                            <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/About.aspx"><i class="fa-solid fa-circle-info"></i>About us</asp:HyperLink>
+                        <li class="nav-item">
+                            <asp:HyperLink ID="HyperLink2" runat="server" class="nav-link" NavigateUrl="~/About.aspx"><i class="fa-solid fa-circle-info"></i>About</asp:HyperLink>
                         </li>
-                        <li>
-                            <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/Gallery.aspx"><i class="fa-solid fa-images"></i>Gallery</asp:HyperLink>
+                        <li class="nav-item">
+                            <asp:HyperLink ID="HyperLink3" runat="server" class="nav-link" NavigateUrl="~/Gallery.aspx"><i class="fa-solid fa-images"></i>Gallery</asp:HyperLink>
                         </li>
-                        <li>
-                            <asp:HyperLink ID="HyperLink6" runat="server" NavigateUrl="~/FAQ.aspx"><i class="fa-solid fa-question"></i>FAQ</asp:HyperLink>
+                        <li class="nav-item">
+                            <asp:HyperLink ID="HyperLink4" class="nav-link" runat="server" NavigateUrl="~/FAQ.aspx"><i class="fa-solid fa-file-circle-question"></i>FAQ</asp:HyperLink>
                         </li>
-                        <li>
-                            <asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="~/Contact.aspx"><i class="fa-solid fa-address-book"></i>Contact us</asp:HyperLink></li>
-                        <li>
-                            <asp:HyperLink ID="HyperLink5" runat="server" NavigateUrl="~/Login.aspx"><i class="fa-solid fa-right-to-bracket"></i>Login</asp:HyperLink>
+                        <li class="nav-item nav-link" id="login-tog">
+                            <i class="fa-solid fa-arrow-right-to-bracket "></i>Login
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
+
+        
         <%--content holder--%>
         <div>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">

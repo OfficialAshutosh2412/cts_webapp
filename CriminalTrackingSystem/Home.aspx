@@ -3,37 +3,68 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <%--slider--%>
-    <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel" >
-        <div class="carousel-inner slider-section">
-            <div class="carousel-item active slider-img-container" data-bs-interval="3000">
-                <img src="dist/img/AD1.jpg" class="d-block w-100" alt="...">
+    <%--login--%>
+    <div class="signin bg-white p-5 shadow-lg rounded show-login">
+        <h1>Login</h1>
+        <div class="mb-3">
+            <label class="form-label">
+                Username<asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="LoginName" ErrorMessage="*fill username " ForeColor="#FF5050">*</asp:RequiredFieldValidator>
+            </label>
+            <asp:TextBox ID="LoginName" runat="server" class="cc-box"></asp:TextBox>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">
+                Password<asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="LoginPassword" ErrorMessage="*password is required  to login " ForeColor="#FF5050">*</asp:RequiredFieldValidator>
+            </label>
+            <asp:TextBox ID="LoginPassword" runat="server" TextMode="Password" class="cc-box"></asp:TextBox>
+        </div>
+        <div class="d-flex justify-content-start align-items-center">
+            <asp:Button ID="Button1" runat="server" Text="login now !" class="send p-2" OnClick="Button1_Click" /><br />
+            <label class="delete p-2" id="login-close">close</label>
+        </div>
+        <asp:HyperLink ID="HyperLink1" runat="server" CssClass="text-secondary" NavigateUrl="~/Signup.aspx">click here to create account...</asp:HyperLink>
+        <asp:ValidationSummary ID="ValidationSummary1" CssClass="d-none" runat="server" ShowMessageBox="True" />
+        <div>
+            <asp:Label ID="Label1" runat="server" Font-Bold="True" Font-Size="Small" ForeColor="#FF5050"></asp:Label>
+        </div>
+    </div>
+    <%--hero--%>
+    <div class="hero">
+        <div class="left"><img src="dist/img/cts_logo.png" /></div>
+        <div class="right">
+            <h1><span>Crime</span> Tracking System</h1>
+            <p>CTS is an online portal to track crime records.</p>
+            <small>Managed by State Police Department</small>
+            <label class="cc-btn">join us</label>
+        </div>
+    </div>
+    <%--about--%>
+    <div class="card-info">
+        <div class="card-info-sections">
+            <div class="card-item">
+                <h1>What's CTS ?</h1>
+                <p>Crime and Criminal Tracking Network & Systems (CCTNS) is a plan scheme conceived in the light of experience of a non-plan scheme namely.</p>
             </div>
-            <div class="carousel-item slider-img-container" data-bs-interval="3000">
-                <img src="dist/img/AD3...jpg" class="d-block w-100" alt="...">
+            <div class="card-item">
+                <h1>CTS Vissions</h1>
+                <p>Make the Police functioning citizen friendly and more transparent by automating the functioning of Police Stations.</p>
             </div>
-            <div class="carousel-item slider-img-container" data-bs-interval="3000">
-                <img src="dist/img/AD4.jpg" class="d-block w-100" alt="...">
+            <div class="card-item">
+                <h1>Stakeholder</h1>
+                <p>Citizens/ Citizens groups, MHA/NCRB, State Police department, External Departments of the State such as Courts, and Peoples.</p>
             </div>
-            <div class="carousel-item slider-img-container" data-bs-interval="3000">
-                <img src="dist/img/AD5.jpg" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item slider-img-container" data-bs-interval="3000">
-                <img src="dist/img/AD6.jpg" class="d-block w-100" alt="...">
+            <div class="card-item">
+                <h1>Benefits</h1>
+                <p>
+                    Enhanced tools for investigation, Centralized crime and criminal information repository along with the criminal images.<p>
             </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
     </div>
 
-        <%--news--%>
-        <div class="news">
+
+
+    <%--news--%>
+        <%--<div class="news">
             <div class="bg-danger text-white p-2 ticker">NEWS</div>
             <div class="two">
                 <a href="/Login.aspx">Site is under development.</a>
@@ -41,7 +72,7 @@
                 <a href="/Login.aspx">User no enabled to upload their profile.</a>
                 <a href="/Login.aspx">Profile edit option will be appear soon</a>
             </div>
-        </div>
+        </div>--%>
 
     <%--services--%>
     <div class="service-container">
