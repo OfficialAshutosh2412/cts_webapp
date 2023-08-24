@@ -3,6 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [Faq] ORDER BY [FaqId], [Question], [Answer]"></asp:SqlDataSource>
     <%--login--%>
     <div class="signin bg-white p-5 shadow-lg rounded show-login">
         <h1>Login</h1>
@@ -25,7 +26,9 @@
     </div>
     <%--hero--%>
     <div class="hero" id="hero">
-        <div class="left"><img src="dist/img/cts_logo.png" /></div>
+        <div class="left">
+            <img class="spin" src="dist/img/11(2).png" alt="animator" />
+        </div>
         <div class="right">
             <h1><span>Crime</span> Tracking System</h1>
             <p>CTS is an online portal to track crime records.</p>
@@ -34,7 +37,7 @@
         </div>
     </div>
     <%--news--%>
-    <div class="news">
+    <%--<div class="news">
         <div class="bg-danger text-white p-2 ticker">NEWS</div>
         <div class="two">
             <a href="/Login.aspx">Site is under development.</a>
@@ -42,7 +45,7 @@
             <a href="/Login.aspx">User no enabled to upload their profile.</a>
             <a href="/Login.aspx">Profile edit option will be appear soon</a>
         </div>
-    </div>
+    </div>--%>
     <%--about--%>
 
     <div class="about" id="about">
@@ -192,7 +195,43 @@
 
         </div>
     </div>
-
+    <%--faq--%>
+    <div class="faq-container" id="faq">
+        <h1 class="section-title text-light"><span>Ask</span> Us Anything</h1>
+        <div class="faq-form">
+            <asp:TextBox ID="question" runat="server" CssClass="cc-box"></asp:TextBox>
+            <asp:Button ID="Button2" runat="server" Text="Send" CssClass="delete" OnClientClick="return ValidateFaq()" OnClick="FAQButton1_Click" />
+        </div>
+    </div>
+    <div class="mt-3">
+        <h3>Frequently Asked Questions...</h3>
+        <div class="faq-grid">
+            <asp:GridView ID="GridView1" runat="server" CssClass="border-0 w-100" AutoGenerateColumns="False" DataKeyNames="FaqId" DataSourceID="SqlDataSource1" Width="637px">
+        <Columns>
+            <asp:TemplateField SortExpression="Question">
+                <EditItemTemplate>
+                    <asp:TextBox ID="TextBox1" runat="server" Text='<%# Bind("Question") %>'></asp:TextBox>
+                </EditItemTemplate>
+                <ItemTemplate>
+                    <div class="mb-3 p-3" style="border-bottom:1px groove gray;">
+                        <div class="w-100">
+                        <strong>
+                            <asp:Label Text="Q." runat="server" />
+                            <asp:Label ID="Label6" runat="server" Text='<%# Bind("FaqId") %>'></asp:Label>: 
+                            <asp:Label ID="Label4" runat="server" Text='<%# Bind("Question") %>'></asp:Label>
+                        </strong>
+                    </div>
+                    <div style="padding-left:35px">
+                        <strong><asp:Label Text="reply: " runat="server" /></strong> 
+                        <asp:Label ID="Label5" CssClass="p-3 " runat="server" Text='<%# Bind("Answer") %>'></asp:Label>
+                    </div>
+                    </div>
+                </ItemTemplate>
+            </asp:TemplateField>
+        </Columns>
+    </asp:GridView>
+        </div>
+    </div>
 
     <script>
         //login validation
@@ -216,6 +255,17 @@
             var cdet = document.getElementById('<%= ContactDetails.ClientID %>').value;
             if (cname == "" || cmail == "" || cnum == "" || cpur == "" || cdet == "") {
                 alert("fields are empty !");
+                return false;
+            }
+            else {
+                return true;
+            }
+        }
+        //faq validation
+        function ValidateFaq() {
+            var quest = document.getElementById('<%= question.ClientID %>').value;
+            if (quest == "") {
+                alert("empty question box not allowed !");
                 return false;
             }
             else {

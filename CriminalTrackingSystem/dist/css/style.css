@@ -364,19 +364,17 @@ a {
     background:red !important;
 }
 /*hero*/
-.hero {
-   background:url("../img/her0-bg.jpeg");
-   display:flex;
-   justify-content:center;
-   background-repeat:no-repeat;
-   background-size:cover;
-   background-attachment:fixed;
-   align-items:center;
-   width:100%;
-   margin:0 auto;
-   height:100vh;
-   position:relative;
-}
+
+    .hero {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin: 0 auto;
+        height: 90vh;
+        position: relative;
+        overflow:hidden;
+    }
     .hero .right, .left {
         width: 100%;
         height: 100%;
@@ -394,7 +392,7 @@ a {
 
         .hero .right small {
             font-weight: 700;
-            color: gray;
+            color: #3c3c3c;
         }
             .hero .right label{
                 cursor:pointer;
@@ -405,7 +403,7 @@ a {
             }
 
             .hero .right h1 {
-                font-size: 5vmax;
+                font-size: 2rem;
                 font-weight:400
             }
 
@@ -416,14 +414,37 @@ a {
             }
 
     .hero .left {
-        padding: 2%;
-        align-items:end
+       
+        position:relative
     }
 
-        .hero .left img {
-            width: 90%;
+        .hero .left img:nth-child(1) {
+            width: 200%;
+            
+            left:-400px;
+            z-index:-1;
             height: auto;
+            position:absolute;
+            
         }
+        
+            .spin {
+                animation: spin 10s linear infinite;
+            }
+
+@keyframes spin {
+    0% {
+        
+        transform:rotate(0deg);
+    }
+    75% {
+        transform:rotate(270deg);
+    }
+    100% {
+        transform:rotate(360deg);
+        
+    }
+}
 /*about*/
 .card-info {
     width: 100%;
@@ -479,7 +500,7 @@ a {
             border: 2px solid white;
         }
 
-/*contact use page*/
+/*contact us page*/
 .contact-us-container {
     width: 100%;
     margin: auto;
@@ -487,13 +508,8 @@ a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    background-image: url('../img/15204.jpg');
-    background-size:cover;
-    background-position:center;
-    background-repeat:no-repeat;
-
-}
+    height: auto;
+    }
 .contact-us-container-form{
     border:1px solid #bebebe;
     border-radius:10px
@@ -570,6 +586,7 @@ a {
     margin-top: -25px;
     border-radius: 10px;
 }
+
 /*profile*/
 .user-profile {
     box-shadow: 5px 5px 10px 0px gray;
@@ -705,25 +722,22 @@ a {
 
 /*faq page*/
 .faq-container {
+    background:#006862;
+    margin-top:50px;
     display: flex;
     width: 100%;
     flex-direction: column;
-    justify-content: start;
+    justify-content:center;
     align-items: center;
-    height: 90vh;
     text-align: center;
+    height:40vh
 }
-
-    .faq-container img {
-        width: 400px;
-        height: auto;
-    }
-
     .faq-container .cc-box {
         width: 100%;
     }
 
 .faq-form {
+    padding:2% 3%;
     width: 60%;
     display: flex;
     justify-content: center;
@@ -844,6 +858,14 @@ a {
         padding: 3%;
         box-shadow: 2px 2px 5px 0px black;
     }
+    .faq-form{
+        width:80%;
+    }
+    .faq-form .cc-box {
+        width: 100%;
+        height: 40px
+    }
+    
 }
 
 /*medium screen*/

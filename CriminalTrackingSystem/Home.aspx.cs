@@ -180,5 +180,16 @@ namespace CriminalTrackingSystem
             ContactPurpose.Text = "";
             ContactDetails.Text = "";
         }
+        protected void FAQButton1_Click(object sender, EventArgs e)
+        {
+
+            con.Open();
+            cmd.CommandText = "INSERT INTO Faq VALUES('" + question.Text + "', '" + "null" + "')";
+            cmd.ExecuteNonQuery();
+            Response.Write("<script>alert('Thank you, we heared you !')</script>");
+            con.Close();
+            question.Text = "";
+
+        }
     }
 }

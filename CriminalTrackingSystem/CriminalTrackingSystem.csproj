@@ -79,6 +79,7 @@
     <Content Include="dist\css\style.css" />
     <Content Include="dist\favicon\cts_logo.ico" />
     <Content Include="dist\img\02_07_2023-gorakhpur_aiims_police_station_23458982.jpg" />
+    <Content Include="dist\img\11%282%29.png" />
     <Content Include="dist\img\14_04_2022-14azm_20_14042022_252-c-1.5_22627032_163740.jpg" />
     <Content Include="dist\img\15204.jpg" />
     <Content Include="dist\img\17_06_2021-16alr_12_16062021_499-c-1.5_21744534_11139.jpg" />
@@ -122,7 +123,6 @@
     <Content Include="dist\img\whatsapp-image-2022-10-16-at-083029_1665903787.jpg" />
     <Content Include="dist\img\—Pngtree—tri color indian flag transparent_7253951.png" />
     <Content Include="dist\js\custom.js" />
-    <Content Include="FAQ.aspx" />
     <Content Include="Home.aspx" />
     <Content Include="Signup.aspx" />
     <Content Include="Registration\CrimeComplain.aspx" />
@@ -176,13 +176,6 @@
       <DependentUpon>PoliceStation.aspx</DependentUpon>
     </Compile>
     <Compile Include="DynamicConnection.cs" />
-    <Compile Include="FAQ.aspx.cs">
-      <DependentUpon>FAQ.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="FAQ.aspx.designer.cs">
-      <DependentUpon>FAQ.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Home.aspx.cs">
       <DependentUpon>Home.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

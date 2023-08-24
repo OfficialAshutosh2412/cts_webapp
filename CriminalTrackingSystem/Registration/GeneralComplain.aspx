@@ -8,8 +8,6 @@
         <%--form--%>
         <div class="complain-form">
             <%--timer--%>
-            <asp:ScriptManager ID="ScriptManager1" runat="server">
-            </asp:ScriptManager>
             <asp:Timer ID="Timer1" runat="server" Interval="1000" OnTick="Timer1_Tick">
             </asp:Timer>
             <asp:UpdatePanel ID="UpdatePanel1" runat="server" class="mt-3 w-100">

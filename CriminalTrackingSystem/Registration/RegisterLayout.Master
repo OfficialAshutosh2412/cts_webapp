@@ -15,24 +15,26 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <i class="fa-solid fa-language cc-btn p-2 hidden-tool-box " id="tool-toggler" style="font-size:2em" ></i>
-        <a class=" cc-btn p-2 go-to-top" href="#nav">go to top</a>
+        <a class="go-to-top clear" href="#hero"><i class="fa-solid fa-arrow-up"></i></a>
+        <i class="fa-solid fa-language clear  hidden-tool-box " id="tool-toggler"></i>     
         <%--top bar--%>
         <div class="top-bar hide-top">
             <div>
                 <asp:Label ID="Label1" runat="server"></asp:Label>
             </div>
-            
+            <div>
+                <a href="#">skip to main content</a>
+            </div>
             <div class="footer-follow">
 
-                <a href="https://www.facebook.com/ashutosh.prasad.754365/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
-                <a href="https://www.instagram.com/official.ashu.2000/" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
-                <a href="https://twitter.com/Ashutos96662173" target="_blank"><i class="fa-brands fa-twitter"></i></a>
-                <a href="https://wa.me/6386239194" target="_blank"><i class="fa-brands fa-square-whatsapp"></i></a>
+                <a href="http://" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="http://" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
+                <a href="http://" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                <a href="http://" target="_blank"><i class="fa-brands fa-square-threads"></i></a>
 
             </div>
             <div class="d-flex">
-                
+                <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
                 <div id="google_translate_element"></div>
                  <script type="text/javascript">
                      function googleTranslateElementInit() {
@@ -43,38 +45,33 @@
             </div>
             
         </div>
+        
         <%--header--%>
-        <nav class="visitor-container" style="box-shadow:0px 2px 5px 0px gray;z-index:326532165316" id="nav">
-            <div class="visitor-nav">
-                <div class="hamburger">
-                    <img src="../dist/img/cts_logo.png" /><i class="fa-solid fa-bars " id="togglebtn"></i>
-                </div>
-                <div class="navs-item show">
-                    <ul>
-                        <li>
-                            <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Registration/RegisterHome.aspx"><i class="fa-solid fa-house"></i>Home</asp:HyperLink>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary p-0" id="nav">
+            <div class="container-fluid justify-content-between ">
+                <a class="navbar-brand" href="#"><img src="../dist/img/cts_logo.png" /></a>
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon fw-bolder"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav ">
+                        <li class="nav-item">
+                            <asp:HyperLink ID="HyperLink1" runat="server" class="nav-link text-dark" aria-current="page" NavigateUrl="~/Registration/RegisterHome.aspx"><i class="fa-solid fa-house"></i>Home</asp:HyperLink>
                         </li>
-                        <li class="drophover">
-                            <asp:HyperLink ID="HyperLink2" runat="server" ><i class="fa-solid fa-circle-chevron-down"></i>Report Complain</asp:HyperLink>
-                            <div class="dropdownbtn">
-                                <div>
-                                    <asp:HyperLink ID="HyperLink7" runat="server" NavigateUrl="~/Registration/CrimeComplain.aspx"><i class="fa-solid fa-handcuffs"></i>Crime Complain</asp:HyperLink>
-                                <asp:HyperLink ID="HyperLink6" runat="server" NavigateUrl="~/Registration/GeneralComplain.aspx"><i class="fa-solid fa-pen-nib"></i>General Complain</asp:HyperLink>
-                                </div>
-                            </div>
+                        <li class="nav-item">
+                            <asp:HyperLink ID="HyperLink2" class="nav-link text-dark" runat="server" NavigateUrl="~/Registration/CrimeComplain.aspx"><i class="fa-solid fa-handcuffs"></i>Crime Complain</asp:HyperLink>
                         </li>
-                        <li class="drophover">
-                            <asp:HyperLink ID="HyperLink4" runat="server" ><i class="fa-solid fa-circle-chevron-down"></i>Report Missing</asp:HyperLink>
-                            <div class="dropdownbtn">
-                                <div>
-                                    <asp:HyperLink ID="HyperLink8" runat="server" NavigateUrl="~/Registration/MissingPerson.aspx"><i class="fa-solid fa-user"></i>For a Person</asp:HyperLink>
-                                    <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/Registration/MissingValuable.aspx"><i class="fa-solid fa-star"></i>For Valuables</asp:HyperLink>
-                                
-                                </div>
-                            </div>
+                        <li class="nav-item">
+                            <asp:HyperLink ID="HyperLink3" class="nav-link text-dark" runat="server" NavigateUrl="~/Registration/GeneralComplain.aspx"><i class="fa-solid fa-file-signature"></i>General Complain</asp:HyperLink>
                         </li>
-                        <li>
-                            <asp:HyperLink ID="HyperLink5" runat="server" CssClass="delete d-flex align-items-center p-1 text-light" NavigateUrl="~/Home.aspx"><i class="fa-solid fa-right-from-bracket"></i>Logout</asp:HyperLink>
+                        <li class="nav-item">
+                            <asp:HyperLink ID="HyperLink4" class="nav-link text-dark" runat="server" NavigateUrl="~/Registration/MissingPerson.aspx"><i class="fa-solid fa-person"></i>Missing Person</asp:HyperLink>
+                        </li>
+                        <li class="nav-item">
+                            <asp:HyperLink ID="HyperLink5" class="nav-link text-dark" runat="server" NavigateUrl="~/Registration/MissingValuable.aspx"><i class="fa-regular fa-gem"></i>Missing Valuable</asp:HyperLink>
+                        </li>
+                        <li class="nav-item">
+                            <asp:HyperLink ID="HyperLink6" class="nav-link text-dark" runat="server" NavigateUrl="~/Home.aspx"><i class="fa-solid fa-right-from-bracket"></i>Logout</asp:HyperLink>
                         </li>
                     </ul>
                 </div>

@@ -6,9 +6,7 @@
     <div class="crime-complain">
         <%--form--%>
         <div class="crime-complain-form">
-            <div >
-                <asp:ScriptManager ID="ScriptManager1" runat="server">
-                </asp:ScriptManager>
+            <div>
                 <asp:UpdatePanel ID="UpdatePanel1" runat="server">
                     <ContentTemplate>
                         <asp:Label ID="Label1" runat="server" Class="p-2 text-white bg-danger"></asp:Label>
