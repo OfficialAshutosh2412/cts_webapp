@@ -124,6 +124,7 @@
     <Content Include="dist\img\—Pngtree—tri color indian flag transparent_7253951.png" />
     <Content Include="dist\js\custom.js" />
     <Content Include="Home.aspx" />
+    <Content Include="Login.aspx" />
     <Content Include="Signup.aspx" />
     <Content Include="Registration\CrimeComplain.aspx" />
     <Content Include="Registration\GeneralComplain.aspx" />
@@ -189,6 +190,13 @@
     </Compile>
     <Compile Include="LandingLayout.Master.designer.cs">
       <DependentUpon>LandingLayout.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Signup.aspx.cs">

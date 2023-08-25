@@ -143,30 +143,7 @@ namespace CriminalTrackingSystem
         {
             Response.Redirect("~/dist/img/whatsapp-image-2022-10-16-at-083029_1665903787.jpg");
         }
-        protected void Button1_Click(object sender, EventArgs e)
-        {
-            con.Open();
-            cmd = new SqlCommand("SELECT * FROM Login WHERE Username='" + LoginName.Text + "' and Password='" + LoginPassword.Text + "'", con);
-            dtr = cmd.ExecuteReader();
-            if (dtr.Read())
-            {
-                if (dtr[2].ToString() == "user")
-                {
-                    Session["user"] = LoginName.Text;
-                    Response.Redirect("~/Registration/RegisterHome.aspx");
-                }
-                else if (dtr[2].ToString() == "admin")
-                {
-                    Session["user"] = LoginName.Text;
-                    Response.Redirect("~/Admin/AdminHome.aspx");
-                }
-            }
-            else
-            {
-                Response.Write("<script>alert('invalid username and password')</script>");
-            }
-
-        }
+        
         protected void ContactBtn_Click(object sender, EventArgs e)
         {
             con.Open();

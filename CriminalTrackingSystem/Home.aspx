@@ -4,24 +4,14 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [Faq] ORDER BY [FaqId], [Question], [Answer]"></asp:SqlDataSource>
-    <%--login--%>
-    <div class="signin bg-white p-5 shadow-lg rounded show-login">
-        <h1>Login</h1>
-        <div class="mb-3">
-            <label class="form-label">Username</label>
-            <asp:TextBox ID="LoginName" runat="server" class="cc-box"></asp:TextBox>
-        </div>
-        <div class="mb-3">
-            <label class="form-label">Password</label>
-            <asp:TextBox ID="LoginPassword" runat="server" TextMode="Password" class="cc-box" ></asp:TextBox>
-        </div>
-        <div class="d-flex justify-content-start align-items-center">
-            <asp:Button ID="Button1" runat="server" Text="login now !" OnClientClick="return validateLogin()" class="send p-2" OnClick="Button1_Click" /><br />
-            <label class="delete p-2" id="login-close">close</label>
-        </div>
-        <asp:HyperLink ID="HyperLink1" runat="server" CssClass="text-secondary" NavigateUrl="~/Signup.aspx">click here to create account...</asp:HyperLink>
-        <div>
-            <asp:Label ID="Label1" runat="server" Font-Bold="True" Font-Size="Small" ForeColor="#FF5050"></asp:Label>
+    <%--news--%>
+    <div class="news">
+        <div class="bg-danger text-white p-2 ticker">NEWS</div>
+        <div class="two">
+            <a href="/Login.aspx">Site is under development.</a>
+            <a href="/Login.aspx">If you see crime happens anywhere, report to our website.</a>
+            <a href="/Login.aspx">User no enabled to upload their profile.</a>
+            <a href="/Login.aspx">Profile edit option will be appear soon</a>
         </div>
     </div>
     <%--hero--%>
@@ -36,16 +26,7 @@
             <label class="send">join us</label>
         </div>
     </div>
-    <%--news--%>
-    <%--<div class="news">
-        <div class="bg-danger text-white p-2 ticker">NEWS</div>
-        <div class="two">
-            <a href="/Login.aspx">Site is under development.</a>
-            <a href="/Login.aspx">If you see crime happens anywhere, report to our website.</a>
-            <a href="/Login.aspx">User no enabled to upload their profile.</a>
-            <a href="/Login.aspx">Profile edit option will be appear soon</a>
-        </div>
-    </div>--%>
+    
     <%--about--%>
 
     <div class="about" id="about">
@@ -234,18 +215,6 @@
     </div>
 
     <script>
-        //login validation
-        function validateLogin() {
-            var lname = document.getElementById('<%= LoginName.ClientID %>').value;
-            var lpass = document.getElementById('<%= LoginPassword.ClientID %>').value;
-            if (lname == "" || lpass == "") {
-                alert("field is empty !");
-                return false;
-            }
-            else {
-                return true;
-            }
-        }
         //contact us validation
         function validateContact() {
             var cname = document.getElementById('<%= ContactName.ClientID %>').value;

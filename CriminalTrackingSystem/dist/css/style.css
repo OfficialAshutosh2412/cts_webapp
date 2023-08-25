@@ -9,34 +9,42 @@
 a {
     text-decoration: none
 }
+
 .navbar-toggler:focus,
 .navbar-toggler:active,
 .navbar-toggler-icon:focus {
     outline: none;
     box-shadow: none;
 }
-.navbar-brand img{
-    width:60px;
+
+.navbar-brand img {
+    width: 50px;
 }
+
 .navbar .container-fluid {
     background: var(--tan)
 }
-.navbar{
-    box-shadow:2px 2px 10px 0px gray;
-    z-index:99;
-    position:sticky;
-    top:0;
-    width:100%;
+
+.navbar {
+    box-shadow: 2px 2px 10px 0px gray;
+    z-index: 99;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    font-size: 10pt;
 }
+
 .section-title {
     text-align: center;
     margin-bottom: 40px;
     margin-top: 40px;
 }
-.section-title span {
-    background: #ea2d2d;
-    color: white;
-}
+
+    .section-title span {
+        background: #ea2d2d;
+        color: white;
+    }
+
 .menu-heads {
     background: #0060bb;
     width: fit-content;
@@ -59,14 +67,15 @@ a {
     --tan: #ffe1b2;
     --topBarBg: #010040;
 }
+
 .GridPager a, .GridPager span {
     display: block;
-    height:fit-content;
+    height: fit-content;
     width: 25px;
     font-weight: bold;
     text-align: center;
     text-decoration: none;
-    padding:1%;
+    padding: 1%;
 }
 
 .GridPager a {
@@ -194,13 +203,13 @@ a {
 
 .hidden-tool-box, .go-to-top {
     position: fixed;
-    text-align:center;
+    text-align: center;
     z-index: 89;
     top: 90%;
-    width:50px;
-    height:50px;
+    width: 50px;
+    height: 50px;
     right: 0;
-    font-size:1.2em
+    font-size: 1.2em
 }
 
 .go-to-top {
@@ -245,7 +254,8 @@ a {
     position: relative;
     justify-content: start;
     align-items: center;
-    background: #241f9a;
+    background: #f19b00;
+    padding: 0.5% 0%;
 }
 
 .two a {
@@ -254,6 +264,7 @@ a {
 
 .news .ticker {
     z-index: 2;
+    border-radius: 0px 20px 20px 0px;
 }
 
 .two {
@@ -263,7 +274,7 @@ a {
     justify-content: center;
     align-items: center;
     white-space: nowrap;
-    animation: pulse 30s linear infinite;
+    animation: pulse 50s linear infinite;
 }
 
     .two a {
@@ -301,6 +312,8 @@ a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background: linear-gradient(#aa3636 70%, white 50%);
+    color: white;
 }
 
 .services {
@@ -335,7 +348,7 @@ a {
 
     .services-item div:nth-child(1) {
         position: absolute;
-        background: #fdc38d;
+        background: #aa3636;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -360,21 +373,22 @@ a {
 
 
 /*visitor navbar*/
-.v-nav{
-    background:red !important;
+.v-nav {
+    background: red !important;
 }
 /*hero*/
 
-    .hero {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        margin: 0 auto;
-        height: 90vh;
-        position: relative;
-        overflow:hidden;
-    }
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+    height: 86vh;
+    position: relative;
+    overflow: hidden;
+}
+
     .hero .right, .left {
         width: 100%;
         height: 100%;
@@ -386,6 +400,7 @@ a {
     .hero .right {
         align-items: flex-start;
     }
+
         .hero .right p {
             font-size: 1.5rem
         }
@@ -394,58 +409,62 @@ a {
             font-weight: 700;
             color: #3c3c3c;
         }
-            .hero .right label{
-                cursor:pointer;
-                width:100px;
-                text-align:center;
-                margin-top:10px !important;
-                margin:0;
-            }
 
-            .hero .right h1 {
-                font-size: 2rem;
-                font-weight:400
-            }
+        .hero .right label {
+            cursor: pointer;
+            width: 100px;
+            text-align: center;
+            margin-top: 10px !important;
+            margin: 0;
+        }
+
+        .hero .right h1 {
+            font-size: 2rem;
+            font-weight: 400
+        }
 
             .hero .right h1 span {
                 background: #ea2d2d;
                 padding: 2px;
-                color:#eeeeee
+                color: #eeeeee
             }
 
     .hero .left {
-       
-        position:relative
+        position: relative
     }
 
-        .hero .left img:nth-child(1) {
+        .hero .left img {
             width: 200%;
-            
-            left:-400px;
-            z-index:-1;
+            left: -400px;
+            z-index: -1;
             height: auto;
-            position:absolute;
-            
+            position: absolute;
         }
-        
-            .spin {
-                animation: spin 10s linear infinite;
-            }
+
+.spin {
+    animation: spin 40s linear infinite;
+}
 
 @keyframes spin {
     0% {
-        
-        transform:rotate(0deg);
+        transform: rotate(0deg);
     }
+
     75% {
-        transform:rotate(270deg);
+        transform: rotate(270deg);
     }
+
     100% {
-        transform:rotate(360deg);
-        
+        transform: rotate(360deg);
     }
 }
 /*about*/
+.about {
+    background: #aa3636;
+    padding: 4% 0%;
+    color: white;
+}
+
 .card-info {
     width: 100%;
     margin: 0 auto;
@@ -453,7 +472,8 @@ a {
 }
 
 .card-info-sections {
-   
+    width: 80%;
+    margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -461,25 +481,32 @@ a {
 }
 
 .card-item {
-    margin-top:50px ;
-    background-image: url('../img/—Pngtree—tri color indian flag transparent_7253951.png');
-    background-size:cover;
-    background-position:center;
-    background-repeat:no-repeat;
+    margin-top: 50px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     flex: auto;
     width: 200px;
     height: auto;
     border: 1px solid gray;
     margin: 0 10px;
     padding: 1%;
-    box-shadow: 3px 3px 10px 0px gray;
+    box-shadow: 3px 3px 10px 0px white;
 }
 
+    .card-item h1 {
+        font-size: 1.3rem;
+        text-decoration: underline;
+    }
+
+    .card-item p {
+        font-size: 10pt
+    }
 /*gallery page*/
 .gallery {
-    height:70vh;
-    overflow:scroll;
-    overflow-x:hidden;
+    height: 70vh;
+    overflow: scroll;
+    overflow-x: hidden;
     display: flex;
     flex-wrap: wrap;
     padding: 1%;
@@ -509,29 +536,28 @@ a {
     justify-content: center;
     align-items: center;
     height: auto;
-    }
-.contact-us-container-form{
-    border:1px solid #bebebe;
-    border-radius:10px
+    font-size: 11pt
+}
+
+.contact-us-container-form {
+    border: 1px solid #bebebe;
+    border-radius: 10px
 }
 /*signin page*/
 .signin {
     width: 40%;
-    position: absolute;
-    z-index: 100;
-    top: 100px;
-    left: 0;
-    right: 0;
-    margin: auto;
-    transition: 0.4s all ease-in-out;
+    margin: 0 auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
 }
+    .signin div{
+        font-size:10pt;
+    }
 
-.show-login {
-    transform: translateY(-200%);
-}
-.deflex {
-    display: flex;
-}
+
+    .deflex {
+        display: flex;
+    }
 /*visitor footer*/
 
 .footer {
@@ -581,19 +607,19 @@ a {
 }
 
 .signup {
-    width: 90%;
-    margin: 0 auto;
-    margin-top: -25px;
+    width: 100%;
     border-radius: 10px;
 }
-
-/*profile*/
-.user-profile {
-    box-shadow: 5px 5px 10px 0px gray;
-    width: 80%;
-    margin: 0 auto;
-    margin-top: -30px;
-}
+    .signup div{
+        font-size:11pt
+    }
+    /*profile*/
+    .user-profile {
+        box-shadow: 5px 5px 10px 0px gray;
+        width: 80%;
+        margin: 0 auto;
+        margin-top: -30px;
+    }
 
 /*crime complain*/
 .crime-complain {
@@ -722,22 +748,23 @@ a {
 
 /*faq page*/
 .faq-container {
-    background:#006862;
-    margin-top:50px;
+    background: #006862;
+    margin-top: 50px;
     display: flex;
     width: 100%;
     flex-direction: column;
-    justify-content:center;
+    justify-content: center;
     align-items: center;
     text-align: center;
-    height:40vh
+    height: 40vh
 }
+
     .faq-container .cc-box {
         width: 100%;
     }
 
 .faq-form {
-    padding:2% 3%;
+    padding: 2% 3%;
     width: 60%;
     display: flex;
     justify-content: center;
@@ -761,30 +788,34 @@ a {
     align-items: center;
     background: #00a9c7;
 }
-    .admin-nav img{
-        width:50px
+
+    .admin-nav img {
+        width: 50px
     }
-    .admin-title{
-        width:100%;
-    }
-.admin-items {
-    display: flex;
-    justify-content:end;
+
+.admin-title {
     width: 100%;
 }
+
+.admin-items {
+    display: flex;
+    justify-content: end;
+    width: 100%;
+}
+
     .admin-items div {
-        width:100%;
+        width: 100%;
     }
 /*admin footer*/
 .admin-foot {
-    text-align:center;
-    padding:2px;
-    color:white;
+    text-align: center;
+    padding: 2px;
+    color: white;
 }
 /*.admin-content height*/
-.admin-content-height{
-    height:100vh;
-    overflow:scroll
+.admin-content-height {
+    height: 100vh;
+    overflow: scroll
 }
 /*admin home*/
 .session-name {
@@ -794,11 +825,12 @@ a {
     margin-top: 10px;
     text-align: right
 }
-.admin-card-container{
-    display:flex;
-    flex-wrap:wrap;
-    
+
+.admin-card-container {
+    display: flex;
+    flex-wrap: wrap;
 }
+
 .admin-card {
     width: 200px;
     padding: 1%;
@@ -808,7 +840,7 @@ a {
     justify-content: center;
     align-items: center;
     margin: 1%;
-    flex:auto;
+    flex: auto;
 }
 
     .admin-card i {
@@ -818,13 +850,14 @@ a {
 .counters {
     font-size: 3em
 }
-    .counterbtn{
-        box-shadow:0px 0px 5px 0px gray;
-        height:20px;
-        text-align:center;
-        width:20px;
-        border-radius:100%;
-    }
+
+.counterbtn {
+    box-shadow: 0px 0px 5px 0px gray;
+    height: 20px;
+    text-align: center;
+    width: 20px;
+    border-radius: 100%;
+}
 
 
 
@@ -834,9 +867,11 @@ a {
     .hero {
         width: 100%;
     }
+
         .hero .left img {
             width: 400px
         }
+
     .deflex {
         display: block;
     }
@@ -850,7 +885,7 @@ a {
         margin: 0 auto;
     }
 
-        
+
 
     .cc-container {
         width: 100%;
@@ -858,31 +893,34 @@ a {
         padding: 3%;
         box-shadow: 2px 2px 5px 0px black;
     }
-    .faq-form{
-        width:80%;
+
+    .faq-form {
+        width: 80%;
     }
-    .faq-form .cc-box {
-        width: 100%;
-        height: 40px
-    }
-    
+
+        .faq-form .cc-box {
+            width: 100%;
+            height: 40px
+        }
 }
 
 /*medium screen*/
 @media screen and (max-width:682px) {
 
     .hero {
-        height:100%;
+        height: 100%;
     }
 
-    .hero .left  {
-        align-items:center;
-        justify-content:center !important
-    }
-    .hero .right {
-        align-items: center;
-        justify-content: center !important
-    }
+        .hero .left {
+            align-items: center;
+            justify-content: center !important
+        }
+
+        .hero .right {
+            align-items: center;
+            justify-content: center !important
+        }
+
     .customContainer {
         width: 100%;
         margin: 0 auto;
@@ -901,13 +939,13 @@ a {
         align-items: center;
         text-align: center;
     }
-        
-        /*crime complain*/
-        .crime-complain {
-            display: flex;
-            flex-direction: column-reverse;
-            height: auto;
-        }
+
+    /*crime complain*/
+    .crime-complain {
+        display: flex;
+        flex-direction: column-reverse;
+        height: auto;
+    }
 
     .crime-complain-form {
         padding: 2%;
@@ -983,7 +1021,7 @@ a {
     /*admin nav*/
     .admin-nav {
         display: flex;
-        flex-direction:column;
+        flex-direction: column;
     }
 
     .admin-items {
@@ -993,14 +1031,15 @@ a {
 
         .admin-items div {
             width: 100%;
-            text-align:center;
-            background:#005f83;
-            padding:1%;
-            transition:0.3s all ease-in-out;
+            text-align: center;
+            background: #005f83;
+            padding: 1%;
+            transition: 0.3s all ease-in-out;
         }
-        .admin-items div:hover{
-            background:#000000;
-        }
+
+            .admin-items div:hover {
+                background: #000000;
+            }
 }
 
 /*small screen*/
