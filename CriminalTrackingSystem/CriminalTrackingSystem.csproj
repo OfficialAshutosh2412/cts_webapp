@@ -82,6 +82,7 @@
     <Content Include="dist\img\11%282%29.png" />
     <Content Include="dist\img\14_04_2022-14azm_20_14042022_252-c-1.5_22627032_163740.jpg" />
     <Content Include="dist\img\15204.jpg" />
+    <Content Include="dist\img\17973908.jpg" />
     <Content Include="dist\img\17_06_2021-16alr_12_16062021_499-c-1.5_21744534_11139.jpg" />
     <Content Include="dist\img\3549634286_882d3c48f9_b.jpg" />
     <Content Include="dist\img\4_1614768752.jpg" />
@@ -125,6 +126,7 @@
     <Content Include="dist\js\custom.js" />
     <Content Include="Home.aspx" />
     <Content Include="Login.aspx" />
+    <Content Include="Registration\Profile.aspx" />
     <Content Include="Signup.aspx" />
     <Content Include="Registration\CrimeComplain.aspx" />
     <Content Include="Registration\GeneralComplain.aspx" />
@@ -199,6 +201,13 @@
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Registration\Profile.aspx.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Registration\Profile.aspx.designer.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Signup.aspx.cs">
       <DependentUpon>Signup.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

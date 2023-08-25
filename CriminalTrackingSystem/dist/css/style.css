@@ -504,22 +504,21 @@ a {
     }
 /*gallery page*/
 .gallery {
-    height: 70vh;
-    overflow: scroll;
+    width:80%;
+    margin:0 auto;
     overflow-x: hidden;
     display: flex;
     flex-wrap: wrap;
-    padding: 1%;
-    background: #353535;
-    margin-top: -10px;
+    background: #f5f5f5;
 }
 
     .gallery * {
         width: 20%;
         height: auto;
         flex: auto;
-        margin: 5px;
-        transition: 0.3s ease-in-out all
+        margin: 2px;
+        transition: 0.3s ease-in-out all;
+        border-radius:6px
     }
 
         .gallery *:hover {
@@ -529,20 +528,61 @@ a {
 
 /*contact us page*/
 .contact-us-container {
+    background-image: url('../img/17973908.jpg');
+    background-attachment:fixed;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-size:cover;
     width: 100%;
-    margin: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: auto;
-    font-size: 11pt
+    height: 100%;
+    font-size: 11pt;
+    margin-top:30px;
 }
 
 .contact-us-container-form {
     border: 1px solid #bebebe;
     border-radius: 10px
 }
+
+/*faq page*/
+.faq-container {
+    background: #aa3636;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 40vh;
+    margin-top: 30px
+}
+
+    .faq-container .cc-box {
+        width: 100%;
+    }
+
+.faq-form {
+    padding: 2% 3%;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+    .faq-form .cc-box {
+        height: 45px;
+        width: 70%
+    }
+
+    .faq-form .delete {
+        width: 20%;
+    }
+
 /*signin page*/
 .signin {
     width: 40%;
@@ -746,40 +786,7 @@ a {
             width: 30%;
         }
 
-/*faq page*/
-.faq-container {
-    background: #006862;
-    margin-top: 50px;
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    height: 40vh
-}
 
-    .faq-container .cc-box {
-        width: 100%;
-    }
-
-.faq-form {
-    padding: 2% 3%;
-    width: 60%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-}
-
-    .faq-form .cc-box {
-        height: 45px;
-        width: 70%
-    }
-
-    .faq-form .delete {
-        width: 20%;
-    }
 
 /*admin design*/
 .admin-nav {

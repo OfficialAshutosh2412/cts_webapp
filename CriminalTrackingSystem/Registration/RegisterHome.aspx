@@ -6,6 +6,7 @@
     <div class="login-home-modal p-5 text-white bg-dark">
         <h1>Welcome, 
             <asp:Label ID="Label1" runat="server" Font-Size="XX-Large" class="text-capitalize"></asp:Label>
+            <asp:HyperLink ID="HyperLink5" runat="server" title="profile" NavigateUrl="~/Registration/Profile.aspx"><i class="fa-solid fa-user-pen"></i></asp:HyperLink>
         </h1>
         
     </div>

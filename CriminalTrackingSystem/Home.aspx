@@ -23,7 +23,7 @@
             <h1><span>Crime</span> Tracking System</h1>
             <p>CTS is an online portal to track crime records.</p>
             <small>Managed by State Police Department</small>
-            <label class="send">join us</label>
+            <asp:HyperLink ID="HyperLink1" runat="server" cssClass="send" NavigateUrl="~/Login.aspx">join us</asp:HyperLink>
         </div>
     </div>
     
@@ -194,7 +194,7 @@
                     <asp:TextBox ID="TextBox1" runat="server" Text='<%# Bind("Question") %>'></asp:TextBox>
                 </EditItemTemplate>
                 <ItemTemplate>
-                    <div class="mb-3 p-3" style="border-bottom:1px groove gray;">
+                    <div class=" p-3" style="border-bottom:1px groove gray;">
                         <div class="w-100">
                         <strong>
                             <asp:Label Text="Q." runat="server" />
