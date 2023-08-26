@@ -3,9 +3,8 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <h3>Profile</h3>
-    <div class="us">
-
-        <asp:GridView ID="GridView1" CssClass="table" runat="server" AutoGenerateColumns="False" DataKeyNames="Email" DataSourceID="SqlDataSource1">
+    <div class="profile">
+        <asp:GridView ID="GridView1" CssClass="table " runat="server" AutoGenerateColumns="False" DataKeyNames="Email" DataSourceID="SqlDataSource1">
             <Columns>
                 <asp:CommandField ButtonType="Image" CancelImageUrl="~/dist/img/close.png" CancelText="" EditImageUrl="~/dist/img/edit.png" EditText="" ShowEditButton="True" UpdateImageUrl="~/dist/img/check-mark.png" UpdateText="" />
                 <asp:BoundField DataField="Username" HeaderText="Your Name" SortExpression="Username" />

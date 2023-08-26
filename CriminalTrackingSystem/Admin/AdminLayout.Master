@@ -4,6 +4,8 @@
 
 <html>
 <head runat="server">
+     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
@@ -44,7 +46,7 @@
                     <asp:HyperLink ID="HyperLink8" runat="server" title="FAQ" NavigateUrl="~/Admin/Admin-FAQ.aspx"><i class="fa-solid fa-circle-question text-light"></i></asp:HyperLink>
                 </div>
                 <div>
-                    <asp:HyperLink ID="HyperLink1" runat="server" title="Logout"><i class="fa-solid fa-right-from-bracket text-light"></i></asp:HyperLink>
+                    <asp:HyperLink ID="HyperLink1" runat="server" title="Logout" NavigateUrl="~/Login.aspx"><i class="fa-solid fa-right-from-bracket text-light"></i></asp:HyperLink>
                 </div>
             </div>
             

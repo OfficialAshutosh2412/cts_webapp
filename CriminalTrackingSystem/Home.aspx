@@ -134,27 +134,25 @@
         </div>
     </div>
     <%--contact us--%>
-
-
     <div class=" min-width contact-us-container" id="contact">
         <h1 class="section-title"><span>Give us</span> a message</h1>
         <div class="p-3 contact-us-container-fom">
-            <div class=" deflex">
+            <div class=" d-flex">
                 <div class="mb-1 w-100 p-2">
                     <label class="form-label">
-                        Your Name
+                        Name
                     </label>
                    <asp:TextBox ID="ContactName" runat="server" type="text" class="cc-box "></asp:TextBox>
                 </div>
                 <div class="mb-1 w-100 p-2">
                     <label class="form-label">
-                        Email address
+                        Email
                     </label>
                    <asp:TextBox ID="ContactEmail" runat="server" type="email" class="cc-box "></asp:TextBox>
                 </div>
                 <div class="mb-1 w-100 p-2">
                     <label class="form-label">
-                        Phone Number
+                        Phone
                     </label>
                    <asp:TextBox ID="ContactNumber" runat="server" type="text" class="cc-box " MaxLength="13"></asp:TextBox>
                 </div>
