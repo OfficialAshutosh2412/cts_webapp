@@ -102,6 +102,7 @@
     <Content Include="dist\img\close.png" />
     <Content Include="dist\img\cts_logo.png" />
     <Content Include="dist\img\delete.png" />
+    <Content Include="dist\img\developer.jpg" />
     <Content Include="dist\img\diamond_2600353.png" />
     <Content Include="dist\img\edit.png" />
     <Content Include="dist\img\FAQs%281%29.gif" />
@@ -112,6 +113,7 @@
     <Content Include="dist\img\H_202002251149133980.jpg" />
     <Content Include="dist\img\letter.png" />
     <Content Include="dist\img\Lucknow-Police.png" />
+    <Content Include="dist\img\mentor 1.jpg" />
     <Content Include="dist\img\mr.jpg" />
     <Content Include="dist\img\mv.jpg" />
     <Content Include="dist\img\police station_0.jpg.jpeg" />

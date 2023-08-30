@@ -23,7 +23,9 @@
             <h1><span>Crime</span> Tracking System</h1>
             <p>CTS is an online portal to track crime records.</p>
             <small>Managed by State Police Department</small>
+            <label><i class="fa-solid fa-phone"></i> +91-0522-112</label>
             <asp:HyperLink ID="HyperLink1" runat="server" cssClass="send" NavigateUrl="~/Login.aspx">join us</asp:HyperLink>
+            
         </div>
     </div>
     
@@ -34,19 +36,23 @@
         <div class="card-info">
             <div class="card-info-sections">
                 <div class="card-item">
-                    <h1>What's CTS ?</h1>
+                    <h1>What's CTS ?
+                    </h1>
                     <p>Criminal Tracking Systems (CTS) is a plan scheme conceived in the light of experience of a non-plan scheme namely.</p>
                 </div>
                 <div class="card-item">
-                    <h1>CTS Vissions</h1>
+                    <h1>CTS Vissions
+                    </h1>
                     <p>Make the Police functioning citizen friendly and more transparent by automating the functioning of Police Stations.</p>
                 </div>
                 <div class="card-item">
-                    <h1>Stakeholder</h1>
+                    <h1>Stakeholder
+                    </h1>
                     <p>Citizens/ Citizens groups, MHA/NCRB, State Police department, External Departments of the State such as Courts, and Peoples.</p>
                 </div>
                 <div class="card-item">
-                    <h1>Benefits</h1>
+                    <h1>Benefits
+                    </h1>
                     <p>
                         Enhanced tools for investigation, Centralized crime and criminal information repository along with the criminal images.<p>
                 </div>
@@ -136,7 +142,7 @@
     <%--contact us--%>
     <div class=" min-width contact-us-container" id="contact">
         <h1 class="section-title"><span>Give us</span> a message</h1>
-        <div class="p-3 contact-us-container-fom">
+        <div class="p-3 contact-us-container-form">
             <div class=" d-flex">
                 <div class="mb-1 w-100 p-2">
                     <label class="form-label">
@@ -173,6 +179,43 @@
 
 
         </div>
+    </div>
+    <%--member--%>
+    <div class="member">
+        <h1 class="section-title"><span>Our</span> Team</h1>
+        <div class="mentor">
+            <div class="image">
+                <img src="dist/img/mentor 1.jpg" />
+            </div>
+            <div class="image-data">
+                <h1>Our Mentor</h1>
+                <p><strong>Mr. Sushant Pathhak</strong> project mentor.</p>
+                <small>Project Scientist at Remote Sensing Applications Centre Uttar Pradesh, Lucknow</small>
+                <div class="member-link">
+                    <a href="https://www.facebook.com/engg.superpower" target="_blank"><i class="fa-brands fa-facebook-f text-light"></i></a>
+                <a href="https://www.instagram.com/scientistsushantpathak/" target="_blank"><i class="fa-brands text-light fa-square-instagram"></i></a>
+                <a href="https://twitter.com/Ashutos96662173" target="_blank"><i class="fa-brands fa-twitter text-light"></i></a>
+                <a href="https://wa.me/6386239194" target="_blank"><i class="fa-brands fa-square-whatsapp text-light"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="mentor">
+            <div class="image">
+                <img src="dist/img/developer.jpg" />
+            </div>
+            <div class="image-data">
+                <h1>The Developer</h1>
+                <p><strong>Mr. Ashutosh Prasad</strong> project developer.</p>
+                <small>MCA graduate from AIET and a full stack developer on python & ASP.NET with MVC</small>
+                 <div class="member-link">
+                    <a href="https://www.facebook.com/ashutosh.prasad.754365/" target="_blank"><i class="fa-brands text-light fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/official.ashu.2000/" target="_blank"><i class="fa-brands fa-square-instagram text-light"></i></a>
+                <a href="https://www.indiamart.com/sunriseinfotechsolution/" target="_blank"><i class="fa-solid fa-cart-shopping text-light"></i></a>
+                <a href="https://sunrise-infotech-solution.business.site/" target="_blank"><i class="fa-solid fa-globe text-light"></i></a>
+                </div>
+            </div>
+        </div>
+        
     </div>
     <%--faq--%>
     <div class="faq-container" id="faq">

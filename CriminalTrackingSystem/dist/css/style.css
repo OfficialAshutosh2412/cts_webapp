@@ -399,13 +399,16 @@ a {
             font-weight: 700;
             color: #3c3c3c
         }
+        .hero .right i{
+            font-weight:bolder;
+        }
 
         .hero .right label {
             cursor: pointer;
-            width: 100px;
-            text-align: center;
-            margin-top: 10px !important;
-            margin: 0
+            width:100%;
+            font-weight:800;
+            width: 100%;
+           
         }
 
         .hero .right h1 {
@@ -459,6 +462,10 @@ a {
     width: 100%;
     margin: 0 auto;
     margin-bottom: 50px
+}
+.about h1 *{
+    text-decoration:none;
+    color:white;
 }
 
 .card-info-sections {
@@ -529,25 +536,79 @@ a {
     align-items: center;
     height: 100%;
     font-size: 11pt;
-    margin-top: 30px
+    margin-top: 30px;
+    padding:2%;
 }
 
 .contact-us-container-form {
     border: 1px solid #bebebe;
-    border-radius: 10px
+    border-radius: 10px;
+    backdrop-filter:blur(100px)
 }
 
-.faq-container {
-    background: #aa3636;
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    height: 40vh;
-    margin-top: 30px
+.member{
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
 }
+    .member .mentor {
+        margin:5px;
+        width:70%;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        background: linear-gradient(267deg, #aa3636,#e65151);
+        padding:1%; 
+        transition:0.3s ease-in-out;
+    }
+        .member .mentor:nth-child(2){
+            flex-direction:row-reverse
+        }
+            .member .mentor .image {
+                width: 30%;
+                border-radius: 5px;
+                overflow: hidden;
+            }
+        .member .mentor .image img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            filter:brightness(60%);
+            transition:0.3s ease-in-out;
+        }
+        .member .mentor:hover .image img {
+            filter: brightness(100%);
+        }
+        .member .mentor .image:hover img{
+            -webkit-transform-origin-y:0px;
+            -moz-transform-origin:center 0px;
+            transform:scale(1.5);
+        }
+        .member .mentor .image-data {
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 70%;
+            height: 100%
+        }
+    .member .member-link {
+        font-size:1.5em
+    }
+    .faq-container {
+        background: #aa3636;
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        height: 40vh;
+        margin-top: 30px
+    }
 
     .faq-container .cc-box {
         width: 100%
@@ -949,18 +1010,40 @@ a {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        text-align: center
+        text-align: center;
     }
+    .hero .left img{
+        top:0;
+    }
+        .hero .right {
+            backdrop-filter: blur(10px)
+        }
 
     .gallery {
         width: 100%;
         padding: 2%
     }
 
-    .contact-us-container-fom {
-        width: 100%
+    .contact-us-container-form {
+        width: 100%;
     }
+        .contact-us-container-form .d-flex{
+            display:block !important;
+        }
+        .member .mentor {
+            margin: 5px;
+            width: 100%;
+            text-align:center;
+            flex-direction: column !important;
+            padding:3%;
+        }
+            .member .mentor .image{
+                width:60%;
+            }
 
+            .member .mentor .image {
+                border-radius: 100%;
+            }
     .register-card div {
         width: 200px
     }
