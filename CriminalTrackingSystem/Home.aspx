@@ -5,7 +5,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [Faq] ORDER BY [FaqId], [Question], [Answer]"></asp:SqlDataSource>
     <%--news--%>
-    <div class="news">
+    <div class="news" id="news" >
         <div class="bg-danger text-white p-2 ticker">NEWS</div>
         <div class="two">
             <a href="/Login.aspx">Site is under development.</a>
@@ -193,9 +193,9 @@
                 <small>Project Scientist at Remote Sensing Applications Centre Uttar Pradesh, Lucknow</small>
                 <div class="member-link">
                     <a href="https://www.facebook.com/engg.superpower" target="_blank"><i class="fa-brands fa-facebook-f text-light"></i></a>
-                <a href="https://www.instagram.com/scientistsushantpathak/" target="_blank"><i class="fa-brands text-light fa-square-instagram"></i></a>
-                <a href="https://twitter.com/Ashutos96662173" target="_blank"><i class="fa-brands fa-twitter text-light"></i></a>
-                <a href="https://wa.me/6386239194" target="_blank"><i class="fa-brands fa-square-whatsapp text-light"></i></a>
+                    <a href="https://www.instagram.com/scientistsushantpathak/" target="_blank"><i class="fa-brands text-light fa-square-instagram"></i></a>
+                    <a href="https://www.indiamart.com/sunriseinfotechsolution/" target="_blank"><i class="fa-solid fa-cart-shopping text-light"></i></a>
+                <a href="https://sunrise-infotech-solution.business.site/" target="_blank"><i class="fa-solid fa-globe text-light"></i></a>
                 </div>
             </div>
         </div>
@@ -210,8 +210,9 @@
                  <div class="member-link">
                     <a href="https://www.facebook.com/ashutosh.prasad.754365/" target="_blank"><i class="fa-brands text-light fa-facebook-f"></i></a>
                 <a href="https://www.instagram.com/official.ashu.2000/" target="_blank"><i class="fa-brands fa-square-instagram text-light"></i></a>
-                <a href="https://www.indiamart.com/sunriseinfotechsolution/" target="_blank"><i class="fa-solid fa-cart-shopping text-light"></i></a>
-                <a href="https://sunrise-infotech-solution.business.site/" target="_blank"><i class="fa-solid fa-globe text-light"></i></a>
+                     <a href="https://twitter.com/Ashutos96662173" target="_blank"><i class="fa-brands fa-twitter text-light"></i></a>
+                    <a href="https://wa.me/6386239194" target="_blank"><i class="fa-brands fa-square-whatsapp text-light"></i></a>
+                
                 </div>
             </div>
         </div>

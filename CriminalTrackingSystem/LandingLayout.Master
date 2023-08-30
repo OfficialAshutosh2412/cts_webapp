@@ -19,7 +19,7 @@
     <form id="form1" runat="server">
  
         
-        <a class="go-to-top clear" href="#hero"><i class="fa-solid fa-arrow-up"></i></a>
+        <a class="go-to-top clear" href="#news"><i class="fa-solid fa-arrow-up"></i></a>
         <i class="fa-solid fa-language clear  hidden-tool-box " id="tool-toggler"></i>     
         <%--top bar--%>
         <div class="top-bar hide-top">
