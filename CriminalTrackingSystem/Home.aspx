@@ -212,6 +212,7 @@
                 <a href="https://www.instagram.com/official.ashu.2000/" target="_blank"><i class="fa-brands fa-square-instagram text-light"></i></a>
                      <a href="https://twitter.com/Ashutos96662173" target="_blank"><i class="fa-brands fa-twitter text-light"></i></a>
                     <a href="https://wa.me/6386239194" target="_blank"><i class="fa-brands fa-square-whatsapp text-light"></i></a>
+                     <a href="https://github.com/OfficialAshutosh2412?tab=repositories" target="_blank"><i class="fa-brands fa-github text-light"></i></a>
                 
                 </div>
             </div>
