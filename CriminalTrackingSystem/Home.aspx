@@ -20,7 +20,7 @@
             <img class="spin" src="dist/img/11(2).png" alt="animator" />
         </div>
         <div class="right">
-            <h1><span>Crime</span> Tracking System</h1>
+            <h1><span>Criminal</span> Tracking System</h1>
             <p>CTS is an online portal to track crime records.</p>
             <small>Managed by State Police Department</small>
             <label><i class="fa-solid fa-phone"></i> +91-0522-112</label>
