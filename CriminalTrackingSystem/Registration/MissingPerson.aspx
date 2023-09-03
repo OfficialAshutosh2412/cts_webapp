@@ -1,12 +1,9 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Registration/RegisterLayout.Master" AutoEventWireup="true" CodeBehind="MissingPerson.aspx.cs" Inherits="CriminalTrackingSystem.Registration.MissingPerson" %>
-
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-
     <div class="missing-form">
         <%--form--%>
-
         <div class="missing-sub-form">
             <asp:Timer ID="Timer1" runat="server" Interval="1000" OnTick="Timer1_Tick"></asp:Timer>
             <asp:UpdatePanel ID="UpdatePanel1" runat="server" class="mt-3">
@@ -95,7 +92,6 @@
                         <asp:FileUpload ID="FileUpload1" runat="server" class="cc-box" placeholder="email of login person" />
 
                         <asp:Literal ID="Literal1" runat="server" Visible="False"></asp:Literal>
-
                     </div>
                     <div>
                         <label>
@@ -110,7 +106,6 @@
                         <asp:TextBox ID="MPstatus" runat="server" class="cc-box"></asp:TextBox>
                     </div>
                 </div>
-
                 <%--sixth row--%>
                 <div>
                     <asp:Button ID="Button2" runat="server" Text="Send" class="send" OnClick="Button1_Click" />

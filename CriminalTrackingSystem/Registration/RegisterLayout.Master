@@ -16,38 +16,8 @@
     
 </head>
 <body>
-    <form id="form1" runat="server">
-        <a class="go-to-top clear" href="#hero"><i class="fa-solid fa-arrow-up"></i></a>
-        <i class="fa-solid fa-language clear  hidden-tool-box " id="tool-toggler"></i>     
-        <%--top bar--%>
-        <div class="top-bar hide-top">
-            <div>
-                <asp:Label ID="Label1" runat="server"></asp:Label>
-            </div>
-            <div>
-                <a href="#">skip to main content</a>
-            </div>
-            <div class="footer-follow">
-
-                <a href="http://" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
-                <a href="http://" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
-                <a href="http://" target="_blank"><i class="fa-brands fa-twitter"></i></a>
-                <a href="http://" target="_blank"><i class="fa-brands fa-square-threads"></i></a>
-
-            </div>
-            <div class="d-flex">
-                <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
-                <div id="google_translate_element"></div>
-                 <script type="text/javascript">
-                     function googleTranslateElementInit() {
-                         new google.translate.TranslateElement({ pageLanguage: 'en' }, 'google_translate_element');
-                     }
-                 </script> 
-                 <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script> 
-            </div>
-            
-        </div>
-        
+    <form id="form1" runat="server">  
+        <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
         <%--header--%>
         <nav class="navbar navbar-expand-lg bg-body-tertiary p-0" id="nav">
             <div class="container-fluid justify-content-between ">

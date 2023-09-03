@@ -49,20 +49,13 @@
                     <asp:HyperLink ID="HyperLink1" runat="server" title="Logout" NavigateUrl="~/Login.aspx"><i class="fa-solid fa-right-from-bracket text-light"></i></asp:HyperLink>
                 </div>
             </div>
-            
         </nav>
-        
-
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
         </asp:ContentPlaceHolder>
-
-
-
         <footer class="admin-foot">
             <p>All Rights are Reserved &copy;CTS 2023</p>
         </footer>
     </form>
-
     <script src="../dist/js/bootstrap.bundle.min.js"></script>    
     <script src="../dist/js/custom.js"></script>
 </body>

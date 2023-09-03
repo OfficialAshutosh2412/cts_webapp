@@ -21,7 +21,6 @@
             </div>
             <asp:HyperLink NavigateUrl="~/Admin/AdminHome.aspx" CssClass="counterbtn" runat="server" ID="userCountLink"><i class="fa-solid fa-angle-right"></i></asp:HyperLink>
         </div>
-
         <%--crime complain--%>
         <div class="admin-card">
             <i class="fa-solid fa-handcuffs counters"></i>

@@ -265,6 +265,8 @@
     <Content Include="Admin\AdminLayout.Master" />
     <Content Include="dist\img\UP-Police-logo-845464.webp" />
     <Content Include="dist\img\iloveimg-resized.zip" />
+    <Content Include="dist\img\11%282%29.webp" />
+    <Content Include="dist\img\mv.webp" />
     <None Include="packages.config" />
     <Content Include="Registration\RegisterLayout.Master" />
     <None Include="Web.Debug.config">

@@ -1,5 +1,4 @@
 ﻿<%@ Page Title="CTS | Home" Language="C#" MasterPageFile="~/LandingLayout.Master" AutoEventWireup="true" CodeBehind="Home.aspx.cs" Inherits="CriminalTrackingSystem.Home" %>
-
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -25,12 +24,9 @@
             <small>Managed by State Police Department</small>
             <label><i class="fa-solid fa-phone"></i> +91-0522-112</label>
             <asp:HyperLink ID="HyperLink1" runat="server" cssClass="send" NavigateUrl="~/Login.aspx">join us</asp:HyperLink>
-            
         </div>
     </div>
-    
     <%--about--%>
-
     <div class="about" id="about">
         <h1 class="section-title"><span>About</span> Us</h1>
         <div class="card-info">
@@ -59,9 +55,7 @@
             </div>
         </div>
     </div>
-
     <%--services--%>
-
     <div class="service-container" id="services">
         <h1 class="section-title"><span>Our</span> Services</h1>
         <div class="services">
@@ -72,7 +66,7 @@
                     <a href="/Login.aspx" class="cc-btn">visit</a>
                 </div>
                 <div class="hide">
-                    <img src="dist/img/mr.jpg" />
+                    <img src="dist/img/mr.jpg" alt="Missing person image"/>
                 </div>
             </div>
             <%--second--%>
@@ -82,7 +76,11 @@
                     <a href="/Login.aspx" class="cc-btn">visit</a>
                 </div>
                 <div class="hide">
-                    <img src="dist/img/mv.jpg" />
+                    <picture>
+                        <source type="image/webp" srcset="dist/img/mv.webp" />
+                        <source type="image/webp" srcset="dist/img/mv.jpg" />
+                        <img src="dist/img/mv.jpg" alt="missing valuable image"/>
+                    </picture>
                 </div>
             </div>
             <%--third--%>
@@ -92,22 +90,21 @@
                     <a href="/Login.aspx" class="cc-btn">visit</a>
                 </div>
                 <div class="hide">
-                    <img src="dist/img/cc.jpg" />
+                    <img src="dist/img/cc.jpg" alt="crime complain image"/>
                 </div>
             </div>
             <%--fourth--%>
             <div class="services-item">
                 <div>
-                    <p>Missing Person Report</p>
+                    <p>General Complain</p>
                     <a href="/Login.aspx" class="cc-btn">visit</a>
                 </div>
                 <div class="hide">
-                    <img src="dist/img/gc.jpg" />
+                    <img src="dist/img/gc.jpg" alt="general complain image"/>
                 </div>
             </div>
         </div>
     </div>
-
     <%--gallery--%>
     <div id="gallery">
         <h1 class="section-title"><span>Moment of</span> captures</h1>
@@ -176,8 +173,6 @@
             <asp:Button ID="ContactBtn" runat="server" Text="submit details" class="send" OnClientClick="return validateContact()" OnClick="ContactBtn_Click" />
 
             <asp:Label ID="Label2" runat="server" ForeColor="#339933"></asp:Label>
-
-
         </div>
     </div>
     <%--member--%>
@@ -195,7 +190,7 @@
                     <a href="https://www.facebook.com/engg.superpower" target="_blank"><i class="fa-brands fa-facebook-f text-light"></i></a>
                     <a href="https://www.instagram.com/scientistsushantpathak/" target="_blank"><i class="fa-brands text-light fa-square-instagram"></i></a>
                     <a href="https://www.indiamart.com/sunriseinfotechsolution/" target="_blank"><i class="fa-solid fa-cart-shopping text-light"></i></a>
-                <a href="https://sunrise-infotech-solution.business.site/" target="_blank"><i class="fa-solid fa-globe text-light"></i></a>
+                    <a href="https://sunrise-infotech-solution.business.site/" target="_blank"><i class="fa-solid fa-globe text-light"></i></a>
                 </div>
             </div>
         </div>
@@ -209,24 +204,15 @@
                 <small>MCA graduate from AIET and a full stack developer on python & ASP.NET with MVC</small>
                  <div class="member-link">
                     <a href="https://www.facebook.com/ashutosh.prasad.754365/" target="_blank"><i class="fa-brands text-light fa-facebook-f"></i></a>
-                <a href="https://www.instagram.com/official.ashu.2000/" target="_blank"><i class="fa-brands fa-square-instagram text-light"></i></a>
-                     <a href="https://twitter.com/Ashutos96662173" target="_blank"><i class="fa-brands fa-twitter text-light"></i></a>
+                    <a href="https://www.instagram.com/official.ashu.2000/" target="_blank"><i class="fa-brands fa-square-instagram text-light"></i></a>
+                    <a href="https://twitter.com/Ashutos96662173" target="_blank"><i class="fa-brands fa-twitter text-light"></i></a>
                     <a href="https://wa.me/6386239194" target="_blank"><i class="fa-brands fa-square-whatsapp text-light"></i></a>
-                     <a href="https://github.com/OfficialAshutosh2412?tab=repositories" target="_blank"><i class="fa-brands fa-github text-light"></i></a>
-                
+                    <a href="https://github.com/OfficialAshutosh2412?tab=repositories" target="_blank"><i class="fa-brands fa-github text-light"></i></a>
                 </div>
             </div>
         </div>
-        
     </div>
     <%--faq--%>
-    <div class="faq-container" id="faq">
-        <h1 class="section-title text-light"><span>Ask</span> Us Anything</h1>
-        <div class="faq-form">
-            <asp:TextBox ID="question" runat="server" CssClass="cc-box"></asp:TextBox>
-            <asp:Button ID="Button2" runat="server" Text="Send" CssClass="delete" OnClientClick="return ValidateFaq()" OnClick="FAQButton1_Click" />
-        </div>
-    </div>
     <div class="mt-3">
         <h3>Frequently Asked Questions...</h3>
         <div class="faq-grid">
@@ -237,18 +223,19 @@
                     <asp:TextBox ID="TextBox1" runat="server" Text='<%# Bind("Question") %>'></asp:TextBox>
                 </EditItemTemplate>
                 <ItemTemplate>
-                    <div class=" p-3" style="border-bottom:1px groove gray;">
+                    <div class=" p-3" style="border-bottom: 1px groove gray;">
                         <div class="w-100">
-                        <strong>
-                            <asp:Label Text="Q." runat="server" />
-                            <asp:Label ID="Label6" runat="server" Text='<%# Bind("FaqId") %>'></asp:Label>: 
+                            <strong>
+                                <asp:Label Text="Q." runat="server" />
+                                <asp:Label ID="Label6" runat="server" Text='<%# Bind("FaqId") %>'></asp:Label>: 
                             <asp:Label ID="Label4" runat="server" Text='<%# Bind("Question") %>'></asp:Label>
-                        </strong>
-                    </div>
-                    <div style="padding-left:35px">
-                        <strong><asp:Label Text="reply: " runat="server" /></strong> 
-                        <asp:Label ID="Label5" CssClass="p-3 " runat="server" Text='<%# Bind("Answer") %>'></asp:Label>
-                    </div>
+                            </strong>
+                        </div>
+                        <div style="padding-left: 35px">
+                            <strong>
+                                <asp:Label Text="reply: " runat="server" /></strong>
+                            <asp:Label ID="Label5" CssClass="p-3 " runat="server" Text='<%# Bind("Answer") %>'></asp:Label>
+                        </div>
                     </div>
                 </ItemTemplate>
             </asp:TemplateField>
@@ -256,6 +243,8 @@
     </asp:GridView>
         </div>
     </div>
+
+
 
     <script>
         //contact us validation
@@ -272,20 +261,6 @@
             else {
                 return true;
             }
-        }
-        //faq validation
-        function ValidateFaq() {
-            var quest = document.getElementById('<%= question.ClientID %>').value;
-            if (quest == "") {
-                alert("empty question box not allowed !");
-                return false;
-            }
-            else {
-                return true;
-            }
-        }
-        
-        
-        
+        } 
     </script>
 </asp:Content>

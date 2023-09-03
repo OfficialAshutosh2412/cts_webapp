@@ -1,9 +1,7 @@
 ﻿<%@ Page Title="CTS | General Complain Portal" Language="C#" MasterPageFile="~/Registration/RegisterLayout.Master" AutoEventWireup="true" CodeBehind="GeneralComplain.aspx.cs" Inherits="CriminalTrackingSystem.Registration.GeneralComplain" %>
-
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">    
     <div class="complain-form-structure">
         <%--form--%>
         <div class="complain-form">
@@ -20,7 +18,6 @@
             </asp:UpdatePanel>
             <div>
                 <br />
-                
                 <%--first row--%>
                 <div>
                     <div>
@@ -81,7 +78,6 @@
             </div>
         </div>
         <br />
-        
         <%--grid view--%>
         <div class=" complain-grid-view">
             <h2 class="p-3">

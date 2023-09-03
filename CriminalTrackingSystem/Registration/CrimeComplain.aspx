@@ -1,5 +1,4 @@
 ﻿<%@ Page Title="CTS | Crime Complain Portal" Language="C#" MasterPageFile="~/Registration/RegisterLayout.Master" AutoEventWireup="true" CodeBehind="CrimeComplain.aspx.cs" Inherits="CriminalTrackingSystem.Registration.CrimeComplain" %>
-
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -18,7 +17,6 @@
                 <%--date time renderer--%>
                 <asp:Timer ID="Timer1" runat="server" OnTick="Timer1_Tick" Interval="1000">
                 </asp:Timer>
-
                 <%--first row--%>
                 <div>
                     <div>
@@ -84,7 +82,6 @@
                     <div>
                         <label>Status<asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="CrimeStatus" ErrorMessage="*required status" Font-Bold="True" Font-Size="Small" ForeColor="#FF5050">*</asp:RequiredFieldValidator></label>
                         <asp:TextBox ID="CrimeStatus" runat="server" class="cc-box" placeholder="write 0, if crime solved, 1 if not solved..."></asp:TextBox>
-
                     </div>
                 </div>
                 <%--fifth row--%>
@@ -99,7 +96,6 @@
             </div>
         </div>
         <br />
-
         <%--grid--%>
         <div class="crime-complain-grid-view">
             <h2>
@@ -182,9 +178,5 @@
                 </UpdateParameters>
             </asp:SqlDataSource>
         </div>
-
     </div>
-
-
-
 </asp:Content>

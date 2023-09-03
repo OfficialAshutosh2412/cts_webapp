@@ -2,16 +2,12 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content> 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    
     <div class="login-home-modal p-5 text-white bg-dark">
         <h1>Welcome, 
             <asp:Label ID="Label1" runat="server" Font-Size="XX-Large" class="text-capitalize"></asp:Label>
             <asp:HyperLink ID="HyperLink5" runat="server" title="profile" NavigateUrl="~/Registration/Profile.aspx"><i class="fa-solid fa-user-pen"></i></asp:HyperLink>
         </h1>
-        
     </div>
-    
-
     <div class="register-card">
         <div>
             <img src="../dist/img/trial.png" />
@@ -34,5 +30,4 @@
             <asp:HyperLink ID="HyperLink4" runat="server" CssClass="cc-btn p-2" NavigateUrl="~/Registration/MissingValuable.aspx">go now !</asp:HyperLink>
         </div>
     </div>
-    
 </asp:Content>

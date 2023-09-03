@@ -3,7 +3,6 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    
     <div class="valuable-container">
         <%--form--%>
         <div class="valuable-form">
@@ -48,7 +47,6 @@
                             <asp:ListItem>Laptop</asp:ListItem>
                             <asp:ListItem>Other</asp:ListItem>
                         </asp:DropDownList>
-
                     </div>
                 </div>
                 <%--second row--%>
