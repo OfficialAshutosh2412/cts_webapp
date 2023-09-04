@@ -68,7 +68,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Admin\Admin-FAQ.aspx" />
-    <Content Include="Admin\Admin-MP.aspx" />
+    <Content Include="Admin\Admin-Gallery.aspx" />
+    <Content Include="Admin\Records.aspx" />
     <Content Include="Admin\GalleryAdmin.aspx" />
     <Content Include="Admin\AdminHome.aspx" />
     <Content Include="Admin\PoliceStation.aspx" />
@@ -76,6 +77,7 @@
     <Content Include="App_Data\CTS_log.ldf">
       <DependentUpon>CTS.mdf</DependentUpon>
     </Content>
+    <Content Include="CriminalGallery.aspx" />
     <Content Include="dist\css\style.css" />
     <Content Include="dist\favicon\cts_logo.ico" />
     <Content Include="dist\img\02_07_2023-gorakhpur_aiims_police_station_23458982.jpg" />
@@ -126,6 +128,8 @@
     <Content Include="dist\img\whatsapp-image-2022-10-16-at-083029_1665903787.jpg" />
     <Content Include="dist\img\—Pngtree—tri color indian flag transparent_7253951.png" />
     <Content Include="dist\js\custom.js" />
+    <Content Include="EventGallery.aspx" />
+    <Content Include="Gallery.aspx" />
     <Content Include="Home.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="Registration\Profile.aspx" />
@@ -145,12 +149,19 @@
     <Compile Include="Admin\Admin-FAQ.aspx.designer.cs">
       <DependentUpon>Admin-FAQ.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin\Admin-MP.aspx.cs">
-      <DependentUpon>Admin-MP.aspx</DependentUpon>
+    <Compile Include="Admin\Admin-Gallery.aspx.cs">
+      <DependentUpon>Admin-Gallery.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin\Admin-MP.aspx.designer.cs">
-      <DependentUpon>Admin-MP.aspx</DependentUpon>
+    <Compile Include="Admin\Admin-Gallery.aspx.designer.cs">
+      <DependentUpon>Admin-Gallery.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Records.aspx.cs">
+      <DependentUpon>Records.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Records.aspx.designer.cs">
+      <DependentUpon>Records.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\GalleryAdmin.aspx.cs">
       <DependentUpon>GalleryAdmin.aspx</DependentUpon>
@@ -180,7 +191,28 @@
     <Compile Include="Admin\PoliceStation.aspx.designer.cs">
       <DependentUpon>PoliceStation.aspx</DependentUpon>
     </Compile>
+    <Compile Include="CriminalGallery.aspx.cs">
+      <DependentUpon>CriminalGallery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CriminalGallery.aspx.designer.cs">
+      <DependentUpon>CriminalGallery.aspx</DependentUpon>
+    </Compile>
     <Compile Include="DynamicConnection.cs" />
+    <Compile Include="EventGallery.aspx.cs">
+      <DependentUpon>EventGallery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EventGallery.aspx.designer.cs">
+      <DependentUpon>EventGallery.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Gallery.aspx.cs">
+      <DependentUpon>Gallery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Gallery.aspx.designer.cs">
+      <DependentUpon>Gallery.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Home.aspx.cs">
       <DependentUpon>Home.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -277,7 +309,8 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Admin\AdminGallery\" />
+    <Folder Include="Admin\AdminGallery\Crimes\" />
+    <Folder Include="Admin\AdminGallery\Events\" />
     <Folder Include="Admin\Police\" />
     <Folder Include="RegisterPhoto\" />
     <Folder Include="Registration\AnyProof\" />

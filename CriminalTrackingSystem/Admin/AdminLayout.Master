@@ -20,7 +20,7 @@
             <div class="admin-title">
                 <h3 class="p-2 d-flex align-items-center w-100">
                     <img src="../dist/img/cts_logo.png" />
-                    &nbsp;|&nbsp; <i class="fa-solid fa-mask"></i>Admin Portal
+                    &nbsp;|&nbsp; <i class="fa-solid fa-mask"></i>Admin Dashboard
                 </h3>
             </div>
             <div class="admin-items">
@@ -28,16 +28,10 @@
                     <asp:HyperLink ID="HyperLink2" runat="server" title="Dashboard" NavigateUrl="~/Admin/AdminHome.aspx"><i class="fa-solid fa-house text-light"></i></asp:HyperLink>
                 </div>
                 <div>
-                    <asp:HyperLink ID="HyperLink3" runat="server" title="Missing Person" NavigateUrl="~/Admin/Admin-MP.aspx"><i class="fa-solid fa-person text-light"></i></asp:HyperLink>
+                    <asp:HyperLink ID="HyperLink3" runat="server" title="Records" NavigateUrl="~/Admin/Records.aspx"><i class="fa-solid fa-file-signature text-light"></i></asp:HyperLink>
                 </div>
                 <div>
-                    <asp:HyperLink ID="HyperLink4" runat="server" title="Missing Valuable"><i class="fa-regular fa-gem text-light"></i></asp:HyperLink>
-                </div>
-                <div>
-                    <asp:HyperLink ID="HyperLink5" runat="server" title="Crime Complains"><i class="fa-solid fa-handcuffs text-light"></i></asp:HyperLink>
-                </div>
-                <div>
-                    <asp:HyperLink ID="HyperLink6" runat="server" title="General Complains"><i class="fa-solid fa-file-signature text-light"></i></asp:HyperLink>
+                    <asp:HyperLink ID="HyperLink9" runat="server" title="Gallery" NavigateUrl="~/Admin/Admin-Gallery.aspx"><i class="fa-solid fa-images text-light"></i></asp:HyperLink>
                 </div>
                 <div>
                     <asp:HyperLink ID="HyperLink7" runat="server" title="Contact Us requests"><i class="fa-solid fa-message text-light"></i></asp:HyperLink>
