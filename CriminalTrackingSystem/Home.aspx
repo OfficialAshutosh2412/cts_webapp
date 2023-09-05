@@ -3,16 +3,6 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [Faq] ORDER BY [FaqId], [Question], [Answer]"></asp:SqlDataSource>
-    <%--news--%>
-    <div class="news" id="news" >
-        <div class="bg-danger text-white p-2 ticker">NEWS</div>
-        <div class="two">
-            <a href="/Login.aspx">Site is under development.</a>
-            <a href="/Login.aspx">If you see crime happens anywhere, report to our website.</a>
-            <a href="/Login.aspx">User no enabled to upload their profile.</a>
-            <a href="/Login.aspx">Profile edit option will be appear soon</a>
-        </div>
-    </div>
     <%--hero--%>
     <div class="hero" id="hero">
         <div class="left">
@@ -109,7 +99,7 @@
     <div id="gallery">
         <h1 class="section-title"><span>Moment of</span> captures</h1>
         <div class="gallery">
-            <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="~/dist/img/02_07_2023-gorakhpur_aiims_police_station_23458982.jpg" OnClick="ImageButton1_Click" />
+            <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="~/dist/img/up-police-3-1200x700.jpg" OnClick="ImageButton1_Click" />
             <asp:ImageButton ID="ImageButton2" runat="server" ImageUrl="~/dist/img/14_04_2022-14azm_20_14042022_252-c-1.5_22627032_163740.jpg" OnClick="ImageButton2_Click" />
             <asp:ImageButton ID="ImageButton3" runat="server" ImageUrl="~/dist/img/17_06_2021-16alr_12_16062021_499-c-1.5_21744534_11139.jpg" OnClick="ImageButton3_Click" />
             <asp:ImageButton ID="ImageButton4" runat="server" ImageUrl="~/dist/img/3549634286_882d3c48f9_b.jpg" OnClick="ImageButton4_Click" />
@@ -192,7 +182,7 @@
         </div>
     </div>
     <%--faq--%>
-    <div class="mt-3">
+    <div class="mt-3" id="faq">
         <h3>Frequently Asked Questions...</h3>
         <div class="faq-grid">
             <asp:GridView ID="GridView1" runat="server" CssClass="border-0 w-100" AutoGenerateColumns="False" DataKeyNames="FaqId" DataSourceID="SqlDataSource1" Width="637px">

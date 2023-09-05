@@ -65,6 +65,9 @@
                             <li class="nav-item">
                                 <a  class="nav-link" href="/Home.aspx#faq"><i class="fa-solid fa-file-circle-question"></i>FAQ</a>
                             </li>
+                            <li class="nav-item nav-link">
+                                <asp:HyperLink NavigateUrl="~/News.aspx" runat="server" CssClass="text-dark"><i class="fa-solid fa-newspaper"></i>News</asp:HyperLink>
+                            </li>
                             <li class="nav-item nav-link" id="login-tog">
                                 <asp:HyperLink ID="HyperLink2" runat="server" CssClass="text-dark" NavigateUrl="~/Login.aspx"><i class="fa-solid fa-arrow-right-to-bracket " ></i>Login</asp:HyperLink>
                             </li>

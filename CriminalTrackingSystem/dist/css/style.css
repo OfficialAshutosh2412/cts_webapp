@@ -228,35 +228,7 @@
     height: 250px
 }
 
-.news {
-    display: flex;
-    position: relative;
-    justify-content: start;
-    align-items: center;
-    background: #f19b00;
-    padding: .5% 0
-}
 
-.two a {
-    color: #fff;
-    padding-left: 10px;
-    border-right: 2px solid #fff
-}
-
-.news .ticker {
-    z-index: 2;
-    border-radius: 0 20px 20px 0
-}
-
-.two {
-    display: flex;
-    left: 60px;
-    position: absolute;
-    justify-content: center;
-    align-items: center;
-    white-space: nowrap;
-    animation: 50s linear infinite pulse
-}
 
 .hero, .hero .left {
     position: relative
@@ -266,19 +238,7 @@
     animation-play-state: paused
 }
 
-@keyframes pulse {
-    0%,100% {
-        transform: translate3d(0,0,0)
-    }
 
-    50% {
-        transform: translate3d(-100%,0,0)
-    }
-
-    75% {
-        transform: translate3d(100,0,0)
-    }
-}
 
 .service-container {
     display: flex;
@@ -321,7 +281,7 @@
     }
 
 .hero {
-    justify-content: center
+    justify-content: center;
 }
 
 .services-item div:first-child * {
@@ -349,7 +309,7 @@
     align-items: center;
     width: 100%;
     margin: 0 auto;
-    height: 86vh
+    height: 100vh
 }
 
     .hero .right, .left {
@@ -513,22 +473,89 @@
     }
         
 /*EVENT GALLERY*/
-        .contact-us-container {
-            background-image: url('../img/17973908.jpg');
-            background-attachment: fixed;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100%;
-            font-size: 11pt;
-            margin-top: 30px;
-            padding: 2%
+.event-gallery-container{
+    width:90%;
+    margin:0 auto;
+    align-items:center;
+    text-align:center;
+    padding:2%
+}
+.event-gallery {
+    width: 250px;
+    height: 150px;
+    height: auto;
+    object-fit: cover;
+    text-align: center;
+    display: inline-block;
+    justify-content: center;
+    flex-wrap: wrap;
+    border:2px solid #00636d;
+    margin: 5px 5px;
+    overflow:hidden;
+}
+    .event-gallery img {
+        width: 250px;
+        height: 150px;
+    }
+        .event-gallery .gal-label{
+            background:#00636d;
+            width:100%;
+            padding:1%;
+            color:white;
         }
+
+/*crime gallery*/
+.crime-gallery {
+    width: 200px !important;
+    height: 200px;
+    height: auto;
+    object-fit:contain;
+    text-align: center;
+    display: inline-block;
+    background:#00636d;
+    flex-wrap: wrap;
+    border: 2px solid #00636d;
+    margin: 5px 5px;
+    overflow: hidden;
+    color:white
+}
+
+    .crime-gallery div:nth-child(1) {
+        background: #1a1a1a;
+        width: 200px;
+        height: 220px;
+        overflow:hidden;
+        object-fit:cover;
+    }
+    .crime-gallery div {
+        margin: 0;
+    }
+    crime-gallery .details {
+        display: flex;
+        justify-content: space-between;
+        align-items: center
+    }
+    .crime-gallery img {
+    width: 100%;
+    height:auto;
+
+}
+.contact-us-container {
+    background-image: url('../img/17973908.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-size: 11pt;
+    margin-top: 30px;
+    padding: 2%
+}
 
 .contact-us-container-form {
     border: 1px solid #bebebe;
@@ -727,7 +754,6 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    align-items: center
 }
 
     .register-card div {
@@ -1043,6 +1069,14 @@
             .admin-items div:hover {
                 background: #000
             }
+    .gallery-card {
+        display: block;
+        height: 60vh;
+        width: 70%;
+        margin: 0 auto;
+        justify-content: center;
+        align-items: center
+    }
 }
 
 @media screen and (max-width:400px) {
