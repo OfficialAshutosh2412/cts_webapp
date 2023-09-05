@@ -3,32 +3,32 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <h1>Gallery</h1>
+    <h1><i class="fa-solid fa-images text-light"></i>Gallery</h1>
+    <hr />
     <div class="admin-gallery">
         <div>
             <asp:RadioButton ID="RadioButton1" CssClass="admin-radio" runat="server" Text="Upload for Events" GroupName="uploader" Checked="True" AutoPostBack="True" />
             <asp:RadioButton ID="RadioButton2" CssClass="admin-radio" runat="server" Text="Upload for Criminals" GroupName="uploader"  AutoPostBack="True" />
         </div>
-        <hr />
         <div class="admin-gallery-form">
             <div>
-                <asp:TextBox runat="server" CssClass="cc-box" ID="criminalName" placeholder="criminal name" />
-                <asp:TextBox runat="server" CssClass="cc-box" ID="EventName" placeholder="Event Name" />
-                <asp:TextBox runat="server" CssClass="cc-box" ID="AffectedOrganisation" placeholder="Affected Organisation" />
+                <asp:TextBox runat="server"  ID="criminalName" placeholder="criminal name" />
+                <asp:TextBox runat="server"  ID="EventName" placeholder="Event Name" />
+                <asp:TextBox runat="server"  ID="AffectedOrganisation" placeholder="Affected Organisation" />
             </div>
-            <hr />
+           
             <div>
-                <asp:TextBox runat="server" CssClass="cc-box" ID="Reward" placeholder="Reward" />
-                <asp:TextBox runat="server" CssClass="cc-box" ID="Details" placeholder="Criminal Details" TextMode="MultiLine" />
-               
+                <asp:TextBox runat="server"  ID="Reward" placeholder="Reward" />
+                <asp:TextBox runat="server"  ID="Details" placeholder="Criminal Details" />
             </div>
-            <hr />
-            <div> <asp:FileUpload ID="FileUpload1" CssClass="cc-box" runat="server" placeholder="Criminal Image" /></div>
+           
+            <div> <asp:FileUpload ID="FileUpload1"  runat="server" placeholder="Criminal Image" CssClass="bg-white text-dark"/></div>
             <div>
                 <asp:Button Text="send" CssClass="send" runat="server"  ID="eventBtn" title="event button" OnClick="eventBtn_Click"/>
                 <asp:Button Text="send" CssClass="send" runat="server" ID="crimeBtn" title="crime button" OnClick="crimeBtn_Click"/>
             </div>
         </div>
     </div>
+    <hr />
 
 </asp:Content>

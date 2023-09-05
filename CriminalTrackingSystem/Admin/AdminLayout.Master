@@ -34,13 +34,16 @@
                     <asp:HyperLink ID="HyperLink9" runat="server" title="Gallery" NavigateUrl="~/Admin/Admin-Gallery.aspx"><i class="fa-solid fa-images text-light"></i></asp:HyperLink>
                 </div>
                 <div>
+                    <asp:HyperLink ID="HyperLink4" runat="server" title="Police Station" NavigateUrl="~/Admin/PoliceStation.aspx"><i class="fa-solid fa-building-shield text-light"></i></asp:HyperLink>
+                </div>
+                <div>
                     <asp:HyperLink ID="HyperLink7" runat="server" title="Contact Us requests"><i class="fa-solid fa-message text-light"></i></asp:HyperLink>
                 </div>
                 <div>
                     <asp:HyperLink ID="HyperLink8" runat="server" title="FAQ" NavigateUrl="~/Admin/Admin-FAQ.aspx"><i class="fa-solid fa-circle-question text-light"></i></asp:HyperLink>
                 </div>
                 <div>
-                    <asp:HyperLink ID="HyperLink1" runat="server" title="Logout" NavigateUrl="~/Login.aspx"><i class="fa-solid fa-right-from-bracket text-light"></i></asp:HyperLink>
+                    <asp:Button Text="Logout" runat="server"  OnClick="Logoutbtn" CssClass="pb-0 p-1"/>
                 </div>
             </div>
         </nav>

@@ -5,7 +5,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <%--mp--%>
     <div class="admin-mp">
-        <h3 style="background:#ff4747;padding:2px">Missing Person Records</h3>
+        <h3><i class="fa-solid fa-person counters"></i> Missing Person Records</h3>
         <asp:GridView ID="GridView1" CssClass="w-100 table table-responsive table-dark" runat="server" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="MPId" DataSourceID="SqlDataSource1">
             <Columns>
                 <asp:BoundField DataField="MPId" HeaderText="ID" InsertVisible="False" ReadOnly="True" SortExpression="MPId" />
@@ -61,7 +61,7 @@
     </div>
     <%--mv--%>
     <div class="admin-mv">
-        <h3 style="background:#67b239;padding:2px">Missing Valuable Records</h3>
+        <h3><i class="fa-regular fa-gem counters"></i> Missing Valuable Records</h3>
         <asp:GridView ID="GridView2" CssClass="w-100 table table-responsive table-dark" runat="server" AutoGenerateColumns="False" DataKeyNames="MVId" DataSourceID="SqlDataSource2" AllowSorting="True">
             <Columns>
                 <asp:BoundField DataField="MVId" HeaderText="MVId" InsertVisible="False" ReadOnly="True" SortExpression="MVId" />
@@ -107,7 +107,7 @@
     </div>
     <%--cc--%>
     <div class="admin-cc">
-        <h3 style="background:#2573ae;padding:2px">Crime Complains Records</h3>
+        <h3 ><i class="fa-solid fa-handcuffs counters"></i> Crime Complains Records</h3>
         <asp:GridView ID="GridView3" CssClass="w-100 table table-responsive table-dark" runat="server" AutoGenerateColumns="False" DataKeyNames="CCId" DataSourceID="SqlDataSource3" AllowSorting="True">
             <Columns>
                 <asp:BoundField DataField="CCId" HeaderText="CCId" InsertVisible="False" ReadOnly="True" SortExpression="CCId" />
@@ -153,7 +153,7 @@
     </div>
     <%--gc--%>
     <div class="admin-gc">
-        <h3 style="background:#ae4eac;padding:2px">General Complains Records</h3>
+        <h3><i class="fa-solid fa-file-signature counters"></i> General Complains Records</h3>
         <asp:GridView ID="GridView4" CssClass="w-100 table table-responsive table-dark" runat="server" AutoGenerateColumns="False" DataKeyNames="GCId" DataSourceID="SqlDataSource4" AllowSorting="True">
         <Columns>
             <asp:BoundField DataField="GCId" HeaderText="GCId" InsertVisible="False" ReadOnly="True" SortExpression="GCId" />

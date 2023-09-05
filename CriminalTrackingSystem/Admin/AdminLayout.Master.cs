@@ -13,6 +13,11 @@ namespace CriminalTrackingSystem.Admin
         {
 
         }
-        
+        public void Logoutbtn(object sender, EventArgs e)
+        {
+            Session.Abandon();
+            Response.Redirect("~/Login.aspx");
+        }
+
     }
 }

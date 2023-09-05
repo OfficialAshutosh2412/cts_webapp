@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/LandingLayout.Master" AutoEventWireup="true" CodeBehind="CriminalGallery.aspx.cs" Inherits="CriminalTrackingSystem.CriminalGallery" %>
+﻿<%@ Page Title="CTS | Gallery | Criminal Images" Language="C#" MasterPageFile="~/LandingLayout.Master" AutoEventWireup="true" CodeBehind="CriminalGallery.aspx.cs" Inherits="CriminalTrackingSystem.CriminalGallery" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>

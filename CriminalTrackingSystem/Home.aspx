@@ -22,25 +22,20 @@
         <div class="card-info">
             <div class="card-info-sections">
                 <div class="card-item">
-                    <h1>What's CTS ?
-                    </h1>
+                    <h1>What's CTS ?</h1>
                     <p>Criminal Tracking Systems (CTS) is a plan scheme conceived in the light of experience of a non-plan scheme namely.</p>
                 </div>
                 <div class="card-item">
-                    <h1>CTS Vissions
-                    </h1>
+                    <h1>CTS Vissions</h1>
                     <p>Make the Police functioning citizen friendly and more transparent by automating the functioning of Police Stations.</p>
                 </div>
                 <div class="card-item">
-                    <h1>Stakeholder
-                    </h1>
+                    <h1>Stakeholder</h1>
                     <p>Citizens/ Citizens groups, MHA/NCRB, State Police department, External Departments of the State such as Courts, and Peoples.</p>
                 </div>
                 <div class="card-item">
-                    <h1>Benefits
-                    </h1>
-                    <p>
-                        Enhanced tools for investigation, Centralized crime and criminal information repository along with the criminal images.<p>
+                    <h1>Benefits</h1>
+                    <p>Enhanced tools for investigation, Centralized crime and criminal information repository along with the criminal images.<p>
                 </div>
             </div>
         </div>
