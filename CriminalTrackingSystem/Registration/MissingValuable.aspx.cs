@@ -33,13 +33,12 @@ namespace CriminalTrackingSystem.Registration
             con.Open();
             FileUpload1.SaveAs(Server.MapPath("MissingValuableRecipt") + "/" + FileUpload1.FileName);
             Literal1.Text = "MissingValuableRecipt" + "/" + FileUpload1.FileName;
-            cmd.CommandText = "INSERT INTO MissingValuable VALUES('" + MVUserName.Text + "', '" + MVPoliceStation.Text + "', '" + MVType.SelectedValue + "', '" + MVCost.Text + "', '" + MVSuspect.Text + "', '" + FileUpload1.FileName + "', '" + MVDetails.Text + "', '" + MVCurrentDate.Text + "', '" + MVStatus.Text + "')";
+            cmd.CommandText = "INSERT INTO MissingValuable VALUES('" + MVUserName.Text + "', '" + MVPoliceStation.SelectedValue + "', '" + MVType.SelectedValue + "', '" + MVCost.Text + "', '" + MVSuspect.Text + "', '" + FileUpload1.FileName + "', '" + MVDetails.Text + "', '" + MVCurrentDate.Text + "', '" + MVStatus.Text + "')";
             cmd.ExecuteNonQuery();
             Response.Write("<script>alert('record inserted successfully !')</script>");
             con.Close();
             GridView1.DataBind();
             MVUserName.Text = "";
-            MVPoliceStation.Text = "";
             MVType.Text = "";
             MVCost.Text = "";
             MVSuspect.Text = "";
@@ -55,13 +54,12 @@ namespace CriminalTrackingSystem.Registration
             con.Open();
             FileUpload1.SaveAs(Server.MapPath("MissingValuableRecipt") + "/" + FileUpload1.FileName);
             Literal1.Text = "MissingValuableRecipt" + "/" + FileUpload1.FileName;
-            cmd.CommandText = "UPDATE MissingValuable SET LoginUsername='" + MVUserName.Text + "', PoliceStation='" + MVPoliceStation.Text + "', ValuableType='" + MVType.SelectedValue + "', ValuableCost='" + MVCost.Text + "', AnySuspect='" + MVSuspect.Text + "', ValuablePurchaseRecipt='" + FileUpload1.FileName + "', Details='" + MVDetails.Text + "', Status='" + MVStatus.Text + "' WHERE CDT='" + MVCurrentDate.Text + "'";
+            cmd.CommandText = "UPDATE MissingValuable SET LoginUsername='" + MVUserName.Text + "', PoliceStation='" + MVPoliceStation.SelectedValue + "', ValuableType='" + MVType.SelectedValue + "', ValuableCost='" + MVCost.Text + "', AnySuspect='" + MVSuspect.Text + "', ValuablePurchaseRecipt='" + FileUpload1.FileName + "', Details='" + MVDetails.Text + "', Status='" + MVStatus.Text + "' WHERE CDT='" + MVCurrentDate.Text + "'";
             cmd.ExecuteNonQuery();
             Response.Write("<script>alert('record updated successfully !')</script>");
             con.Close();
             GridView1.DataBind();
             MVUserName.Text = "";
-            MVPoliceStation.Text = "";
             MVType.Text = "";
             MVCost.Text = "";
             MVSuspect.Text = "";
@@ -82,7 +80,6 @@ namespace CriminalTrackingSystem.Registration
             con.Close();
             GridView1.DataBind();
             MVUserName.Text = "";
-            MVPoliceStation.Text = "";
             MVType.Text = "";
             MVCost.Text = "";
             MVSuspect.Text = "";
@@ -94,7 +91,7 @@ namespace CriminalTrackingSystem.Registration
         
         protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            MVPoliceStation.Text = GridView1.SelectedRow.Cells[3].Text.ToString();
+            MVPoliceStation.SelectedValue = GridView1.SelectedRow.Cells[3].Text.ToString();
             MVType.SelectedValue = GridView1.SelectedRow.Cells[4].Text.ToString();
             MVCost.Text = GridView1.SelectedRow.Cells[5].Text.ToString();
             MVSuspect.Text = GridView1.SelectedRow.Cells[6].Text.ToString();

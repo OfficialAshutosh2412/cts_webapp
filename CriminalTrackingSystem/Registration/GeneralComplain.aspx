@@ -26,9 +26,12 @@
                         &nbsp;<asp:TextBox ID="GCUserName" runat="server" class="cc-box"></asp:TextBox>
                     </div>
                     <div>
-                        <label>Police Station<asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="GCPoliceStation" ErrorMessage="police station required" ForeColor="#FF5050">*</asp:RequiredFieldValidator>
-                        </label>
-                        &nbsp;<asp:TextBox ID="GCPoliceStation" runat="server" class="cc-box" placeholder="police station name"></asp:TextBox>
+                        <label>Police Station<asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="GCPoliceStation" ErrorMessage="police station required" ForeColor="#FF5050">*</asp:RequiredFieldValidator> </label>
+                        <asp:DropDownList ID="GCPoliceStation" class="cc-box" runat="server" DataSourceID="SqlDataSource2" DataTextField="PoliceStationName" DataValueField="PoliceStationName" AppendDataBoundItems="True">
+                            <asp:ListItem Selected="True">--select--</asp:ListItem>
+                        </asp:DropDownList>
+                        <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [PoliceStationName] FROM [PoliceStation]"></asp:SqlDataSource>
+
                     </div>
                     <div>
                         <label>Title<asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="GCTitle" ErrorMessage="title required" ForeColor="#FF5050">*</asp:RequiredFieldValidator>

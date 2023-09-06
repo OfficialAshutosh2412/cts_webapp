@@ -33,13 +33,12 @@ namespace CriminalTrackingSystem.Registration
             con.Open();
             FileUpload1.SaveAs(Server.MapPath("MissingPerson") + "/" + FileUpload1.FileName);
             Literal1.Text = "MissingPerson" + "/" + FileUpload1.FileName;
-            cmd.CommandText = "INSERT INTO MissingPerson VALUES('" + MPUserName.Text + "', '" + MPPoliceStation.Text + "', '" + MPname.Text + "', '" + MPcontact.Text + "', '" + MPemail.Text + "', '" + MPlocation.Text + "', '" + MPransom.Text + "', '" + MPdob.Text + "', '" + MPdetails.Text + "', '" + FileUpload1.FileName + "', '" + MPcurrentDate.Text + "', '" + MPstatus.Text + "')";
+            cmd.CommandText = "INSERT INTO MissingPerson VALUES('" + MPUserName.Text + "', '" + MPPoliceStation.SelectedValue + "', '" + MPname.Text + "', '" + MPcontact.Text + "', '" + MPemail.Text + "', '" + MPlocation.Text + "', '" + MPransom.Text + "', '" + MPdob.Text + "', '" + MPdetails.Text + "', '" + FileUpload1.FileName + "', '" + MPcurrentDate.Text + "', '" + MPstatus.Text + "')";
             cmd.ExecuteNonQuery();
             Response.Write("<script>alert('record inserted successfully !')</script>");
             con.Close();
             GridView1.DataBind();
             MPUserName.Text = "";
-            MPPoliceStation.Text = "";
             MPname.Text = "";
             MPcontact.Text = "";
             MPemail.Text = "";
@@ -58,13 +57,12 @@ namespace CriminalTrackingSystem.Registration
             con.Open();
             FileUpload1.SaveAs(Server.MapPath("MissingPerson") + "/" + FileUpload1.FileName);
             Literal1.Text = "MissingPerson" + "/" + FileUpload1.FileName;
-            cmd.CommandText = "UPDATE MissingPerson SET LoginUsername='" + MPUserName.Text + "', PoliceStation='" + MPPoliceStation.Text + "', MPName='" + MPname.Text + "', MPCOntactNumber='" + MPcontact.Text + "', MPEmailId='" + MPemail.Text + "', LastViewLocation='" + MPlocation.Text + "', Ransom='" + MPransom.Text + "', Dob='" + MPdob.Text + "', Details='" + MPdetails.Text + "', LatestPhoto='" + FileUpload1.FileName + "', Status='" + MPstatus.Text + "' WHERE CDT='" + MPcurrentDate.Text + "'";
+            cmd.CommandText = "UPDATE MissingPerson SET LoginUsername='" + MPUserName.Text + "', PoliceStation='" + MPPoliceStation.SelectedValue + "', MPName='" + MPname.Text + "', MPCOntactNumber='" + MPcontact.Text + "', MPEmailId='" + MPemail.Text + "', LastViewLocation='" + MPlocation.Text + "', Ransom='" + MPransom.Text + "', Dob='" + MPdob.Text + "', Details='" + MPdetails.Text + "', LatestPhoto='" + FileUpload1.FileName + "', Status='" + MPstatus.Text + "' WHERE CDT='" + MPcurrentDate.Text + "'";
             cmd.ExecuteNonQuery();
             con.Close();
             GridView1.DataBind();
             Response.Write("<script>alert('record updated successfully !')</script>");
             MPUserName.Text = "";
-            MPPoliceStation.Text = "";
             MPname.Text = "";
             MPcontact.Text = "";
             MPemail.Text = "";
@@ -79,7 +77,7 @@ namespace CriminalTrackingSystem.Registration
         //grid view
         protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            MPPoliceStation.Text = GridView1.SelectedRow.Cells[3].Text.ToString();
+            MPPoliceStation.SelectedValue = GridView1.SelectedRow.Cells[3].Text.ToString();
             MPname.Text = GridView1.SelectedRow.Cells[4].Text.ToString();
             MPcontact.Text = GridView1.SelectedRow.Cells[5].Text.ToString();
             MPemail.Text = GridView1.SelectedRow.Cells[6].Text.ToString();
@@ -100,7 +98,6 @@ namespace CriminalTrackingSystem.Registration
             GridView1.DataBind();
             Response.Write("<script>alert('record deleted successfully !')</script>");
             MPUserName.Text = "";
-            MPPoliceStation.Text = "";
             MPname.Text = "";
             MPcontact.Text = "";
             MPemail.Text = "";

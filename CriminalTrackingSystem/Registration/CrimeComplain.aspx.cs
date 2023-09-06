@@ -29,13 +29,12 @@ namespace CriminalTrackingSystem.Registration
             con.Open();
             FileUpload1.SaveAs(Server.MapPath("AnyProof") + "/" + FileUpload1.FileName);
             Literal1.Text = "AnyProof" + "/" + FileUpload1.FileName;
-            cmd.CommandText = "INSERT INTO CrimeComplain VALUES('" + UserName.Text + "', '" + PoliceStation.Text + "', '" + CrimeType.SelectedValue + "', '" + InvolvedPerson.Text + "', '" + FileUpload1.FileName + "', '" + CrimeStation.Text + "', '" + CrimeDate.Text + "', '" + CurrentDate.Text + "', '" + CrimeStatus.Text + "')";
+            cmd.CommandText = "INSERT INTO CrimeComplain VALUES('" + UserName.Text + "', '" + PoliceStation.SelectedValue + "', '" + CrimeType.SelectedValue + "', '" + InvolvedPerson.Text + "', '" + FileUpload1.FileName + "', '" + CrimeStation.Text + "', '" + CrimeDate.Text + "', '" + CurrentDate.Text + "', '" + CrimeStatus.Text + "')";
             cmd.ExecuteNonQuery();
             Response.Write("<script>alert('record inserted successfully !')</script>");
             con.Close();
             GridView1.DataBind();
             UserName.Text = "";
-            PoliceStation.Text = "";
             InvolvedPerson.Text = "";
             CrimeStation.Text = "";
             CrimeDate.Text = "";
@@ -61,13 +60,12 @@ namespace CriminalTrackingSystem.Registration
             con.Open();
             FileUpload1.SaveAs(Server.MapPath("AnyProof") + "/" + FileUpload1.FileName);
             Literal1.Text = "AnyProof" + "/" + FileUpload1.FileName;
-            cmd.CommandText = "UPDATE CrimeComplain SET LoginUsername='" + UserName.Text + "', PoliceStation='" + PoliceStation.Text+"', CrimeType='"+CrimeType.Text+"', InvolvePerson='"+InvolvedPerson.Text+"', AnyProof='"+FileUpload1.FileName+"', CrimeStation='"+CrimeStation.Text+"', CDT='"+CurrentDate.Text+"', Status='"+CrimeStatus.Text+ "' WHERE CrimeDate='" + CrimeDate.Text + "'";
+            cmd.CommandText = "UPDATE CrimeComplain SET LoginUsername='" + UserName.Text + "', PoliceStation='" + PoliceStation.SelectedValue + "', CrimeType='"+CrimeType.Text+"', InvolvePerson='"+InvolvedPerson.Text+"', AnyProof='"+FileUpload1.FileName+"', CrimeStation='"+CrimeStation.Text+"', CDT='"+CurrentDate.Text+"', Status='"+CrimeStatus.Text+ "' WHERE CrimeDate='" + CrimeDate.Text + "'";
             cmd.ExecuteNonQuery();
             con.Close();
             GridView1.DataBind();
             Response.Write("<script>alert('record updated successfully !')</script>");
             UserName.Text = "";
-            PoliceStation.Text = "";
             InvolvedPerson.Text = "";
             CrimeStation.Text = "";
             CrimeDate.Text = "";
@@ -85,7 +83,6 @@ namespace CriminalTrackingSystem.Registration
             GridView1.DataBind();
             Response.Write("<script>alert('record deleted successfully !')</script>");
             UserName.Text = "";
-            PoliceStation.Text = "";
             InvolvedPerson.Text = "";
             CrimeStation.Text = "";
             CrimeDate.Text = "";
@@ -96,7 +93,7 @@ namespace CriminalTrackingSystem.Registration
 
         protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            PoliceStation.Text = GridView1.SelectedRow.Cells[3].Text.ToString();
+            PoliceStation.SelectedValue = GridView1.SelectedRow.Cells[3].Text.ToString();
             CrimeType.SelectedValue = GridView1.SelectedRow.Cells[4].Text.ToString();
             InvolvedPerson.Text = GridView1.SelectedRow.Cells[5].Text.ToString();
             CrimeStation.Text = GridView1.SelectedRow.Cells[6].Text.ToString();

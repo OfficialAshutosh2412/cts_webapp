@@ -31,13 +31,12 @@ namespace CriminalTrackingSystem.Registration
         protected void Button1_Click(object sender, EventArgs e)
         {
             con.Open();
-            cmd.CommandText = "INSERT INTO GeneralComplain VALUES('" + GCUserName.Text + "', '" + GCPoliceStation.Text + "', '" + GCTitle.Text + "', '" + GCDetails.Text + "', '" + GCInvolvedPersons.Text + "', '" + GCCurrentDate.Text + "', '" + GCCrimeStatus.Text + "')";
+            cmd.CommandText = "INSERT INTO GeneralComplain VALUES('" + GCUserName.Text + "', '" + GCPoliceStation.SelectedValue + "', '" + GCTitle.Text + "', '" + GCDetails.Text + "', '" + GCInvolvedPersons.Text + "', '" + GCCurrentDate.Text + "', '" + GCCrimeStatus.Text + "')";
             cmd.ExecuteNonQuery();
             Response.Write("<script>alert('record inserted successfully !')</script>");
             con.Close();
             GridView1.DataBind();
             GCUserName.Text = "";
-            GCPoliceStation.Text = "";
             GCTitle.Text = "";
             GCDetails.Text = "";
             GCInvolvedPersons.Text = "";
@@ -48,7 +47,7 @@ namespace CriminalTrackingSystem.Registration
         protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
-            GCPoliceStation.Text = GridView1.SelectedRow.Cells[3].Text.ToString();
+            GCPoliceStation.SelectedValue = GridView1.SelectedRow.Cells[3].Text.ToString();
             GCTitle.Text = GridView1.SelectedRow.Cells[4].Text.ToString();
             GCDetails.Text = GridView1.SelectedRow.Cells[5].Text.ToString();
             GCInvolvedPersons.Text = GridView1.SelectedRow.Cells[6].Text.ToString();
@@ -59,13 +58,12 @@ namespace CriminalTrackingSystem.Registration
         protected void Button3_Click(object sender, EventArgs e)
         {
             con.Open();
-            cmd.CommandText = "UPDATE GeneralComplain SET LoginUsername='" + GCUserName.Text + "', PoliceStation='" + GCPoliceStation.Text + "', Title='" + GCTitle.Text + "', Details='" + GCDetails.Text + "', InvolvePerson='" + GCInvolvedPersons.Text + "', Status='" + GCCrimeStatus.Text + "' WHERE CDT='" + GCCurrentDate.Text + "'";
+            cmd.CommandText = "UPDATE GeneralComplain SET LoginUsername='" + GCUserName.Text + "', PoliceStation='" + GCPoliceStation.SelectedValue + "', Title='" + GCTitle.Text + "', Details='" + GCDetails.Text + "', InvolvePerson='" + GCInvolvedPersons.Text + "', Status='" + GCCrimeStatus.Text + "' WHERE CDT='" + GCCurrentDate.Text + "'";
             cmd.ExecuteNonQuery();
             con.Close();
             GridView1.DataBind();
             Response.Write("<script>alert('record updatd successfully! ')</script>");
             GCUserName.Text = "";
-            GCPoliceStation.Text = "";
             GCInvolvedPersons.Text = "";
             GCTitle.Text = "";
             GCDetails.Text = "";
@@ -83,7 +81,6 @@ namespace CriminalTrackingSystem.Registration
             GridView1.DataBind();
             Response.Write("<script>alert('record deletd successfully! ')</script>");
             GCUserName.Text = "";
-            GCPoliceStation.Text = "";
             GCInvolvedPersons.Text = "";
             GCTitle.Text = "";
             GCDetails.Text = "";

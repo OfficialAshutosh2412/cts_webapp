@@ -27,9 +27,11 @@
                     </div>
                     <div>
                         <label>
-                            Police Station<asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="MVPoliceStation" ErrorMessage="Police station required" ForeColor="#FF5050">*</asp:RequiredFieldValidator>
-                        </label>
-                        <asp:TextBox ID="MVPoliceStation" runat="server" class="cc-box" placeholder="police station name"></asp:TextBox>
+                            Police Station<asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="MVPoliceStation" ErrorMessage="Police station required" ForeColor="#FF5050">*</asp:RequiredFieldValidator></label>
+                        <asp:DropDownList ID="MVPoliceStation" class="cc-box" runat="server" AppendDataBoundItems="True" DataSourceID="SqlDataSource2" DataTextField="PoliceStationName" DataValueField="PoliceStationName">
+                            <asp:ListItem Selected="True">--select--</asp:ListItem>
+                        </asp:DropDownList>
+                        <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [PoliceStationName] FROM [PoliceStation]"></asp:SqlDataSource>
                     </div>
                     <div>
                         <label>Valuable Type</label>

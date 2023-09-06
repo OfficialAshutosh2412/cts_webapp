@@ -14,6 +14,10 @@ namespace CriminalTrackingSystem.Registration
 
         }
 
-        
+        protected void Unnamed1_Click(object sender, EventArgs e)
+        {
+            Session.Abandon();
+            Response.Redirect("~/Login.aspx");
+        }
     }
 }

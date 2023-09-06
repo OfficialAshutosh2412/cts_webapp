@@ -27,15 +27,17 @@
                         <label>
                             Police Station<asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="MPPoliceStation" ErrorMessage="police station required" ForeColor="#FF5050">*</asp:RequiredFieldValidator>
                         </label>
-                        <asp:TextBox ID="MPPoliceStation" runat="server" class="cc-box" placeholder="police station name"></asp:TextBox>
+                        <asp:DropDownList ID="MPPoliceStation" class="cc-box" runat="server" DataSourceID="SqlDataSource2" DataTextField="PoliceStationName" DataValueField="PoliceStationName" AppendDataBoundItems="True">
+                            <asp:ListItem Selected="True">--select--</asp:ListItem>
+                        </asp:DropDownList>
+                        <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [PoliceStationName] FROM [PoliceStation]"></asp:SqlDataSource>
                     </div>
                 </div>
                 <%--second row--%>
                 <div>
                     <div>
                         <label>
-                            Person Name<asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="MPname" ErrorMessage="Missing Person name required" ForeColor="#FF5050">*</asp:RequiredFieldValidator>
-                        </label>
+                            Person Name<asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="MPname" ErrorMessage="Missing Person name required" ForeColor="#FF5050">*</asp:RequiredFieldValidator> </label>
                         <asp:TextBox ID="MPname" runat="server" class="cc-box" placeholder="name of missing person"></asp:TextBox>
                     </div>
                     <div>

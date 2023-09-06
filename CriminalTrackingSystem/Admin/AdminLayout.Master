@@ -43,7 +43,7 @@
                     <asp:HyperLink ID="HyperLink8" runat="server" title="FAQ" NavigateUrl="~/Admin/Admin-FAQ.aspx"><i class="fa-solid fa-circle-question text-light"></i></asp:HyperLink>
                 </div>
                 <div>
-                    <asp:Button Text="Logout" runat="server"  OnClick="Logoutbtn" CssClass="pb-0 p-1"/>
+                    <Button Text="Logout" runat="server" class="nav-link fw-bolder" title="logout"  onserverclick="Logoutbtn" ValidationGroup="sdsas"><i class="fa-solid fa-right-from-bracket"></i></Button>
                 </div>
             </div>
         </nav>
