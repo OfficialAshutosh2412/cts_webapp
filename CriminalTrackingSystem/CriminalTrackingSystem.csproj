@@ -67,13 +67,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Admin\Admin-Contact.aspx" />
     <Content Include="Admin\Admin-FAQ.aspx" />
     <Content Include="Admin\Admin-Gallery.aspx" />
+    <Content Include="Admin\AdminContact.aspx" />
+    <Content Include="Admin\AdminNews.aspx" />
+    <Content Include="Admin\Emailsuccess.aspx" />
     <Content Include="Admin\Records.aspx" />
-    <Content Include="Admin\GalleryAdmin.aspx" />
     <Content Include="Admin\AdminHome.aspx" />
     <Content Include="Admin\PoliceStation.aspx" />
+    <Content Include="Admin\Status.aspx" />
+    <Content Include="Admin\Users.aspx" />
     <Content Include="App_Data\CTS.mdf" />
     <Content Include="App_Data\CTS_log.ldf">
       <DependentUpon>CTS.mdf</DependentUpon>
@@ -144,13 +147,6 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Admin\Admin-Contact.aspx.cs">
-      <DependentUpon>Admin-Contact.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Admin\Admin-Contact.aspx.designer.cs">
-      <DependentUpon>Admin-Contact.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Admin\Admin-FAQ.aspx.cs">
       <DependentUpon>Admin-FAQ.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -165,19 +161,33 @@
     <Compile Include="Admin\Admin-Gallery.aspx.designer.cs">
       <DependentUpon>Admin-Gallery.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Admin\AdminContact.aspx.cs">
+      <DependentUpon>AdminContact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminContact.aspx.designer.cs">
+      <DependentUpon>AdminContact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminNews.aspx.cs">
+      <DependentUpon>AdminNews.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminNews.aspx.designer.cs">
+      <DependentUpon>AdminNews.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Emailsuccess.aspx.cs">
+      <DependentUpon>Emailsuccess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Emailsuccess.aspx.designer.cs">
+      <DependentUpon>Emailsuccess.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Admin\Records.aspx.cs">
       <DependentUpon>Records.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Admin\Records.aspx.designer.cs">
       <DependentUpon>Records.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Admin\GalleryAdmin.aspx.cs">
-      <DependentUpon>GalleryAdmin.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Admin\GalleryAdmin.aspx.designer.cs">
-      <DependentUpon>GalleryAdmin.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\AdminHome.aspx.cs">
       <DependentUpon>AdminHome.aspx</DependentUpon>
@@ -199,6 +209,20 @@
     </Compile>
     <Compile Include="Admin\PoliceStation.aspx.designer.cs">
       <DependentUpon>PoliceStation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Status.aspx.cs">
+      <DependentUpon>Status.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Status.aspx.designer.cs">
+      <DependentUpon>Status.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Users.aspx.cs">
+      <DependentUpon>Users.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Users.aspx.designer.cs">
+      <DependentUpon>Users.aspx</DependentUpon>
     </Compile>
     <Compile Include="CriminalGallery.aspx.cs">
       <DependentUpon>CriminalGallery.aspx</DependentUpon>

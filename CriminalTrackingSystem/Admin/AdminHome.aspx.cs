@@ -55,7 +55,7 @@ namespace CriminalTrackingSystem.Admin
             cmd.ExecuteNonQuery();
 
             //contact us counting
-            cmd.CommandText = "SELECT COUNT(*) FROM MissingValuable";
+            cmd.CommandText = "SELECT COUNT(*) FROM Contact";
             int contcount = (int)cmd.ExecuteScalar();
             contact.Text = contcount.ToString();
             cmd.ExecuteNonQuery();
@@ -65,7 +65,27 @@ namespace CriminalTrackingSystem.Admin
             int faqcount = (int)cmd.ExecuteScalar();
             faq.Text = faqcount.ToString();
             cmd.ExecuteNonQuery();
-            con.Close();
+
+            //gallery counting
+            cmd.CommandText = "SELECT COUNT(*) FROM EventGallery";
+            int eventcount = (int)cmd.ExecuteScalar();
+            cmd.CommandText = "SELECT COUNT(*) FROM CriminalGallery";
+            int criminalcount = (int)cmd.ExecuteScalar();
+            int sum = eventcount + criminalcount;
+            gallery.Text = sum.ToString();
+            cmd.ExecuteNonQuery();
+
+            //news counting
+            cmd.CommandText = "SELECT COUNT(*) FROM News";
+            int newscount = (int)cmd.ExecuteScalar();
+            news.Text = newscount.ToString();
+            cmd.ExecuteNonQuery();
+
+            ////news counting
+            //cmd.CommandText = "SELECT COUNT(status) FROM(CrimeComplain, GeneralComplain, MissingPerson, MissingValuable) WHERE status='0'";
+            //int statuscount = (int)cmd.ExecuteScalar();
+            //pendingstatus.Text = statuscount.ToString();
+            //cmd.ExecuteNonQuery();
         }
     }
 }

@@ -8,26 +8,26 @@
         <div class="policeItem">
             <div>
                 <asp:Label Text="Chowki Incharge Name" runat="server" />
-                <asp:TextBox ID="chowki" runat="server"></asp:TextBox>
+                <asp:TextBox ID="chowki" CssClass="cc-box" runat="server"></asp:TextBox>
             </div>
             <div>
                 <asp:Label Text="Police Station Name" runat="server" />
-                <asp:TextBox ID="name" runat="server"></asp:TextBox>
+                <asp:TextBox ID="name" CssClass="cc-box" runat="server"></asp:TextBox>
             </div>
             <div>
                 <asp:Label Text="Agent Name" runat="server" />
-                <asp:TextBox ID="agentname" runat="server"></asp:TextBox>
+                <asp:TextBox ID="agentname" CssClass="cc-box" runat="server"></asp:TextBox>
             </div>
         </div>
      
         <div class="policeItem">
             <div>
                 <asp:Label Text="First CUG Number" runat="server" />
-                <asp:TextBox ID="cugone" runat="server"></asp:TextBox>
+                <asp:TextBox ID="cugone" CssClass="cc-box" runat="server"></asp:TextBox>
             </div>
             <div>
                 <asp:Label Text="Second CUG Number" runat="server" />
-                <asp:TextBox ID="cugtwo" runat="server"></asp:TextBox>
+                <asp:TextBox ID="cugtwo" CssClass="cc-box" runat="server"></asp:TextBox>
             </div>
             
         </div>
@@ -35,11 +35,11 @@
         <div class="policeItem">
             <div>
                 <asp:Label Text="Agent Phone Number" runat="server" />
-                <asp:TextBox ID="agentnumber"  runat="server"></asp:TextBox>
+                <asp:TextBox ID="agentnumber" CssClass="cc-box"  runat="server"></asp:TextBox>
             </div>
             <div>
                 <asp:Label Text="Police Station Picture" runat="server" />
-                <asp:FileUpload ID="FileUpload1" runat="server" class="bg-white text-dark"/>
+                <asp:FileUpload ID="FileUpload1" CssClass="cc-box" runat="server" class="bg-white text-dark"/>
             </div>
         </div>
         
