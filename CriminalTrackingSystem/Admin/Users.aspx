@@ -20,6 +20,6 @@
         <div><asp:Label Text="Living Status" runat="server" /><asp:Label Text=":" runat="server" /><asp:Label ID="ls" runat="server" /></div>
         <div><asp:Label Text="Adhaar Number" runat="server" /><asp:Label Text=":" runat="server" /><asp:Label ID="adhaar" runat="server" /></div>
         <div><asp:Label Text="Phone Number" runat="server" /><asp:Label Text=":" runat="server" /><asp:Label ID="phone" runat="server" /></div>
-        <div><asp:Label Text="Profile Picture" runat="server" /><asp:Label Text=":" runat="server" /><asp:Image ID="pics" runat="server" />
+        <%--<div><asp:Label Text="Profile Picture" runat="server" /><asp:Label Text=":" runat="server" /><asp:Image ID="pics" runat="server" />--%>
     </div>
 </asp:Content>

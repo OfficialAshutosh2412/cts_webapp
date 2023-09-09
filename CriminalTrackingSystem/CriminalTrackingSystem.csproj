@@ -132,6 +132,7 @@
     <Content Include="dist\img\whatsapp-image-2022-10-16-at-083029_1665903787.jpg" />
     <Content Include="dist\img\—Pngtree—tri color indian flag transparent_7253951.png" />
     <Content Include="dist\js\custom.js" />
+    <Content Include="dist\loader\Ripple-2.1s-204px.gif" />
     <Content Include="EventGallery.aspx" />
     <Content Include="Gallery.aspx" />
     <Content Include="Home.aspx" />

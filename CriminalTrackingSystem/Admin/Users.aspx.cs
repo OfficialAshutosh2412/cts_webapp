@@ -34,7 +34,7 @@ namespace CriminalTrackingSystem.Admin
                 ls.Text = "";
                 adhaar.Text = "";
                 phone.Text = "";
-                picture.Text = "";
+                //picture.Text = "";
             }
             else
             {
@@ -55,7 +55,7 @@ namespace CriminalTrackingSystem.Admin
                     ls.Text = dt.Rows[i]["Lstatus"].ToString();
                     adhaar.Text = dt.Rows[i]["AdharNumber"].ToString();
                     phone.Text = dt.Rows[i]["ContactNumber"].ToString();
-                    pics.ImageUrl = dt.Rows[i]["ProfilePhoto"].ToString();
+                    //pics.ImageUrl = dt.Rows[i]["ProfilePhoto"].ToString();
                 }
             }
         }
