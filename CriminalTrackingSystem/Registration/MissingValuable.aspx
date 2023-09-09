@@ -103,8 +103,8 @@
                 <%--fifth row--%>
                 <div>
                     <asp:Button ID="Button2" runat="server" Text="Send" class="send" OnClick="Button1_Click" />
-                    <asp:Button ID="Button3" runat="server" Text="Update" class="cc-btn" OnClick="Button3_Click" />
-                    <asp:Button ID="Button1" runat="server" Text="Delete" class="delete" OnClick="Button1_Click1"  />
+                    <%--<asp:Button ID="Button3" runat="server" Text="Update" class="cc-btn" OnClick="Button3_Click" />
+                    <asp:Button ID="Button1" runat="server" Text="Delete" class="delete" OnClick="Button1_Click1"  />--%>
                     <input type="reset" value="clear" class="clear" /><asp:ValidationSummary ID="ValidationSummary1" CssClass="d-none" runat="server" ShowMessageBox="True" />
                     <br />
                 </div>
@@ -114,12 +114,9 @@
         <div class="valuable-grid">
             <h2 class="p-3">
                     <img src="../dist/img/diamond_2600353.png" style="width: 60px;" />Missing Valuable Report</h2>
-            <asp:GridView ID="GridView1" CssClass="table table-group-divider " runat="server" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="MVId" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
+            <asp:GridView ID="GridView1" CssClass="table table-group-divider " runat="server" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="MVId" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None">
                 <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
                 <Columns>
-                    <asp:CommandField ButtonType="Button" ShowSelectButton="True">
-                    <ControlStyle CssClass="cc-btn p-2" />
-                    </asp:CommandField>
                     <asp:BoundField DataField="MVId" HeaderText="ID" InsertVisible="False" ReadOnly="True" SortExpression="MVId" />
                     <asp:BoundField DataField="LoginUsername" HeaderText="Username" SortExpression="LoginUsername" />
                     <asp:BoundField DataField="PoliceStation" HeaderText="Police Station" SortExpression="PoliceStation" />

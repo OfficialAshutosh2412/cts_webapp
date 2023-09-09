@@ -32,7 +32,7 @@ namespace CriminalTrackingSystem
                 }
                 else if (dtr[2].ToString() == "admin")
                 {
-                    Session["user"] = LoginName.Text;
+                    Session["type"] = LoginName.Text;
                     Response.Redirect("~/Admin/AdminHome.aspx");
                 }
             }

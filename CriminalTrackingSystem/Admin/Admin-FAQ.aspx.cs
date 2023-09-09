@@ -17,9 +17,9 @@ namespace CriminalTrackingSystem.Admin
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            cmd.Connection = con;
-            if (Session["user"] == null)
+            if (Session["type"] == null)
                 Response.Redirect("~/Login.aspx");
+            cmd.Connection = con;
         }
         protected void FAQButton1_Click(object sender, EventArgs e)
         {

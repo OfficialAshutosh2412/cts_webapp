@@ -141,7 +141,7 @@
         <div class="admin-card">
            <i class="fa-solid fa-circle-check counters" style="color:#63d448"></i>
             <div>
-                <asp:Label Text="" runat="server" ID="Label2" class="counters" />
+                <asp:Label Text="" runat="server" ID="solvedcases" class="counters" />
                 <asp:Label Text="+" runat="server" class="counters" />
             </div>
             <div class="d-flex justify-content-center align-items-center">

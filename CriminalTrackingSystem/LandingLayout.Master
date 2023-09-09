@@ -17,13 +17,10 @@
             <img src="dist/loader/Ripple-2.1s-204px.gif" />
         </div>
         <form id="form1" runat="server">
-            <a class="go-to-top clear" href="#news"><i class="fa-solid fa-arrow-up"></i></a>
             <i class="fa-solid fa-language clear  hidden-tool-box " id="tool-toggler"></i>     
             <%--top bar--%>
             <div class="top-bar hide-top">
-                <div>
-                    <asp:Label ID="Label1" runat="server"></asp:Label>
-                </div>
+                <div><asp:Label ID="Label1" runat="server"></asp:Label></div>
                 <div class="footer-follow">
                     <a href="http://" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
                     <a href="http://" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>

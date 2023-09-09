@@ -111,8 +111,8 @@
                 <%--sixth row--%>
                 <div>
                     <asp:Button ID="Button2" runat="server" Text="Send" class="send" OnClick="Button1_Click" />
-                    <asp:Button ID="Button3" runat="server" Text="Update" class="cc-btn" OnClick="Button3_Click1"  />
-                    <asp:Button ID="Button1" runat="server" Text="Delete" class="delete" OnClick="Button1_Click1"  />
+                    <%--<asp:Button ID="Button3" runat="server" Text="Update" class="cc-btn" OnClick="Button3_Click1"  />
+                    <asp:Button ID="Button1" runat="server" Text="Delete" class="delete" OnClick="Button1_Click1"  />--%>
                     <input type="reset" value="clear" class="clear" /><asp:ValidationSummary ID="ValidationSummary1" CssClass="d-none" runat="server" ShowMessageBox="True" />
                     <br />
                 </div>
@@ -122,12 +122,9 @@
     <div class="missing-grid">
         <h2 class="p-3">
             <img src="../dist/img/user.png" style="width: 50px;" />Report Missing Person</h2>
-        <asp:GridView ID="GridView1" runat="server" CssClass="table table-group-divider table-bordered" AutoGenerateColumns="False" BackColor="White" BorderColor="#E7E7FF" BorderStyle="None" BorderWidth="1px" CellPadding="3" DataKeyNames="MPId" DataSourceID="SqlDataSource1" GridLines="Horizontal" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" Width="100%">
+        <asp:GridView ID="GridView1" runat="server" CssClass="table table-group-divider table-bordered" AutoGenerateColumns="False" BackColor="White" BorderColor="#E7E7FF" BorderStyle="None" BorderWidth="1px" CellPadding="3" DataKeyNames="MPId" DataSourceID="SqlDataSource1" GridLines="Horizontal" Width="100%">
             <AlternatingRowStyle BackColor="#F7F7F7" />
             <Columns>
-                <asp:CommandField ButtonType="Button" ShowSelectButton="True">
-                    <ControlStyle CssClass="cc-btn p-1" />
-                </asp:CommandField>
                 <asp:BoundField DataField="MPId" HeaderText="ID" InsertVisible="False" ReadOnly="True" SortExpression="MPId" />
                 <asp:BoundField DataField="LoginUsername" HeaderText="Username" SortExpression="LoginUsername" />
                 <asp:BoundField DataField="PoliceStation" HeaderText="Police Station" SortExpression="PoliceStation" />

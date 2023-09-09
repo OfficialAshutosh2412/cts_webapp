@@ -91,8 +91,8 @@
                 <%--fifth row--%>
                 <div>
                     <asp:Button ID="Button2" runat="server" Text="Send" class=" send" OnClick="Button1_Click" />
-                    <asp:Button ID="Button1" runat="server" Text="Update" class="cc-btn" OnClick="Button3_Click" />
-                    <asp:Button ID="Button3" runat="server" Text="Delete" class=" delete" OnClick="Button3_Click1" />
+                    <%--<asp:Button ID="Button1" runat="server" Text="Update" class="cc-btn" OnClick="Button3_Click" />
+                    <asp:Button ID="Button3" runat="server" Text="Delete" class=" delete" OnClick="Button3_Click1" />--%>
                     <input type="reset" value="clear" class=" clear" />
 
                     <asp:ValidationSummary CssClass="d-none" ID="ValidationSummary1" runat="server" ShowMessageBox="True" />
@@ -105,12 +105,9 @@
             <h2>
                 <img src="../dist/img/trial.png" />Crime Complain
             </h2>
-            <asp:GridView ID="GridView1" CssClass="table  table-group-divider table-bordered"  runat="server" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="CCId" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
+            <asp:GridView ID="GridView1" CssClass="table  table-group-divider table-bordered"  runat="server" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="CCId" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None" >
                 <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
                 <Columns>
-                    <asp:CommandField ShowSelectButton="True" ButtonType="Button" >
-                    <ControlStyle CssClass="cc-btn p-2" />
-                    </asp:CommandField>
                     <asp:BoundField DataField="CCId" HeaderText="ID" InsertVisible="False" ReadOnly="True" SortExpression="CCId">
                         <ItemStyle ForeColor="Black" />
                     </asp:BoundField>

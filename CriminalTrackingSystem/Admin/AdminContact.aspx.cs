@@ -18,6 +18,8 @@ namespace CriminalTrackingSystem.Admin
         SqlCommand cmd = new SqlCommand();
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["type"] == null)
+                Response.Redirect("~/Login.aspx");
             cmd.Connection = con;
         }
         protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)

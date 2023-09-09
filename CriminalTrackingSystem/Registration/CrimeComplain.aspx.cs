@@ -49,58 +49,58 @@ namespace CriminalTrackingSystem.Registration
 
         
 
-        protected void ImageButton1_Click1(object sender, ImageClickEventArgs e)
-        {
-            Response.Redirect("AnyProof/{0}");
-        }
+        //protected void ImageButton1_Click1(object sender, ImageClickEventArgs e)
+        //{
+        //    Response.Redirect("AnyProof/{0}");
+        //}
 
-        //update button
-        protected void Button3_Click(object sender, EventArgs e)
-        {
-            con.Open();
-            FileUpload1.SaveAs(Server.MapPath("AnyProof") + "/" + FileUpload1.FileName);
-            Literal1.Text = "AnyProof" + "/" + FileUpload1.FileName;
-            cmd.CommandText = "UPDATE CrimeComplain SET LoginUsername='" + UserName.Text + "', PoliceStation='" + PoliceStation.SelectedValue + "', CrimeType='"+CrimeType.Text+"', InvolvePerson='"+InvolvedPerson.Text+"', AnyProof='"+FileUpload1.FileName+"', CrimeStation='"+CrimeStation.Text+"', CDT='"+CurrentDate.Text+"', Status='"+CrimeStatus.Text+ "' WHERE CrimeDate='" + CrimeDate.Text + "'";
-            cmd.ExecuteNonQuery();
-            con.Close();
-            GridView1.DataBind();
-            Response.Write("<script>alert('record updated successfully !')</script>");
-            UserName.Text = "";
-            InvolvedPerson.Text = "";
-            CrimeStation.Text = "";
-            CrimeDate.Text = "";
-            CurrentDate.Text = "";
-            CrimeStatus.Text = "";
-        }
+        ////update button
+        //protected void Button3_Click(object sender, EventArgs e)
+        //{
+        //    con.Open();
+        //    FileUpload1.SaveAs(Server.MapPath("AnyProof") + "/" + FileUpload1.FileName);
+        //    Literal1.Text = "AnyProof" + "/" + FileUpload1.FileName;
+        //    cmd.CommandText = "UPDATE CrimeComplain SET LoginUsername='" + UserName.Text + "', PoliceStation='" + PoliceStation.SelectedValue + "', CrimeType='"+CrimeType.Text+"', InvolvePerson='"+InvolvedPerson.Text+"', AnyProof='"+FileUpload1.FileName+"', CrimeStation='"+CrimeStation.Text+"', CDT='"+CurrentDate.Text+"', Status='"+CrimeStatus.Text+ "' WHERE CrimeDate='" + CrimeDate.Text + "'";
+        //    cmd.ExecuteNonQuery();
+        //    con.Close();
+        //    GridView1.DataBind();
+        //    Response.Write("<script>alert('record updated successfully !')</script>");
+        //    UserName.Text = "";
+        //    InvolvedPerson.Text = "";
+        //    CrimeStation.Text = "";
+        //    CrimeDate.Text = "";
+        //    CurrentDate.Text = "";
+        //    CrimeStatus.Text = "";
+        //}
 
-        //delete btn
-        protected void Button3_Click1(object sender, EventArgs e)
-        {
-            con.Open();
-            cmd.CommandText = "DELETE FROM CrimeComplain WHERE CrimeDate='" + CrimeDate.Text + "'";
-            cmd.ExecuteNonQuery();
-            con.Close();
-            GridView1.DataBind();
-            Response.Write("<script>alert('record deleted successfully !')</script>");
-            UserName.Text = "";
-            InvolvedPerson.Text = "";
-            CrimeStation.Text = "";
-            CrimeDate.Text = "";
-            CurrentDate.Text = "";
-            CrimeStatus.Text = "";
+        ////delete btn
+        //protected void Button3_Click1(object sender, EventArgs e)
+        //{
+        //    con.Open();
+        //    cmd.CommandText = "DELETE FROM CrimeComplain WHERE CrimeDate='" + CrimeDate.Text + "'";
+        //    cmd.ExecuteNonQuery();
+        //    con.Close();
+        //    GridView1.DataBind();
+        //    Response.Write("<script>alert('record deleted successfully !')</script>");
+        //    UserName.Text = "";
+        //    InvolvedPerson.Text = "";
+        //    CrimeStation.Text = "";
+        //    CrimeDate.Text = "";
+        //    CurrentDate.Text = "";
+        //    CrimeStatus.Text = "";
 
-        }
+        //}
 
-        protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            PoliceStation.SelectedValue = GridView1.SelectedRow.Cells[3].Text.ToString();
-            CrimeType.SelectedValue = GridView1.SelectedRow.Cells[4].Text.ToString();
-            InvolvedPerson.Text = GridView1.SelectedRow.Cells[5].Text.ToString();
-            CrimeStation.Text = GridView1.SelectedRow.Cells[6].Text.ToString();
-            CrimeDate.Text = GridView1.SelectedRow.Cells[7].Text.ToString();
-            CurrentDate.Text = GridView1.SelectedRow.Cells[8].Text.ToString();
-            CrimeStatus.Text = GridView1.SelectedRow.Cells[9].Text.ToString();
+        //protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
+        //{
+        //    PoliceStation.SelectedValue = GridView1.SelectedRow.Cells[3].Text.ToString();
+        //    CrimeType.SelectedValue = GridView1.SelectedRow.Cells[4].Text.ToString();
+        //    InvolvedPerson.Text = GridView1.SelectedRow.Cells[5].Text.ToString();
+        //    CrimeStation.Text = GridView1.SelectedRow.Cells[6].Text.ToString();
+        //    CrimeDate.Text = GridView1.SelectedRow.Cells[7].Text.ToString();
+        //    CurrentDate.Text = GridView1.SelectedRow.Cells[8].Text.ToString();
+        //    CrimeStatus.Text = GridView1.SelectedRow.Cells[9].Text.ToString();
             
-        }
+        //}
     }
 }

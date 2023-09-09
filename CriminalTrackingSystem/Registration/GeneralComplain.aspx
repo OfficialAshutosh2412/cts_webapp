@@ -73,8 +73,8 @@
                 <%--fifth row--%>
                 <div>
                     <asp:Button ID="Button2" runat="server" Text="Send" class="send p-1" OnClick="Button1_Click" />
-                    <asp:Button ID="Button3" runat="server" Text="Update" class="cc-btn p-1" OnClick="Button3_Click"  />
-                    <asp:Button ID="Button4" runat="server" Text="Delete" class="delete p-1" OnClick="Button4_Click"  />
+                    <%--<asp:Button ID="Button3" runat="server" Text="Update" class="cc-btn p-1" OnClick="Button3_Click"  />
+                    <asp:Button ID="Button4" runat="server" Text="Delete" class="delete p-1" OnClick="Button4_Click"  />--%>
                     <input type="reset" value="clear " class="clear p-1" />
                     <asp:ValidationSummary ID="ValidationSummary1" runat="server" CssClass="d-none" ShowMessageBox="True" />
                 </div>
@@ -85,12 +85,9 @@
         <div class=" complain-grid-view">
             <h2 class="p-3">
                     <img src="../dist/img/letter.png" style="width: 60px;" />General Complain</h2>
-            <asp:GridView ID="GridView1" CssClass="table table-bordered table-group-divider" runat="server" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="GCId" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None" Width="100%" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
+            <asp:GridView ID="GridView1" CssClass="table table-bordered table-group-divider" runat="server" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="GCId" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None" Width="100%">
                 <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
                 <Columns>
-                    <asp:CommandField ButtonType="Button" ShowSelectButton="True">
-                        <ControlStyle CssClass="cc-btn p-1" />
-                    </asp:CommandField>
                     <asp:BoundField DataField="GCId" HeaderText="ID" InsertVisible="False" ReadOnly="True" SortExpression="GCId" />
                     <asp:BoundField DataField="LoginUsername" HeaderText="Username" SortExpression="LoginUsername" />
                     <asp:BoundField DataField="PoliceStation" HeaderText="Police Station" SortExpression="PoliceStation" />

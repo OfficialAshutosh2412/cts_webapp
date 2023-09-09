@@ -16,11 +16,11 @@ namespace CriminalTrackingSystem.Admin
         SqlCommand cmd = new SqlCommand();
         protected void Page_Load(object sender, EventArgs e)
         {
-            
-            if (Session["user"] == null)
+
+            if (Session["type"] == null)
                 Response.Redirect("~/Login.aspx");
 
-            adminName.Text = Session["user"].ToString();
+            adminName.Text = Session["type"].ToString();
             cmd.Connection = con;
             con.Open();
 
@@ -81,11 +81,31 @@ namespace CriminalTrackingSystem.Admin
             news.Text = newscount.ToString();
             cmd.ExecuteNonQuery();
 
-            ////news counting
-            //cmd.CommandText = "SELECT COUNT(status) FROM(CrimeComplain, GeneralComplain, MissingPerson, MissingValuable) WHERE status='0'";
-            //int statuscount = (int)cmd.ExecuteScalar();
-            //pendingstatus.Text = statuscount.ToString();
-            //cmd.ExecuteNonQuery();
+            //pend case counting
+            cmd.CommandText = "SELECT COUNT(*) FROM CrimeComplain WHERE Status='"+"pending"+"'";
+            int p1 = (int)cmd.ExecuteScalar();
+            cmd.CommandText = "SELECT COUNT(*) FROM GeneralComplain WHERE Status='" + "pending" + "'";
+            int p2 = (int)cmd.ExecuteScalar();
+            cmd.CommandText = "SELECT COUNT(*) FROM MissingPerson WHERE Status='" + "pending" + "'";
+            int p3 = (int)cmd.ExecuteScalar();
+            cmd.CommandText = "SELECT COUNT(*) FROM MissingValuable WHERE Status='" + "pending" + "'";
+            int p4 = (int)cmd.ExecuteScalar();
+            int p = p1 + p2 + p3 + p4;
+            pendingstatus.Text = p.ToString();
+            cmd.ExecuteNonQuery();
+
+            //solved case counting
+            cmd.CommandText = "SELECT COUNT(*) FROM CrimeComplain WHERE Status='" + "solved" + "'";
+            int s1 = (int)cmd.ExecuteScalar();
+            cmd.CommandText = "SELECT COUNT(*) FROM GeneralComplain WHERE Status='" + "solved" + "'";
+            int s2 = (int)cmd.ExecuteScalar();
+            cmd.CommandText = "SELECT COUNT(*) FROM MissingPerson WHERE Status='" + "solved" + "'";
+            int s3 = (int)cmd.ExecuteScalar();
+            cmd.CommandText = "SELECT COUNT(*) FROM MissingValuable WHERE Status='" + "solved" + "'";
+            int s4 = (int)cmd.ExecuteScalar();
+            int s = s1 + s2 + s3 + s4;
+            solvedcases.Text = s.ToString();
+            cmd.ExecuteNonQuery();
         }
     }
 }
