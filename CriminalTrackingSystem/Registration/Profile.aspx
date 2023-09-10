@@ -20,6 +20,7 @@
                 <asp:TemplateField HeaderText="Profile Photo" SortExpression="ProfilePhoto">
                     <EditItemTemplate>
                         <asp:TextBox ID="TextBox1" runat="server" Text='<%# Bind("ProfilePhoto") %>'></asp:TextBox>
+                        <%--<asp:FileUpload ID="FileUpload1" runat="server" />--%>
                     </EditItemTemplate>
                     <ItemTemplate>
                         <asp:ImageButton ID="ImageButton1" runat="server" Height="69px" ImageUrl='<%# Eval("ProfilePhoto", "../RegisterPhoto/{0}") %>' Width="71px" />

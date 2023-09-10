@@ -44,6 +44,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DataVisualization" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -77,6 +78,7 @@
     <Content Include="Admin\PoliceStation.aspx" />
     <Content Include="Admin\Status.aspx" />
     <Content Include="Admin\Users.aspx" />
+    <Content Include="Admin\WebForm1.aspx" />
     <Content Include="App_Data\CTS.mdf" />
     <Content Include="App_Data\CTS_log.ldf">
       <DependentUpon>CTS.mdf</DependentUpon>
@@ -225,6 +227,13 @@
     <Compile Include="Admin\Users.aspx.designer.cs">
       <DependentUpon>Users.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Admin\WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
     <Compile Include="CriminalGallery.aspx.cs">
       <DependentUpon>CriminalGallery.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -353,6 +362,7 @@
     <Folder Include="Admin\AdminGallery\Crimes\" />
     <Folder Include="Admin\AdminGallery\Events\" />
     <Folder Include="Admin\Police\" />
+    <Folder Include="demo\" />
     <Folder Include="RegisterPhoto\" />
     <Folder Include="Registration\AnyProof\" />
     <Folder Include="Registration\MissingPerson\" />
