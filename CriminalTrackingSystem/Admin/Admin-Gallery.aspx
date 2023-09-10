@@ -22,7 +22,7 @@
                 <asp:TextBox runat="server" CssClass="cc-box" ID="Details" placeholder="Criminal Details" />
             </div>
            
-            <div> <asp:FileUpload ID="FileUpload1" CssClass="cc-box text-dark" runat="server" placeholder="Criminal Image"/></div>
+            <div> <asp:FileUpload ID="FileUpload1" AllowMultiple="true" CssClass="cc-box text-dark" runat="server" placeholder="Criminal Image"/></div>
             <div>
                 <asp:Button Text="send" CssClass="send" runat="server"  ID="eventBtn" title="event button" OnClick="eventBtn_Click"/>
                 <asp:Button Text="send" CssClass="send" runat="server" ID="crimeBtn" title="crime button" OnClick="crimeBtn_Click"/>

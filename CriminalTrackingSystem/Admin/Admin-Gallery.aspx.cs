@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
 using System.Data.SqlClient;
+using System.IO;
 
 namespace CriminalTrackingSystem.Admin
 {
@@ -43,14 +44,24 @@ namespace CriminalTrackingSystem.Admin
 
         protected void eventBtn_Click(object sender, EventArgs e)
         {
+            //safiuasgfkajsfkjb
             con.Open();
-            FileUpload1.SaveAs(Server.MapPath("AdminGallery/Events") + "/" + FileUpload1.FileName);
-            cmd.CommandText = "INSERT INTO EventGallery VALUES('"+EventName.Text+"', '"+FileUpload1.FileName+"')";
-            cmd.ExecuteNonQuery();
-            con.Close();
-            Response.Write("<script>alert('upload successfull !')</script>");
-            EventName.Text = "";
-            
+            string title = EventName.Text;
+            if (FileUpload1.HasFiles)
+            {
+                foreach (HttpPostedFile f in FileUpload1.PostedFiles)
+                {
+                    cmd.CommandText = "INSERT INTO EventGallery VALUES('" + EventName.Text + "', '" + f.FileName + "')";
+                    if (cmd.ExecuteNonQuery() > 0)
+                    {
+                        f.SaveAs(Path.Combine(Server.MapPath("AdminGallery/Events/"), f.FileName));
+                    }
+                }
+                Response.Write("<script>alert('images uploaded !')</script>");
+            }
+            else
+                Response.Write("<script>alert('no image selected')</script>");
+
         }
 
         protected void crimeBtn_Click(object sender, EventArgs e)
