@@ -103,6 +103,7 @@
     <Content Include="dist\img\b80eae0e-dcf4-45a5-90bc-ed57f03ebea71649490885320_1649500857.jpg" />
     <Content Include="dist\img\bhatta-basti-rape-case-jaipur_1616044293.jpg" />
     <Content Include="dist\img\cc.jpg" />
+    <Content Include="dist\img\chandrayaan-3-news-live-today-landing-isro-south-pole-vikram-lander-photos-pictures-1.jpg" />
     <Content Include="dist\img\check-mark.png" />
     <Content Include="dist\img\check.png" />
     <Content Include="dist\img\chitrakoot-2.png" />
@@ -115,6 +116,7 @@
     <Content Include="dist\img\FAQs%281%29.gif" />
     <Content Include="dist\img\Fru8lECaEAE3I-O.png" />
     <Content Include="dist\img\gc.jpg" />
+    <Content Include="dist\img\Happy-Independence-Day-Images1_64da6e31a9b59.jpg" />
     <Content Include="dist\img\Hata.jpeg" />
     <Content Include="dist\img\her0-bg.jpeg" />
     <Content Include="dist\img\H_202002251149133980.jpg" />
@@ -133,6 +135,7 @@
     <Content Include="dist\img\whatsapp-image-2022-10-16-at-083029_1665903787.jpg" />
     <Content Include="dist\img\—Pngtree—tri color indian flag transparent_7253951.png" />
     <Content Include="dist\js\custom.js" />
+    <Content Include="dist\js\jquery.js" />
     <Content Include="dist\loader\Ripple-2.1s-204px.gif" />
     <Content Include="EventGallery.aspx" />
     <Content Include="Gallery.aspx" />
@@ -354,7 +357,6 @@
     <Folder Include="Admin\AdminGallery\Crimes\" />
     <Folder Include="Admin\AdminGallery\Events\" />
     <Folder Include="Admin\Police\" />
-    <Folder Include="demo\" />
     <Folder Include="RegisterPhoto\" />
     <Folder Include="Registration\AnyProof\" />
     <Folder Include="Registration\MissingPerson\" />

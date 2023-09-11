@@ -1,13 +1,14 @@
-﻿.preloader{
-    position:fixed;
-    width:100%;
-    height:100vh;
-    z-index:999999;
-    background:white;
-    display:flex;
-    justify-content:center;
-    align-items:center;
+﻿.preloader {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    z-index: 999999;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
 .about h1 *, .top-bar a, a {
     text-decoration: none
 }
@@ -461,35 +462,129 @@
         transform: translateY(-10px);
         border: 2px solid #fff
     }
-.gallery-card{
-    display:flex;
-   height:80vh;
-   width:70%;
-   margin:0 auto;
-   justify-content:center;
-   align-items:center
-}
-    .gallery-card div{
-        width:100%;
-        display:flex;
-        flex-direction:column;
-        justify-content:center;align-items:center;
-        box-shadow:2px 2px 10px 0px #bdbdbd;
-        padding:1;
-        height:50%;
-        margin:1%;
-        border-radius:10px
 
-    }
-        
-/*EVENT GALLERY*/
-.event-gallery-container{
-    width:90%;
-    margin:0 auto;
-    align-items:center;
-    text-align:center;
-    padding:2%
+.gallery-card {
+    display: flex;
+    height: 80vh;
+    width: 70%;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center
 }
+
+    .gallery-card div {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 2px 2px 10px 0px #bdbdbd;
+        padding: 1;
+        height: 50%;
+        margin: 1%;
+        border-radius: 10px
+    }
+
+/*EVENT GALLERY*/
+.ind-hide {
+    position: fixed;
+    top: 100px;
+    left: 0;
+    right: 0;
+    z-index: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    height: 80vh;
+    overflow: scroll;
+    overflow-x: hidden;
+    background: linear-gradient(135deg,#e8a300,#3ab700);
+    padding: 1%;
+    transition: 0.5s ease-in-out all;
+    box-shadow: 2px 2px 10px 5px gray;
+    border-radius: 10px;
+}
+.ind-show {
+    transform: scale(0);
+    -webkit-transform-origin-y:-10px;
+    opacity:0;
+}
+.chandra-hide {
+    position: fixed;
+    top: 100px;
+    left: 0;
+    right: 0;
+    z-index: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    height: 80vh;
+    overflow: scroll;
+    overflow-x: hidden;
+    background: linear-gradient(135deg,#d9d9d9,#606060);
+    padding: 1%;
+    transition: 0.5s ease-in-out all;
+    box-shadow: 2px 2px 10px 5px gray;
+    border-radius:10px;
+}
+.chandra-show {
+    transform: scale(0);
+    -webkit-transform-origin-y: -10px;
+    opacity: 0;
+}
+.event-gallery-container {
+    width: 90%;
+    height:90vh;
+    margin: 0 auto;
+    align-items: center;
+    text-align: center;
+    padding: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+    .event-gallery-container .img-thumb {
+        height: 200px;
+        width: 200px;
+        overflow: hidden;
+        margin: 1%;
+        box-shadow: 2px 2px 5px 0px #414141;
+        transition: 0.5s ease-in-out all;
+        cursor:pointer;
+    }
+
+        .event-gallery-container .img-thumb:hover {
+            box-shadow: 2px 2px 10px 0px #414141;
+            transform: translateY(-10px) scale(1.05);
+        }
+
+        .event-gallery-container .img-thumb .imgbtn {
+            height: 200px;
+            width: 200px;
+        }
+
+.independence {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 5px;
+}
+
+.column {
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    flex: 50%;
+    box-shadow:3px 3px 10px 1px black;
+}
+
+    .column .inimg {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
 .event-gallery {
     width: 250px;
     height: 150px;
@@ -499,57 +594,62 @@
     display: inline-block;
     justify-content: center;
     flex-wrap: wrap;
-    border:2px solid #00636d;
+    border: 2px solid #00636d;
     margin: 5px 5px;
-    overflow:hidden;
+    overflow: hidden;
 }
+
     .event-gallery img {
         width: 250px;
         height: 150px;
     }
-        .event-gallery .gal-label{
-            background:#00636d;
-            width:100%;
-            padding:1%;
-            color:white;
-        }
+
+    .event-gallery .gal-label {
+        background: #00636d;
+        width: 100%;
+        padding: 1%;
+        color: white;
+    }
 
 /*crime gallery*/
 .crime-gallery {
     width: 200px !important;
     height: 200px;
     height: auto;
-    object-fit:contain;
+    object-fit: contain;
     text-align: center;
     display: inline-block;
-    background:#00636d;
+    background: #00636d;
     flex-wrap: wrap;
     border: 2px solid #00636d;
     margin: 5px 5px;
     overflow: hidden;
-    color:white
+    color: white
 }
 
     .crime-gallery div:nth-child(1) {
         background: #1a1a1a;
         width: 200px;
         height: 220px;
-        overflow:hidden;
-        object-fit:cover;
+        overflow: hidden;
+        object-fit: cover;
     }
+
     .crime-gallery div {
         margin: 0;
     }
-    crime-gallery .details {
-        display: flex;
-        justify-content: space-between;
-        align-items: center
-    }
-    .crime-gallery img {
-    width: 100%;
-    height:auto;
 
+crime-gallery .details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center
 }
+
+.crime-gallery img {
+    width: 100%;
+    height: auto;
+}
+
 .contact-us-container {
     background-image: url('../img/17973908.jpg');
     background-attachment: fixed;
@@ -632,9 +732,9 @@
         font-size: 1.5em
     }
 
-    .admin-items div, .admin-title, .faq-container .cc-box {
-        width: 100%
-    }
+.admin-items div, .admin-title, .faq-container .cc-box {
+    width: 100%
+}
 
 
 
@@ -642,9 +742,10 @@
     padding: 10px;
     display: flex
 }
-.newspage{
-    height:95.8vh;
-    display:flex; 
+
+.newspage {
+    height: 95.8vh;
+    display: flex;
 }
 
 .leftnews {
@@ -654,21 +755,23 @@
     position: relative;
     overflow: scroll;
 }
+
     .leftnews h1 {
         position: absolute;
         background: #aa3636;
         color: white;
         width: 100%;
     }
+
 .marqueestyle {
     height: 100%;
     margin-top: 40px;
-  
 }
-    .rightnews {
-        height: 100%;
-        width: 100%
-    }
+
+.rightnews {
+    height: 100%;
+    width: 100%
+}
 
 .signin {
     width: 40%;
@@ -827,41 +930,46 @@
     color: #fff
 }
 
-.admin-content-height .faq-form{
-    display:flex;
-     justify-content:center;
-     align-items:center;
-     padding:1%;
+.admin-content-height .faq-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1%;
 }
-    .admin-content-height .faq-form .cc-box{
-        height:40px;
+
+    .admin-content-height .faq-form .cc-box {
+        height: 40px;
     }
+
     .admin-content-height .faq-form div:nth-child(1) {
         width: 30%;
-        margin:0 5px;
+        margin: 0 5px;
     }
+
     .admin-content-height .faq-form div:nth-child(2) {
         width: 100%;
         margin: 0 5px;
     }
+
     .admin-content-height .faq-form div:nth-child(3) {
-        width:10%;
-        display:flex;
-        justify-content:end
-    }
-    .admin-content-height .faq-form .delete {
-        height:40px;
-        width:100%;
-    }
-    
-    .faq-grid{
-        height:64vh;
-        width:100%;
-        overflow:scroll;
-        border:1px solid skyblue;
+        width: 10%;
+        display: flex;
+        justify-content: end
     }
 
-        .session-name {
+    .admin-content-height .faq-form .delete {
+        height: 40px;
+        width: 100%;
+    }
+
+.faq-grid {
+    height: 64vh;
+    width: 100%;
+    overflow: scroll;
+    border: 1px solid skyblue;
+}
+
+.session-name {
     padding: .5%;
     border-radius: 4px;
     margin: 10px auto 0;
@@ -876,14 +984,14 @@
 .admin-card {
     width: 200px;
     padding: 1%;
-    box-shadow:0px 0px 15px 0px black;
+    box-shadow: 0px 0px 15px 0px black;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin: 1%;
     flex: auto;
-   border-radius:10px;
+    border-radius: 10px;
 }
 
     .admin-card i {
@@ -901,63 +1009,72 @@
     border-radius: 100%
 }
 /*admin-mp*/
-.admin-mp, .admin-mv, .admin-cc, .admin-gc{
-    height:50vh;
-    overflow:scroll;
-    width:100%;
-    margin:0 auto;
-    margin-top:20px;
-    border:1px solid gray;
+.admin-mp, .admin-mv, .admin-cc, .admin-gc {
+    height: 50vh;
+    overflow: scroll;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 20px;
+    border: 1px solid gray;
 }
 /*admin-gallery*/
-.admin-gallery{   
-    width:100%;
+.admin-gallery {
+    width: 100%;
 }
-    .admin-gallery-form div {
-        display: flex;
-        margin:1%
-    }
-        .admin-gallery-form div input {
-            width: 100%; margin:1%;border-radius:5px;
-            padding:3px;
-        }
-            .admin-gallery-form div .send{
-                width:fit-content;
-                padding:0 1%;
-            }
 
-            .admin-radio {
-                background: #00a9c7;
-                padding: 4px;
-            }
+.admin-gallery-form div {
+    display: flex;
+    margin: 1%
+}
+
+    .admin-gallery-form div input {
+        width: 100%;
+        margin: 1%;
+        border-radius: 5px;
+        padding: 3px;
+    }
+
+    .admin-gallery-form div .send {
+        width: fit-content;
+        padding: 0 1%;
+    }
+
+.admin-radio {
+    background: #00a9c7;
+    padding: 4px;
+}
 /*admin police*/
-.policeContainer{
-  
-    width:100%;
+.policeContainer {
+    width: 100%;
+}
 
+.policeItem {
+    width: 100%;
+    display: flex;
+    justify-content: space-between
 }
-.policeItem{
-    width:100%;
-    display:flex;
-    justify-content:space-between
-}
-    .policeItem div{
-        width:100%;
-        display:flex;
-        flex-direction:column;
-        margin:1%;
-        padding:0 1%;
+
+    .policeItem div {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin: 1%;
+        padding: 0 1%;
     }
-        .policeItem div input{
-            padding:0 1%;
-            border-radius:5px
-        }
-        .policeItem  .cc-btn {
-            width:fit-content;padding:2px 1%;margin-left:20px
+
+        .policeItem div input {
+            padding: 0 1%;
+            border-radius: 5px
         }
 
-            @media screen and (max-width:880px) {
-                .faq-form, .hero, .signup {
+    .policeItem .cc-btn {
+        width: fit-content;
+        padding: 2px 1%;
+        margin-left: 20px
+    }
+
+@media screen and (max-width:880px) {
+    .faq-form, .hero, .signup {
         width: 100%
     }
 
@@ -991,11 +1108,12 @@
         height: 40px
     }
 }
-.correct{
-    box-shadow:0px 0px 5px 0px gray;
-    height:50px;
-    width:50px;
-    border-radius:100%
+
+.correct {
+    box-shadow: 0px 0px 5px 0px gray;
+    height: 50px;
+    width: 50px;
+    border-radius: 100%
 }
 
 @media screen and (max-width:682px) {
@@ -1126,6 +1244,7 @@
             .admin-items div:hover {
                 background: #000
             }
+
     .gallery-card {
         display: block;
         height: 60vh;
@@ -1134,18 +1253,21 @@
         justify-content: center;
         align-items: center
     }
+
     .newspage {
         height: 100%;
-        display:block;
+        display: block;
     }
-    .newspage .leftnews{
-        width:100%;
-        height:90vh
-    }
-    .newspage .rightnews{
-        margin-top:20px;
-        border:none;
-    }
+
+        .newspage .leftnews {
+            width: 100%;
+            height: 90vh
+        }
+
+        .newspage .rightnews {
+            margin-top: 20px;
+            border: none;
+        }
 }
 
 @media screen and (max-width:400px) {

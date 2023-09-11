@@ -11,4 +11,19 @@ var load=document.getElementById("preloader");
 function myfunction() {
     load.style.display="none"
 }
-
+//gallery revealer
+document.querySelector('#hide').addEventListener("click", () => {
+    document.querySelector('.ind-hide').classList.toggle('ind-show');
+})
+//closebtn
+document.querySelector('#close').addEventListener("click", () => {
+    document.querySelector('.ind-hide').classList.toggle('ind-show');
+})
+//chandrayan gallery revealer
+document.querySelector('#chandrahide').addEventListener("click", () => {
+    document.querySelector('.chandra-hide').classList.toggle('chandra-show');
+})
+//closebtn
+document.querySelector('#chandraclose').addEventListener("click", () => {
+    document.querySelector('.chandra-hide').classList.toggle('chandra-show');
+})
