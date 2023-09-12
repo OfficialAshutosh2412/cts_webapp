@@ -30,21 +30,27 @@ namespace CriminalTrackingSystem.Registration
         protected void Button1_Click(object sender, EventArgs e)
         {
 
-            con.Open();
-            FileUpload1.SaveAs(Server.MapPath("MissingValuableRecipt") + "/" + FileUpload1.FileName);
-            Literal1.Text = "MissingValuableRecipt" + "/" + FileUpload1.FileName;
-            cmd.CommandText = "INSERT INTO MissingValuable VALUES('" + MVUserName.Text + "', '" + MVPoliceStation.SelectedValue + "', '" + MVType.SelectedValue + "', '" + MVCost.Text + "', '" + MVSuspect.Text + "', '" + FileUpload1.FileName + "', '" + MVDetails.Text + "', '" + MVCurrentDate.Text + "', '" + "pending" + "')";
-            cmd.ExecuteNonQuery();
-            Response.Write("<script>alert('record inserted successfully !')</script>");
-            con.Close();
-            GridView1.DataBind();
-            MVUserName.Text = "";
-            MVType.Text = "";
-            MVCost.Text = "";
-            MVSuspect.Text = "";
-            MVDetails.Text = "";
-            MVCurrentDate.Text = "";
-            Literal1.Text = "";
+            try
+            {
+                con.Open();
+                FileUpload1.SaveAs(Server.MapPath("MissingValuableRecipt") + "/" + FileUpload1.FileName);
+                Literal1.Text = "MissingValuableRecipt" + "/" + FileUpload1.FileName;
+                cmd.CommandText = "INSERT INTO MissingValuable VALUES('" + MVUserName.Text + "', '" + MVPoliceStation.SelectedValue + "', '" + MVType.SelectedValue + "', '" + MVCost.Text + "', '" + MVSuspect.Text + "', '" + FileUpload1.FileName + "', '" + MVDetails.Text + "', '" + MVCurrentDate.Text + "', '" + "pending" + "')";
+                cmd.ExecuteNonQuery();
+                Response.Write("<script>alert('record inserted successfully !')</script>");
+                con.Close();
+                GridView1.DataBind();
+                MVType.Text = "";
+                MVCost.Text = "";
+                MVSuspect.Text = "";
+                MVDetails.Text = "";
+                MVCurrentDate.Text = "";
+                Literal1.Text = "";
+            }
+            catch (Exception)
+            {
+                Response.Redirect("../Error_message.aspx");
+            }
 
         }
     }

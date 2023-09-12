@@ -16,6 +16,9 @@
             <asp:HyperLink ID="HyperLink1" runat="server" cssClass="send" NavigateUrl="~/Login.aspx">join us</asp:HyperLink>
         </div>
     </div>
+    <div class="w-100">
+        <img src="dist/img/वसुधैव%20कुटुम्बकम्%20vasudhaiva%20kuTumbakam%207minutes.jpg" class="w-100" />
+    </div>
     <%--about--%>
     <div class="about" id="about">
         <h1 class="section-title"><span>About</span> Us</h1>

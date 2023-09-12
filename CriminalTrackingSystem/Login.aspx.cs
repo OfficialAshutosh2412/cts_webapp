@@ -40,7 +40,6 @@ namespace CriminalTrackingSystem
             {
                 Response.Write("<script>alert('invalid username and password')</script>");
             }
-
         }
     }
 }

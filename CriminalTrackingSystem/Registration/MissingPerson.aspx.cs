@@ -30,23 +30,29 @@ namespace CriminalTrackingSystem.Registration
         //insert
         protected void Button1_Click(object sender, EventArgs e)
         {
-            con.Open();
-            FileUpload1.SaveAs(Server.MapPath("MissingPerson") + "/" + FileUpload1.FileName);
-            Literal1.Text = "MissingPerson" + "/" + FileUpload1.FileName;
-            cmd.CommandText = "INSERT INTO MissingPerson VALUES('" + MPUserName.Text + "', '" + MPPoliceStation.SelectedValue + "', '" + MPname.Text + "', '" + MPcontact.Text + "', '" + MPemail.Text + "', '" + MPlocation.Text + "', '" + MPransom.Text + "', '" + MPdob.Text + "', '" + MPdetails.Text + "', '" + FileUpload1.FileName + "', '" + MPcurrentDate.Text + "', '" + "pending" + "')";
-            cmd.ExecuteNonQuery();
-            Response.Write("<script>alert('record inserted successfully !')</script>");
-            con.Close();
-            GridView1.DataBind();
-            MPUserName.Text = "";
-            MPname.Text = "";
-            MPcontact.Text = "";
-            MPemail.Text = "";
-            MPlocation.Text = "";
-            MPransom.Text = "";
-            MPdob.Text = "";
-            MPdetails.Text = "";
-            MPcurrentDate.Text = "";
+            try
+            {
+                con.Open();
+                FileUpload1.SaveAs(Server.MapPath("MissingPerson") + "/" + FileUpload1.FileName);
+                Literal1.Text = "MissingPerson" + "/" + FileUpload1.FileName;
+                cmd.CommandText = "INSERT INTO MissingPerson VALUES('" + MPUserName.Text + "', '" + MPPoliceStation.SelectedValue + "', '" + MPname.Text + "', '" + MPcontact.Text + "', '" + MPemail.Text + "', '" + MPlocation.Text + "', '" + MPransom.Text + "', '" + MPdob.Text + "', '" + MPdetails.Text + "', '" + FileUpload1.FileName + "', '" + MPcurrentDate.Text + "', '" + "pending" + "')";
+                cmd.ExecuteNonQuery();
+                Response.Write("<script>alert('record inserted successfully !')</script>");
+                con.Close();
+                GridView1.DataBind();
+                MPname.Text = "";
+                MPcontact.Text = "";
+                MPemail.Text = "";
+                MPlocation.Text = "";
+                MPransom.Text = "";
+                MPdob.Text = "";
+                MPdetails.Text = "";
+                MPcurrentDate.Text = "";
+            }
+            catch (Exception)
+            {
+                Response.Redirect("../Error_message.aspx");
+            }
         }
     }
 }

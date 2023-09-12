@@ -14,7 +14,6 @@ namespace CriminalTrackingSystem
         SqlConnection con = DynamicConnection.GetsConnection();
         SqlDataAdapter adp = new SqlDataAdapter();
         SqlCommand cmd = new SqlCommand();
-        SqlDataReader dtr;
         protected void Page_Load(object sender, EventArgs e)
         {
             cmd.Connection = con;
@@ -43,16 +42,22 @@ namespace CriminalTrackingSystem
         
         protected void ContactBtn_Click(object sender, EventArgs e)
         {
-            con.Open();
-            cmd.CommandText = "INSERT INTO Contact VALUES('" + ContactName.Text + "', '" + ContactEmail.Text + "', '" + ContactNumber.Text + "', '" + ContactPurpose.Text + "', '" + ContactDetails.Text + "')";
-            cmd.ExecuteNonQuery();
-            Response.Write("<script>alert('Thank you for contacting us. We will answer you ASAP...')</script>");
-            con.Close();
-            ContactName.Text = "";
-            ContactEmail.Text = "";
-            ContactNumber.Text = "";
-            ContactPurpose.Text = "";
-            ContactDetails.Text = "";
+            try
+            {
+                con.Open();
+                cmd.CommandText = "INSERT INTO Contact VALUES('" + ContactName.Text + "', '" + ContactEmail.Text + "', '" + ContactNumber.Text + "', '" + ContactPurpose.Text + "', '" + ContactDetails.Text + "')";
+                cmd.ExecuteNonQuery();
+                Response.Write("<script>alert('Thank you for contacting us. We will answer you ASAP...')</script>");
+                con.Close();
+                ContactName.Text = "";
+                ContactEmail.Text = "";
+                ContactNumber.Text = "";
+                ContactPurpose.Text = "";
+                ContactDetails.Text = "";
+            }catch(Exception)
+            {
+                Response.Redirect("Error_message.aspx");
+            }
         }
     }
 }

@@ -30,17 +30,23 @@ namespace CriminalTrackingSystem.Registration
         //insert button
         protected void Button1_Click(object sender, EventArgs e)
         {
-            con.Open();
-            cmd.CommandText = "INSERT INTO GeneralComplain VALUES('" + GCUserName.Text + "', '" + GCPoliceStation.SelectedValue + "', '" + GCTitle.Text + "', '" + GCDetails.Text + "', '" + GCInvolvedPersons.Text + "', '" + GCCurrentDate.Text + "', '" + "pending" + "')";
-            cmd.ExecuteNonQuery();
-            Response.Write("<script>alert('record inserted successfully !')</script>");
-            con.Close();
-            GridView1.DataBind();
-            GCUserName.Text = "";
-            GCTitle.Text = "";
-            GCDetails.Text = "";
-            GCInvolvedPersons.Text = "";
-            GCCurrentDate.Text = "";
+            try
+            {
+                con.Open();
+                cmd.CommandText = "INSERT INTO GeneralComplain VALUES('" + GCUserName.Text + "', '" + GCPoliceStation.SelectedValue + "', '" + GCTitle.Text + "', '" + GCDetails.Text + "', '" + GCInvolvedPersons.Text + "', '" + GCCurrentDate.Text + "', '" + "pending" + "')";
+                cmd.ExecuteNonQuery();
+                Response.Write("<script>alert('record inserted successfully !')</script>");
+                con.Close();
+                GridView1.DataBind();
+                GCTitle.Text = "";
+                GCDetails.Text = "";
+                GCInvolvedPersons.Text = "";
+                GCCurrentDate.Text = "";
+            }
+            catch (Exception)
+            {
+                Response.Redirect("../Error_message.aspx");
+            }
         }
     }
 }

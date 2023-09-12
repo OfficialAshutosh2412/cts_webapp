@@ -96,6 +96,7 @@
     <Content Include="dist\img\15204.jpg" />
     <Content Include="dist\img\17973908.jpg" />
     <Content Include="dist\img\17_06_2021-16alr_12_16062021_499-c-1.5_21744534_11139.jpg" />
+    <Content Include="dist\img\2392490.jpg" />
     <Content Include="dist\img\3549634286_882d3c48f9_b.jpg" />
     <Content Include="dist\img\4_1614768752.jpg" />
     <Content Include="dist\img\AD1.jpg" />
@@ -138,10 +139,12 @@
     <Content Include="dist\img\uuu_1646034261.jpg" />
     <Content Include="dist\img\whatsapp-image-2022-05-05-at-24_1651854871.jpg" />
     <Content Include="dist\img\whatsapp-image-2022-10-16-at-083029_1665903787.jpg" />
+    <Content Include="dist\img\वसुधैव कुटुम्बकम् vasudhaiva kuTumbakam 7minutes.jpg" />
     <Content Include="dist\img\—Pngtree—tri color indian flag transparent_7253951.png" />
     <Content Include="dist\js\custom.js" />
     <Content Include="dist\js\jquery.js" />
     <Content Include="dist\loader\Ripple-2.1s-204px.gif" />
+    <Content Include="Error_message.aspx" />
     <Content Include="EventGallery.aspx" />
     <Content Include="Gallery.aspx" />
     <Content Include="Home.aspx" />
@@ -242,6 +245,13 @@
       <DependentUpon>CriminalGallery.aspx</DependentUpon>
     </Compile>
     <Compile Include="DynamicConnection.cs" />
+    <Compile Include="Error_message.aspx.cs">
+      <DependentUpon>Error_message.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Error_message.aspx.designer.cs">
+      <DependentUpon>Error_message.aspx</DependentUpon>
+    </Compile>
     <Compile Include="EventGallery.aspx.cs">
       <DependentUpon>EventGallery.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
