@@ -26,7 +26,7 @@
         </div>
         <div>
             <img src="../dist/img/diamond_2600353.png" />
-            <h4>File Missing Valuable</h4>
+            <h4>File Valuable</h4>
             <asp:HyperLink ID="HyperLink4" runat="server" CssClass="cc-btn p-2" NavigateUrl="~/Registration/MissingValuable.aspx">go now !</asp:HyperLink>
         </div>
     </div>

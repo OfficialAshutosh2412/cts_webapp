@@ -71,6 +71,11 @@
     <Content Include="Admin\Admin-FAQ.aspx" />
     <Content Include="Admin\Admin-Gallery.aspx" />
     <Content Include="Admin\AdminContact.aspx" />
+    <Content Include="Admin\AdminGallery\Crimes\albert.jpg" />
+    <Content Include="Admin\AdminGallery\Crimes\angshu-purkait-pgQ1-bDAkTQ-unsplash.jpg" />
+    <Content Include="Admin\AdminGallery\Crimes\asdas.jpg" />
+    <Content Include="Admin\AdminGallery\Crimes\james-barr-njqbZ3y0o_M-unsplash.jpg" />
+    <Content Include="Admin\AdminGallery\Crimes\robert.jpg" />
     <Content Include="Admin\AdminNews.aspx" />
     <Content Include="Admin\Emailsuccess.aspx" />
     <Content Include="Admin\Records.aspx" />
@@ -354,7 +359,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Admin\AdminGallery\Crimes\" />
     <Folder Include="Admin\AdminGallery\Events\" />
     <Folder Include="Admin\Police\" />
     <Folder Include="RegisterPhoto\" />

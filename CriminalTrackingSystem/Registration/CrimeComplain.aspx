@@ -73,26 +73,21 @@
                     </div>
                     <div>
                         <label>Date of Crime<asp:RequiredFieldValidator ID="RequiredFieldValidator8" runat="server" ControlToValidate="CrimeDate" ErrorMessage="*date of crime required" Font-Bold="True" Font-Size="Small" ForeColor="#FF5050">*</asp:RequiredFieldValidator></label>
-                        <asp:TextBox ID="CrimeDate" runat="server" class="cc-box" placeholder="when crime happened?"></asp:TextBox>
+                        <asp:TextBox ID="CrimeDate" runat="server" class="cc-box" placeholder="when crime happened?" TextMode="DateTimeLocal"></asp:TextBox>
+
                     </div>
                 </div>
                 <%--fourth row--%>
                 <div>
                     <div>
                         <label>Current Date & Time<asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="CurrentDate" ErrorMessage="*date required" Font-Bold="True" Font-Size="Small" ForeColor="#FF5050">*</asp:RequiredFieldValidator></label>
-                        <asp:TextBox ID="CurrentDate" runat="server" class="cc-box" placeholder="enter current date and time"></asp:TextBox>
+                        <asp:TextBox ID="CurrentDate" runat="server" class="cc-box" placeholder="enter current date and time" TextMode="DateTimeLocal"></asp:TextBox>
 
-                    </div>
-                    <div>
-                        <label>Status<asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="CrimeStatus" ErrorMessage="*required status" Font-Bold="True" Font-Size="Small" ForeColor="#FF5050">*</asp:RequiredFieldValidator></label>
-                        <asp:TextBox ID="CrimeStatus" runat="server" class="cc-box" placeholder="write 0, if crime solved, 1 if not solved..."></asp:TextBox>
                     </div>
                 </div>
                 <%--fifth row--%>
                 <div>
                     <asp:Button ID="Button2" runat="server" Text="Send" class=" send" OnClick="Button1_Click" />
-                    <%--<asp:Button ID="Button1" runat="server" Text="Update" class="cc-btn" OnClick="Button3_Click" />
-                    <asp:Button ID="Button3" runat="server" Text="Delete" class=" delete" OnClick="Button3_Click1" />--%>
                     <input type="reset" value="clear" class=" clear" />
 
                     <asp:ValidationSummary CssClass="d-none" ID="ValidationSummary1" runat="server" ShowMessageBox="True" />

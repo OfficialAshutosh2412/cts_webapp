@@ -57,24 +57,13 @@
                     <div>
                         <label>Current Date & Time<asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="GCCurrentDate" ErrorMessage="current date time required" ForeColor="#FF5050">*</asp:RequiredFieldValidator>
                         </label>
-                        &nbsp;<asp:TextBox ID="GCCurrentDate" runat="server" class="cc-box" placeholder="enter current date and time"></asp:TextBox>
-                        <br />
-                    </div>
-                </div>
-                <%--fourth row--%>
-                <div>
-                    <div>
-                        <label>Status<asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ControlToValidate="GCCrimeStatus" ErrorMessage="status required" ForeColor="#FF5050">*</asp:RequiredFieldValidator>
-                        </label>
-                        &nbsp;<asp:TextBox ID="GCCrimeStatus" runat="server" class="cc-box" placeholder="write 0, if crime solved, 1 if not solved..."></asp:TextBox>
+                        &nbsp;<asp:TextBox ID="GCCurrentDate" runat="server" class="cc-box" TextMode="DateTimeLocal" placeholder="enter current date and time"></asp:TextBox>
                         <br />
                     </div>
                 </div>
                 <%--fifth row--%>
                 <div>
                     <asp:Button ID="Button2" runat="server" Text="Send" class="send p-1" OnClick="Button1_Click" />
-                    <%--<asp:Button ID="Button3" runat="server" Text="Update" class="cc-btn p-1" OnClick="Button3_Click"  />
-                    <asp:Button ID="Button4" runat="server" Text="Delete" class="delete p-1" OnClick="Button4_Click"  />--%>
                     <input type="reset" value="clear " class="clear p-1" />
                     <asp:ValidationSummary ID="ValidationSummary1" runat="server" CssClass="d-none" ShowMessageBox="True" />
                 </div>

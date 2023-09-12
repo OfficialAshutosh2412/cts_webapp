@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Registration/RegisterLayout.Master" AutoEventWireup="true" CodeBehind="MissingPerson.aspx.cs" Inherits="CriminalTrackingSystem.Registration.MissingPerson" %>
+﻿<%@ Page Title="CTS | Missing Person Portal" Language="C#" MasterPageFile="~/Registration/RegisterLayout.Master" AutoEventWireup="true" CodeBehind="MissingPerson.aspx.cs" Inherits="CriminalTrackingSystem.Registration.MissingPerson" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -50,7 +50,7 @@
                         <label>
                             Email<asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="MPemail" ErrorMessage="Email required" ForeColor="#FF5050">*</asp:RequiredFieldValidator>
                         </label>
-                        <asp:TextBox ID="MPemail" runat="server" class="cc-box" placeholder="email of login person"></asp:TextBox>
+                        <asp:TextBox ID="MPemail" runat="server" class="cc-box" placeholder="email of login person" TextMode="Email"></asp:TextBox>
                     </div>
                 </div>
                 <%--third row--%>
@@ -73,7 +73,7 @@
                         <label>
                             Person D.O.B<asp:RequiredFieldValidator ID="RequiredFieldValidator8" runat="server" ControlToValidate="MPdob" ErrorMessage="Person dob required" ForeColor="#FF5050">*</asp:RequiredFieldValidator>
                         </label>
-                        <asp:TextBox ID="MPdob" runat="server" class="cc-box" placeholder="missing person date of birth"></asp:TextBox>
+                        <asp:TextBox ID="MPdob" runat="server" class="cc-box" TextMode="Date" placeholder="missing person date of birth"></asp:TextBox>
                     </div>
                 </div>
                 <%--fourth row--%>
@@ -99,20 +99,12 @@
                         <label>
                             Current Date & Time<asp:RequiredFieldValidator ID="RequiredFieldValidator11" runat="server" ControlToValidate="MPcurrentDate" ErrorMessage="Fill Current Date Time" ForeColor="#FF5050">*</asp:RequiredFieldValidator>
                         </label>
-                        <asp:TextBox ID="MPcurrentDate" runat="server" class="cc-box"></asp:TextBox>
-                    </div>
-                    <div>
-                        <label>
-                            Status<asp:RequiredFieldValidator ID="RequiredFieldValidator12" runat="server" ControlToValidate="MPstatus" ErrorMessage="Status required" ForeColor="#FF5050">*</asp:RequiredFieldValidator>
-                        </label>
-                        <asp:TextBox ID="MPstatus" runat="server" class="cc-box"></asp:TextBox>
+                        <asp:TextBox ID="MPcurrentDate" runat="server" class="cc-box" TextMode="DateTimeLocal"></asp:TextBox>
                     </div>
                 </div>
                 <%--sixth row--%>
                 <div>
                     <asp:Button ID="Button2" runat="server" Text="Send" class="send" OnClick="Button1_Click" />
-                    <%--<asp:Button ID="Button3" runat="server" Text="Update" class="cc-btn" OnClick="Button3_Click1"  />
-                    <asp:Button ID="Button1" runat="server" Text="Delete" class="delete" OnClick="Button1_Click1"  />--%>
                     <input type="reset" value="clear" class="clear" /><asp:ValidationSummary ID="ValidationSummary1" CssClass="d-none" runat="server" ShowMessageBox="True" />
                     <br />
                 </div>

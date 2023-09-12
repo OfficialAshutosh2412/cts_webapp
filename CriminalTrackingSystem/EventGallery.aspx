@@ -4,10 +4,16 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="event-gallery-container">
-        <div class="img-thumb" id="hide">
-            <asp:Image CssClass="imgbtn" ImageUrl="~/dist/img/Happy-Independence-Day-Images1_64da6e31a9b59.jpg" runat="server" /></div>
-        <div class="img-thumb" id="chandrahide">
-            <asp:Image CssClass="imgbtn" ImageUrl="~/dist/img/chandrayaan-3-news-live-today-landing-isro-south-pole-vikram-lander-photos-pictures-1.jpg" runat="server" /></div>
+        <div class="img-thumb">
+            <asp:Image CssClass="imgbtn" ImageUrl="~/dist/img/Happy-Independence-Day-Images1_64da6e31a9b59.jpg" runat="server" />
+            <label  id="hide" class="send">see images</label>
+        </div>
+            
+        <div class="img-thumb">
+            <asp:Image CssClass="imgbtn" ImageUrl="~/dist/img/chandrayaan-3-news-live-today-landing-isro-south-pole-vikram-lander-photos-pictures-1.jpg" runat="server" />
+            <label  id="chandrahide" class="send">see images</label>
+        </div>
+
     </div>
     <%--independence--%>
     <div class="ind-hide ind-show" id="show">

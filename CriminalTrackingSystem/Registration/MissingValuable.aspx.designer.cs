@@ -195,24 +195,6 @@ namespace CriminalTrackingSystem.Registration
         protected global::System.Web.UI.WebControls.TextBox MVCurrentDate;
 
         /// <summary>
-        /// RequiredFieldValidator8 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator8;
-
-        /// <summary>
-        /// MVStatus control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox MVStatus;
-
-        /// <summary>
         /// Button2 control.
         /// </summary>
         /// <remarks>

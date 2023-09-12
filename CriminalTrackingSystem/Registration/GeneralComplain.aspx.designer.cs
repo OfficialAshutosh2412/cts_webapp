@@ -159,24 +159,6 @@ namespace CriminalTrackingSystem.Registration
         protected global::System.Web.UI.WebControls.TextBox GCCurrentDate;
 
         /// <summary>
-        /// RequiredFieldValidator7 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator7;
-
-        /// <summary>
-        /// GCCrimeStatus control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox GCCrimeStatus;
-
-        /// <summary>
         /// Button2 control.
         /// </summary>
         /// <remarks>

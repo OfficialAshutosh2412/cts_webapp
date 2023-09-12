@@ -89,22 +89,13 @@
                         <label>
                             Current Date & Time<asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ControlToValidate="MVCurrentDate" ErrorMessage="datetime required" ForeColor="#FF5050">*</asp:RequiredFieldValidator>
                         </label>
-                        <asp:TextBox ID="MVCurrentDate" runat="server" class="cc-box" placeholder="enter current date and time"></asp:TextBox>
-                        <br />
-                    </div>
-                    <div>
-                        <label>
-                            Status<asp:RequiredFieldValidator ID="RequiredFieldValidator8" runat="server" ControlToValidate="MVStatus" ErrorMessage="status required" ForeColor="#FF5050">*</asp:RequiredFieldValidator>
-                        </label>
-                        <asp:TextBox ID="MVStatus" runat="server" class="cc-box" placeholder="write 0, if crime solved, 1 if not solved..."></asp:TextBox>
+                        <asp:TextBox ID="MVCurrentDate" runat="server" class="cc-box" TextMode="DateTimeLocal" placeholder="enter current date and time"></asp:TextBox>
                         <br />
                     </div>
                 </div>
                 <%--fifth row--%>
                 <div>
                     <asp:Button ID="Button2" runat="server" Text="Send" class="send" OnClick="Button1_Click" />
-                    <%--<asp:Button ID="Button3" runat="server" Text="Update" class="cc-btn" OnClick="Button3_Click" />
-                    <asp:Button ID="Button1" runat="server" Text="Delete" class="delete" OnClick="Button1_Click1"  />--%>
                     <input type="reset" value="clear" class="clear" /><asp:ValidationSummary ID="ValidationSummary1" CssClass="d-none" runat="server" ShowMessageBox="True" />
                     <br />
                 </div>
