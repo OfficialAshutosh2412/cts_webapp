@@ -1,66 +1,68 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Registration/RegisterLayout.Master" AutoEventWireup="true" CodeBehind="Profile.aspx.cs" Inherits="CriminalTrackingSystem.Registration.Profile" %>
+﻿<%@ Page Title="CTS | Profile" Language="C#" MasterPageFile="~/Registration/RegisterLayout.Master" AutoEventWireup="true" CodeBehind="Profile.aspx.cs" Inherits="CriminalTrackingSystem.Registration.Profile" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <h3>Profile</h3>
     <div class="profile">
-        <asp:GridView ID="GridView1" CssClass="table " runat="server" AutoGenerateColumns="False" DataKeyNames="Email" DataSourceID="SqlDataSource1">
-            <Columns>
-                <asp:CommandField ButtonType="Image" CancelImageUrl="~/dist/img/close.png" CancelText="" EditImageUrl="~/dist/img/edit.png" EditText="" ShowEditButton="True" UpdateImageUrl="~/dist/img/check-mark.png" UpdateText="" />
-                <asp:BoundField DataField="Username" HeaderText="Your Name" SortExpression="Username" />
-                <asp:BoundField DataField="Password" HeaderText="Password" SortExpression="Password" />
-                <asp:BoundField DataField="Email" HeaderText="Email" ReadOnly="True" SortExpression="Email" />
-                <asp:BoundField DataField="Pincode" HeaderText="Pincode" SortExpression="Pincode" />
-                <asp:BoundField DataField="Gender" HeaderText="Gender" SortExpression="Gender" />
-                <asp:BoundField DataField="Address" HeaderText="Address" SortExpression="Address" />
-                <asp:BoundField DataField="Mstatus" HeaderText="Marriage status" SortExpression="Mstatus" />
-                <asp:BoundField DataField="Lstatus" HeaderText="Living status" SortExpression="Lstatus" />
-                <asp:BoundField DataField="AdharNumber" HeaderText="Adhaar Number" SortExpression="AdharNumber" />
-                <asp:BoundField DataField="ContactNumber" HeaderText="Phone" SortExpression="ContactNumber" />
-                <asp:TemplateField HeaderText="Profile Photo" SortExpression="ProfilePhoto">
-                    <EditItemTemplate>
-                        <asp:TextBox ID="TextBox1" runat="server" Text='<%# Bind("ProfilePhoto") %>'></asp:TextBox>
-                        <%--<asp:FileUpload ID="FileUpload1" runat="server" />--%>
-                    </EditItemTemplate>
-                    <ItemTemplate>
-                        <asp:ImageButton ID="ImageButton1" runat="server" Height="69px" ImageUrl='<%# Eval("ProfilePhoto", "../RegisterPhoto/{0}") %>' Width="71px" />
-                    </ItemTemplate>
-                </asp:TemplateField>
-            </Columns>
-        </asp:GridView>
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" DeleteCommand="DELETE FROM [Registration] WHERE [Email] = @Email" InsertCommand="INSERT INTO [Registration] ([Username], [Password], [Email], [Pincode], [Gender], [Address], [Mstatus], [Lstatus], [AdharNumber], [ContactNumber], [ProfilePhoto]) VALUES (@Username, @Password, @Email, @Pincode, @Gender, @Address, @Mstatus, @Lstatus, @AdharNumber, @ContactNumber, @ProfilePhoto)" SelectCommand="SELECT [Username], [Password], [Email], [Pincode], [Gender], [Address], [Mstatus], [Lstatus], [AdharNumber], [ContactNumber], [ProfilePhoto] FROM [Registration] WHERE ([Username] = @Username)" UpdateCommand="UPDATE [Registration] SET [Username] = @Username, [Password] = @Password, [Pincode] = @Pincode, [Gender] = @Gender, [Address] = @Address, [Mstatus] = @Mstatus, [Lstatus] = @Lstatus, [AdharNumber] = @AdharNumber, [ContactNumber] = @ContactNumber, [ProfilePhoto] = @ProfilePhoto WHERE [Email] = @Email">
-            <DeleteParameters>
-                <asp:Parameter Name="Email" Type="String" />
-            </DeleteParameters>
-            <InsertParameters>
-                <asp:Parameter Name="Username" Type="String" />
-                <asp:Parameter Name="Password" Type="String" />
-                <asp:Parameter Name="Email" Type="String" />
-                <asp:Parameter Name="Pincode" Type="Decimal" />
-                <asp:Parameter Name="Gender" Type="String" />
-                <asp:Parameter Name="Address" Type="String" />
-                <asp:Parameter Name="Mstatus" Type="String" />
-                <asp:Parameter Name="Lstatus" Type="String" />
-                <asp:Parameter Name="AdharNumber" Type="Decimal" />
-                <asp:Parameter Name="ContactNumber" Type="Decimal" />
-                <asp:Parameter Name="ProfilePhoto" Type="String" />
-            </InsertParameters>
-            <SelectParameters>
-                <asp:SessionParameter Name="Username" SessionField="user" Type="String" />
-            </SelectParameters>
-            <UpdateParameters>
-                <asp:Parameter Name="Username" Type="String" />
-                <asp:Parameter Name="Password" Type="String" />
-                <asp:Parameter Name="Pincode" Type="Decimal" />
-                <asp:Parameter Name="Gender" Type="String" />
-                <asp:Parameter Name="Address" Type="String" />
-                <asp:Parameter Name="Mstatus" Type="String" />
-                <asp:Parameter Name="Lstatus" Type="String" />
-                <asp:Parameter Name="AdharNumber" Type="Decimal" />
-                <asp:Parameter Name="ContactNumber" Type="Decimal" />
-                <asp:Parameter Name="ProfilePhoto" Type="String" />
-                <asp:Parameter Name="Email" Type="String" />
-            </UpdateParameters>
-        </asp:SqlDataSource>
+        <div class="profile-box">
+            <asp:HyperLink NavigateUrl="~/Registration/EditProfile.aspx" CssClass="text-black" title="edit profile data" runat="server"><i class="fa-solid fa-pen-to-square"></i></asp:HyperLink>
+            <div class="profile-img">
+                <asp:Image ID="Image1" runat="server" />
+            </div>
+            <div class="profile-name">
+                <asp:Label ID="name" runat="server" />
+            </div>
+            <div class="profile-data">
+                <div>
+                    <p><i class="fa-solid fa-id-card-clip"></i>
+                    <asp:Label Text="Your Portal ID" runat="server" /></p>
+                    <asp:Label ID="id" runat="server" />
+                </div>
+                
+                <div>
+                    <p>
+                        <i class="fa-solid fa-hashtag"></i>
+                    <asp:Label Text="Your Pincode" runat="server" />
+                    </p>
+                    <asp:Label ID="pin" runat="server" />
+                </div>
+                <div>
+                    <p><i class="fa-solid fa-venus-mars"></i>
+                    <asp:Label Text="Your Gender" runat="server" /></p>
+                    <asp:Label ID="sex" runat="server" />
+                </div>
+                
+                <div>
+                    <p><i class="fa-solid fa-heart"></i>
+                    <asp:Label Text="Marital Status" runat="server" /></p>
+                    <asp:Label ID="ms" runat="server" />
+                </div>
+                <div>
+                    <p><i class="fa-solid fa-building-wheat"></i>
+                    <asp:Label Text="Living Status" runat="server" /></p>
+                    <asp:Label ID="ls" runat="server" />
+                </div>
+                <div>
+                    <p><i class="fa-solid fa-id-card"></i> 
+                    <asp:Label Text="Your Adhaar Number" runat="server" /></p>
+                    <asp:Label ID="adhaar" runat="server" />
+                </div>
+                
+            </div>
+            <div class="profile-foot">
+                <div>
+                    <i class="fa-solid fa-envelope"></i>
+                    <asp:Label ID="email" runat="server" />
+                </div>
+                <div>
+                    <i class="fa-solid fa-location-dot"></i>
+                    <asp:Label ID="address" runat="server" />
+                </div>
+                <div>
+                    <i class="fa-solid fa-phone"></i>
+                    <asp:Label ID="phone" runat="server" />
+                </div>
+            </div>
+        </div>
     </div>
 </asp:Content>

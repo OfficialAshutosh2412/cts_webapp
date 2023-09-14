@@ -6,11 +6,11 @@
     <div class="signin bg-white p-5 shadow-lg rounded">
         <h1>Login</h1>
         <div class="mb-3">
-            <label class="form-label">Username</label>
+            <i class="fa-solid fa-user"></i><label class="form-label fw-bolder">Username</label>
             <asp:TextBox ID="LoginName" runat="server" class="cc-box"></asp:TextBox>
         </div>
         <div class="mb-3">
-            <label class="form-label">Password</label>
+            <i class="fa-solid fa-key"></i><label class="form-label fw-bolder">Password</label>
             <asp:TextBox ID="LoginPassword" runat="server" TextMode="Password" class="cc-box" ></asp:TextBox>
         </div>
         <div class="d-flex justify-content-start align-items-center">
