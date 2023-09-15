@@ -21,7 +21,7 @@
     </div>
     <%--about--%>
     <div class="about" id="about">
-        <h1 class="section-title"><span>About</span> Us</h1>
+        <h1 class="section-title"><span><i class="fa-solid fa-circle-info"></i>About</span> Us</h1>
         <div class="card-info">
             <div class="card-info-sections">
                 <div class="card-item">
@@ -45,7 +45,7 @@
     </div>
     <%--services--%>
     <div class="service-container" id="services">
-        <h1 class="section-title"><span>Our</span> Services</h1>
+        <h1 class="section-title"><span><i class="fa-solid fa-cubes"></i>Our</span> Services</h1>
         <div class="services">
             <%--first--%>
             <div class="services-item">
@@ -95,7 +95,7 @@
     </div>
     <%--gallery--%>
     <div id="gallery">
-        <h1 class="section-title"><span>Moment of</span> captures</h1>
+        <h1 class="section-title"><span><i class="fa-solid fa-images"></i>Moment of</span> captures</h1>
         <div class="gallery">
             <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="~/dist/img/up-police-3-1200x700.jpg" OnClick="ImageButton1_Click" />
             <asp:ImageButton ID="ImageButton2" runat="server" ImageUrl="~/dist/img/14_04_2022-14azm_20_14042022_252-c-1.5_22627032_163740.jpg" OnClick="ImageButton2_Click" />
@@ -105,35 +105,35 @@
     </div>
     <%--contact us--%>
     <div class=" min-width contact-us-container" id="contact">
-        <h1 class="section-title"><span>Give us</span> a message</h1>
+        <h1 class="section-title"><span><i class="fa-solid fa-message"></i>Give us</span> a message</h1>
         <div class="p-3 contact-us-container-form">
             <div class=" d-flex">
                 <div class="mb-1 w-100 p-2">
                     <label class="form-label">
-                        Name
+                        <i class="fa-solid fa-pencil"></i> Name
                     </label>
                    <asp:TextBox ID="ContactName" runat="server" type="text" class="cc-box "></asp:TextBox>
                 </div>
                 <div class="mb-1 w-100 p-2">
                     <label class="form-label">
-                        Email
+                        <i class="fa-solid fa-envelope"></i> Email
                     </label>
                    <asp:TextBox ID="ContactEmail" runat="server" type="email" class="cc-box "></asp:TextBox>
                 </div>
                 <div class="mb-1 w-100 p-2">
                     <label class="form-label">
-                        Phone
+                        <i class="fa-solid fa-phone"></i> Phone
                     </label>
                    <asp:TextBox ID="ContactNumber" runat="server" type="text" class="cc-box " MaxLength="13"></asp:TextBox>
                 </div>
             </div>
             <div class="mb-1 w-100 p-2">
-                <label class="form-label" for="purpose">Purpose</label>
+                <label class="form-label" for="purpose"><i class="fa-solid fa-question"></i> Purpose</label>
                 <asp:TextBox ID="ContactPurpose" runat="server" class="cc-box "></asp:TextBox>
             </div>
             <div class="mb-1 p-2">
                 <label class="form-label">
-                    Give Us Details
+                    <i class="fa-solid fa-pen-nib"></i> Give Us Details
                 </label>
                <asp:TextBox ID="ContactDetails" runat="server" TextMode="MultiLine" class="cc-box "></asp:TextBox>
             </div>
@@ -144,7 +144,7 @@
     </div>
     <%--member--%>
     <div class="member">
-        <h1 class="section-title"><span>Our</span> Team</h1>
+        <h1 class="section-title"><span><i class="fa-solid fa-users"></i>Our</span> Team</h1>
         <div class="mentor">
             <div class="image">
                 <img src="dist/img/mentor 1.jpg" />
@@ -154,10 +154,10 @@
                 <p><strong>Mr. Sushant Pathhak</strong> project mentor.</p>
                 <small>Project Scientist at Remote Sensing Applications Centre Uttar Pradesh, Lucknow</small>
                 <div class="member-link">
-                    <a href="https://www.facebook.com/engg.superpower" target="_blank"><i class="fa-brands fa-facebook-f text-light"></i></a>
-                    <a href="https://www.instagram.com/scientistsushantpathak/" target="_blank"><i class="fa-brands text-light fa-square-instagram"></i></a>
-                    <a href="https://www.indiamart.com/sunriseinfotechsolution/" target="_blank"><i class="fa-solid fa-cart-shopping text-light"></i></a>
-                    <a href="https://sunrise-infotech-solution.business.site/" target="_blank"><i class="fa-solid fa-globe text-light"></i></a>
+                    <a href="https://www.facebook.com/engg.superpower" target="_blank"><i class="fa-brands fa-bounce fa-facebook-f text-light"></i></a>
+                    <a href="https://www.instagram.com/scientistsushantpathak/" target="_blank"><i class="fa-brands fa-bounce text-light fa-square-instagram"></i></a>
+                    <a href="https://www.indiamart.com/sunriseinfotechsolution/" target="_blank"><i class="fa-solid fa-bounce fa-cart-shopping text-light"></i></a>
+                    <a href="http://www.sunriseinfotechsolution.com/Anonymous/Home.aspx" target="_blank"><i class="fa-solid fa-bounce fa-globe text-light"></i></a>
                 </div>
             </div>
         </div>
@@ -170,18 +170,18 @@
                 <p><strong>Mr. Ashutosh Prasad</strong> project developer.</p>
                 <small>MCA graduate from AIET and a full stack developer on python & ASP.NET with MVC</small>
                  <div class="member-link">
-                    <a href="https://www.facebook.com/ashutosh.prasad.754365/" target="_blank"><i class="fa-brands text-light fa-facebook-f"></i></a>
-                    <a href="https://www.instagram.com/official.ashu.2000/" target="_blank"><i class="fa-brands fa-square-instagram text-light"></i></a>
-                    <a href="https://twitter.com/Ashutos96662173" target="_blank"><i class="fa-brands fa-twitter text-light"></i></a>
-                    <a href="https://wa.me/6386239194" target="_blank"><i class="fa-brands fa-square-whatsapp text-light"></i></a>
-                    <a href="https://github.com/OfficialAshutosh2412?tab=repositories" target="_blank"><i class="fa-brands fa-github text-light"></i></a>
+                    <a href="https://www.facebook.com/ashutosh.prasad.754365/" target="_blank"><i class="fa-brands fa-beat-fade text-light fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/official.ashu.2000/" target="_blank"><i class="fa-brands fa-beat-fade fa-square-instagram text-light"></i></a>
+                    <a href="https://twitter.com/Ashutos96662173" target="_blank"><i class="fa-brands fa-twitter fa-beat-fade text-light"></i></a>
+                    <a href="https://wa.me/6386239194" target="_blank"><i class="fa-brands fa-square-whatsapp fa-beat-fade text-light"></i></a>
+                    <a href="https://github.com/OfficialAshutosh2412?tab=repositories" target="_blank"><i class="fa-brands fa-beat-fade fa-github text-light"></i></a>
                 </div>
             </div>
         </div>
     </div>
     <%--faq--%>
     <div class="mt-3" id="faq">
-        <h3>Frequently Asked Questions...</h3>
+        <h3><i class="fa-solid fa-file-circle-question"></i>Frequently Asked Questions...</h3>
         <div class="faq-grid">
             <asp:GridView ID="GridView1" runat="server" CssClass="border-0 w-100" AutoGenerateColumns="False" DataKeyNames="FaqId" DataSourceID="SqlDataSource1" Width="637px">
         <Columns>

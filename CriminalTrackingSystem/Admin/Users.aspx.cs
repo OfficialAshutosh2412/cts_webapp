@@ -57,7 +57,8 @@ namespace CriminalTrackingSystem.Admin
                     ls.Text = dt.Rows[i]["Lstatus"].ToString();
                     adhaar.Text = dt.Rows[i]["AdharNumber"].ToString();
                     phone.Text = dt.Rows[i]["ContactNumber"].ToString();
-                    //pics.ImageUrl = dt.Rows[i]["ProfilePhoto"].ToString();
+                    string img = (string)dt.Rows[i]["ProfilePhoto"];
+                    pics.ImageUrl = "/RegisterPhoto/"+img.ToString();
                 }
             }
         }

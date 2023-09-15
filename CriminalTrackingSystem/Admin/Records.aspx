@@ -8,6 +8,14 @@
         <h3><i class="fa-solid fa-person counters"></i> Missing Person Records</h3>
         <asp:GridView ID="GridView1" CssClass="w-100 table table-responsive table-dark" runat="server" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="MPId" DataSourceID="SqlDataSource1">
             <Columns>
+                <asp:TemplateField HeaderText="Latest Photo" SortExpression="LatestPhoto">
+                    <EditItemTemplate>
+                        <asp:TextBox ID="TextBox1" runat="server" Text='<%# Bind("LatestPhoto") %>'></asp:TextBox>
+                    </EditItemTemplate>
+                    <ItemTemplate>
+                        <asp:Image ID="Image1" runat="server" Height="84px" ImageUrl='<%# Eval("LatestPhoto","../Registration/MissingPerson/{0}") %>' Width="83px" />
+                    </ItemTemplate>
+                </asp:TemplateField>
                 <asp:BoundField DataField="MPId" HeaderText="ID" InsertVisible="False" ReadOnly="True" SortExpression="MPId" />
                 <asp:BoundField DataField="LoginUsername" HeaderText="Username" SortExpression="LoginUsername" />
                 <asp:BoundField DataField="PoliceStation" HeaderText="Police Station" SortExpression="PoliceStation" />
@@ -18,7 +26,6 @@
                 <asp:BoundField DataField="Ransom" HeaderText="Ransom" SortExpression="Ransom" />
                 <asp:BoundField DataField="Dob" HeaderText="Person DOB" SortExpression="Dob" />
                 <asp:BoundField DataField="Details" HeaderText="Details" SortExpression="Details" />
-                <asp:BoundField DataField="LatestPhoto" HeaderText="Latest Photo" SortExpression="LatestPhoto" />
                 <asp:BoundField DataField="CDT" HeaderText="Report Datetime" SortExpression="CDT" />
                 <asp:BoundField DataField="Status" HeaderText="Status" SortExpression="Status" />
             </Columns>
@@ -64,13 +71,20 @@
         <h3><i class="fa-regular fa-gem counters"></i> Missing Valuable Records</h3>
         <asp:GridView ID="GridView2" CssClass="w-100 table table-responsive table-dark" runat="server" AutoGenerateColumns="False" DataKeyNames="MVId" DataSourceID="SqlDataSource2" AllowSorting="True">
             <Columns>
+                <asp:TemplateField HeaderText="ValuablePurchaseRecipt" SortExpression="ValuablePurchaseRecipt">
+                    <EditItemTemplate>
+                        <asp:TextBox ID="TextBox1" runat="server" Text='<%# Bind("ValuablePurchaseRecipt") %>'></asp:TextBox>
+                    </EditItemTemplate>
+                    <ItemTemplate>
+                        <asp:Image ID="Image2" runat="server" Height="83px" ImageUrl='<%# Eval("ValuablePurchaseRecipt","../Registration/MissingValuableRecipt/{0}") %>' Width="86px" />
+                    </ItemTemplate>
+                </asp:TemplateField>
                 <asp:BoundField DataField="MVId" HeaderText="MVId" InsertVisible="False" ReadOnly="True" SortExpression="MVId" />
                 <asp:BoundField DataField="LoginUsername" HeaderText="LoginUsername" SortExpression="LoginUsername" />
                 <asp:BoundField DataField="PoliceStation" HeaderText="PoliceStation" SortExpression="PoliceStation" />
                 <asp:BoundField DataField="ValuableType" HeaderText="ValuableType" SortExpression="ValuableType" />
                 <asp:BoundField DataField="ValuableCost" HeaderText="ValuableCost" SortExpression="ValuableCost" />
                 <asp:BoundField DataField="AnySuspect" HeaderText="AnySuspect" SortExpression="AnySuspect" />
-                <asp:BoundField DataField="ValuablePurchaseRecipt" HeaderText="ValuablePurchaseRecipt" SortExpression="ValuablePurchaseRecipt" />
                 <asp:BoundField DataField="Details" HeaderText="Details" SortExpression="Details" />
                 <asp:BoundField DataField="CDT" HeaderText="CDT" SortExpression="CDT" />
                 <asp:BoundField DataField="Status" HeaderText="Status" SortExpression="Status" />
@@ -110,12 +124,19 @@
         <h3 ><i class="fa-solid fa-handcuffs counters"></i> Crime Complains Records</h3>
         <asp:GridView ID="GridView3" CssClass="w-100 table table-responsive table-dark" runat="server" AutoGenerateColumns="False" DataKeyNames="CCId" DataSourceID="SqlDataSource3" AllowSorting="True">
             <Columns>
+                <asp:TemplateField HeaderText="AnyProof" SortExpression="AnyProof">
+                    <EditItemTemplate>
+                        <asp:TextBox ID="TextBox1" runat="server" Text='<%# Bind("AnyProof") %>'></asp:TextBox>
+                    </EditItemTemplate>
+                    <ItemTemplate>
+                        <asp:Image ID="Image3" runat="server" Height="87px" ImageUrl='<%# Eval("AnyProof","../Registration/AnyProof/{0}") %>' Width="83px" />
+                    </ItemTemplate>
+                </asp:TemplateField>
                 <asp:BoundField DataField="CCId" HeaderText="CCId" InsertVisible="False" ReadOnly="True" SortExpression="CCId" />
                 <asp:BoundField DataField="LoginUsername" HeaderText="LoginUsername" SortExpression="LoginUsername" />
                 <asp:BoundField DataField="PoliceStation" HeaderText="PoliceStation" SortExpression="PoliceStation" />
                 <asp:BoundField DataField="CrimeType" HeaderText="CrimeType" SortExpression="CrimeType" />
                 <asp:BoundField DataField="InvolvePerson" HeaderText="InvolvePerson" SortExpression="InvolvePerson" />
-                <asp:BoundField DataField="AnyProof" HeaderText="AnyProof" SortExpression="AnyProof" />
                 <asp:BoundField DataField="CrimeStation" HeaderText="CrimeStation" SortExpression="CrimeStation" />
                 <asp:BoundField DataField="CrimeDate" HeaderText="CrimeDate" SortExpression="CrimeDate" />
                 <asp:BoundField DataField="CDT" HeaderText="CDT" SortExpression="CDT" />

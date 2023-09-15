@@ -5,7 +5,10 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <h1><i class="fa-solid fa-images text-light"></i>Gallery</h1>
     <hr />
-    <div class="admin-gallery">
+    <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+    <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+        <ContentTemplate>
+            <div class="admin-gallery">
         <div>
             <asp:RadioButton ID="RadioButton1" CssClass="admin-radio" runat="server" Text="Upload for Events" GroupName="uploader" Checked="True" AutoPostBack="True" />
             <asp:RadioButton ID="RadioButton2" CssClass="admin-radio" runat="server" Text="Upload for Criminals" GroupName="uploader"  AutoPostBack="True" />
@@ -29,6 +32,9 @@
             </div>
         </div>
     </div>
+        </ContentTemplate>
+    </asp:UpdatePanel>
+    
     <hr />
 
 </asp:Content>

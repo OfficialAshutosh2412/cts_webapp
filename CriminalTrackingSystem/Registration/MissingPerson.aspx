@@ -19,13 +19,13 @@
                 <div>
                     <div>
                         <label>
-                            Username<asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="MPUserName" ErrorMessage="username required" ForeColor="#FF5050">*</asp:RequiredFieldValidator>
+                            <i class="fa-solid fa-user"></i> Username<asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="MPUserName" ErrorMessage="username required" ForeColor="#FF5050">*</asp:RequiredFieldValidator>
                         </label>
                         <asp:TextBox ID="MPUserName" runat="server" class="cc-box" placeholder="name here who login"></asp:TextBox>
                     </div>
                     <div>
                         <label>
-                            Police Station<asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="MPPoliceStation" ErrorMessage="police station required" ForeColor="#FF5050">*</asp:RequiredFieldValidator>
+                            <i class="fa-solid fa-building-shield"></i> Police Station<asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="MPPoliceStation" ErrorMessage="police station required" ForeColor="#FF5050">*</asp:RequiredFieldValidator>
                         </label>
                         <asp:DropDownList ID="MPPoliceStation" class="cc-box" runat="server" DataSourceID="SqlDataSource2" DataTextField="PoliceStationName" DataValueField="PoliceStationName" AppendDataBoundItems="True">
                             <asp:ListItem Selected="True">--select--</asp:ListItem>
@@ -37,18 +37,18 @@
                 <div>
                     <div>
                         <label>
-                            Person Name<asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="MPname" ErrorMessage="Missing Person name required" ForeColor="#FF5050">*</asp:RequiredFieldValidator> </label>
+                            <i class="fa-solid fa-person-circle-question"></i> Person Name<asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="MPname" ErrorMessage="Missing Person name required" ForeColor="#FF5050">*</asp:RequiredFieldValidator> </label>
                         <asp:TextBox ID="MPname" runat="server" class="cc-box" placeholder="name of missing person"></asp:TextBox>
                     </div>
                     <div>
                         <label>
-                            Person Contact No.<asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="MPcontact" ErrorMessage="Contact no. of missing person equired" ForeColor="#FF5050">*</asp:RequiredFieldValidator>
+                            <i class="fa-solid fa-mobile-screen-button"></i> Person Contact No.<asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="MPcontact" ErrorMessage="Contact no. of missing person equired" ForeColor="#FF5050">*</asp:RequiredFieldValidator>
                         </label>
                         <asp:TextBox ID="MPcontact" runat="server" class="cc-box"></asp:TextBox>
                     </div>
                     <div>
                         <label>
-                            Email<asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="MPemail" ErrorMessage="Email required" ForeColor="#FF5050">*</asp:RequiredFieldValidator>
+                            <i class="fa-solid fa-envelope"></i> Email<asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="MPemail" ErrorMessage="Email required" ForeColor="#FF5050">*</asp:RequiredFieldValidator>
                         </label>
                         <asp:TextBox ID="MPemail" runat="server" class="cc-box" placeholder="email of login person" TextMode="Email"></asp:TextBox>
                     </div>
@@ -57,21 +57,21 @@
                 <div>
                     <div>
                         <label>
-                            Last View Location<asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="MPlocation" ErrorMessage="Last location required" ForeColor="#FF5050">*</asp:RequiredFieldValidator>
+                            <i class="fa-solid fa-location-dot"></i> Last View Location<asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="MPlocation" ErrorMessage="Last location required" ForeColor="#FF5050">*</asp:RequiredFieldValidator>
                         </label>
                         <asp:TextBox ID="MPlocation" runat="server" class="cc-box"></asp:TextBox>
                         <br />
                     </div>
                     <div>
                         <label>
-                            Ransom<asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ControlToValidate="MPransom" ErrorMessage="Ransom required" ForeColor="#FF5050">*</asp:RequiredFieldValidator>
+                            <i class="fa-solid fa-indian-rupee-sign"></i> Ransom<asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ControlToValidate="MPransom" ErrorMessage="Ransom required" ForeColor="#FF5050">*</asp:RequiredFieldValidator>
                         </label>
                         <asp:TextBox ID="MPransom" runat="server" class="cc-box"></asp:TextBox>
                         <br />
                     </div>
                     <div>
                         <label>
-                            Person D.O.B<asp:RequiredFieldValidator ID="RequiredFieldValidator8" runat="server" ControlToValidate="MPdob" ErrorMessage="Person dob required" ForeColor="#FF5050">*</asp:RequiredFieldValidator>
+                            <i class="fa-solid fa-calendar-days"></i> Person D.O.B<asp:RequiredFieldValidator ID="RequiredFieldValidator8" runat="server" ControlToValidate="MPdob" ErrorMessage="Person dob required" ForeColor="#FF5050">*</asp:RequiredFieldValidator>
                         </label>
                         <asp:TextBox ID="MPdob" runat="server" class="cc-box" TextMode="Date" placeholder="missing person date of birth"></asp:TextBox>
                     </div>
@@ -80,7 +80,7 @@
                 <div>
                     <div>
                         <label>
-                            Person Details<asp:RequiredFieldValidator ID="RequiredFieldValidator9" runat="server" ControlToValidate="MPdetails" ErrorMessage="Person details required" ForeColor="#FF5050">*</asp:RequiredFieldValidator>
+                            <i class="fa-solid fa-file-pen"></i> Person Details<asp:RequiredFieldValidator ID="RequiredFieldValidator9" runat="server" ControlToValidate="MPdetails" ErrorMessage="Person details required" ForeColor="#FF5050">*</asp:RequiredFieldValidator>
                         </label>
                         <asp:TextBox ID="MPdetails" runat="server" class="cc-box" placeholder="give detail color, height, face structure of missing person"></asp:TextBox>
                     </div>
@@ -89,7 +89,7 @@
                 <div>
                     <div>
                         <label>
-                            Person Latest Photo<asp:RequiredFieldValidator ID="RequiredFieldValidator10" runat="server" ControlToValidate="FileUpload1" ErrorMessage="Person photo required" ForeColor="#FF5050">*</asp:RequiredFieldValidator>
+                            <i class="fa-solid fa-file-image"></i> Person Latest Photo<asp:RequiredFieldValidator ID="RequiredFieldValidator10" runat="server" ControlToValidate="FileUpload1" ErrorMessage="Person photo required" ForeColor="#FF5050">*</asp:RequiredFieldValidator>
                         </label>
                         <asp:FileUpload ID="FileUpload1" runat="server" class="cc-box" placeholder="email of login person" />
 
@@ -97,7 +97,7 @@
                     </div>
                     <div>
                         <label>
-                            Current Date & Time<asp:RequiredFieldValidator ID="RequiredFieldValidator11" runat="server" ControlToValidate="MPcurrentDate" ErrorMessage="Fill Current Date Time" ForeColor="#FF5050">*</asp:RequiredFieldValidator>
+                            <i class="fa-solid fa-calendar-days"></i> Current Date & Time<asp:RequiredFieldValidator ID="RequiredFieldValidator11" runat="server" ControlToValidate="MPcurrentDate" ErrorMessage="Fill Current Date Time" ForeColor="#FF5050">*</asp:RequiredFieldValidator>
                         </label>
                         <asp:TextBox ID="MPcurrentDate" runat="server" class="cc-box" TextMode="DateTimeLocal"></asp:TextBox>
                     </div>

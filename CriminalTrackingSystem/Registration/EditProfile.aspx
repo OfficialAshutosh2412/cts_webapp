@@ -4,6 +4,8 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>CTS | Edit Profile</title>
     <link rel="icon" href="../dist/favicon/cts_logo.ico" type="image/x-icon" />
     <link href="../dist/css/bootstrap.min.css" rel="stylesheet" />

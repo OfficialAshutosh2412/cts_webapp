@@ -13,11 +13,13 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     </head>
     <body onload="myfunction()" class="body">
+        <%--preloader--%>
         <div class="preloader" id="preloader">
             <img src="dist/loader/Ripple-2.1s-204px.gif" />
         </div>
         <form id="form1" runat="server">
-            <i class="fa-solid fa-language clear  hidden-tool-box " id="tool-toggler"></i>     
+            <i class="fa-solid fa-language fa-bounce  hidden-tool-box " id="tool-toggler"></i>
+            <asp:HyperLink NavigateUrl="https://wa.me/6386239194" runat="server" CssClass="whap-link" ><i class="fa-brands fa-bounce fa-square-whatsapp" style="color: #21b506;"></i></asp:HyperLink> 
             <%--top bar--%>
             <div class="top-bar hide-top">
                 <div><asp:Label ID="Label1" runat="server"></asp:Label></div>
@@ -60,7 +62,7 @@
                                 <a class="nav-link text-dark" href="/Home.aspx#gallery"><i class="fa-solid fa-images"></i>Gallery</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-dark" href="/Home.aspx#contact"><i class="fa-solid fa-phone"></i>Contact us</a>
+                                <a class="nav-link text-dark" href="/Home.aspx#contact"><i class="fa-solid fa-message"></i>Contact us</a>
                             </li>
                             <li class="nav-item">
                                 <a  class="nav-link" href="/Home.aspx#faq"><i class="fa-solid fa-file-circle-question"></i>FAQ</a>

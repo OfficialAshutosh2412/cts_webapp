@@ -20,11 +20,11 @@
                 <%--first row--%>
                 <div>
                     <div>
-                        <label>Username<asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="UserName" ErrorMessage="*username required" Font-Bold="True" Font-Size="Small" ForeColor="#FF5050">*</asp:RequiredFieldValidator></label>
+                        <label><i class="fa-solid fa-user"></i> Username<asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="UserName" ErrorMessage="*username required" Font-Bold="True" Font-Size="Small" ForeColor="#FF5050">*</asp:RequiredFieldValidator></label>
                         <asp:TextBox ID="UserName" runat="server" class="cc-box"></asp:TextBox>
                     </div>
                     <div>
-                        <label>Police Station<asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="PoliceStation" ErrorMessage="*station name required" Font-Bold="True" Font-Size="Small" ForeColor="#FF5050">*</asp:RequiredFieldValidator></label>
+                        <label><i class="fa-solid fa-building-shield"></i> Police Station<asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="PoliceStation" ErrorMessage="*station name required" Font-Bold="True" Font-Size="Small" ForeColor="#FF5050">*</asp:RequiredFieldValidator></label>
                         <asp:DropDownList ID="PoliceStation" runat="server" class="cc-box" DataSourceID="SqlDataSource2" DataTextField="PoliceStationName" DataValueField="PoliceStationName" AppendDataBoundItems="True">
                             <asp:ListItem Selected="True">-select--</asp:ListItem>
                         </asp:DropDownList>
@@ -32,7 +32,7 @@
 
                     </div>
                     <div>
-                        <label>Crime Type<asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="CrimeType" ErrorMessage="*type of crime required" Font-Bold="True" Font-Size="Small" ForeColor="#FF5050">*</asp:RequiredFieldValidator></label>
+                        <label><i class="fa-solid fa-handcuffs"></i> Crime Type<asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="CrimeType" ErrorMessage="*type of crime required" Font-Bold="True" Font-Size="Small" ForeColor="#FF5050">*</asp:RequiredFieldValidator></label>
                         <asp:DropDownList ID="CrimeType" runat="server" class="cc-box">
                             <asp:ListItem Selected="True">--select--</asp:ListItem>
                             <asp:ListItem>Cyber crime</asp:ListItem>
@@ -56,23 +56,23 @@
                 <%--second row--%>
                 <div>
                     <div>
-                        <label>Involved Persons</label>
+                        <label><i class="fa-solid fa-handshake"></i> Involved Persons</label>
                         <asp:TextBox ID="InvolvedPerson" runat="server" class="cc-box" placeholder="name persons who are involved in crime..."></asp:TextBox>
                     </div>
                 </div>
                 <%--third row--%>
                 <div>
                     <div>
-                        <label>Give us Proof</label>
+                        <label><i class="fa-regular fa-image"></i> Give us Proof</label>
                         <asp:FileUpload ID="FileUpload1" runat="server" class="cc-box" />
                         <asp:Literal ID="Literal1" runat="server" Visible="false"></asp:Literal>
                     </div>
                     <div>
-                        <label>Crime Station<asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ControlToValidate="CrimeStation" ErrorMessage="*Report Station  required" Font-Bold="True" Font-Size="Small" ForeColor="#FF5050">*</asp:RequiredFieldValidator></label>
+                        <label><i class="fa-solid fa-building-shield"></i> Crime Station<asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ControlToValidate="CrimeStation" ErrorMessage="*Report Station  required" Font-Bold="True" Font-Size="Small" ForeColor="#FF5050">*</asp:RequiredFieldValidator></label>
                         <asp:TextBox ID="CrimeStation" runat="server" class="cc-box" placeholder="crime police station name"></asp:TextBox>
                     </div>
                     <div>
-                        <label>Date of Crime<asp:RequiredFieldValidator ID="RequiredFieldValidator8" runat="server" ControlToValidate="CrimeDate" ErrorMessage="*date of crime required" Font-Bold="True" Font-Size="Small" ForeColor="#FF5050">*</asp:RequiredFieldValidator></label>
+                        <label><i class="fa-solid fa-calendar-days"></i> Date of Crime<asp:RequiredFieldValidator ID="RequiredFieldValidator8" runat="server" ControlToValidate="CrimeDate" ErrorMessage="*date of crime required" Font-Bold="True" Font-Size="Small" ForeColor="#FF5050">*</asp:RequiredFieldValidator></label>
                         <asp:TextBox ID="CrimeDate" runat="server" class="cc-box" placeholder="when crime happened?" TextMode="DateTimeLocal"></asp:TextBox>
 
                     </div>
@@ -80,7 +80,7 @@
                 <%--fourth row--%>
                 <div>
                     <div>
-                        <label>Current Date & Time<asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="CurrentDate" ErrorMessage="*date required" Font-Bold="True" Font-Size="Small" ForeColor="#FF5050">*</asp:RequiredFieldValidator></label>
+                        <label><i class="fa-solid fa-calendar-days"></i> Current Date & Time<asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="CurrentDate" ErrorMessage="*date required" Font-Bold="True" Font-Size="Small" ForeColor="#FF5050">*</asp:RequiredFieldValidator></label>
                         <asp:TextBox ID="CurrentDate" runat="server" class="cc-box" placeholder="enter current date and time" TextMode="DateTimeLocal"></asp:TextBox>
 
                     </div>

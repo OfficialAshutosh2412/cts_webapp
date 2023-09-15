@@ -8,7 +8,13 @@
     justify-content: center;
     align-items: center;
 }
-
+.whap-link {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    font-size: 3rem;
+    z-index: 99999;
+}
 .about h1 *, .top-bar a, a {
     text-decoration: none
 }
@@ -198,13 +204,10 @@
 
 .go-to-top, .hidden-tool-box {
     position: fixed;
-    text-align: center;
     z-index: 89;
-    top: 90%;
-    width: 50px;
-    height: 50px;
-    right: 0;
-    font-size: 1.2em
+    font-size:2rem;
+    right: 20px;
+    bottom:50px;
 }
 
 .slider-section, .slider-section img {
@@ -1172,7 +1175,6 @@
         padding: 2px 1%;
         margin-left: 20px
     }
-
 @media screen and (max-width:880px) {
     .faq-form, .hero, .signup {
         width: 100%
@@ -1207,6 +1209,56 @@
         width: 100%;
         height: 40px
     }
+    .profile {
+        height: auto;
+        display: block;
+        flex-direction: unset;
+        justify-content: unset;
+        align-items: unset;
+    }
+
+    .profile-box {
+        width: 100%;
+        margin: 0;
+        margin-top: 20px;
+        padding: 2%;
+        border-radius: 0px;
+        box-shadow:none;
+    }
+
+    .profile .profile-data {
+        width: 100%;
+        margin: 0;
+        padding: 1%;
+    }
+
+    .profile-foot {
+        flex-direction:column;
+    }
+
+    .profile-edit {
+        margin: 0;
+        height: auto;
+        display: block;
+        flex-direction: unset;
+        justify-content: unset;
+        align-items: unset;
+        width: 100%;
+    }
+
+    .edit-box {
+        border-radius: 0px;
+        box-shadow: 0px 0px 15px 0px #d0d0d0;
+    }
+
+    .profile-edit .edit-item {
+        flex-direction:column;
+    }
+
+        .profile-edit .edit-item div {
+            padding:1%;
+        }
+    
 }
 
 .correct {
@@ -1404,58 +1456,6 @@
         padding: 5%;
         margin-bottom: 20px;
     }
-    .profile {
-        height: auto !important;
-    }
-
-    .profile-box {
-        width: 100% !important;
-        margin-top: 20px;
-        border-radius: 0px !important;
-        box-shadow: none !important;
-    }
-    .profile .profile-data {
-        width: 90%;
-        margin: 0 auto;
-        padding: 1%;
-    }
-    .profile .profile-foot{
-       flex-direction:column;
-    }
-
-
-
-    .profile-edit {
-        margin: 0 ;
-        height: auto;
-        display: block;
-        flex-direction: unset;
-        justify-content: unset;
-        align-items: start;
-        width: 100%;
-    }
-
-    .edit-box {
-        width: 100%;
-        background: white
-    }
-
-        .edit-box .cc-box {
-            border-top: none;
-            border-right: none;
-            border-left: none;
-            color: #313131
-        }
-
-    .profile-edit .edit-item {
-        display: flex;
-        flex-direction:column;
-        width: 100%;
-    }
-
-        .profile-edit .edit-item div {
-            width: 100%;
-        }
 }
 
 @media screen and (max-width:400px) {

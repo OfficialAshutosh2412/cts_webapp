@@ -21,12 +21,12 @@
                 <%--first row--%>
                 <div>
                     <div>
-                        <label>Username<asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="GCUserName" ErrorMessage="username empty" ForeColor="#FF5050">*</asp:RequiredFieldValidator>
+                        <label><i class="fa-solid fa-user"></i> Username<asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="GCUserName" ErrorMessage="username empty" ForeColor="#FF5050">*</asp:RequiredFieldValidator>
                         </label>
-                        &nbsp;<asp:TextBox ID="GCUserName" runat="server" class="cc-box"></asp:TextBox>
+                        <asp:TextBox ID="GCUserName" runat="server" class="cc-box"></asp:TextBox>
                     </div>
                     <div>
-                        <label>Police Station<asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="GCPoliceStation" ErrorMessage="police station required" ForeColor="#FF5050">*</asp:RequiredFieldValidator> </label>
+                        <label><i class="fa-solid fa-building-shield"></i> Police Station<asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="GCPoliceStation" ErrorMessage="police station required" ForeColor="#FF5050">*</asp:RequiredFieldValidator> </label>
                         <asp:DropDownList ID="GCPoliceStation" class="cc-box" runat="server" DataSourceID="SqlDataSource2" DataTextField="PoliceStationName" DataValueField="PoliceStationName" AppendDataBoundItems="True">
                             <asp:ListItem Selected="True">--select--</asp:ListItem>
                         </asp:DropDownList>
@@ -34,7 +34,7 @@
 
                     </div>
                     <div>
-                        <label>Title<asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="GCTitle" ErrorMessage="title required" ForeColor="#FF5050">*</asp:RequiredFieldValidator>
+                        <label><i class="fa-solid fa-marker"></i> Title<asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="GCTitle" ErrorMessage="title required" ForeColor="#FF5050">*</asp:RequiredFieldValidator>
                         </label>
                         &nbsp;<asp:TextBox ID="GCTitle" runat="server" class="cc-box" placeholder="write subject here..."></asp:TextBox>
                     </div>
@@ -42,7 +42,7 @@
                 <%--second row--%>
                 <div>
                     <div>
-                        <label>Give us Details<asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="GCDetails" ErrorMessage="details required" ForeColor="#FF5050">*</asp:RequiredFieldValidator>
+                        <label><i class="fa-solid fa-file-pen"></i> Give us Details<asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="GCDetails" ErrorMessage="details required" ForeColor="#FF5050">*</asp:RequiredFieldValidator>
                         </label>
                         &nbsp;<asp:TextBox ID="GCDetails" runat="server" class="cc-box"></asp:TextBox>
                     </div>
@@ -50,12 +50,12 @@
                 <%--third row--%>
                 <div>
                     <div>
-                        <label>Involved Persons<asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="GCInvolvedPersons" ErrorMessage="involved person required" ForeColor="#FF5050">*</asp:RequiredFieldValidator>
+                        <label><i class="fa-solid fa-handshake"></i> Involved Persons<asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="GCInvolvedPersons" ErrorMessage="involved person required" ForeColor="#FF5050">*</asp:RequiredFieldValidator>
                         </label>
                         &nbsp;<asp:TextBox ID="GCInvolvedPersons" runat="server" class="cc-box"></asp:TextBox>
                     </div>
                     <div>
-                        <label>Current Date & Time<asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="GCCurrentDate" ErrorMessage="current date time required" ForeColor="#FF5050">*</asp:RequiredFieldValidator>
+                        <label><i class="fa-solid fa-calendar-days"></i> Current Date & Time<asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="GCCurrentDate" ErrorMessage="current date time required" ForeColor="#FF5050">*</asp:RequiredFieldValidator>
                         </label>
                         &nbsp;<asp:TextBox ID="GCCurrentDate" runat="server" class="cc-box" TextMode="DateTimeLocal" placeholder="enter current date and time"></asp:TextBox>
                         <br />
