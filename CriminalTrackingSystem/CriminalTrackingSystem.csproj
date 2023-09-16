@@ -44,6 +44,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="System.Web.DataVisualization" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -152,6 +153,7 @@
     <Content Include="Login.aspx" />
     <Content Include="News.aspx" />
     <Content Include="Registration\EditProfile.aspx" />
+    <Content Include="Registration\Help.aspx" />
     <Content Include="Registration\Profile.aspx" />
     <Content Include="Signup.aspx" />
     <Content Include="Registration\CrimeComplain.aspx" />
@@ -304,6 +306,13 @@
     </Compile>
     <Compile Include="Registration\EditProfile.aspx.designer.cs">
       <DependentUpon>EditProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Registration\Help.aspx.cs">
+      <DependentUpon>Help.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Registration\Help.aspx.designer.cs">
+      <DependentUpon>Help.aspx</DependentUpon>
     </Compile>
     <Compile Include="Registration\Profile.aspx.cs">
       <DependentUpon>Profile.aspx</DependentUpon>

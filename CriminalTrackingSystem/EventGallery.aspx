@@ -24,7 +24,7 @@
                 <ItemTemplate>
                     <div class="independence">
                         <figure class="column">
-                            <asp:ImageButton CssClass="inimg" ID="Image1" runat="server" ImageUrl='<%# Eval("Picture","Admin/AdminGallery/Events/{0}") %>' />
+                            <asp:ImageButton CssClass="inimg" ID="Image1"  runat="server" ImageUrl='<%# Eval("Picture","Admin/AdminGallery/Events/{0}") %>' />
                         </figure>
                     </div>
                 </ItemTemplate>
