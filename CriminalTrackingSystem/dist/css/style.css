@@ -987,10 +987,16 @@
     overflow: scroll;
     padding: 2%
 }
-
+.register-welcome {
+    width: 87%;
+    padding:2%;
+    margin: 0 auto;
+    margin-top:20px;
+    box-shadow: 0px 0px 20px #d9d9d9;
+}
 .register-card {
-    width: 70%;
-    margin: 50px auto 0;
+    width: 90%;
+    margin:  0 auto;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -1004,8 +1010,8 @@
         justify-content: center;
         align-items: center;
         margin: 2%;
-        padding: 4%;
-        box-shadow: 1px 1px 5px 0 gray;
+        padding: 3%;
+        box-shadow: 0px 0px 20px  #d9d9d9;
         flex: auto
     }
 

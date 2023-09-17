@@ -5,15 +5,6 @@
     <div class="missing-form">
         <%--form--%>
         <div class="missing-sub-form">
-            <asp:Timer ID="Timer1" runat="server" Interval="1000" OnTick="Timer1_Tick"></asp:Timer>
-            <asp:UpdatePanel ID="UpdatePanel1" runat="server" class="mt-3">
-                <ContentTemplate>
-                    <asp:Label ID="Label2" runat="server" CssClass="bg-danger text-white p-2 "></asp:Label>
-                </ContentTemplate>
-                <Triggers>
-                    <asp:AsyncPostBackTrigger ControlID="Timer1" EventName="Tick" />
-                </Triggers>
-            </asp:UpdatePanel>
             <div >
                 <%--first row--%>
                 <div>

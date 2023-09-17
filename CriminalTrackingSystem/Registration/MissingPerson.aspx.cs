@@ -16,16 +16,10 @@ namespace CriminalTrackingSystem.Registration
         SqlCommand cmd = new SqlCommand();
         protected void Page_Load(object sender, EventArgs e)
         {
-            Timer1.Enabled = true;
             if (Session["user"] == null)
                 Response.Redirect("~/Login.aspx");
             MPUserName.Text = Session["user"].ToString();
             cmd.Connection = con;
-        }
-
-        protected void Timer1_Tick(object sender, EventArgs e)
-        {
-            Label2.Text = DateTime.Now.ToString("hh:mm:ss tt dddd ,  dd MMMM yyyy ");
         }
         //insert
         protected void Button1_Click(object sender, EventArgs e)

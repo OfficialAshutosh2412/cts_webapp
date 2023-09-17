@@ -17,7 +17,6 @@ namespace CriminalTrackingSystem.Registration
         SqlDataAdapter adp = new SqlDataAdapter();
         protected void Page_Load(object sender, EventArgs e)
         {
-            Timer1.Enabled = true;
             if (Session["user"] == null)
                 Response.Redirect("~/Login.aspx");
             UserName.Text = Session["user"].ToString();
@@ -45,11 +44,6 @@ namespace CriminalTrackingSystem.Registration
             {
                 Response.Redirect("../Error_message.aspx");
             }
-        }
-        //timer
-        protected void Timer1_Tick(object sender, EventArgs e)
-        {
-            Label1.Text = DateTime.Now.ToString("hh:mm:ss tt dddd ,  dd MMMM yyyy ");
         }
     }
 }

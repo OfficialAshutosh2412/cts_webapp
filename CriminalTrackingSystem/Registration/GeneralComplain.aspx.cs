@@ -16,16 +16,10 @@ namespace CriminalTrackingSystem.Registration
         SqlDataAdapter adp = new SqlDataAdapter();
         protected void Page_Load(object sender, EventArgs e)
         {
-            Timer1.Enabled = true;
             if (Session["user"] == null)
                 Response.Redirect("~/Login.aspx");
             GCUserName.Text = Session["user"].ToString();
             cmd.Connection = con;
-        }
-        //timer
-        protected void Timer1_Tick(object sender, EventArgs e)
-        {
-            Label1.Text = DateTime.Now.ToString("hh:mm:ss tt dddd ,  dd MM yyyy ");
         }
         //insert button
         protected void Button1_Click(object sender, EventArgs e)

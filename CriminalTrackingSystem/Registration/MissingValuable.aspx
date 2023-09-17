@@ -7,34 +7,24 @@
         <%--form--%>
         <div class="valuable-form">
             <div>
-                <asp:Timer ID="Timer1" runat="server" Interval="1000" OnTick="Timer1_Tick">
-                </asp:Timer>
-                <asp:UpdatePanel ID="UpdatePanel1" runat="server" class="mt-3">
-                    <ContentTemplate>
-                        <asp:Label ID="Label1" runat="server" CssClass="p-2 bg-danger text-white"></asp:Label>
-                    </ContentTemplate>
-                    <Triggers>
-                        <asp:AsyncPostBackTrigger ControlID="Timer1" EventName="Tick" />
-                    </Triggers>
-                </asp:UpdatePanel>
                 <%--first row--%>
                 <div>
                     <div>
                         <label>
-                            <i class="fa-solid fa-user"></i> Username<asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="MVUserName" ErrorMessage="username required" ForeColor="#FF5050">*</asp:RequiredFieldValidator>
+                            <i class="fa-solid fa-user"></i>Username<asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="MVUserName" ErrorMessage="username required" ForeColor="#FF5050">*</asp:RequiredFieldValidator>
                         </label>
                         <asp:TextBox ID="MVUserName" runat="server" class="cc-box"></asp:TextBox>
                     </div>
                     <div>
                         <label>
-                            <i class="fa-solid fa-building-shield"></i> Police Station<asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="MVPoliceStation" ErrorMessage="Police station required" ForeColor="#FF5050">*</asp:RequiredFieldValidator></label>
+                            <i class="fa-solid fa-building-shield"></i>Police Station<asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="MVPoliceStation" ErrorMessage="Police station required" ForeColor="#FF5050">*</asp:RequiredFieldValidator></label>
                         <asp:DropDownList ID="MVPoliceStation" class="cc-box" runat="server" AppendDataBoundItems="True" DataSourceID="SqlDataSource2" DataTextField="PoliceStationName" DataValueField="PoliceStationName">
                             <asp:ListItem Selected="True">--select--</asp:ListItem>
                         </asp:DropDownList>
                         <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [PoliceStationName] FROM [PoliceStation]"></asp:SqlDataSource>
                     </div>
                     <div>
-                        <label><i class="fa-solid fa-gem"></i> Valuable Type</label>
+                        <label><i class="fa-solid fa-gem"></i>Valuable Type</label>
                         <asp:DropDownList ID="MVType" runat="server" class="cc-box">
                             <asp:ListItem Selected="True">--select--</asp:ListItem>
                             <asp:ListItem>FIne Art</asp:ListItem>
@@ -55,19 +45,19 @@
                 <div>
                     <div>
                         <label>
-                            <i class="fa-solid fa-indian-rupee-sign"></i> Valuable Cost<asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="MVCost" ErrorMessage="valuable cost required" ForeColor="#FF5050">*</asp:RequiredFieldValidator>
+                            <i class="fa-solid fa-indian-rupee-sign"></i>Valuable Cost<asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="MVCost" ErrorMessage="valuable cost required" ForeColor="#FF5050">*</asp:RequiredFieldValidator>
                         </label>
                         <asp:TextBox ID="MVCost" runat="server" class="cc-box"></asp:TextBox>
                     </div>
                     <div>
                         <label>
-                            <i class="fa-solid fa-user-secret"></i> Any suspect<asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="MVSuspect" ErrorMessage="Suspets required, if none then write &quot;not known&quot;" ForeColor="#FF5050">*</asp:RequiredFieldValidator>
+                            <i class="fa-solid fa-user-secret"></i>Any suspect<asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="MVSuspect" ErrorMessage="Suspets required, if none then write &quot;not known&quot;" ForeColor="#FF5050">*</asp:RequiredFieldValidator>
                         </label>
                         <asp:TextBox ID="MVSuspect" runat="server" class="cc-box"></asp:TextBox>
                     </div>
                     <div>
                         <label>
-                            <i class="fa-solid fa-file-invoice-dollar"></i> Valuable or valuable Receipt Photo<asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="FileUpload1" ErrorMessage="Valuable recipt image required" ForeColor="#FF5050">*</asp:RequiredFieldValidator>
+                            <i class="fa-solid fa-file-invoice-dollar"></i>Valuable or valuable Receipt Photo<asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="FileUpload1" ErrorMessage="Valuable recipt image required" ForeColor="#FF5050">*</asp:RequiredFieldValidator>
                         </label>
                         <asp:FileUpload ID="FileUpload1" runat="server" class="cc-box" />
                         <asp:Literal ID="Literal1" runat="server"></asp:Literal>
@@ -77,7 +67,7 @@
                 <div>
                     <div>
                         <label>
-                            <i class="fa-solid fa-receipt"></i> Valuable Details<asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="MVDetails" ErrorMessage="details required" ForeColor="#FF5050">*</asp:RequiredFieldValidator>
+                            <i class="fa-solid fa-receipt"></i>Valuable Details<asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="MVDetails" ErrorMessage="details required" ForeColor="#FF5050">*</asp:RequiredFieldValidator>
                         </label>
                         <asp:TextBox ID="MVDetails" runat="server" class="cc-box" placeholder="write few identification of valuables..."></asp:TextBox>
                         <br />
@@ -87,7 +77,7 @@
                 <div>
                     <div>
                         <label>
-                            <i class="fa-solid fa-calendar-days"></i> Current Date & Time<asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ControlToValidate="MVCurrentDate" ErrorMessage="datetime required" ForeColor="#FF5050">*</asp:RequiredFieldValidator>
+                            <i class="fa-solid fa-calendar-days"></i>Current Date & Time<asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ControlToValidate="MVCurrentDate" ErrorMessage="datetime required" ForeColor="#FF5050">*</asp:RequiredFieldValidator>
                         </label>
                         <asp:TextBox ID="MVCurrentDate" runat="server" class="cc-box" TextMode="DateTimeLocal" placeholder="enter current date and time"></asp:TextBox>
                         <br />
@@ -104,7 +94,7 @@
         <%--grid view--%>
         <div class="valuable-grid">
             <h2 class="p-3">
-                    <img src="../dist/img/diamond_2600353.png" style="width: 60px;" />Missing Valuable Report</h2>
+                <img src="../dist/img/diamond_2600353.png" style="width: 60px;" />Missing Valuable Report</h2>
             <asp:GridView ID="GridView1" CssClass="table table-group-divider " runat="server" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="MVId" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None">
                 <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
                 <Columns>

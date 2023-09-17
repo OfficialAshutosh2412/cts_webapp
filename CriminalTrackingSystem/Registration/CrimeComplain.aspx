@@ -6,17 +6,6 @@
         <%--form--%>
         <div class="crime-complain-form">
             <div>
-                <asp:UpdatePanel ID="UpdatePanel1" runat="server">
-                    <ContentTemplate>
-                        <asp:Label ID="Label1" runat="server" Class="p-2 text-white bg-danger"></asp:Label>
-                    </ContentTemplate>
-                    <Triggers>
-                        <asp:AsyncPostBackTrigger ControlID="Timer1" EventName="Tick" />
-                    </Triggers>
-                </asp:UpdatePanel>
-                <%--date time renderer--%>
-                <asp:Timer ID="Timer1" runat="server" OnTick="Timer1_Tick" Interval="1000">
-                </asp:Timer>
                 <%--first row--%>
                 <div>
                     <div>
