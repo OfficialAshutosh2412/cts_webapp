@@ -16,7 +16,7 @@
     z-index: 99999;
 }
 .about h1 *, .top-bar a, a {
-    text-decoration: none
+    text-decoration: none;
 }
 
 .hero, .news, .services-item {
@@ -40,7 +40,7 @@
 }
 
 .navbar .container-fluid {
-    background: var(--tan)
+    background: #1e9b56
 }
 
 .navbar {
@@ -221,7 +221,7 @@
 }
 
 .hide-top {
-    transform: translateX(100%)
+    transform: translateX(110%)
 }
 
 .top-bar a, .top-bar i {
@@ -259,8 +259,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(#aa3636 70%,#fff 50%);
-    color: #fff
 }
 
 .services {
@@ -272,7 +270,8 @@
 
 .services-item {
     margin: 10px;
-    border: 1px solid red
+    box-shadow:1px 1px 10px 0px #dbdbdb;
+    color:white;
 }
 
     .services-item img {
@@ -287,7 +286,9 @@
 
     .services-item div:first-child {
         position: absolute;
-        background: #aa3636;
+        background-position: center;
+        background-image: url('../img/abstract-gradient-neon-lights.jpg');
+        background-size: cover;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -393,16 +394,20 @@
         transform: rotate(360deg)
     }
 }
-
+.about-services {
+    
+}
 .about {
-    background: #aa3636;
     padding: 4% 0;
-    color: #fff
+    color: black;
+    background-image: url('../img/3167099.jpg') !important;
+    background-size: cover;
+    background-position: center
 }
 
 .card-info {
     width: 100%;
-    margin: 0 auto 50px
+    margin: 0 auto;
 }
 
 .about h1 * {
@@ -428,7 +433,8 @@
     border: 1px solid gray;
     margin: 0 10px;
     padding: 1%;
-    box-shadow: 3px 3px 10px 0 #fff
+    box-shadow: 3px 3px 10px 0 #fff;
+    background: rgba(255,255,255,0.5);
 }
 
 .admin-card, .counterbtn {
@@ -476,12 +482,13 @@
 }
 
     .gallery-card div {
+       background:white;
         width: 100%;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        box-shadow: 2px 2px 10px 0px #bdbdbd;
+        box-shadow: 0px 0px 10px 0px #c1c1c1;
         padding: 1%;
         height: 50%;
         margin: 1%;
@@ -681,11 +688,6 @@
 }
 
 .contact-us-container {
-    background-image: url('../img/17973908.jpg');
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -693,14 +695,13 @@
     align-items: center;
     height: 100%;
     font-size: 11pt;
-    margin-top: 30px;
     padding: 2%
 }
 
 .contact-us-container-form {
-    border: 1px solid #bebebe;
-    border-radius: 10px;
-    backdrop-filter: blur(100px)
+    width: 83%;
+    background:white;
+    box-shadow:0px 0px 15px 0px #c8c8c8;
 }
 
 .member {
@@ -708,21 +709,23 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center
+    align-items: center;
 }
 
     .member .mentor {
         margin: 5px;
-        width: 70%;
+        width: 80%;
         display: flex;
         justify-content: start;
         align-items: center;
-        background: linear-gradient(267deg,#aa3636,#e65151);
-        padding: 1%
+        box-shadow: 0px 0px 15px 0px #d0d0d0;
+        padding: 1%;
+        background: white;
+        box-shadow: 0px 0px 15px 0px #c8c8c8;
     }
 
         .member .mentor:nth-child(2) {
-            flex-direction: row-reverse
+            flex-direction: row-reverse;
         }
 
         .member .mentor .image {
@@ -749,7 +752,6 @@
         }
 
         .member .mentor .image-data {
-            color: #fff;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -795,7 +797,10 @@
 
 .signin {
     width: 40%;
-    margin: 5% auto
+    margin: 5% auto;
+   
+    background-position:center;
+    box-shadow:0px 0px 10px 0px #d1d1d1;
 }
     .signin .cc-box {
         border-top: none;
@@ -808,7 +813,7 @@
     }
 
 .footer {
-    background: #ffe3a9;
+    background: #1e9b56;
     text-align: center;
     text-transform: capitalize;
     bottom: 0
@@ -828,21 +833,24 @@
 }
 
     .footer-follow a {
-        color: #000;
+        color: white;
         padding-right: 1%;
         font-size: 1.4em
     }
 
 .footer h6 {
-    font-weight: 600
+    font-weight: 600;
+    color:white;
 }
 
 .rights {
+    display: flex;
     align-items: center;
     justify-content: center;
-    background: #fdc38d;
+    background: #30854b;
     font-size: .9em;
-    font-weight: 600
+    font-weight: 600;
+    color: white;
 }
 
 .customContainer {
@@ -870,6 +878,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    
 }
 
 .profile-box {
@@ -879,6 +888,9 @@
     padding: 2%;
     border-radius: 10px;
     box-shadow: 0px 0px 15px 0px #d0d0d0;
+    background-image: url('../img/v904-nunny-017-d.jpg');
+    background-size: cover;
+    background-position: right;
 }
 
 .profile .profile-img {
@@ -951,9 +963,11 @@
             height: 90vh
         }
 
-.crime-complain-form, .missing-sub-form, .valuable-form {
+.crime-complain-form, .missing-sub-form, .valuable-form, .complain-form {
     padding: 1%;
-    background: #fdc38d;
+    background-image: url('../img/v904-nunny-017-d.jpg') !important;
+    background-size: cover;
+    background-position: center;
     overflow: scroll
 }
 
@@ -993,6 +1007,7 @@
     margin: 0 auto;
     margin-top:20px;
     box-shadow: 0px 0px 20px #d9d9d9;
+    background:#cfd8ff;
 }
 .register-card {
     width: 90%;
@@ -1018,13 +1033,18 @@
         .register-card div img {
             width: 30%
         }
+    .register-card div {
+        background-image: url('../img/v904-nunny-012.jpg');
+        background-size: cover;
+        background-position: center;
+    }
 
-.admin-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: #00a9c7
-}
+    .admin-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: #00a9c7
+    }
 
 .admin-items {
     display: flex;
@@ -1074,7 +1094,7 @@
     height: 64vh;
     width: 100%;
     overflow: scroll;
-    border: 1px solid skyblue;
+    border:2px solid gray;
 }
 
 .session-name {
@@ -1159,14 +1179,13 @@
     width:80%;
     margin:0 auto;
 }
-    .help h1{
-        box-shadow:0px 0px 10px 0px #dcdcdc;
-        padding:2%;
-        margin-top:30px;
-        font-weight:300;
-        background:#256bae;
-        color:white;
-        border-radius:6px
+    .help h1 {
+        box-shadow: 0px 0px 20px #d9d9d9;
+        background: #cfd8ff;
+        padding: 2%;
+        margin-top: 30px;
+        font-weight: 600;
+        border-radius: 6px
     }
 .help-db {
     width: 100%;
@@ -1342,7 +1361,7 @@
 
 @media screen and (max-width:682px) {
     .hero {
-        height: 100%
+        height: 100%;
     }
 
     .services-item, .services-item div {
@@ -1363,7 +1382,7 @@
 
     .hero .right {
         align-items: center;
-        height: 60vh;
+        height: 80vh;
         justify-content: center !important;
         backdrop-filter: blur(10px)
     }

@@ -3,6 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+
     <div class="event-gallery-container">
         <div class="img-thumb">
             <asp:Image CssClass="imgbtn" ImageUrl="~/dist/img/Happy-Independence-Day-Images1_64da6e31a9b59.jpg" runat="server" />

@@ -75,10 +75,10 @@
         </div>
     </div>
 
-    <div class="">
-        <div>
-            
-        </div>
-        <div></div>
+    <div class="register-welcome" style="margin-top:5px !important;margin-bottom:10px !important">
+        <h1>Dear user, 
+            <asp:Label ID="Label2" Text="We have made help portal for you." runat="server" Font-Size="XX-Large" class="text-capitalize"></asp:Label>
+            <asp:HyperLink ID="HyperLink6" runat="server" title="profile" NavigateUrl="~/Registration/Help.aspx"><i class="fa-solid fa-angle-right"></i></asp:HyperLink>
+        </h1>
     </div>
 </asp:Content>

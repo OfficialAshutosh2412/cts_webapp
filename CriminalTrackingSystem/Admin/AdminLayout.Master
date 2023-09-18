@@ -19,7 +19,7 @@
         <nav class="admin-nav">
             <div class="admin-title">
                 <h3 class="p-2 d-flex align-items-center w-100">
-                    <img src="../dist/img/cts_logo.png" />
+                    <asp:HyperLink NavigateUrl="~/Admin/AdminHome.aspx" runat="server"><img src="../dist/img/cts_logo.png" /></asp:HyperLink>
                     &nbsp;|&nbsp; <i class="fa-solid fa-mask"></i>Admin Dashboard
                 </h3>
             </div>

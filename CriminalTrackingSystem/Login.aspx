@@ -3,7 +3,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
    <%--login--%>
-    <div class="signin bg-white p-5 shadow-lg rounded">
+    <div class="signin bg-white p-5  rounded">
         <h1>Login</h1>
         <div class="mb-3">
             <i class="fa-solid fa-user"></i><label class="form-label fw-bolder">Username</label>
@@ -16,7 +16,7 @@
         <div class="d-flex justify-content-start align-items-center">
             <asp:Button ID="Button1" runat="server" Text="login now !" OnClientClick="return validateLogin()" class="send p-2" OnClick="Button1_Click" /><br />
         </div>
-        <asp:HyperLink ID="HyperLink1" runat="server" CssClass="text-secondary" NavigateUrl="~/Signup.aspx">click here to create account...</asp:HyperLink>
+        <asp:HyperLink ID="HyperLink1" runat="server" CssClass="text-dark fw-bolder" NavigateUrl="~/Signup.aspx">click here to create account...</asp:HyperLink>
         <div>
             <asp:Label ID="Label1" runat="server" Font-Bold="True" Font-Size="Small" ForeColor="#FF5050"></asp:Label>
         </div>

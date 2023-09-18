@@ -2,6 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+
     <div class="gallery-card">
         <div>
             <h1><i class="fa-solid fa-images fa-beat-fade"></i> Event Gallery</h1>

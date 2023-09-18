@@ -12,7 +12,7 @@
         <link href="dist/css/style.css" rel="stylesheet" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     </head>
-    <body onload="myfunction()" class="body">
+    <body onload="myfunction()" class="body" vlink="coral" style="background:#eefff9;background-size:cover;">
         <%--preloader--%>
         <div class="preloader" id="preloader">
             <img src="dist/loader/Ripple-2.1s-204px.gif" />
@@ -43,40 +43,42 @@
             <%--header--%>
             <nav class="navbar navbar-expand-lg bg-body-tertiary p-0" id="nav">
                 <div class="container-fluid justify-content-between ">
-                    <a class="navbar-brand" href="#"><img src="dist/img/cts_logo.png" /></a>
-                    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <asp:HyperLink NavigateUrl="~/Home.aspx" CssClass="navbar-brand" runat="server"><img src="dist/img/cts_logo.png" /></asp:HyperLink>
+                    <button class="navbar-toggler border-0 bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon fw-bolder"></span>
                     </button>
                     <div class="collapse navbar-collapse justify-content-end" id="navbarNav">      
                         <ul class="navbar-nav ">
                             <li class="nav-item">
-                                <asp:HyperLink ID="HyperLink1" runat="server" class="nav-link text-dark" aria-current="page" NavigateUrl="~/Home.aspx"><i class="fa-solid fa-house"></i>Home</asp:HyperLink>
+                                <asp:HyperLink ID="HyperLink1" runat="server" class="nav-link text-light " aria-current="page" NavigateUrl="~/Home.aspx"><i class="fa-solid fa-house"></i>Home</asp:HyperLink>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-dark" href="/Home.aspx#about"><i class="fa-solid fa-circle-info"></i>About</a>
+                                <a class="nav-link text-light" href="/Home.aspx#about"><i class="fa-solid fa-circle-info"></i>About</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-dark" href="/Home.aspx#services"><i class="fa-solid fa-cubes"></i>Services</a>
+                                <a class="nav-link text-light" href="/Home.aspx#services"><i class="fa-solid fa-cubes"></i>Services</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-dark" href="/Home.aspx#gallery"><i class="fa-solid fa-images"></i>Gallery</a>
+                                <asp:HyperLink class="nav-link text-light" NavigateUrl="~/Gallery.aspx" runat="server"><i class="fa-solid fa-images"></i>Gallery</asp:HyperLink>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-dark" href="/Home.aspx#contact"><i class="fa-solid fa-message"></i>Contact us</a>
+                                <a class="nav-link text-light" href="/Home.aspx#contact"><i class="fa-solid fa-message"></i>Contact us</a>
                             </li>
                             <li class="nav-item">
-                                <a  class="nav-link" href="/Home.aspx#faq"><i class="fa-solid fa-file-circle-question"></i>FAQ</a>
+                                <a  class="nav-link text-light" href="/Home.aspx#faq"><i class="fa-solid fa-file-circle-question"></i>FAQ</a>
                             </li>
                             <li class="nav-item nav-link">
-                                <asp:HyperLink NavigateUrl="~/News.aspx" runat="server" CssClass="text-dark"><i class="fa-solid fa-newspaper"></i>News</asp:HyperLink>
+                                <asp:HyperLink NavigateUrl="~/News.aspx" runat="server" CssClass="text-light"><i class="fa-solid fa-newspaper"></i>News</asp:HyperLink>
                             </li>
                             <li class="nav-item nav-link" id="login-tog">
-                                <asp:HyperLink ID="HyperLink2" runat="server" CssClass="text-dark" NavigateUrl="~/Login.aspx"><i class="fa-solid fa-arrow-right-to-bracket " ></i>Login</asp:HyperLink>
+                                <asp:HyperLink ID="HyperLink2" runat="server" CssClass="text-light" NavigateUrl="~/Login.aspx"><i class="fa-solid fa-arrow-right-to-bracket " ></i>Login</asp:HyperLink>
                             </li>
                         </ul>
                     </div>
                 </div>
             </nav>
+            
+            
             <%--content holder--%>
             <div>
                 <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
