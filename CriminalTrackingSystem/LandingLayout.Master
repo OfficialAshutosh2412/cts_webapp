@@ -18,8 +18,23 @@
             <img src="dist/loader/Ripple-2.1s-204px.gif" />
         </div>
         <form id="form1" runat="server">
-            <i class="fa-solid fa-language fa-bounce  hidden-tool-box " id="tool-toggler"></i>
-            <asp:HyperLink NavigateUrl="https://wa.me/6386239194" runat="server" CssClass="whap-link" ><i class="fa-brands fa-bounce fa-square-whatsapp" style="color: #21b506;"></i></asp:HyperLink> 
+            <div class=" whap-link" style="bottom: 50px; right: 10px;"><i class="fa-solid fa-language" id="tool-toggler"></i></div>
+            <div class=" whap-link" style="bottom: 170px; right: 10px;"><a><i class="fa-solid fa-comments" onclick="showFeed()"></i></a></div>
+            <div class=" whap-link" style="bottom: 110px; right: 10px;">
+                <asp:HyperLink NavigateUrl="https://wa.me/6386239194" runat="server" CssClass="text-light"><i class="fa-brands fa-whatsapp"></i></asp:HyperLink>
+            </div>
+            <div class="feedback show-feeds">
+                <div>
+                    <h1><i class="fa-solid fa-hand-holding-heart"></i></h1>
+                    <h1>HELP US IN MAKING IT BETTER</h1>
+                    <p>
+                        We welcome your participation in enhancing the portal further
+                        and also invite your comments and suggestions for improvement
+                    </p>
+                    <asp:HyperLink NavigateUrl="navigateurl" runat="server" Text="give us your feedback..." CssClass="send" />
+                </div>
+            </div>
+
             <%--top bar--%>
             <div class="top-bar hide-top">
                 <div><asp:Label ID="Label1" runat="server"></asp:Label></div>
@@ -41,8 +56,8 @@
                 </div>
             </div>
             <%--header--%>
-            <nav class="navbar navbar-expand-lg bg-body-tertiary p-0" id="nav">
-                <div class="container-fluid justify-content-between ">
+            <nav class="navbar dark-mode navbar-expand-lg bg-body-tertiary p-0" id="nav">
+                <div class="container-fluid justify-content-between " id="navigator">
                     <asp:HyperLink NavigateUrl="~/Home.aspx" CssClass="navbar-brand" runat="server"><img src="dist/img/cts_logo.png" /></asp:HyperLink>
                     <button class="navbar-toggler border-0 bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon fw-bolder"></span>

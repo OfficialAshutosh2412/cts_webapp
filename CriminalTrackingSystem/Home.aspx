@@ -3,6 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    
     <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [Faq] ORDER BY [FaqId], [Question], [Answer]"></asp:SqlDataSource>
     <%--hero--%>
     <div class="hero" id="hero">
@@ -20,7 +21,7 @@
     <div class="about-services">
         <%--about--%>
         <div class="about" id="about">
-            <h1 class="section-title"><span><i class="fa-solid fa-circle-info"></i>About</span> Us</h1>
+            <h1 class="section-title" id="section-title""><span><i class="fa-solid fa-circle-info"></i>About</span> Us</h1>
             <div class="card-info">
                 <div class="card-info-sections">
                     <div class="card-item">
@@ -145,10 +146,10 @@
                 <p><strong>Mr. Sushant Pathhak</strong> project mentor.</p>
                 <small>Project Scientist at Remote Sensing Applications Centre Uttar Pradesh, Lucknow</small>
                 <div class="member-link">
-                    <a href="https://www.facebook.com/engg.superpower" target="_blank"><i class="fa-brands fa-bounce fa-facebook-f text-dark"></i></a>
-                    <a href="https://www.instagram.com/scientistsushantpathak/" target="_blank"><i class="fa-brands fa-bounce fa-square-instagram text-dark"></i></a>
-                    <a href="https://www.indiamart.com/sunriseinfotechsolution/" target="_blank"><i class="fa-solid fa-bounce fa-cart-shopping text-dark"></i></a>
-                    <a href="http://www.sunriseinfotechsolution.com/Anonymous/Home.aspx" target="_blank"><i class="fa-solid fa-bounce fa-globe text-dark"></i></a>
+                    <a href="https://www.facebook.com/engg.superpower" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/scientistsushantpathak/" target="_blank"><i class="fa-brands fa-square-instagram "></i></a>
+                    <a href="https://www.indiamart.com/sunriseinfotechsolution/" target="_blank"><i class="fa-solid fa-cart-shopping"></i></a>
+                    <a href="http://www.sunriseinfotechsolution.com/Anonymous/Home.aspx" target="_blank"><i class="fa-solid fa-globe "></i></a>
                 </div>
             </div>
         </div>
@@ -161,17 +162,40 @@
                 <p><strong>Mr. Ashutosh Prasad</strong> project developer.</p>
                 <small>MCA graduate from AIET and a full stack developer on python & ASP.NET with MVC</small>
                 <div class="member-link">
-                    <a href="https://www.facebook.com/ashutosh.prasad.754365/" target="_blank"><i class="fa-brands fa-bounce  fa-facebook-f text-dark"></i></a>
-                    <a href="https://www.instagram.com/official.ashu.2000/" target="_blank"><i class="fa-brands fa-bounce fa-square-instagram text-dark"></i></a>
-                    <a href="https://twitter.com/Ashutos96662173" target="_blank"><i class="fa-brands fa-twitter fa-bounce text-dark"></i></a>
-                    <a href="https://wa.me/6386239194" target="_blank"><i class="fa-brands fa-square-whatsapp fa-bounce text-dark"></i></a>
-                    <a href="https://github.com/OfficialAshutosh2412?tab=repositories" target="_blank"><i class="fa-brands fa-bounce fa-github text-dark"></i></a>
+                    <a href="https://www.facebook.com/ashutosh.prasad.754365/" target="_blank"><i class="fa-brands fa-facebook-f "></i></a>
+                    <a href="https://www.instagram.com/official.ashu.2000/" target="_blank"><i class="fa-brands fa-square-instagram "></i></a>
+                    <a href="https://twitter.com/Ashutos96662173" target="_blank"><i class="fa-brands fa-twitter "></i></a>
+                    <a href="https://wa.me/6386239194" target="_blank"><i class="fa-brands fa-square-whatsapp "></i></a>
+                    <a href="https://github.com/OfficialAshutosh2412?tab=repositories" target="_blank"><i class="fa-brands fa-github "></i></a>
                 </div>
             </div>
         </div>
     </div>
+    <%--other sites--%>
+    <div class="other-sites">
+        <div>
+            <asp:HyperLink NavigateUrl="https://pgportal.gov.in/" runat="server" Target="_blank">
+                <img src="dist/img/cpgrams.png" />
+            </asp:HyperLink>
+        </div>
+        <div>
+            <asp:HyperLink NavigateUrl="https://data.gov.in/" runat="server" Target="_blank"><img src="dist/img/data-gov.png" /></asp:HyperLink>
+        </div>
+        <div>
+            <asp:HyperLink NavigateUrl="https://www.g20.org/en/" runat="server" Target="_blank"><img src="dist/img/g20_logo.png" /></asp:HyperLink>
+        </div>
+        <div>
+            <asp:HyperLink NavigateUrl="https://www.india.gov.in/" runat="server" Target="_blank"> <img src="dist/img/india-gov.png" /></asp:HyperLink>
+        </div>
+        <div>
+            <asp:HyperLink NavigateUrl="https://www.nic.in/" runat="server" Target="_blank"><img src="dist/img/logo-nic-blue.png" /></asp:HyperLink>
+        </div>
+        <div>
+            <asp:HyperLink NavigateUrl="https://www.mygov.in/" runat="server" Target="_blank"><img src="dist/img/mygov.png" /></asp:HyperLink>
+        </div>
+    </div>
     <%--faq--%>
-    <div class="mt-3" id="faq">
+    <div class=" bg-light" id="faq">
         <h3><i class="fa-solid fa-file-circle-question"></i>Frequently Asked Questions...</h3>
         <div class="faq-grid">
             <asp:GridView ID="GridView1" runat="server" CssClass="border-0 w-100 bg-light" AutoGenerateColumns="False" DataKeyNames="FaqId" DataSourceID="SqlDataSource1" Width="637px">
