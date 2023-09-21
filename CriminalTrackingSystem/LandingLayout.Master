@@ -18,11 +18,22 @@
             <img src="dist/loader/Ripple-2.1s-204px.gif" />
         </div>
         <form id="form1" runat="server">
-            <div class=" whap-link" style="bottom: 50px; right: 10px;"><i class="fa-solid fa-language" id="tool-toggler"></i></div>
-            <div class=" whap-link" style="bottom: 170px; right: 10px;"><a><i class="fa-solid fa-comments" onclick="showFeed()"></i></a></div>
-            <div class=" whap-link" style="bottom: 110px; right: 10px;">
+            <div class=" whap-link" style="bottom: 230px; right: 10px;cursor:pointer"><i class="fa-solid fa-brush" id="theme"></i></div>
+            <div class=" whap-link" style="bottom: 50px; right: 10px;cursor:pointer"><i class="fa-solid fa-language" id="tool-toggler"></i></div>
+            <div class=" whap-link" style="bottom: 170px; right: 10px;cursor:pointer"><a><i class="fa-solid fa-comments" onclick="showFeed()"></i></a></div>
+            <div class=" whap-link" style="bottom: 110px; right: 10px;cursor:pointer">
                 <asp:HyperLink NavigateUrl="https://wa.me/6386239194" runat="server" CssClass="text-light"><i class="fa-brands fa-whatsapp"></i></asp:HyperLink>
             </div>
+            <%--theme--%>
+            <div class="themes">
+                <ul>
+                    <li id="red" onclick="themeRed()"></li>
+                    <li id="blue" onclick="themeBlue()"></li>
+                    <li id="black" onclick="themeBlack()"></li>
+                </ul>
+                <div class="content"></div>
+            </div>
+            <%--feedback--%>
             <div class="feedback show-feeds">
                 <div>
                     <h1><i class="fa-solid fa-hand-holding-heart"></i></h1>
@@ -34,7 +45,6 @@
                     <asp:HyperLink NavigateUrl="~/Feedback.aspx" runat="server" Text="give us your feedback..." CssClass="send" />
                 </div>
             </div>
-
             <%--top bar--%>
             <div class="top-bar hide-top">
                 <div><asp:Label ID="Label1" runat="server"></asp:Label></div>
@@ -119,7 +129,26 @@
             </footer>
         </form>
 
-
+        <script>
+            //theme switcher
+            function themeRed() {
+                localStorage.clear();
+                document.querySelector('#navigator').style.backgroundColor = 'salmon';
+                localStorage.setItem('red', this);
+            }
+            function themeBlue() {
+                localStorage.clear();
+                document.querySelector('#navigator').style.backgroundColor = 'blue';
+                localStorage.setItem('blue', this);
+            }
+            if (localStorage.getItem('red')) {
+                document.querySelector('#navigator').style.backgroundColor = 'salmon';
+            }
+            if (localStorage.getItem('blue')) {
+                document.querySelector('#navigator').style.backgroundColor = 'blue';
+            }
+            
+        </script>
         <script src="dist/js/bootstrap.bundle.min.js"></script>    
         <script src="dist/js/custom.js"></script>
         <script src="dist/js/jquery.js"></script>

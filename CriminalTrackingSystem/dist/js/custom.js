@@ -31,6 +31,4 @@ document.querySelector('#chandraclose').addEventListener("click", () => {
 function showFeed() {
     document.querySelector('.feedback').classList.toggle('show-feeds');
 }
-//document.querySelector('tool-toggler').addEventListener("click", () => {
-//    alert("hi here");
-//});
+
