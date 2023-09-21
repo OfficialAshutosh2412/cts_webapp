@@ -5,24 +5,24 @@
     <h1><i class="fa-solid fa-newspaper text-light"></i> News</h1>
     <hr />
     <div class="policeContainer">
-        <div class="policeItem">
+        <div class="policeItem news-details">
             <div>
                 <asp:Label Text="Title" runat="server" />
                 <asp:TextBox runat="server" ID="title" CssClass="cc-box" placeholder="Title of news"/>
             </div>
-            <div style="width:30%">
+            <div class=" news-date   news-details" style="width:30%">
                 <asp:Label Text="Date" runat="server" />
                 <asp:TextBox runat="server" ID="datetime" CssClass="cc-box" TextMode="DateTimeLocal"/>
             </div>
         </div>
-        <div class="policeItem">
-            <div >
+        <div class="policeItem news-details">
+            <div class="">
                 <asp:Label Text="Details" runat="server" />
                 <asp:TextBox runat="server" ID="data" CssClass="cc-box" placeholder="Details of news"/>
             </div>            
         </div>
-        <div class="policeItem">
-            <div style="width:10%">
+        <div class="policeItem news-details">
+            <div class="news-btn" style="width:10%">
                 <asp:Button Text="send" runat="server"  CssClass="send" OnClick="Unnamed4_Click" />
             </div>
         </div>
