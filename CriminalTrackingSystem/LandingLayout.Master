@@ -31,7 +31,7 @@
                         We welcome your participation in enhancing the portal further
                         and also invite your comments and suggestions for improvement
                     </p>
-                    <asp:HyperLink NavigateUrl="navigateurl" runat="server" Text="give us your feedback..." CssClass="send" />
+                    <asp:HyperLink NavigateUrl="~/Feedback.aspx" runat="server" Text="give us your feedback..." CssClass="send" />
                 </div>
             </div>
 

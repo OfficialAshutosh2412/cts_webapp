@@ -162,6 +162,7 @@
     <Content Include="dist\loader\Ripple-2.1s-204px.gif" />
     <Content Include="Error_message.aspx" />
     <Content Include="EventGallery.aspx" />
+    <Content Include="Feedback.aspx" />
     <Content Include="Gallery.aspx" />
     <Content Include="Home.aspx" />
     <Content Include="Login.aspx" />
@@ -277,6 +278,13 @@
     </Compile>
     <Compile Include="EventGallery.aspx.designer.cs">
       <DependentUpon>EventGallery.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Feedback.aspx.cs">
+      <DependentUpon>Feedback.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Feedback.aspx.designer.cs">
+      <DependentUpon>Feedback.aspx</DependentUpon>
     </Compile>
     <Compile Include="Gallery.aspx.cs">
       <DependentUpon>Gallery.aspx</DependentUpon>
