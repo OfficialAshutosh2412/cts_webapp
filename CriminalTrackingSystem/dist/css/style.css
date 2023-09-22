@@ -1,25 +1,46 @@
 ﻿/*theme*/
-.themes ul{
+.themes{
+    width:fit-content;
+    height:100vh;
     display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    background:#ededed;
+    position:fixed;
+    z-index:6669999;
+    transition:0.5s all ease-in-out;
+}
+.theme-hide{
+    transform:translateX(-100%);
+}
+.themes ul {
+    width: fit-content;
+    padding-right:30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height:100%;
+    align-items: center
 }
     .themes ul li {
         list-style: none;
-        width: 30px;
-        height: 30px;
+        width: 40px;
+        height: 40px;
         box-shadow: 0px 0px 5px 0px #adadad;
         cursor: pointer;
-        margin: 1%;
         transition:0.4s all ease-in-out;
+        border-radius:100%;
     }
     .themes ul li:nth-of-type(1){
-        background:red;
+        background:crimson;
     }
-    .themes ul li:nth-of-type(2) {
-        background: blue;
-    }
-    .themes ul li:nth-of-type(3) {
-        background: black;
-    }
+        .themes ul li:nth-of-type(2) {
+            background: #1b2987;
+        }
+        .themes ul li:nth-of-type(3) {
+            background: #007e8a;
+        }
 
 
     .preloader {
@@ -45,6 +66,7 @@
     background:#1c9d56;
     color:white;
     border-radius:100%;
+    transition:0.5s all ease-in-out;
 }
 .about h1 *, .top-bar a, a {
     text-decoration: none;

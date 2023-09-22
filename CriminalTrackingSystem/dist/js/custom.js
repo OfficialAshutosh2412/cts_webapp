@@ -31,4 +31,14 @@ document.querySelector('#chandraclose').addEventListener("click", () => {
 function showFeed() {
     document.querySelector('.feedback').classList.toggle('show-feeds');
 }
+//theme panel hidden
+function showTheme() {
+    document.querySelector('.themes').classList.toggle('theme-hide');
+    //auto hide theme panel
+   setTimeout(() => {
+       document.querySelector('.themes').classList.toggle('theme-hide');
+    }, 2500);
+}
+
+
 

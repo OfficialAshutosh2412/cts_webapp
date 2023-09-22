@@ -18,18 +18,18 @@
             <img src="dist/loader/Ripple-2.1s-204px.gif" />
         </div>
         <form id="form1" runat="server">
-            <div class=" whap-link" style="bottom: 230px; right: 10px;cursor:pointer"><i class="fa-solid fa-brush" id="theme"></i></div>
-            <div class=" whap-link" style="bottom: 50px; right: 10px;cursor:pointer"><i class="fa-solid fa-language" id="tool-toggler"></i></div>
-            <div class=" whap-link" style="bottom: 170px; right: 10px;cursor:pointer"><a><i class="fa-solid fa-comments" onclick="showFeed()"></i></a></div>
-            <div class=" whap-link" style="bottom: 110px; right: 10px;cursor:pointer">
+            <div class=" whap-link" style="bottom: 230px; right: 10px;cursor:pointer" id="themeSwitch" ><i class="fa-solid fa-brush" id="theme" onclick="showTheme()"></i></div>
+            <div class=" whap-link" style="bottom: 50px; right: 10px;cursor:pointer" id="translator"><i class="fa-solid fa-language" id="tool-toggler"></i></div>
+            <div class=" whap-link" style="bottom: 170px; right: 10px;cursor:pointer" id="feedbackBtn"><a><i class="fa-solid fa-comments" onclick="showFeed()"></i></a></div>
+            <div class=" whap-link" style="bottom: 110px; right: 10px;cursor:pointer" id="whats">
                 <asp:HyperLink NavigateUrl="https://wa.me/6386239194" runat="server" CssClass="text-light"><i class="fa-brands fa-whatsapp"></i></asp:HyperLink>
             </div>
             <%--theme--%>
-            <div class="themes">
+            <div class="themes theme-hide">
                 <ul>
-                    <li id="red" onclick="themeRed()"></li>
+                    <li id="crimson" onclick="crimson()"></li>
                     <li id="blue" onclick="themeBlue()"></li>
-                    <li id="black" onclick="themeBlack()"></li>
+                    <li id="black" onclick="slate()"></li>
                 </ul>
                 <div class="content"></div>
             </div>
@@ -102,15 +102,13 @@
                     </div>
                 </div>
             </nav>
-            
-            
             <%--content holder--%>
             <div>
                 <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
                 </asp:ContentPlaceHolder>
             </div>
             <%--footer--%>
-            <footer class="footer">
+            <footer class="footer" id="footer">
             <div class="footer-brand">
                 <img src="./dist/img/cts_logo.png" alt="">
             </div>
@@ -123,29 +121,68 @@
                     <a href="https://wa.me/6386239194" target="_blank"><i class="fa-brands fa-square-whatsapp"></i></a>
                 </div>
             </div>
-                <div class="rights">
+                <div class="rights" id="rights">
                     <p>All rights are reserved &copy;Criminal tracking system 2023 .inc</p>
                 </div>
             </footer>
         </form>
 
         <script>
-            //theme switcher
-            function themeRed() {
-                localStorage.clear();
-                document.querySelector('#navigator').style.backgroundColor = 'salmon';
-                localStorage.setItem('red', this);
+            //def red
+            function applyRed() {
+                let crim = document.querySelectorAll('#navigator, #rights, #themeSwitch, #feedbackBtn, #whats, #translator');
+                for (var i = 0; i < crim.length; i++) {
+                    crim[i].style.backgroundColor = 'crimson'
+                }
+                document.querySelector('#footer').style.backgroundColor = '#c21135';
+                document.body.style.backgroundColor = '#fcf2f4';
+            };
+            //def blue
+            function applyBlue() {
+                let bl = document.querySelectorAll('#navigator, #rights, #themeSwitch, #feedbackBtn, #whats, #translator');
+                for (var i = 0; i < bl.length; i++) {
+                    bl[i].style.backgroundColor = '#1b2987'
+                }
+                document.querySelector('#footer').style.backgroundColor = '#3952cc';
+                document.body.style.backgroundColor = '#f0f2ff';
             }
+            //def slate
+            function applySlate() {
+                let sl = document.querySelectorAll('#navigator, #rights, #themeSwitch, #feedbackBtn, #whats, #translator');
+                for (var i = 0; i < sl.length; i++) {
+                    sl[i].style.backgroundColor = '#007e8a'
+                }
+                document.querySelector('#footer').style.backgroundColor = '#03a0ab';
+                document.body.style.backgroundColor = '#edfbfc';
+            }
+            //theme red button
+            function crimson() {
+                localStorage.clear();
+                applyRed();
+                localStorage.setItem('crimson', this);
+            }
+            //theme blue button
             function themeBlue() {
                 localStorage.clear();
-                document.querySelector('#navigator').style.backgroundColor = 'blue';
+                applyBlue();
                 localStorage.setItem('blue', this);
             }
-            if (localStorage.getItem('red')) {
-                document.querySelector('#navigator').style.backgroundColor = 'salmon';
+            function slate() {
+                localStorage.clear();
+                applySlate();
+                localStorage.setItem('slate', this);
             }
+            //keep red
+            if (localStorage.getItem('crimson')) {
+                applyRed();
+            }
+            //keep blue
             if (localStorage.getItem('blue')) {
-                document.querySelector('#navigator').style.backgroundColor = 'blue';
+                applyBlue();
+            }
+            //keep slate
+            if (localStorage.getItem('slate')) {
+                applySlate();
             }
             
         </script>
