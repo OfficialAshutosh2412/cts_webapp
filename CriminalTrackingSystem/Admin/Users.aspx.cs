@@ -20,7 +20,6 @@ namespace CriminalTrackingSystem.Admin
                 Response.Redirect("~/Login.aspx");
             cmd.Connection = con;
         }
-
         protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (DropDownList1.SelectedValue == "--select--")
@@ -36,7 +35,6 @@ namespace CriminalTrackingSystem.Admin
                 ls.Text = "";
                 adhaar.Text = "";
                 phone.Text = "";
-                //picture.Text = "";
             }
             else
             {

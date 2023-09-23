@@ -20,7 +20,6 @@ namespace CriminalTrackingSystem.Admin
                 Response.Redirect("~/Login.aspx");
             cmd.Connection = con;
         }
-
         protected void Unnamed4_Click(object sender, EventArgs e)
         {
             con.Open();

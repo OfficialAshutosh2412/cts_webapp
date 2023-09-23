@@ -18,28 +18,6 @@ namespace CriminalTrackingSystem
         {
             cmd.Connection = con;
         }
-        protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
-        {
-            Response.Redirect("~/Gallery.aspx");
-        }
-
-        protected void ImageButton2_Click(object sender, ImageClickEventArgs e)
-        {
-            Response.Redirect("~/Gallery.aspx");
-        }
-
-        protected void ImageButton3_Click(object sender, ImageClickEventArgs e)
-        {
-            Response.Redirect("~/Gallery.aspx");
-        }
-
-        protected void ImageButton4_Click(object sender, ImageClickEventArgs e)
-        {
-            Response.Redirect("~/Gallery.aspx");
-        }
-
-       
-        
         protected void ContactBtn_Click(object sender, EventArgs e)
         {
             try

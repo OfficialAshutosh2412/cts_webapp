@@ -1,5 +1,4 @@
 ﻿<%@ Page Title="CTS | Admin | Records" Language="C#" MasterPageFile="~/Admin/AdminLayout.Master" AutoEventWireup="true" CodeBehind="Records.aspx.cs" Inherits="CriminalTrackingSystem.Admin.Admin_MP" %>
-
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">

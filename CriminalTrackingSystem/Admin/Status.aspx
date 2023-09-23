@@ -2,7 +2,6 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    
     <%--cc--%>
     <div class="admin-cc">
         <h3 ><i class="fa-solid fa-handcuffs counters"></i> Crime Complains Records</h3>

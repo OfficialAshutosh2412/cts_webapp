@@ -12,106 +12,107 @@
         <link href="dist/css/style.css" rel="stylesheet" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     </head>
-    <body onload="myfunction()" class="body" vlink="coral" style="background:#eefff9;background-size:cover;">
-        <%--preloader--%>
-        <div class="preloader" id="preloader">
-            <img src="dist/loader/Ripple-2.1s-204px.gif" />
+<body onload="myfunction()" class="body" vlink="coral" style="background: #eefff9; background-size: cover;">
+    <%--preloader--%>
+    <div class="preloader" id="preloader">
+        <img src="dist/loader/Ripple-2.1s-204px.gif" />
+    </div>
+    <form id="form1" runat="server">
+        <div class=" whap-link" style="bottom: 20px; right: 10px; cursor: pointer; z-index: 8889998" id="settings"><i class="fa-solid fa-gear fa-spin" id="setting" onclick="showSetting()"></i></div>
+        <div class=" whap-link themeSwitch" id="themeSwitch"><i class="fa-solid fa-brush" id="theme" onclick="showTheme()"></i></div>
+        <div class=" whap-link translator" id="translator"><i class="fa-solid fa-language" id="tool-toggler"></i></div>
+        <div class=" whap-link feedbackBtn" id="feedbackBtn"><a><i class="fa-solid fa-comments" onclick="showFeed()"></i></a></div>
+        <div class=" whap-link whats" id="whats">
+            <asp:HyperLink NavigateUrl="https://wa.me/6386239194" runat="server" CssClass="text-light"><i class="fa-brands fa-whatsapp"></i></asp:HyperLink>
         </div>
-        <form id="form1" runat="server">
-            <div class=" whap-link" style="bottom: 20px; right: 10px;cursor:pointer;z-index:8889998" id="settings" ><i class="fa-solid fa-gear fa-spin" id="setting" onclick="showSetting()"></i></div>
-            <div class=" whap-link themeSwitch" id="themeSwitch" ><i class="fa-solid fa-brush" id="theme" onclick="showTheme()"></i></div>
-            <div class=" whap-link translator" id="translator"><i class="fa-solid fa-language" id="tool-toggler"></i></div>
-            <div class=" whap-link feedbackBtn"  id="feedbackBtn"><a><i class="fa-solid fa-comments" onclick="showFeed()"></i></a></div>
-            <div class=" whap-link whats"  id="whats">
-                <asp:HyperLink NavigateUrl="https://wa.me/6386239194" runat="server" CssClass="text-light"><i class="fa-brands fa-whatsapp"></i></asp:HyperLink>
-            </div>
-            <%--theme--%>
-            <div class="themes theme-hide">
-                <ul>
-                    <li id="crimson" onclick="crimson()"></li>
-                    <li id="blue" onclick="themeBlue()"></li>
-                    <li id="slate" onclick="slate()"></li>
-                    <li id="green" onclick="green()"></li>
-                    <li id="kesar" onclick="kesar()"></li>
-                </ul>
-                <div class="content"></div>
-            </div>
-            <%--feedback--%>
-            <div class="feedback show-feeds">
-                <div>
-                    <h1><i class="fa-solid fa-hand-holding-heart"></i></h1>
-                    <h1>HELP US IN MAKING IT BETTER</h1>
-                    <p>
-                        We welcome your participation in enhancing the portal further
+        <%--theme--%>
+        <div class="themes theme-hide">
+            <ul>
+                <li id="crimson" onclick="crimson()"></li>
+                <li id="blue" onclick="themeBlue()"></li>
+                <li id="slate" onclick="slate()"></li>
+                <li id="green" onclick="green()"></li>
+                <li id="kesar" onclick="kesar()"></li>
+            </ul>
+            <div class="content"></div>
+        </div>
+        <%--feedback--%>
+        <div class="feedback show-feeds">
+            <div>
+                <h1><i class="fa-solid fa-hand-holding-heart"></i></h1>
+                <h1>HELP US IN MAKING IT BETTER</h1>
+                <p>
+                    We welcome your participation in enhancing the portal further
                         and also invite your comments and suggestions for improvement
-                    </p>
-                    <asp:HyperLink NavigateUrl="~/Feedback.aspx" runat="server" Text="give us your feedback..." CssClass="send" />
-                </div>
+                </p>
+                <asp:HyperLink NavigateUrl="~/Feedback.aspx" runat="server" Text="give us your feedback..." CssClass="send" />
             </div>
-            <%--top bar--%>
-            <div class="top-bar hide-top">
-                <div><asp:Label ID="Label1" runat="server"></asp:Label></div>
-                <div class="footer-follow">
-                    <a href="http://" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="http://" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
-                    <a href="http://" target="_blank"><i class="fa-brands fa-twitter"></i></a>
-                    <a href="http://" target="_blank"><i class="fa-brands fa-square-threads"></i></a>
-                </div>
-                <div class="d-flex">
-                    <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
-                    <div id="google_translate_element"></div>
-                     <script type="text/javascript">
+        </div>
+        <%--top bar--%>
+        <div class="top-bar hide-top">
+            <div>
+                <asp:Label ID="Label1" runat="server"></asp:Label></div>
+            <div class="footer-follow">
+                <a href="http://" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="http://" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
+                <a href="http://" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                <a href="http://" target="_blank"><i class="fa-brands fa-square-threads"></i></a>
+            </div>
+            <div class="d-flex">
+                <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+                <div id="google_translate_element"></div>
+                <script type="text/javascript">
                          function googleTranslateElementInit() {
                              new google.translate.TranslateElement({ pageLanguage: 'en' }, 'google_translate_element');
                          }
-                     </script> 
-                     <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script> 
+                </script>
+                <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+            </div>
+        </div>
+        <%--header--%>
+        <nav class="navbar dark-mode navbar-expand-lg bg-body-tertiary p-0" id="nav">
+            <div class="container-fluid justify-content-between " id="navigator">
+                <asp:HyperLink NavigateUrl="~/Home.aspx" CssClass="navbar-brand" runat="server"><img src="dist/img/cts_logo.png" /></asp:HyperLink>
+                <button class="navbar-toggler border-0 bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon fw-bolder"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav ">
+                        <li class="nav-item">
+                            <asp:HyperLink ID="HyperLink1" runat="server" class="nav-link text-light " aria-current="page" NavigateUrl="~/Home.aspx"><i class="fa-solid fa-house"></i> Home</asp:HyperLink>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="/Home.aspx#about"><i class="fa-solid fa-circle-info"></i>About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="/Home.aspx#services"><i class="fa-solid fa-cubes"></i>Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <asp:HyperLink class="nav-link text-light" NavigateUrl="~/Gallery.aspx" runat="server"><i class="fa-solid fa-images"></i> Gallery</asp:HyperLink>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="/Home.aspx#contact"><i class="fa-solid fa-message"></i>Contact us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="/Home.aspx#faq"><i class="fa-solid fa-file-circle-question"></i>FAQ</a>
+                        </li>
+                        <li class="nav-item nav-link">
+                            <asp:HyperLink NavigateUrl="~/News.aspx" runat="server" CssClass="text-light"><i class="fa-solid fa-newspaper"></i> News</asp:HyperLink>
+                        </li>
+                        <li class="nav-item nav-link" id="login-tog">
+                            <asp:HyperLink ID="HyperLink2" runat="server" CssClass="text-light" NavigateUrl="~/Login.aspx"><i class="fa-solid fa-arrow-right-to-bracket " ></i> Login</asp:HyperLink>
+                        </li>
+                    </ul>
                 </div>
             </div>
-            <%--header--%>
-            <nav class="navbar dark-mode navbar-expand-lg bg-body-tertiary p-0" id="nav">
-                <div class="container-fluid justify-content-between " id="navigator">
-                    <asp:HyperLink NavigateUrl="~/Home.aspx" CssClass="navbar-brand" runat="server"><img src="dist/img/cts_logo.png" /></asp:HyperLink>
-                    <button class="navbar-toggler border-0 bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon fw-bolder"></span>
-                    </button>
-                    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">      
-                        <ul class="navbar-nav ">
-                            <li class="nav-item">
-                                <asp:HyperLink ID="HyperLink1" runat="server" class="nav-link text-light " aria-current="page" NavigateUrl="~/Home.aspx"><i class="fa-solid fa-house"></i> Home</asp:HyperLink>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-light" href="/Home.aspx#about"><i class="fa-solid fa-circle-info"></i> About</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-light" href="/Home.aspx#services"><i class="fa-solid fa-cubes"></i> Services</a>
-                            </li>
-                            <li class="nav-item">
-                                <asp:HyperLink class="nav-link text-light" NavigateUrl="~/Gallery.aspx" runat="server"><i class="fa-solid fa-images"></i> Gallery</asp:HyperLink>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-light" href="/Home.aspx#contact"><i class="fa-solid fa-message"></i> Contact us</a>
-                            </li>
-                            <li class="nav-item">
-                                <a  class="nav-link text-light" href="/Home.aspx#faq"><i class="fa-solid fa-file-circle-question"></i> FAQ</a>
-                            </li>
-                            <li class="nav-item nav-link">
-                                <asp:HyperLink NavigateUrl="~/News.aspx" runat="server" CssClass="text-light"><i class="fa-solid fa-newspaper"></i> News</asp:HyperLink>
-                            </li>
-                            <li class="nav-item nav-link" id="login-tog">
-                                <asp:HyperLink ID="HyperLink2" runat="server" CssClass="text-light" NavigateUrl="~/Login.aspx"><i class="fa-solid fa-arrow-right-to-bracket " ></i> Login</asp:HyperLink>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-            <%--content holder--%>
-            <div>
-                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-                </asp:ContentPlaceHolder>
-            </div>
-            <%--footer--%>
-            <footer class="footer" id="footer">
+        </nav>
+        <%--content holder--%>
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <%--footer--%>
+        <footer class="footer" id="footer">
             <div class="footer-brand">
                 <img src="./dist/img/cts_logo.png" alt="">
             </div>
@@ -124,13 +125,13 @@
                     <a href="https://wa.me/6386239194" target="_blank"><i class="fa-brands fa-square-whatsapp"></i></a>
                 </div>
             </div>
-                <div class="rights" id="rights">
-                    <p>All rights are reserved &copy;Criminal tracking system 2023 .inc</p>
-                </div>
-            </footer>
-        </form>
+            <div class="rights" id="rights">
+                <p>All rights are reserved &copy;Criminal tracking system 2023 .inc</p>
+            </div>
+        </footer>
+    </form>
 
-        <script>
+    <script>
             //def green
             function applyGreen() {
                 let crim = document.querySelectorAll('#settings,#navigator, #rights, #themeSwitch, #feedbackBtn, #whats, #translator');
@@ -168,7 +169,7 @@
                 let hero = document.querySelectorAll('#title-vip1,#title-vip2,#title-vip3,#title-vip4,#title-vip5');
                 for (var j = 0; j < hero.length; j++) {
                     hero[j].style.cssText = "background:#1b2987;color:white";
-                } 
+                }
             };
             //def slate
             function applySlate() {
@@ -252,10 +253,10 @@
             if (localStorage.getItem('kesar')) {
                 applyKesar();
             }
-            
-        </script>
-        <script src="dist/js/bootstrap.bundle.min.js"></script>    
-        <script src="dist/js/custom.js"></script>
-        <script src="dist/js/jquery.js"></script>
-    </body>
+
+    </script>
+    <script src="dist/js/bootstrap.bundle.min.js"></script>
+    <script src="dist/js/custom.js"></script>
+    <script src="dist/js/jquery.js"></script>
+</body>
 </html>

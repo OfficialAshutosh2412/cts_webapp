@@ -3,22 +3,20 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="admin-content-height">
-        
         <%--form--%>
         <div class="bg-dark p-2">
-            <h4 class="text-center"><i class="fa-solid fa-question"></i> Frequently Asked Questions</h4>
-        <div class="faq-form">
-            <div>
-                <asp:TextBox ID="question" runat="server" CssClass="cc-box" placeholder="question"></asp:TextBox>
+            <h4 class="text-center"><i class="fa-solid fa-question"></i>Frequently Asked Questions</h4>
+            <div class="faq-form">
+                <div>
+                    <asp:TextBox ID="question" runat="server" CssClass="cc-box" placeholder="question"></asp:TextBox>
+                </div>
+                <div>
+                    <asp:TextBox ID="answer" runat="server" CssClass="cc-box" placeholder="answer"></asp:TextBox>
+                </div>
+                <div>
+                    <asp:Button ID="Button2" runat="server" Text="Send" CssClass="delete" OnClientClick="return ValidateFaq()" OnClick="FAQButton1_Click" />
+                </div>
             </div>
-            <div>
-                 <asp:TextBox  ID="answer" runat="server" CssClass="cc-box" placeholder="answer"></asp:TextBox>
-            </div>
-            <div>
-                <asp:Button ID="Button2" runat="server" Text="Send" CssClass="delete" OnClientClick="return ValidateFaq()"  OnClick="FAQButton1_Click"/>
-            </div>
-            
-        </div>
         </div>
         <%--grid view--%>
         <div class="faq-grid">
@@ -50,9 +48,7 @@
             </UpdateParameters>
         </asp:SqlDataSource>
         </div>
-        
     </div>
-
     <script>
         //faq validation
         function ValidateFaq() {

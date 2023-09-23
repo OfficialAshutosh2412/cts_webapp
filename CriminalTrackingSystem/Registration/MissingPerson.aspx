@@ -101,49 +101,49 @@
                 </div>
             </div>
         </div>
-    <%--grid view--%>
-    <div class="missing-grid">
-        <h2 class="p-3">
-            <img src="../dist/img/user.png" style="width: 50px;" />Report Missing Person</h2>
-        <asp:GridView ID="GridView1" runat="server" CssClass="table table-group-divider table-bordered" AutoGenerateColumns="False" BackColor="White" BorderColor="#E7E7FF" BorderStyle="None" BorderWidth="1px" CellPadding="3" DataKeyNames="MPId" DataSourceID="SqlDataSource1" GridLines="Horizontal" Width="100%">
-            <AlternatingRowStyle BackColor="#F7F7F7" />
-            <Columns>
-                <asp:BoundField DataField="MPId" HeaderText="ID" InsertVisible="False" ReadOnly="True" SortExpression="MPId" />
-                <asp:BoundField DataField="LoginUsername" HeaderText="Username" SortExpression="LoginUsername" />
-                <asp:BoundField DataField="PoliceStation" HeaderText="Police Station" SortExpression="PoliceStation" />
-                <asp:BoundField DataField="MPName" HeaderText="Person Name" SortExpression="MPName" />
-                <asp:BoundField DataField="MPContactNumber" HeaderText="Person Phone No." SortExpression="MPContactNumber" />
-                <asp:BoundField DataField="MPEmailId" HeaderText="Person Email" SortExpression="MPEmailId" />
-                <asp:BoundField DataField="LastViewLocation" HeaderText="Last View Location" SortExpression="LastViewLocation" />
-                <asp:BoundField DataField="Ransom" HeaderText="Ransom" SortExpression="Ransom" />
-                <asp:BoundField DataField="Dob" HeaderText="Person DOB" SortExpression="Dob" />
-                <asp:BoundField DataField="Details" HeaderText="Details" SortExpression="Details" />
-                <asp:BoundField DataField="CDT" HeaderText="Current Datetime" SortExpression="CDT" />
-                <asp:BoundField DataField="Status" HeaderText="Status" SortExpression="Status" />
-                <asp:TemplateField HeaderText="Person Latest Photo" SortExpression="LatestPhoto">
-                    <EditItemTemplate>
-                        <asp:TextBox ID="TextBox1" runat="server" Text='<%# Bind("LatestPhoto") %>'></asp:TextBox>
-                    </EditItemTemplate>
-                    <ItemTemplate>
-                        <asp:Image ID="Image1" runat="server" Height="69px" ImageUrl='<%# Eval("LatestPhoto", "MissingPerson/{0}") %>' Width="74px" />
-                    </ItemTemplate>
-                </asp:TemplateField>
-            </Columns>
-            <FooterStyle BackColor="#B5C7DE" ForeColor="#4A3C8C" />
-            <HeaderStyle BackColor="#4A3C8C" Font-Bold="True" ForeColor="#F7F7F7" />
-            <PagerStyle BackColor="#E7E7FF" ForeColor="#4A3C8C" HorizontalAlign="Right" />
-            <RowStyle BackColor="#E7E7FF" ForeColor="#4A3C8C" />
-            <SelectedRowStyle BackColor="#738A9C" Font-Bold="True" ForeColor="#F7F7F7" />
-            <SortedAscendingCellStyle BackColor="#F4F4FD" />
-            <SortedAscendingHeaderStyle BackColor="#5A4C9D" />
-            <SortedDescendingCellStyle BackColor="#D8D8F0" />
-            <SortedDescendingHeaderStyle BackColor="#3E3277" />
-        </asp:GridView>
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [MissingPerson] WHERE ([LoginUsername] = @LoginUsername)">
-            <SelectParameters>
-                <asp:SessionParameter Name="LoginUsername" SessionField="user" Type="String" />
-            </SelectParameters>
-        </asp:SqlDataSource>
-    </div>
+        <%--grid view--%>
+        <div class="missing-grid">
+            <h2 class="p-3">
+                <img src="../dist/img/user.png" style="width: 50px;" />Report Missing Person</h2>
+            <asp:GridView ID="GridView1" runat="server" CssClass="table table-group-divider table-bordered" AutoGenerateColumns="False" BackColor="White" BorderColor="#E7E7FF" BorderStyle="None" BorderWidth="1px" CellPadding="3" DataKeyNames="MPId" DataSourceID="SqlDataSource1" GridLines="Horizontal" Width="100%">
+                <AlternatingRowStyle BackColor="#F7F7F7" />
+                <Columns>
+                    <asp:BoundField DataField="MPId" HeaderText="ID" InsertVisible="False" ReadOnly="True" SortExpression="MPId" />
+                    <asp:BoundField DataField="LoginUsername" HeaderText="Username" SortExpression="LoginUsername" />
+                    <asp:BoundField DataField="PoliceStation" HeaderText="Police Station" SortExpression="PoliceStation" />
+                    <asp:BoundField DataField="MPName" HeaderText="Person Name" SortExpression="MPName" />
+                    <asp:BoundField DataField="MPContactNumber" HeaderText="Person Phone No." SortExpression="MPContactNumber" />
+                    <asp:BoundField DataField="MPEmailId" HeaderText="Person Email" SortExpression="MPEmailId" />
+                    <asp:BoundField DataField="LastViewLocation" HeaderText="Last View Location" SortExpression="LastViewLocation" />
+                    <asp:BoundField DataField="Ransom" HeaderText="Ransom" SortExpression="Ransom" />
+                    <asp:BoundField DataField="Dob" HeaderText="Person DOB" SortExpression="Dob" />
+                    <asp:BoundField DataField="Details" HeaderText="Details" SortExpression="Details" />
+                    <asp:BoundField DataField="CDT" HeaderText="Current Datetime" SortExpression="CDT" />
+                    <asp:BoundField DataField="Status" HeaderText="Status" SortExpression="Status" />
+                    <asp:TemplateField HeaderText="Person Latest Photo" SortExpression="LatestPhoto">
+                        <EditItemTemplate>
+                            <asp:TextBox ID="TextBox1" runat="server" Text='<%# Bind("LatestPhoto") %>'></asp:TextBox>
+                        </EditItemTemplate>
+                        <ItemTemplate>
+                            <asp:Image ID="Image1" runat="server" Height="69px" ImageUrl='<%# Eval("LatestPhoto", "MissingPerson/{0}") %>' Width="74px" />
+                        </ItemTemplate>
+                    </asp:TemplateField>
+                </Columns>
+                <FooterStyle BackColor="#B5C7DE" ForeColor="#4A3C8C" />
+                <HeaderStyle BackColor="#4A3C8C" Font-Bold="True" ForeColor="#F7F7F7" />
+                <PagerStyle BackColor="#E7E7FF" ForeColor="#4A3C8C" HorizontalAlign="Right" />
+                <RowStyle BackColor="#E7E7FF" ForeColor="#4A3C8C" />
+                <SelectedRowStyle BackColor="#738A9C" Font-Bold="True" ForeColor="#F7F7F7" />
+                <SortedAscendingCellStyle BackColor="#F4F4FD" />
+                <SortedAscendingHeaderStyle BackColor="#5A4C9D" />
+                <SortedDescendingCellStyle BackColor="#D8D8F0" />
+                <SortedDescendingHeaderStyle BackColor="#3E3277" />
+            </asp:GridView>
+            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [MissingPerson] WHERE ([LoginUsername] = @LoginUsername)">
+                <SelectParameters>
+                    <asp:SessionParameter Name="LoginUsername" SessionField="user" Type="String" />
+                </SelectParameters>
+            </asp:SqlDataSource>
+        </div>
     </div>
 </asp:Content>

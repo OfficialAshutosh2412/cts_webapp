@@ -18,7 +18,6 @@
                             <asp:ListItem Selected="True">-select--</asp:ListItem>
                         </asp:DropDownList>
                         <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [PoliceStationName] FROM [PoliceStation]"></asp:SqlDataSource>
-
                     </div>
                     <div>
                         <label><i class="fa-solid fa-handcuffs"></i> Crime Type<asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="CrimeType" ErrorMessage="*type of crime required" Font-Bold="True" Font-Size="Small" ForeColor="#FF5050">*</asp:RequiredFieldValidator></label>
@@ -63,7 +62,6 @@
                     <div>
                         <label><i class="fa-solid fa-calendar-days"></i> Date of Crime<asp:RequiredFieldValidator ID="RequiredFieldValidator8" runat="server" ControlToValidate="CrimeDate" ErrorMessage="*date of crime required" Font-Bold="True" Font-Size="Small" ForeColor="#FF5050">*</asp:RequiredFieldValidator></label>
                         <asp:TextBox ID="CrimeDate" runat="server" class="cc-box" placeholder="when crime happened?" TextMode="DateTimeLocal"></asp:TextBox>
-
                     </div>
                 </div>
                 <%--fourth row--%>
@@ -71,14 +69,12 @@
                     <div>
                         <label><i class="fa-solid fa-calendar-days"></i> Current Date & Time<asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="CurrentDate" ErrorMessage="*date required" Font-Bold="True" Font-Size="Small" ForeColor="#FF5050">*</asp:RequiredFieldValidator></label>
                         <asp:TextBox ID="CurrentDate" runat="server" class="cc-box" placeholder="enter current date and time" TextMode="DateTimeLocal"></asp:TextBox>
-
                     </div>
                 </div>
                 <%--fifth row--%>
                 <div>
                     <asp:Button ID="Button2" runat="server" Text="Send" class=" send" OnClick="Button1_Click" />
                     <input type="reset" value="clear" class=" clear" />
-
                     <asp:ValidationSummary CssClass="d-none" ID="ValidationSummary1" runat="server" ShowMessageBox="True" />
                 </div>
             </div>

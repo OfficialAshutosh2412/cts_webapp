@@ -14,7 +14,6 @@ namespace CriminalTrackingSystem.Admin
         SqlConnection con = DynamicConnection.GetsConnection();
         SqlDataAdapter adp = new SqlDataAdapter();
         SqlCommand cmd = new SqlCommand();
-
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Session["type"] == null)
@@ -23,7 +22,6 @@ namespace CriminalTrackingSystem.Admin
         }
         protected void FAQButton1_Click(object sender, EventArgs e)
         {
-
             con.Open();
             cmd.CommandText = "INSERT INTO Faq VALUES('" + question.Text + "', '" +answer.Text+ "')";
             cmd.ExecuteNonQuery();

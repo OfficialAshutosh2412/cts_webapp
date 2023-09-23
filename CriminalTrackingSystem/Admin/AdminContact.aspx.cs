@@ -36,7 +36,6 @@ namespace CriminalTrackingSystem.Admin
                 email.Text = dt.Rows[0]["Email"].ToString();
             }
         }
-
         protected void send_Click(object sender, EventArgs e)
         {
             try
@@ -44,7 +43,7 @@ namespace CriminalTrackingSystem.Admin
                 sendEmail();
                 Response.Redirect("./Emailsuccess.aspx");
             }
-            catch(Exception ex)
+            catch(Exception)
             {
                 Response.Write("<srcipt>alert('Something wrong! try again later')</script>");
             }
@@ -55,7 +54,6 @@ namespace CriminalTrackingSystem.Admin
             string smtpPassword;
             MailMessage mail = new MailMessage();
             SmtpClient smtp_Client = new SmtpClient(System.Configuration.ConfigurationSettings.AppSettings["smtpClient"]);
-
             smtpUserName = System.Configuration.ConfigurationSettings.AppSettings["smtpUserName"];
             smtpPassword = System.Configuration.ConfigurationSettings.AppSettings["smtpPassword"];
             mail.From = new MailAddress(smtpUserName);
@@ -66,7 +64,6 @@ namespace CriminalTrackingSystem.Admin
             smtp_Client.Credentials = new System.Net.NetworkCredential(smtpUserName, smtpPassword);
             smtp_Client.EnableSsl = Convert.ToBoolean(System.Configuration.ConfigurationSettings.AppSettings["enableSSL"]);
             smtp_Client.Send(mail);
-            
         }
     }
 }

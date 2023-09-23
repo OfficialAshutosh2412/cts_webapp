@@ -1,9 +1,7 @@
 ﻿<%@ Page Title="CTS | Gallery | Criminal Images" Language="C#" MasterPageFile="~/LandingLayout.Master" AutoEventWireup="true" CodeBehind="CriminalGallery.aspx.cs" Inherits="CriminalTrackingSystem.CriminalGallery" %>
-
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-
     <div class="crime-gallery-container">
         <asp:ListView ID="ListView1" runat="server" DataSourceID="SqlDataSource1">
             <ItemTemplate>
@@ -30,7 +28,6 @@
                         <div><strong>
                             <label>Details</label></strong><br />
                             <asp:Label ID="DetailsLabel" runat="server" Text='<%# Eval("Details") %>' /></div>
-
                     </div>
                     <div class="crime-pic">
                         <asp:Image ID="Image1" runat="server" ImageUrl='<%# Bind("ProfilePhoto","~/Admin/AdminGallery/Crimes/{0}") %>' />
@@ -39,6 +36,5 @@
             </ItemTemplate>
         </asp:ListView>
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [CiminalName], [AffectedOrganisation], [Reward], [ProfilePhoto], [Details] FROM [CriminalGallery]"></asp:SqlDataSource>
-
     </div>
 </asp:Content>

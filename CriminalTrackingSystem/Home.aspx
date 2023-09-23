@@ -1,9 +1,7 @@
 ﻿<%@ Page Title="CTS | Home" Language="C#" MasterPageFile="~/LandingLayout.Master" AutoEventWireup="true" CodeBehind="Home.aspx.cs" Inherits="CriminalTrackingSystem.Home" %>
-
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    
     <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [Faq] ORDER BY [FaqId], [Question], [Answer]"></asp:SqlDataSource>
     <%--hero--%>
     <div class="hero" id="hero">
@@ -38,8 +36,7 @@
                     </div>
                     <div class="card-item">
                         <h1>Benefits</h1>
-                        <p>
-                            Enhanced tools for investigation, Centralized crime and criminal information repository along with the criminal images.<p>
+                        <p>Enhanced tools for investigation, Centralized crime and criminal information repository along with the criminal images.<p>
                     </div>
                 </div>
             </div>
@@ -204,18 +201,20 @@
                         <EditItemTemplate>
                             <asp:TextBox ID="TextBox1" runat="server" Text='<%# Bind("Question") %>'></asp:TextBox>
                         </EditItemTemplate>
-                        <ItemTemplate>
+                        <itemtemplate>
                             <div class=" p-3" style="border-bottom: 1px groove gray;">
                                 <div class="w-100">
                                     <strong>
                                         <asp:Label Text="Q." runat="server" />
-                                        <asp:Label ID="Label6" runat="server" Text='<%# Bind("FaqId") %>'></asp:Label>: 
+                                        <asp:Label ID="Label6" runat="server" Text='<%# Bind("FaqId") %>'></asp:Label>
+                                        : 
                             <asp:Label ID="Label4" runat="server" Text='<%# Bind("Question") %>'></asp:Label>
                                     </strong>
                                 </div>
                                 <div style="padding-left: 35px">
                                     <strong>
-                                        <asp:Label Text="reply: " runat="server" /></strong>
+                                        <asp:Label Text="reply: " runat="server" />
+                                    </strong>
                                     <asp:Label ID="Label5" CssClass="p-3 " runat="server" Text='<%# Bind("Answer") %>'></asp:Label>
                                 </div>
                             </div>
@@ -227,8 +226,6 @@
     </div>
 
     <script>
-        
-        
         //contact us validation
         function validateContact() {
             var cname = document.getElementById('<%= ContactName.ClientID %>').value;

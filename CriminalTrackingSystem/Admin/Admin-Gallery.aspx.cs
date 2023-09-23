@@ -41,7 +41,6 @@ namespace CriminalTrackingSystem.Admin
             }
             cmd.Connection = con;
         }
-
         protected void eventBtn_Click(object sender, EventArgs e)
         {
             con.Open();
@@ -63,7 +62,6 @@ namespace CriminalTrackingSystem.Admin
                 Response.Write("<script>alert('no image selected')</script>");
 
         }
-
         protected void crimeBtn_Click(object sender, EventArgs e)
         {
             con.Open();
@@ -76,7 +74,6 @@ namespace CriminalTrackingSystem.Admin
             AffectedOrganisation.Text = "";
             Reward.Text = "";
             Details.Text = "";
-            
         }
     }
 }

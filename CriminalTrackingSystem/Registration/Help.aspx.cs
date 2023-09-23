@@ -20,7 +20,6 @@ namespace CriminalTrackingSystem.Registration
                 Response.Redirect("~/Login.aspx");
             cmd.Connection = con;
         }
-
         protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
         {
             try
@@ -47,7 +46,6 @@ namespace CriminalTrackingSystem.Registration
                 Response.Redirect("Error_message.aspx");
             }
         }
-
         protected void DropDownList2_SelectedIndexChanged(object sender, EventArgs e)
         {
             try

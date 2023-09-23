@@ -19,7 +19,6 @@
                 <asp:TextBox ID="agentname" CssClass="cc-box" runat="server"></asp:TextBox>
             </div>
         </div>
-     
         <div class="policeItem">
             <div>
                 <asp:Label Text="First CUG Number" runat="server" />
@@ -29,9 +28,7 @@
                 <asp:Label Text="Second CUG Number" runat="server" />
                 <asp:TextBox ID="cugtwo" CssClass="cc-box" runat="server"></asp:TextBox>
             </div>
-            
         </div>
-       
         <div class="policeItem">
             <div>
                 <asp:Label Text="Agent Phone Number" runat="server" />
@@ -42,7 +39,6 @@
                 <asp:FileUpload ID="FileUpload1" CssClass="cc-box" runat="server" class="bg-white text-dark"/>
             </div>
         </div>
-        
         <div class="policeItem">
             <asp:Button Text="save" runat="server" CssClass="cc-btn" OnClick="Unnamed8_Click"/>
         </div>
@@ -95,6 +91,5 @@
                 <asp:Parameter Name="PoliceStationId" Type="Int32" />
             </UpdateParameters>
         </asp:SqlDataSource>
-        
     </div>
 </asp:Content>

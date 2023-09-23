@@ -18,7 +18,6 @@ namespace CriminalTrackingSystem
         protected void Page_Load(object sender, EventArgs e)
         {
             cmd.Connection = con;
-
         }
 
         protected void Button1_Click(object sender, EventArgs e)
@@ -66,25 +65,32 @@ namespace CriminalTrackingSystem
 
         protected void AdminButton_Click(object sender, EventArgs e)
         {
-            con.Open();
-            SignupProfile.SaveAs(Server.MapPath("RegisterPhoto") + "/" + SignupProfile.FileName);
-            Literal1.Text = "RegisterPhoto" + "/" + SignupProfile.FileName;
-            //Signup code
-            cmd.CommandText = "INSERT INTO Registration VALUES('" + SignupName.Text + "', '" + SignupPwsd.Text + "', '" + SignupEmail.Text + "', " + SignupPin.Text + ", '" + SignupGender.SelectedValue + "', '" + SignupAddress.Text + "', '" + SignupMS.SelectedValue + "', '" + SignupLS.SelectedValue + "', " + SignupAdhaar.Text + ", " + SignupContact.Text + ", '" + SignupProfile.FileName + "')";
-            cmd.ExecuteNonQuery();
-            //Login code
-            cmd.CommandText = "INSERT INTO Login VALUES('" + SignupName.Text.Replace("'", "''") + "', '" + SignupPwsd.Text.Replace("'", "''") + "', '" + "admin" + "')";
-            cmd.ExecuteNonQuery();
-            Response.Redirect("Login.aspx");
-            con.Close();
-            SignupName.Text = "";
-            SignupPwsd.Text = "";
-            SignupCrmfPwsd.Text = "";
-            SignupEmail.Text = "";
-            SignupPin.Text = "";
-            SignupAddress.Text = "";
-            SignupAdhaar.Text = "";
-            SignupContact.Text = "";
+            try
+            {
+                con.Open();
+                SignupProfile.SaveAs(Server.MapPath("RegisterPhoto") + "/" + SignupProfile.FileName);
+                Literal1.Text = "RegisterPhoto" + "/" + SignupProfile.FileName;
+                //Signup code
+                cmd.CommandText = "INSERT INTO Registration VALUES('" + SignupName.Text + "', '" + SignupPwsd.Text + "', '" + SignupEmail.Text + "', " + SignupPin.Text + ", '" + SignupGender.SelectedValue + "', '" + SignupAddress.Text + "', '" + SignupMS.SelectedValue + "', '" + SignupLS.SelectedValue + "', " + SignupAdhaar.Text + ", " + SignupContact.Text + ", '" + SignupProfile.FileName + "')";
+                cmd.ExecuteNonQuery();
+                //Login code
+                cmd.CommandText = "INSERT INTO Login VALUES('" + SignupName.Text.Replace("'", "''") + "', '" + SignupPwsd.Text.Replace("'", "''") + "', '" + "admin" + "')";
+                cmd.ExecuteNonQuery();
+                Response.Redirect("Login.aspx");
+                con.Close();
+                SignupName.Text = "";
+                SignupPwsd.Text = "";
+                SignupCrmfPwsd.Text = "";
+                SignupEmail.Text = "";
+                SignupPin.Text = "";
+                SignupAddress.Text = "";
+                SignupAdhaar.Text = "";
+                SignupContact.Text = "";
+            }
+            catch (Exception)
+            {
+                Response.Redirect("~/Error_message.aspx");
+            }
         }
     }
 }

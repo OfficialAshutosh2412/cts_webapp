@@ -74,7 +74,6 @@
             <asp:HyperLink ID="HyperLink4" runat="server" CssClass="cc-btn p-2" NavigateUrl="~/Registration/MissingValuable.aspx">go now !</asp:HyperLink>
         </div>
     </div>
-
     <div class="register-welcome" style="margin-top:5px !important;margin-bottom:10px !important">
         <h1>Dear user, 
             <asp:Label ID="Label2" Text="We have made help portal for you." runat="server" Font-Size="XX-Large" class="text-capitalize"></asp:Label>

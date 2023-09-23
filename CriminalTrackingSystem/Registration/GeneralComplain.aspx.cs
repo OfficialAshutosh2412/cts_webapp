@@ -18,6 +18,7 @@ namespace CriminalTrackingSystem.Registration
         {
             if (Session["user"] == null)
                 Response.Redirect("~/Login.aspx");
+
             GCUserName.Text = Session["user"].ToString();
             cmd.Connection = con;
         }

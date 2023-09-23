@@ -1,7 +1,5 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="AdminLayout.master.cs" Inherits="CriminalTrackingSystem.Admin.AdminLayout" %>
-
 <!DOCTYPE html>
-
 <html>
 <head runat="server">
      <meta charset="UTF-8">

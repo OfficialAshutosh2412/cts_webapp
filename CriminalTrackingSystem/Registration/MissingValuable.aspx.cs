@@ -18,13 +18,13 @@ namespace CriminalTrackingSystem.Registration
         {
             if (Session["user"] == null)
                 Response.Redirect("~/Login.aspx");
+
             MVUserName.Text = Session["user"].ToString();
             cmd.Connection = con;
         }
         //insert
         protected void Button1_Click(object sender, EventArgs e)
         {
-
             try
             {
                 con.Open();

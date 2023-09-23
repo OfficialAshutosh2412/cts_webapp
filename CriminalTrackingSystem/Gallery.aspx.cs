@@ -13,12 +13,10 @@ namespace CriminalTrackingSystem
         {
 
         }
-
         protected void Unnamed1_Click(object sender, EventArgs e)
         {
             Response.Redirect("~/EventGallery.aspx");
         }
-
         protected void Unnamed2_Click(object sender, EventArgs e)
         {
             Response.Redirect("~/CriminalGallery.aspx");

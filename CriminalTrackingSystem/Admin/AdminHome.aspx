@@ -1,5 +1,4 @@
 ﻿<%@ Page Title="CTS | Dashboard" Language="C#" MasterPageFile="~/Admin/AdminLayout.Master" AutoEventWireup="true" CodeBehind="AdminHome.aspx.cs" Inherits="CriminalTrackingSystem.Admin.AdminHome" %>
-
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -60,7 +59,7 @@
         </div>
         <%--missing valuable--%>
         <div class="admin-card">
-           <i class="fa-regular fa-gem counters"></i>
+            <i class="fa-regular fa-gem counters"></i>
             <div>
                 <asp:Label Text="" runat="server" ID="mv" class="counters" />
                 <asp:Label Text="+" runat="server" class="counters" />
@@ -75,7 +74,7 @@
     <div class="admin-card-container">
         <%-- contact us--%>
         <div class="admin-card">
-           <i class="fa-solid fa-message counters"></i>
+            <i class="fa-solid fa-message counters"></i>
             <div>
                 <asp:Label Text="" runat="server" ID="contact" class="counters" />
                 <asp:Label Text="+" runat="server" class="counters" />
@@ -87,7 +86,7 @@
         </div>
         <%-- FAQ--%>
         <div class="admin-card">
-           <i class="fa-solid fa-circle-question counters"></i>
+            <i class="fa-solid fa-circle-question counters"></i>
             <div>
                 <asp:Label Text="" runat="server" ID="faq" class="counters" />
                 <asp:Label Text="+" runat="server" class="counters" />
@@ -99,7 +98,7 @@
         </div>
         <%-- Gallery--%>
         <div class="admin-card">
-           <i class="fa-solid fa-images counters"></i>
+            <i class="fa-solid fa-images counters"></i>
             <div>
                 <asp:Label Text="" runat="server" ID="gallery" class="counters" />
                 <asp:Label Text="+" runat="server" class="counters" />
@@ -111,7 +110,7 @@
         </div>
         <%-- news--%>
         <div class="admin-card">
-           <i class="fa-solid fa-newspaper counters"></i>
+            <i class="fa-solid fa-newspaper counters"></i>
             <div>
                 <asp:Label Text="" runat="server" ID="news" class="counters" />
                 <asp:Label Text="+" runat="server" class="counters" />
@@ -126,7 +125,7 @@
     <div class="admin-card-container">
         <%-- pending cases--%>
         <div class="admin-card">
-           <i class="fa-solid fa-clock-rotate-left counters" style="color:#e44646"></i>
+            <i class="fa-solid fa-clock-rotate-left counters" style="color: #e44646"></i>
             <div>
                 <asp:Label Text="" runat="server" ID="pendingstatus" class="counters" />
                 <asp:Label Text="+" runat="server" class="counters" />
@@ -136,10 +135,9 @@
             </div>
             <asp:HyperLink NavigateUrl="~/Admin/AdminNews.aspx" CssClass="counterbtn" runat="server" ID="HyperLink9"><i class="fa-solid fa-angle-right"></i></asp:HyperLink>
         </div>
-    
-    <%-- solved cases--%>
+        <%-- solved cases--%>
         <div class="admin-card">
-           <i class="fa-solid fa-circle-check counters" style="color:#63d448"></i>
+            <i class="fa-solid fa-circle-check counters" style="color: #63d448"></i>
             <div>
                 <asp:Label Text="" runat="server" ID="solvedcases" class="counters" />
                 <asp:Label Text="+" runat="server" class="counters" />
@@ -149,5 +147,5 @@
             </div>
             <asp:HyperLink NavigateUrl="~/Admin/AdminNews.aspx" CssClass="counterbtn" runat="server" ID="HyperLink10"><i class="fa-solid fa-angle-right"></i></asp:HyperLink>
         </div>
-        </div>
+    </div>
 </asp:Content>

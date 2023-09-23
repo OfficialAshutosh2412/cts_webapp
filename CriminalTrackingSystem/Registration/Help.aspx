@@ -27,7 +27,6 @@
                             </asp:DropDownList>
                             <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [FaqId] FROM [Faq] ORDER BY [FaqId] DESC"></asp:SqlDataSource>
                         </div>
-
                         <div>
                             <asp:Label Text="View Details using title" runat="server" />
                             <asp:DropDownList ID="DropDownList2" runat="server" CssClass="cc-box" AppendDataBoundItems="True" DataSourceID="SqlDataSource3" DataTextField="Question" DataValueField="Question" AutoPostBack="True" OnSelectedIndexChanged="DropDownList2_SelectedIndexChanged">

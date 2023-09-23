@@ -20,7 +20,6 @@ namespace CriminalTrackingSystem.Registration
             if (Session["user"] == null)
                 Response.Redirect("~/Login.aspx");
             cmd.Connection = con;
-
             if (!IsPostBack)
             {
                 con.Open();
@@ -28,7 +27,6 @@ namespace CriminalTrackingSystem.Registration
                 DataTable dtr = new DataTable();
                 adp.Fill(dtr);
                 Session["dtr"] = dtr;
-
                 for (int i = 0; i < dtr.Rows.Count; i++)
                 {
                     email.Text = dtr.Rows[i]["Email"].ToString();
@@ -44,7 +42,6 @@ namespace CriminalTrackingSystem.Registration
             }
             
         }
-
         protected void Unnamed9_Click(object sender, EventArgs e)
         {
             if (FileUpload1.HasFile)
@@ -64,10 +61,6 @@ namespace CriminalTrackingSystem.Registration
                 con.Close();
                 Response.Redirect("Profile.aspx");
             }
-                
-                
-            
         }
-
     }
 }

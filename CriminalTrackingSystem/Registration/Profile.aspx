@@ -18,7 +18,6 @@
                     <asp:Label Text="Your Portal ID" runat="server" /></p>
                     <asp:Label ID="id" runat="server" />
                 </div>
-                
                 <div>
                     <p>
                         <i class="fa-solid fa-hashtag"></i>
@@ -31,7 +30,6 @@
                     <asp:Label Text="Your Gender" runat="server" /></p>
                     <asp:Label ID="sex" runat="server" />
                 </div>
-                
                 <div>
                     <p><i class="fa-solid fa-heart"></i>
                     <asp:Label Text="Marital Status" runat="server" /></p>
@@ -47,7 +45,6 @@
                     <asp:Label Text="Your Adhaar Number" runat="server" /></p>
                     <asp:Label ID="adhaar" runat="server" />
                 </div>
-                
             </div>
             <div class="profile-foot">
                 <div>

@@ -26,7 +26,6 @@ namespace CriminalTrackingSystem.Registration
             DataTable dtr = new DataTable();
             adp.Fill(dtr);
             Session["dtr"] = dtr;
-
             for (int i = 0; i < dtr.Rows.Count; i++)
             {
                 id.Text = dtr.Rows[i]["RegId"].ToString();
