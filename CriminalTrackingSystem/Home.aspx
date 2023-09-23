@@ -11,7 +11,7 @@
             <img class="spin" src="dist/img/11(2).png" alt="animator" />
         </div>
         <div class="right">
-            <h1><span>Criminal</span> Tracking System</h1>
+            <h1><span class="title-vip" id="title-vip1">Criminal</span> Tracking System</h1>
             <p>CTS is an online portal to track crime records.</p>
             <small>Managed by State Police Department</small>
             <label><i class="fa-solid fa-phone"></i>+91-0522-112</label>
@@ -21,7 +21,7 @@
     <div class="about-services">
         <%--about--%>
         <div class="about" id="about">
-            <h1 class="section-title" id="section-title""><span><i class="fa-solid fa-circle-info"></i>About</span> Us</h1>
+            <h1 class="section-title" id="section-title"><span class="title-vip" id="title-vip2"><i class="fa-solid fa-circle-info"></i>About</span> Us</h1>
             <div class="card-info">
                 <div class="card-info-sections">
                     <div class="card-item">
@@ -46,7 +46,7 @@
         </div>
         <%--services--%>
         <div class="service-container" id="services">
-            <h1 class="section-title"><span><i class="fa-solid fa-cubes"></i>Our</span> Services</h1>
+            <h1 class="section-title"><span class="title-vip" id="title-vip3"><i class="fa-solid fa-cubes"></i>Our</span> Services</h1>
             <div class="services">
                 <%--first--%>
                 <div class="services-item">
@@ -96,9 +96,9 @@
         </div>
     </div>
     <%--contact us--%>
-    <div class=" min-width contact-us-container" id="contact">
-        <h1 class="section-title"><span><i class="fa-solid fa-message"></i>Give us</span> a message</h1>
-        <div class="p-3 contact-us-container-form">
+    <div class=" min-width contact-us-container" >
+        <h1 class="section-title"><span class="title-vip" id="title-vip4"><i class="fa-solid fa-message"></i>Give us</span> a message</h1>
+        <div class="p-3 contact-us-container-form" id="contact">
             <div class=" d-flex">
                 <div class="mb-1 w-100 p-2">
                     <label class="form-label">
@@ -136,8 +136,8 @@
     </div>
     <%--member--%>
     <div class="member">
-        <h1 class="section-title"><span><i class="fa-solid fa-users"></i>Our</span> Team</h1>
-        <div class="mentor">
+        <h1 class="section-title"><span class="title-vip" id="title-vip5"><i class="fa-solid fa-users"></i>Our</span> Team</h1>
+        <div class="mentor" id="mentor">
             <div class="image">
                 <img src="dist/img/mentor 1.jpg" />
             </div>
@@ -146,14 +146,14 @@
                 <p><strong>Mr. Sushant Pathhak</strong> project mentor.</p>
                 <small>Project Scientist at Remote Sensing Applications Centre Uttar Pradesh, Lucknow</small>
                 <div class="member-link">
-                    <a href="https://www.facebook.com/engg.superpower" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="https://www.instagram.com/scientistsushantpathak/" target="_blank"><i class="fa-brands fa-square-instagram "></i></a>
-                    <a href="https://www.indiamart.com/sunriseinfotechsolution/" target="_blank"><i class="fa-solid fa-cart-shopping"></i></a>
-                    <a href="http://www.sunriseinfotechsolution.com/Anonymous/Home.aspx" target="_blank"><i class="fa-solid fa-globe "></i></a>
+                    <a id="member-social1" href="https://www.facebook.com/engg.superpower" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a id="member-social2" href="https://www.instagram.com/scientistsushantpathak/" target="_blank"><i class="fa-brands fa-square-instagram "></i></a>
+                    <a id="member-social3" href="https://www.indiamart.com/sunriseinfotechsolution/" target="_blank"><i class="fa-solid fa-cart-shopping"></i></a>
+                    <a id="member-social4" href="http://www.sunriseinfotechsolution.com/Anonymous/Home.aspx" target="_blank"><i class="fa-solid fa-globe "></i></a>
                 </div>
             </div>
         </div>
-        <div class="mentor">
+        <div class="mentor" id="developer">
             <div class="image">
                 <img src="dist/img/developer.jpg" />
             </div>
@@ -162,35 +162,35 @@
                 <p><strong>Mr. Ashutosh Prasad</strong> project developer.</p>
                 <small>MCA graduate from AIET and a full stack developer on python & ASP.NET with MVC</small>
                 <div class="member-link">
-                    <a href="https://www.facebook.com/ashutosh.prasad.754365/" target="_blank"><i class="fa-brands fa-facebook-f "></i></a>
-                    <a href="https://www.instagram.com/official.ashu.2000/" target="_blank"><i class="fa-brands fa-square-instagram "></i></a>
-                    <a href="https://twitter.com/Ashutos96662173" target="_blank"><i class="fa-brands fa-twitter "></i></a>
-                    <a href="https://wa.me/6386239194" target="_blank"><i class="fa-brands fa-square-whatsapp "></i></a>
-                    <a href="https://github.com/OfficialAshutosh2412?tab=repositories" target="_blank"><i class="fa-brands fa-github "></i></a>
+                    <a id="member-social5" href="https://www.facebook.com/ashutosh.prasad.754365/" target="_blank"><i class="fa-brands fa-facebook-f "></i></a>
+                    <a id="member-social6" href="https://www.instagram.com/official.ashu.2000/" target="_blank"><i class="fa-brands fa-square-instagram "></i></a>
+                    <a id="member-social7" href="https://twitter.com/Ashutos96662173" target="_blank"><i class="fa-brands fa-twitter "></i></a>
+                    <a id="member-social8" href="https://wa.me/6386239194" target="_blank"><i class="fa-brands fa-square-whatsapp "></i></a>
+                    <a id="member-social9" href="https://github.com/OfficialAshutosh2412?tab=repositories" target="_blank"><i class="fa-brands fa-github "></i></a>
                 </div>
             </div>
         </div>
     </div>
     <%--other sites--%>
     <div class="other-sites">
-        <div>
+        <div id="other-dark1">
             <asp:HyperLink NavigateUrl="https://pgportal.gov.in/" runat="server" Target="_blank">
                 <img src="dist/img/cpgrams.png" />
             </asp:HyperLink>
         </div>
-        <div>
+        <div id="other-dark2">
             <asp:HyperLink NavigateUrl="https://data.gov.in/" runat="server" Target="_blank"><img src="dist/img/data-gov.png" /></asp:HyperLink>
         </div>
-        <div>
+        <div id="other-dark3">
             <asp:HyperLink NavigateUrl="https://www.g20.org/en/" runat="server" Target="_blank"><img src="dist/img/g20_logo.png" /></asp:HyperLink>
         </div>
-        <div>
+        <div id="other-dark4">
             <asp:HyperLink NavigateUrl="https://www.india.gov.in/" runat="server" Target="_blank"> <img src="dist/img/india-gov.png" /></asp:HyperLink>
         </div>
-        <div>
+        <div id="other-dark5">
             <asp:HyperLink NavigateUrl="https://www.nic.in/" runat="server" Target="_blank"><img src="dist/img/logo-nic-blue.png" /></asp:HyperLink>
         </div>
-        <div>
+        <div id="other-dark6">
             <asp:HyperLink NavigateUrl="https://www.mygov.in/" runat="server" Target="_blank"><img src="dist/img/mygov.png" /></asp:HyperLink>
         </div>
     </div>
@@ -227,6 +227,8 @@
     </div>
 
     <script>
+        
+        
         //contact us validation
         function validateContact() {
             var cname = document.getElementById('<%= ContactName.ClientID %>').value;

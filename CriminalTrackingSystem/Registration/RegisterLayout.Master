@@ -15,7 +15,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
 </head>
-<body>
+<body onload="myfunction()">
+    <%--preloader--%>
+        <div class="preloader" id="preloader">
+            <img src="../dist/loader/Ripple-2.1s-204px.gif" />
+        </div>
     <form id="form1" runat="server">  
         <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
         <%--header--%>
@@ -76,7 +80,14 @@
             </div>
         </footer>
     </form>
+    <script>
+        //preloader
+        var load = document.getElementById("preloader");
+        function myfunction() {
+            load.style.display = "none"
+        };
 
+    </script>
     <script src="../dist/js/bootstrap.bundle.min.js"></script>
     <script src="../dist/js/custom.js"></script>
     

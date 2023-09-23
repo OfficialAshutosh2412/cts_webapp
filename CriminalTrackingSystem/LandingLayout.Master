@@ -18,10 +18,11 @@
             <img src="dist/loader/Ripple-2.1s-204px.gif" />
         </div>
         <form id="form1" runat="server">
-            <div class=" whap-link" style="bottom: 230px; right: 10px;cursor:pointer" id="themeSwitch" ><i class="fa-solid fa-brush" id="theme" onclick="showTheme()"></i></div>
-            <div class=" whap-link" style="bottom: 50px; right: 10px;cursor:pointer" id="translator"><i class="fa-solid fa-language" id="tool-toggler"></i></div>
-            <div class=" whap-link" style="bottom: 170px; right: 10px;cursor:pointer" id="feedbackBtn"><a><i class="fa-solid fa-comments" onclick="showFeed()"></i></a></div>
-            <div class=" whap-link" style="bottom: 110px; right: 10px;cursor:pointer" id="whats">
+            <div class=" whap-link" style="bottom: 20px; right: 10px;cursor:pointer;z-index:8889998" id="settings" ><i class="fa-solid fa-gear fa-spin" id="setting" onclick="showSetting()"></i></div>
+            <div class=" whap-link themeSwitch" id="themeSwitch" ><i class="fa-solid fa-brush" id="theme" onclick="showTheme()"></i></div>
+            <div class=" whap-link translator" id="translator"><i class="fa-solid fa-language" id="tool-toggler"></i></div>
+            <div class=" whap-link feedbackBtn"  id="feedbackBtn"><a><i class="fa-solid fa-comments" onclick="showFeed()"></i></a></div>
+            <div class=" whap-link whats"  id="whats">
                 <asp:HyperLink NavigateUrl="https://wa.me/6386239194" runat="server" CssClass="text-light"><i class="fa-brands fa-whatsapp"></i></asp:HyperLink>
             </div>
             <%--theme--%>
@@ -29,7 +30,9 @@
                 <ul>
                     <li id="crimson" onclick="crimson()"></li>
                     <li id="blue" onclick="themeBlue()"></li>
-                    <li id="black" onclick="slate()"></li>
+                    <li id="slate" onclick="slate()"></li>
+                    <li id="green" onclick="green()"></li>
+                    <li id="kesar" onclick="kesar()"></li>
                 </ul>
                 <div class="content"></div>
             </div>
@@ -75,28 +78,28 @@
                     <div class="collapse navbar-collapse justify-content-end" id="navbarNav">      
                         <ul class="navbar-nav ">
                             <li class="nav-item">
-                                <asp:HyperLink ID="HyperLink1" runat="server" class="nav-link text-light " aria-current="page" NavigateUrl="~/Home.aspx"><i class="fa-solid fa-house"></i>Home</asp:HyperLink>
+                                <asp:HyperLink ID="HyperLink1" runat="server" class="nav-link text-light " aria-current="page" NavigateUrl="~/Home.aspx"><i class="fa-solid fa-house"></i> Home</asp:HyperLink>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-light" href="/Home.aspx#about"><i class="fa-solid fa-circle-info"></i>About</a>
+                                <a class="nav-link text-light" href="/Home.aspx#about"><i class="fa-solid fa-circle-info"></i> About</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-light" href="/Home.aspx#services"><i class="fa-solid fa-cubes"></i>Services</a>
+                                <a class="nav-link text-light" href="/Home.aspx#services"><i class="fa-solid fa-cubes"></i> Services</a>
                             </li>
                             <li class="nav-item">
-                                <asp:HyperLink class="nav-link text-light" NavigateUrl="~/Gallery.aspx" runat="server"><i class="fa-solid fa-images"></i>Gallery</asp:HyperLink>
+                                <asp:HyperLink class="nav-link text-light" NavigateUrl="~/Gallery.aspx" runat="server"><i class="fa-solid fa-images"></i> Gallery</asp:HyperLink>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-light" href="/Home.aspx#contact"><i class="fa-solid fa-message"></i>Contact us</a>
+                                <a class="nav-link text-light" href="/Home.aspx#contact"><i class="fa-solid fa-message"></i> Contact us</a>
                             </li>
                             <li class="nav-item">
-                                <a  class="nav-link text-light" href="/Home.aspx#faq"><i class="fa-solid fa-file-circle-question"></i>FAQ</a>
+                                <a  class="nav-link text-light" href="/Home.aspx#faq"><i class="fa-solid fa-file-circle-question"></i> FAQ</a>
                             </li>
                             <li class="nav-item nav-link">
-                                <asp:HyperLink NavigateUrl="~/News.aspx" runat="server" CssClass="text-light"><i class="fa-solid fa-newspaper"></i>News</asp:HyperLink>
+                                <asp:HyperLink NavigateUrl="~/News.aspx" runat="server" CssClass="text-light"><i class="fa-solid fa-newspaper"></i> News</asp:HyperLink>
                             </li>
                             <li class="nav-item nav-link" id="login-tog">
-                                <asp:HyperLink ID="HyperLink2" runat="server" CssClass="text-light" NavigateUrl="~/Login.aspx"><i class="fa-solid fa-arrow-right-to-bracket " ></i>Login</asp:HyperLink>
+                                <asp:HyperLink ID="HyperLink2" runat="server" CssClass="text-light" NavigateUrl="~/Login.aspx"><i class="fa-solid fa-arrow-right-to-bracket " ></i> Login</asp:HyperLink>
                             </li>
                         </ul>
                     </div>
@@ -128,32 +131,70 @@
         </form>
 
         <script>
+            //def green
+            function applyGreen() {
+                let crim = document.querySelectorAll('#settings,#navigator, #rights, #themeSwitch, #feedbackBtn, #whats, #translator');
+                for (var i = 0; i < crim.length; i++) {
+                    crim[i].style.backgroundColor = '#1e9b56'
+                }
+                document.querySelector('#footer').style.backgroundColor = '#178a4f';
+                document.body.style.cssText = 'background:#e8fff3;color:black;';
+                let hero = document.querySelectorAll('#title-vip1,#title-vip2,#title-vip3,#title-vip4,#title-vip5');
+                for (var j = 0; j < hero.length; j++) {
+                    hero[j].style.cssText = "background:#1e9b56;color:white";
+                }
+            };
             //def red
             function applyRed() {
-                let crim = document.querySelectorAll('#navigator, #rights, #themeSwitch, #feedbackBtn, #whats, #translator');
+                let crim = document.querySelectorAll('#settings,#navigator, #rights, #themeSwitch, #feedbackBtn, #whats, #translator');
                 for (var i = 0; i < crim.length; i++) {
                     crim[i].style.backgroundColor = 'crimson'
                 }
                 document.querySelector('#footer').style.backgroundColor = '#c21135';
-                document.body.style.backgroundColor = '#fcf2f4';
+                document.body.style.cssText = 'background:#fcf2f4;color:black;';
+                let hero = document.querySelectorAll('#title-vip1,#title-vip2,#title-vip3,#title-vip4,#title-vip5');
+                for (var j = 0; j < hero.length; j++) {
+                    hero[j].style.cssText = "background:crimson;color:white";
+                }
             };
             //def blue
             function applyBlue() {
-                let bl = document.querySelectorAll('#navigator, #rights, #themeSwitch, #feedbackBtn, #whats, #translator');
+                let bl = document.querySelectorAll('#settings,#navigator, #rights, #themeSwitch, #feedbackBtn, #whats, #translator');
                 for (var i = 0; i < bl.length; i++) {
                     bl[i].style.backgroundColor = '#1b2987'
                 }
                 document.querySelector('#footer').style.backgroundColor = '#3952cc';
-                document.body.style.backgroundColor = '#f0f2ff';
-            }
+                document.body.style.cssText = 'background:#f0f2ff;color:black;';
+                let hero = document.querySelectorAll('#title-vip1,#title-vip2,#title-vip3,#title-vip4,#title-vip5');
+                for (var j = 0; j < hero.length; j++) {
+                    hero[j].style.cssText = "background:#1b2987;color:white";
+                } 
+            };
             //def slate
             function applySlate() {
-                let sl = document.querySelectorAll('#navigator, #rights, #themeSwitch, #feedbackBtn, #whats, #translator');
+                let sl = document.querySelectorAll('#settings,#navigator, #rights, #themeSwitch, #feedbackBtn, #whats, #translator');
                 for (var i = 0; i < sl.length; i++) {
                     sl[i].style.backgroundColor = '#007e8a'
                 }
                 document.querySelector('#footer').style.backgroundColor = '#03a0ab';
-                document.body.style.backgroundColor = '#edfbfc';
+                document.body.style.cssText = 'background:#edfbfc;color:black;';
+                let hero = document.querySelectorAll('#title-vip1,#title-vip2,#title-vip3,#title-vip4,#title-vip5');
+                for (var j = 0; j < hero.length; j++) {
+                    hero[j].style.cssText = "background:#007e8a;color:white";
+                }
+            }
+            //def kesar
+            function applyKesar() {
+                let sl = document.querySelectorAll('#settings,#navigator, #rights, #themeSwitch, #feedbackBtn, #whats, #translator');
+                for (var i = 0; i < sl.length; i++) {
+                    sl[i].style.backgroundColor = '#e88b27'
+                }
+                document.querySelector('#footer').style.backgroundColor = '#eb9942';
+                document.body.style.cssText = 'background:#faf4ed;color:black;';
+                let hero = document.querySelectorAll('#title-vip1,#title-vip2,#title-vip3,#title-vip4,#title-vip5');
+                for (var j = 0; j < hero.length; j++) {
+                    hero[j].style.cssText = "background:#e88b27;color:white";
+                }
             }
             //theme red button
             function crimson() {
@@ -167,10 +208,29 @@
                 applyBlue();
                 localStorage.setItem('blue', this);
             }
+            //theme slate button
             function slate() {
                 localStorage.clear();
                 applySlate();
                 localStorage.setItem('slate', this);
+            }
+            //theme dark button
+            function dark() {
+                localStorage.clear();
+                applyDark();
+                localStorage.setItem('dark', this);
+            }
+            //theme green
+            function green() {
+                localStorage.clear();
+                applyGreen();
+                localStorage.setItem('green', this);
+            }
+            //theme kesar
+            function kesar() {
+                localStorage.clear();
+                applyKesar();
+                localStorage.setItem('kesar', this);
             }
             //keep red
             if (localStorage.getItem('crimson')) {
@@ -183,6 +243,14 @@
             //keep slate
             if (localStorage.getItem('slate')) {
                 applySlate();
+            }
+            //keep green
+            if (localStorage.getItem('green')) {
+                applyGreen();
+            }
+            //keep kesar
+            if (localStorage.getItem('kesar')) {
+                applyKesar();
             }
             
         </script>

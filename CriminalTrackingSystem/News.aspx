@@ -3,8 +3,8 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <h1 class="news-h1"><i class="fa-solid fa-newspaper"></i>News</h1>
-    <div class="leftnews">
+    <h1 id="news-bg-1" class="news-h1"><i class="fa-solid fa-newspaper"></i>News</h1>
+    <div class="leftnews" id="news-table">
         <asp:GridView ID="GridView1" CssClass="w-100 table table-group-divider" runat="server" AutoGenerateColumns="False" DataKeyNames="Nid" DataSourceID="SqlDataSource1">
             <Columns>
                 <asp:BoundField DataField="Nid" HeaderText="ID" InsertVisible="False" ReadOnly="True" SortExpression="Nid" />
@@ -17,7 +17,7 @@
     <asp:UpdatePanel ID="UpdatePanel1" runat="server">
         <ContentTemplate>
             <%--right--%>
-            <div class="rightnews">
+            <div class="rightnews" id="news-bg-2">
                 <div class="policeItem">
                     <div>
                         <strong>
@@ -34,7 +34,6 @@
                             <asp:ListItem Selected="True">-select date-</asp:ListItem>
                         </asp:DropDownList>
                         <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [Ndate] FROM [News]"></asp:SqlDataSource>
-
                     </div>
                     <div>
                         <strong>
@@ -47,7 +46,7 @@
                 </div>
                 <hr />
                 <%--showing details--%>
-                <div class="p-3">
+                <div class="p-3" id="news-bg-3">
                     <strong>
                         <asp:Label Text="Id: " runat="server" /><asp:Label runat="server" ID="id" /></strong><br />
                     <small>

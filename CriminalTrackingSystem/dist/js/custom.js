@@ -39,6 +39,12 @@ function showTheme() {
        document.querySelector('.themes').classList.toggle('theme-hide');
     }, 2500);
 }
-
+//show setting
+function showSetting() {
+    document.querySelector('.themeSwitch').classList.toggle('showtheme');
+    document.querySelector('.translator').classList.toggle('showtranslate');
+    document.querySelector('.feedbackBtn').classList.toggle('showfeed');
+    document.querySelector('.whats').classList.toggle('showwhats');
+}
 
 

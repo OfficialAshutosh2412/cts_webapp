@@ -44,7 +44,6 @@ namespace CriminalTrackingSystem.Admin
 
         protected void eventBtn_Click(object sender, EventArgs e)
         {
-            //safiuasgfkajsfkjb
             con.Open();
             string title = EventName.Text;
             if (FileUpload1.HasFiles)
@@ -56,6 +55,7 @@ namespace CriminalTrackingSystem.Admin
                     {
                         f.SaveAs(Path.Combine(Server.MapPath("AdminGallery/Events/"), f.FileName));
                     }
+                    EventName.Text = "";
                 }
                 Response.Write("<script>alert('images uploaded !')</script>");
             }

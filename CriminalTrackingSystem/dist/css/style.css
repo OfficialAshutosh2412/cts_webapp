@@ -41,8 +41,12 @@
         .themes ul li:nth-of-type(3) {
             background: #007e8a;
         }
-
-
+        .themes ul li:nth-of-type(4) {
+            background: #1e9b56;
+        }
+        .themes ul li:nth-of-type(5) {
+            background: #d16915;
+        }
     .preloader {
         position: fixed;
         width: 100%;
@@ -67,6 +71,44 @@
     color:white;
     border-radius:100%;
     transition:0.5s all ease-in-out;
+    cursor:pointer;
+}
+.themeSwitch {
+    bottom: 20px;
+    right: 10px;transform:scale(0);
+    transition: 0.4s all ease-in-out;
+    
+}
+.translator {
+    bottom: 20px;
+    right: 10px;
+    transform: scale(0); transition: 0.3s all ease-in-out;
+}
+.feedbackBtn {
+    bottom: 20px;
+    right: 10px;
+    transform: scale(0); transition: 0.2s all ease-in-out;
+}
+.whats {
+    bottom: 20px;
+    right: 10px;
+    transform: scale(0); transition: 0.1s all ease-in-out;
+}
+.showtheme {
+    bottom: 260px;
+    transform: scale(1);
+}
+.showtranslate {
+    bottom: 200px;
+    transform: scale(1);
+}
+.showfeed {
+    bottom: 140px;
+    transform: scale(1);
+}
+.showwhats {
+    bottom: 80px;
+    transform: scale(1);
 }
 .about h1 *, .top-bar a, a {
     text-decoration: none;
@@ -457,11 +499,11 @@
             font-weight: 400
         }
 
-            .hero .right h1 span {
-                background: #ea2d2d;
-                padding: 2px;
-                color: #eee
-            }
+.title-vip {
+    background: #1e9b56;
+    padding: 2px;
+    color: white;
+}
 
     .hero .left img {
         width: 200%;
@@ -494,9 +536,7 @@
 .about {
     padding: 4% 0;
     color: black;
-    background-image: url('../img/3167099.jpg') !important;
-    background-size: cover;
-    background-position: center
+    background:#319062
 }
 
 .card-info {
@@ -817,9 +857,7 @@
         background: white;
         box-shadow: 0px 0px 15px 0px #c8c8c8;
     }
-.mentor h1 {
-    color: #3fc387;
-}
+
 .member .mentor:nth-child(2) {
     flex-direction: row-reverse;
 }
@@ -858,7 +896,7 @@
 
 .member .member-link a {
     font-size: 1.5em;
-    color: #3fc387;
+    color: black;
     
 }
 .member .member-link {
@@ -1492,6 +1530,9 @@
 }
 
 @media screen and (max-width:682px) {
+    .signin{
+        height:auto;
+    }
     .hero {
         height: 100%;
     }
